@@ -1,0 +1,9 @@
+{
+  "gc_final": ["Pogacar", "Vingegaard", "Evenepoel", "Skjelmose", "F. Lipowitz", "J. Hindley", "Van Gils", "T. van Dijke", "N.Oliveira", "Bernal"],
+  "points_final": ["Philipsen", "Pogacar", "Girmay", "J.vdBerg", "Merlier", "Van Baarle"],
+  "mountains_final": ["Pogacar", "Vingegaard", "Evenepoel", "Skjelmose"],
+  "youth_final": ["Skjelmose", "Evenepoel", "F. Lipowitz"],
+  "podium": ["Pogacar", "Vingegaard", "Evenepoel"],
+  "winner_gap_seconds": 132,
+  "dnf_count": 24
+}

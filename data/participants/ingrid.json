@@ -1,0 +1,62 @@
+{
+  "name": "Ingrid",
+  "hoofdploeg": [
+    {
+      "slot": 1,
+      "rider": "Pogacar",
+      "team": "UAE"
+    },
+    {
+      "slot": 2,
+      "rider": "Philipsen",
+      "team": "Alpecin"
+    },
+    {
+      "slot": 3,
+      "rider": "Skjelmose",
+      "team": "Lidl"
+    },
+    {
+      "slot": 4,
+      "rider": "Artz",
+      "team": "Lotto"
+    },
+    {
+      "slot": 5,
+      "rider": "Degenkolb",
+      "team": "Picnic"
+    },
+    {
+      "slot": 6,
+      "rider": "Hessmann",
+      "team": "Movistar"
+    },
+    {
+      "slot": 7,
+      "rider": "Biermans",
+      "team": "Cofidis"
+    },
+    {
+      "slot": 8,
+      "rider": "Hirschi",
+      "team": "Tudor"
+    },
+    {
+      "slot": 9,
+      "rider": "Vingegaard",
+      "team": "Visma"
+    },
+    {
+      "slot": 10,
+      "rider": "Girmay",
+      "team": "NSN"
+    }
+  ],
+  "joker_stage": 1,
+  "pannenkoeken": [],
+  "bonus_answers": {
+    "podium": null,
+    "gap_seconds": null,
+    "dnf_count": null
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "name": "Jeffrey",
+  "hoofdploeg": [
+    {
+      "slot": 1,
+      "rider": "Pogacar",
+      "team": null
+    },
+    {
+      "slot": 2,
+      "rider": "Philipsen",
+      "team": null
+    },
+    {
+      "slot": 3,
+      "rider": "Skjelmose",
+      "team": null
+    },
+    {
+      "slot": 4,
+      "rider": "Fretin",
+      "team": null
+    },
+    {
+      "slot": 5,
+      "rider": "Vauquelin",
+      "team": null
+    },
+    {
+      "slot": 6,
+      "rider": "De Kleijn",
+      "team": null
+    },
+    {
+      "slot": 7,
+      "rider": "Riccitello",
+      "team": null
+    },
+    {
+      "slot": 8,
+      "rider": "Ballerini",
+      "team": null
+    },
+    {
+      "slot": 9,
+      "rider": "Vingevaard",
+      "team": null
+    },
+    {
+      "slot": 10,
+      "rider": "Merlier",
+      "team": null
+    }
+  ],
+  "joker_stage": 11,
+  "pannenkoeken": [
+    {
+      "slot": 1,
+      "rider": "De Bruyne"
+    },
+    {
+      "slot": 2,
+      "rider": "Biermans"
+    },
+    {
+      "slot": 3,
+      "rider": "Parra"
+    },
+    {
+      "slot": 4,
+      "rider": "Cepeda"
+    },
+    {
+      "slot": 5,
+      "rider": "van Dijke"
+    },
+    {
+      "slot": 6,
+      "rider": "Vervaeke"
+    },
+    {
+      "slot": 7,
+      "rider": "Engelhardt"
+    },
+    {
+      "slot": 8,
+      "rider": "Biesterbos"
+    },
+    {
+      "slot": 9,
+      "rider": "Dondt"
+    },
+    {
+      "slot": 10,
+      "rider": "Voisard"
+    },
+    {
+      "slot": 11,
+      "rider": "Grosschartner"
+    },
+    {
+      "slot": 12,
+      "rider": "Strand Hagenes"
+    },
+    {
+      "slot": 13,
+      "rider": "Vinokourov"
+    },
+    {
+      "slot": 14,
+      "rider": "Markl"
+    }
+  ],
+  "bonus_answers": {
+    "podium": [
+      "Pogacar",
+      "Vingegaard",
+      "Seixas"
+    ],
+    "gap_seconds": null,
+    "dnf_count": null
+  }
+}

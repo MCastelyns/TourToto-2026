@@ -1,0 +1,127 @@
+{
+  "name": "Ger",
+  "hoofdploeg": [
+    {
+      "slot": 1,
+      "rider": "Pogacar",
+      "team": "UAE"
+    },
+    {
+      "slot": 2,
+      "rider": "Philipsen",
+      "team": "Alpecin"
+    },
+    {
+      "slot": 3,
+      "rider": "Skjelmose",
+      "team": "Lidl"
+    },
+    {
+      "slot": 4,
+      "rider": "Abrahamsen",
+      "team": "Uno X"
+    },
+    {
+      "slot": 5,
+      "rider": "Germani",
+      "team": "FDJ"
+    },
+    {
+      "slot": 6,
+      "rider": "Godon",
+      "team": "Ineos"
+    },
+    {
+      "slot": 7,
+      "rider": "van Asbroeck",
+      "team": "NSN"
+    },
+    {
+      "slot": 8,
+      "rider": "vanMechelen",
+      "team": "Bahrein"
+    },
+    {
+      "slot": 9,
+      "rider": "Vingegaard",
+      "team": "Visma"
+    },
+    {
+      "slot": 10,
+      "rider": "Lipowitz",
+      "team": "Bora"
+    }
+  ],
+  "joker_stage": 20,
+  "pannenkoeken": [
+    {
+      "slot": 1,
+      "rider": "Vercher"
+    },
+    {
+      "slot": 2,
+      "rider": "Le Berre"
+    },
+    {
+      "slot": 3,
+      "rider": "Dellettre"
+    },
+    {
+      "slot": 4,
+      "rider": "Delbove"
+    },
+    {
+      "slot": 5,
+      "rider": "Velasco"
+    },
+    {
+      "slot": 6,
+      "rider": "Gate"
+    },
+    {
+      "slot": 7,
+      "rider": "Kanter"
+    },
+    {
+      "slot": 8,
+      "rider": "Skaarseth"
+    },
+    {
+      "slot": 9,
+      "rider": "Charmig"
+    },
+    {
+      "slot": 10,
+      "rider": "Vermeersch"
+    },
+    {
+      "slot": 11,
+      "rider": "Politt"
+    },
+    {
+      "slot": 12,
+      "rider": "De Kleijn"
+    },
+    {
+      "slot": 13,
+      "rider": "Pluimers"
+    },
+    {
+      "slot": 14,
+      "rider": "Affini"
+    },
+    {
+      "slot": 15,
+      "rider": "Markl"
+    }
+  ],
+  "bonus_answers": {
+    "podium": [
+      "Pogacar",
+      "Vingegaard",
+      "Lipowitz"
+    ],
+    "gap_seconds": null,
+    "dnf_count": 33
+  }
+}

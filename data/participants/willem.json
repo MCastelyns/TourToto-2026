@@ -1,0 +1,127 @@
+{
+  "name": "Willem",
+  "hoofdploeg": [
+    {
+      "slot": 1,
+      "rider": "Bittner",
+      "team": "Picnic"
+    },
+    {
+      "slot": 2,
+      "rider": "Baudin",
+      "team": "EF"
+    },
+    {
+      "slot": 3,
+      "rider": "Bol",
+      "team": "Decathlon"
+    },
+    {
+      "slot": 4,
+      "rider": "Fretien",
+      "team": "Cofidis"
+    },
+    {
+      "slot": 5,
+      "rider": "Lipowitch",
+      "team": "Bora"
+    },
+    {
+      "slot": 6,
+      "rider": "Philipsen",
+      "team": "Alpecin"
+    },
+    {
+      "slot": 7,
+      "rider": "Pogacar",
+      "team": "UAE"
+    },
+    {
+      "slot": 8,
+      "rider": "Vacek",
+      "team": "Lidl"
+    },
+    {
+      "slot": 9,
+      "rider": "Vauquelin",
+      "team": "Ineos"
+    },
+    {
+      "slot": 10,
+      "rider": "Vinegaard",
+      "team": "Visma"
+    }
+  ],
+  "joker_stage": 14,
+  "pannenkoeken": [
+    {
+      "slot": 1,
+      "rider": "Biesterbos"
+    },
+    {
+      "slot": 2,
+      "rider": "Cepeda"
+    },
+    {
+      "slot": 3,
+      "rider": "Charming"
+    },
+    {
+      "slot": 4,
+      "rider": "de Kleijn"
+    },
+    {
+      "slot": 5,
+      "rider": "Dhondt"
+    },
+    {
+      "slot": 6,
+      "rider": "Guernalec"
+    },
+    {
+      "slot": 7,
+      "rider": "Le Berre"
+    },
+    {
+      "slot": 8,
+      "rider": "Oldani"
+    },
+    {
+      "slot": 9,
+      "rider": "Otruba"
+    },
+    {
+      "slot": 10,
+      "rider": "Q.Simmons"
+    },
+    {
+      "slot": 11,
+      "rider": "Skaarset"
+    },
+    {
+      "slot": 12,
+      "rider": "Slock"
+    },
+    {
+      "slot": 13,
+      "rider": "Stannard"
+    },
+    {
+      "slot": 14,
+      "rider": "Velasco"
+    },
+    {
+      "slot": 15,
+      "rider": "Verona"
+    }
+  ],
+  "bonus_answers": {
+    "podium": [
+      "Pogacar",
+      "Vingegaard",
+      "Del Torro"
+    ],
+    "gap_seconds": 125,
+    "dnf_count": 32
+  }
+}

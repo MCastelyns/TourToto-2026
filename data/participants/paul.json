@@ -1,0 +1,127 @@
+{
+  "name": "Paul",
+  "hoofdploeg": [
+    {
+      "slot": 1,
+      "rider": "Pogacar",
+      "team": "UAE"
+    },
+    {
+      "slot": 2,
+      "rider": "Lipowitz",
+      "team": "Bora"
+    },
+    {
+      "slot": 3,
+      "rider": "Healy",
+      "team": "EF"
+    },
+    {
+      "slot": 4,
+      "rider": "V. Paret-Pientre",
+      "team": "Soudal"
+    },
+    {
+      "slot": 5,
+      "rider": "Waernskjold",
+      "team": "Unox"
+    },
+    {
+      "slot": 6,
+      "rider": "Godon",
+      "team": "Ineos"
+    },
+    {
+      "slot": 7,
+      "rider": "Vacek",
+      "team": "Lidl"
+    },
+    {
+      "slot": 8,
+      "rider": "Piganzoli",
+      "team": "Visma"
+    },
+    {
+      "slot": 9,
+      "rider": "Seixas",
+      "team": "Decathlon"
+    },
+    {
+      "slot": 10,
+      "rider": "Philipsen",
+      "team": "Alpecin"
+    }
+  ],
+  "joker_stage": 15,
+  "pannenkoeken": [
+    {
+      "slot": 1,
+      "rider": "Rickaert"
+    },
+    {
+      "slot": 2,
+      "rider": "Dillier"
+    },
+    {
+      "slot": 3,
+      "rider": "Biermans"
+    },
+    {
+      "slot": 4,
+      "rider": "Allegaert"
+    },
+    {
+      "slot": 5,
+      "rider": "Louvel"
+    },
+    {
+      "slot": 6,
+      "rider": "Stewart"
+    },
+    {
+      "slot": 7,
+      "rider": "van Moer"
+    },
+    {
+      "slot": 8,
+      "rider": "Vervaeke"
+    },
+    {
+      "slot": 9,
+      "rider": "O;Brien"
+    },
+    {
+      "slot": 10,
+      "rider": "Biesterbos"
+    },
+    {
+      "slot": 11,
+      "rider": "Dhondt"
+    },
+    {
+      "slot": 12,
+      "rider": "Markl"
+    },
+    {
+      "slot": 13,
+      "rider": "Veistroffer"
+    },
+    {
+      "slot": 14,
+      "rider": "Delbove"
+    },
+    {
+      "slot": 15,
+      "rider": "le Berre"
+    }
+  ],
+  "bonus_answers": {
+    "podium": [
+      "Pogacar",
+      "Vingegaard",
+      "Evenepoel"
+    ],
+    "gap_seconds": 221,
+    "dnf_count": 31
+  }
+}

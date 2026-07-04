@@ -1,0 +1,972 @@
+{
+  "teams": {
+    "ALPECIN": [
+      "Vd Poel",
+      "J. Philipsen",
+      "Dillier",
+      "Verstrynge",
+      "Rickaert",
+      "T.Marsman",
+      "Debruyne",
+      "Planckaert"
+    ],
+    "Pinarello Q36.5": [
+      "T. Pidcock",
+      "Wright",
+      "Hermans",
+      "Van Moer",
+      "Chris Harper",
+      "Howson",
+      "Azparren",
+      "Meurisse"
+    ],
+    "BAHRAIN": [
+      "L. Martinez",
+      "Tiberi",
+      "M. Mohoric",
+      "Bauhaus",
+      "Caruso",
+      "Gradek",
+      "Stannard",
+      "vanMechelen"
+    ],
+    "COFIDIS": [
+      "B.Thomas",
+      "I.Izagirre",
+      "Kirsch",
+      "Fretin",
+      "Page",
+      "Allegaert",
+      "Biermans",
+      "Aranburu"
+    ],
+    "DECATHLON": [
+      "P. Seixas",
+      "O. Kooij",
+      "A.Paret-Pientre",
+      "Prodhomme",
+      "D. Hoole",
+      "Cees Bol",
+      "Riccitello",
+      "T.Benoot"
+    ],
+    "EF EDUCATION": [
+      "R. Carapaz",
+      "K. Asgreen",
+      "B. Healy",
+      "Quinn",
+      "Steinhauser",
+      "Valgren",
+      "Walker",
+      "Baudin"
+    ],
+    "GROUPAMA FDJ": [
+      "R. Gregoire",
+      "G. Martin",
+      "Pacher",
+      "Russo",
+      "Germani",
+      "Berthet",
+      "Costiou",
+      "Afonso"
+    ],
+    "Netcompany INEOS": [
+      "T. Arensman",
+      "F. Ganna",
+      "Bernal",
+      "Kwiatkowski",
+      "Vauquelin",
+      "Godon",
+      "T. Voss",
+      "Joshua Tarling"
+    ],
+    "Caja Rural Serguros RGA": [
+      "Gaviria",
+      "Balderstone",
+      "Molenaar",
+      "Nicolau Beltran",
+      "Oldani",
+      "Otruba",
+      "Felix Parra",
+      "Berwick"
+    ],
+    "NSN Cycling": [
+      "G. Bennett",
+      "Girmay",
+      "M. Frigo",
+      "Stewart",
+      "Askey",
+      "Louvel",
+      "Van Asbroeck",
+      "Neilands"
+    ],
+    "LIDL TREK": [
+      "Ayuso",
+      "Pedersen",
+      "Skjelmose",
+      "Gee-West",
+      "Q. Simmons",
+      "Verona",
+      "M. Vacek",
+      "Skujins"
+    ],
+    "LOTTO Intermarche": [
+      "De Lie",
+      "Van Eetvelt",
+      "Zimmermann",
+      "Artz",
+      "Berckmoes",
+      "Craps",
+      "Slock",
+      "Veistroffer"
+    ],
+    "MOVISTAR": [
+      "Uijtdebroeks",
+      "Einer Rubio",
+      "Castrillo Zapater",
+      "Pierna",
+      "Romo",
+      "Hessmann",
+      "Cepeda",
+      "N.Oliveira"
+    ],
+    "RED BULL BORA": [
+      "Evenepoel",
+      "F. Lipowitz",
+      "J. Hindley",
+      "Van Gils",
+      "T. van Dijke",
+      "Cattaneo",
+      "Denz",
+      "Tratnik"
+    ],
+    "SOUDAL QUICKSTEP": [
+      "Van Baarle",
+      "T. Merlier",
+      "J. Stuyven",
+      "V.Paret-Peintre",
+      "I.van Wilder",
+      "L. Vervaeke",
+      "Lerberghe",
+      "Eenkhoorn"
+    ],
+    "JAYCO ALULA": [
+      "B’Connor",
+      "P. Ackermann",
+      "Plapp",
+      "M. Matthews",
+      "L. Durbridge",
+      "Schmid",
+      "Engelhardt",
+      "O’Brien"
+    ],
+    "PICNIC POSTNL": [
+      "F. van den Broek",
+      "W. Barguil",
+      "Bittner",
+      "Degenkolb",
+      "J.vdBerg",
+      "Biesterbos",
+      "Dhondt",
+      "Markl"
+    ],
+    "VISMA LEASE A BIKE": [
+      "Vingegaard",
+      "Jorgenson",
+      "Kuss",
+      "Campenaerts",
+      "Armirall",
+      "Affini",
+      "Strand Hagenes",
+      "Piganzoli"
+    ],
+    "TUDOR PRO CYCLING": [
+      "M. Storer",
+      "Alaphilippe",
+      "Haller",
+      "M. Trentin",
+      "Pluimers",
+      "De Kleijn",
+      "Voisard",
+      "Hirschi"
+    ],
+    "UAE TEAM EMIRATES": [
+      "Pogacar",
+      "Del Torro Romero",
+      "A.Yates",
+      "Wellens",
+      "Politt",
+      "Vermeersch",
+      "McNulty",
+      "Grosschartner"
+    ],
+    "UNO X MOBILITY": [
+      "T.H. Johannessen",
+      "M. Cort",
+      "Traeen",
+      "Abrahamsen",
+      "Waerenskjold",
+      "Skaarseth",
+      "Charmig",
+      "A.H. Johannessen"
+    ],
+    "XDS ASTANA": [
+      "S. Higuita",
+      "M. Teunissen",
+      "Tejada",
+      "Kanter",
+      "Gate",
+      "Velasco",
+      "Vinokourov",
+      "Ballerini"
+    ],
+    "TOTAL ENERGIES": [
+      "Turgis",
+      "Jegat",
+      "Breuillard",
+      "Delbove",
+      "Delettre",
+      "Guernalec",
+      "Le Berre",
+      "Vercher"
+    ]
+  },
+  "riders": {
+    "Vd Poel": {
+      "team": "ALPECIN",
+      "slot": 1
+    },
+    "J. Philipsen": {
+      "team": "ALPECIN",
+      "slot": 2
+    },
+    "Dillier": {
+      "team": "ALPECIN",
+      "slot": 3
+    },
+    "Verstrynge": {
+      "team": "ALPECIN",
+      "slot": 4
+    },
+    "Rickaert": {
+      "team": "ALPECIN",
+      "slot": 5
+    },
+    "T.Marsman": {
+      "team": "ALPECIN",
+      "slot": 6
+    },
+    "Debruyne": {
+      "team": "ALPECIN",
+      "slot": 7
+    },
+    "Planckaert": {
+      "team": "ALPECIN",
+      "slot": 8
+    },
+    "T. Pidcock": {
+      "team": "Pinarello Q36.5",
+      "slot": 1
+    },
+    "Wright": {
+      "team": "Pinarello Q36.5",
+      "slot": 2
+    },
+    "Hermans": {
+      "team": "Pinarello Q36.5",
+      "slot": 3
+    },
+    "Van Moer": {
+      "team": "Pinarello Q36.5",
+      "slot": 4
+    },
+    "Chris Harper": {
+      "team": "Pinarello Q36.5",
+      "slot": 5
+    },
+    "Howson": {
+      "team": "Pinarello Q36.5",
+      "slot": 6
+    },
+    "Azparren": {
+      "team": "Pinarello Q36.5",
+      "slot": 7
+    },
+    "Meurisse": {
+      "team": "Pinarello Q36.5",
+      "slot": 8
+    },
+    "L. Martinez": {
+      "team": "BAHRAIN",
+      "slot": 1
+    },
+    "Tiberi": {
+      "team": "BAHRAIN",
+      "slot": 2
+    },
+    "M. Mohoric": {
+      "team": "BAHRAIN",
+      "slot": 3
+    },
+    "Bauhaus": {
+      "team": "BAHRAIN",
+      "slot": 4
+    },
+    "Caruso": {
+      "team": "BAHRAIN",
+      "slot": 5
+    },
+    "Gradek": {
+      "team": "BAHRAIN",
+      "slot": 6
+    },
+    "Stannard": {
+      "team": "BAHRAIN",
+      "slot": 7
+    },
+    "vanMechelen": {
+      "team": "BAHRAIN",
+      "slot": 8
+    },
+    "B.Thomas": {
+      "team": "COFIDIS",
+      "slot": 1
+    },
+    "I.Izagirre": {
+      "team": "COFIDIS",
+      "slot": 2
+    },
+    "Kirsch": {
+      "team": "COFIDIS",
+      "slot": 3
+    },
+    "Fretin": {
+      "team": "COFIDIS",
+      "slot": 4
+    },
+    "Page": {
+      "team": "COFIDIS",
+      "slot": 5
+    },
+    "Allegaert": {
+      "team": "COFIDIS",
+      "slot": 6
+    },
+    "Biermans": {
+      "team": "COFIDIS",
+      "slot": 7
+    },
+    "Aranburu": {
+      "team": "COFIDIS",
+      "slot": 8
+    },
+    "P. Seixas": {
+      "team": "DECATHLON",
+      "slot": 1
+    },
+    "O. Kooij": {
+      "team": "DECATHLON",
+      "slot": 2
+    },
+    "A.Paret-Pientre": {
+      "team": "DECATHLON",
+      "slot": 3
+    },
+    "Prodhomme": {
+      "team": "DECATHLON",
+      "slot": 4
+    },
+    "D. Hoole": {
+      "team": "DECATHLON",
+      "slot": 5
+    },
+    "Cees Bol": {
+      "team": "DECATHLON",
+      "slot": 6
+    },
+    "Riccitello": {
+      "team": "DECATHLON",
+      "slot": 7
+    },
+    "T.Benoot": {
+      "team": "DECATHLON",
+      "slot": 8
+    },
+    "R. Carapaz": {
+      "team": "EF EDUCATION",
+      "slot": 1
+    },
+    "K. Asgreen": {
+      "team": "EF EDUCATION",
+      "slot": 2
+    },
+    "B. Healy": {
+      "team": "EF EDUCATION",
+      "slot": 3
+    },
+    "Quinn": {
+      "team": "EF EDUCATION",
+      "slot": 4
+    },
+    "Steinhauser": {
+      "team": "EF EDUCATION",
+      "slot": 5
+    },
+    "Valgren": {
+      "team": "EF EDUCATION",
+      "slot": 6
+    },
+    "Walker": {
+      "team": "EF EDUCATION",
+      "slot": 7
+    },
+    "Baudin": {
+      "team": "EF EDUCATION",
+      "slot": 8
+    },
+    "R. Gregoire": {
+      "team": "GROUPAMA FDJ",
+      "slot": 1
+    },
+    "G. Martin": {
+      "team": "GROUPAMA FDJ",
+      "slot": 2
+    },
+    "Pacher": {
+      "team": "GROUPAMA FDJ",
+      "slot": 3
+    },
+    "Russo": {
+      "team": "GROUPAMA FDJ",
+      "slot": 4
+    },
+    "Germani": {
+      "team": "GROUPAMA FDJ",
+      "slot": 5
+    },
+    "Berthet": {
+      "team": "GROUPAMA FDJ",
+      "slot": 6
+    },
+    "Costiou": {
+      "team": "GROUPAMA FDJ",
+      "slot": 7
+    },
+    "Afonso": {
+      "team": "GROUPAMA FDJ",
+      "slot": 8
+    },
+    "T. Arensman": {
+      "team": "Netcompany INEOS",
+      "slot": 1
+    },
+    "F. Ganna": {
+      "team": "Netcompany INEOS",
+      "slot": 2
+    },
+    "Bernal": {
+      "team": "Netcompany INEOS",
+      "slot": 3
+    },
+    "Kwiatkowski": {
+      "team": "Netcompany INEOS",
+      "slot": 4
+    },
+    "Vauquelin": {
+      "team": "Netcompany INEOS",
+      "slot": 5
+    },
+    "Godon": {
+      "team": "Netcompany INEOS",
+      "slot": 6
+    },
+    "T. Voss": {
+      "team": "Netcompany INEOS",
+      "slot": 7
+    },
+    "Joshua Tarling": {
+      "team": "Netcompany INEOS",
+      "slot": 8
+    },
+    "Gaviria": {
+      "team": "Caja Rural Serguros RGA",
+      "slot": 1
+    },
+    "Balderstone": {
+      "team": "Caja Rural Serguros RGA",
+      "slot": 2
+    },
+    "Molenaar": {
+      "team": "Caja Rural Serguros RGA",
+      "slot": 3
+    },
+    "Nicolau Beltran": {
+      "team": "Caja Rural Serguros RGA",
+      "slot": 4
+    },
+    "Oldani": {
+      "team": "Caja Rural Serguros RGA",
+      "slot": 5
+    },
+    "Otruba": {
+      "team": "Caja Rural Serguros RGA",
+      "slot": 6
+    },
+    "Felix Parra": {
+      "team": "Caja Rural Serguros RGA",
+      "slot": 7
+    },
+    "Berwick": {
+      "team": "Caja Rural Serguros RGA",
+      "slot": 8
+    },
+    "G. Bennett": {
+      "team": "NSN Cycling",
+      "slot": 1
+    },
+    "Girmay": {
+      "team": "NSN Cycling",
+      "slot": 2
+    },
+    "M. Frigo": {
+      "team": "NSN Cycling",
+      "slot": 3
+    },
+    "Stewart": {
+      "team": "NSN Cycling",
+      "slot": 4
+    },
+    "Askey": {
+      "team": "NSN Cycling",
+      "slot": 5
+    },
+    "Louvel": {
+      "team": "NSN Cycling",
+      "slot": 6
+    },
+    "Van Asbroeck": {
+      "team": "NSN Cycling",
+      "slot": 7
+    },
+    "Neilands": {
+      "team": "NSN Cycling",
+      "slot": 8
+    },
+    "Ayuso": {
+      "team": "LIDL TREK",
+      "slot": 1
+    },
+    "Pedersen": {
+      "team": "LIDL TREK",
+      "slot": 2
+    },
+    "Skjelmose": {
+      "team": "LIDL TREK",
+      "slot": 3
+    },
+    "Gee-West": {
+      "team": "LIDL TREK",
+      "slot": 4
+    },
+    "Q. Simmons": {
+      "team": "LIDL TREK",
+      "slot": 5
+    },
+    "Verona": {
+      "team": "LIDL TREK",
+      "slot": 6
+    },
+    "M. Vacek": {
+      "team": "LIDL TREK",
+      "slot": 7
+    },
+    "Skujins": {
+      "team": "LIDL TREK",
+      "slot": 8
+    },
+    "De Lie": {
+      "team": "LOTTO Intermarche",
+      "slot": 1
+    },
+    "Van Eetvelt": {
+      "team": "LOTTO Intermarche",
+      "slot": 2
+    },
+    "Zimmermann": {
+      "team": "LOTTO Intermarche",
+      "slot": 3
+    },
+    "Artz": {
+      "team": "LOTTO Intermarche",
+      "slot": 4
+    },
+    "Berckmoes": {
+      "team": "LOTTO Intermarche",
+      "slot": 5
+    },
+    "Craps": {
+      "team": "LOTTO Intermarche",
+      "slot": 6
+    },
+    "Slock": {
+      "team": "LOTTO Intermarche",
+      "slot": 7
+    },
+    "Veistroffer": {
+      "team": "LOTTO Intermarche",
+      "slot": 8
+    },
+    "Uijtdebroeks": {
+      "team": "MOVISTAR",
+      "slot": 1
+    },
+    "Einer Rubio": {
+      "team": "MOVISTAR",
+      "slot": 2
+    },
+    "Castrillo Zapater": {
+      "team": "MOVISTAR",
+      "slot": 3
+    },
+    "Pierna": {
+      "team": "MOVISTAR",
+      "slot": 4
+    },
+    "Romo": {
+      "team": "MOVISTAR",
+      "slot": 5
+    },
+    "Hessmann": {
+      "team": "MOVISTAR",
+      "slot": 6
+    },
+    "Cepeda": {
+      "team": "MOVISTAR",
+      "slot": 7
+    },
+    "N.Oliveira": {
+      "team": "MOVISTAR",
+      "slot": 8
+    },
+    "Evenepoel": {
+      "team": "RED BULL BORA",
+      "slot": 1
+    },
+    "F. Lipowitz": {
+      "team": "RED BULL BORA",
+      "slot": 2
+    },
+    "J. Hindley": {
+      "team": "RED BULL BORA",
+      "slot": 3
+    },
+    "Van Gils": {
+      "team": "RED BULL BORA",
+      "slot": 4
+    },
+    "T. van Dijke": {
+      "team": "RED BULL BORA",
+      "slot": 5
+    },
+    "Cattaneo": {
+      "team": "RED BULL BORA",
+      "slot": 6
+    },
+    "Denz": {
+      "team": "RED BULL BORA",
+      "slot": 7
+    },
+    "Tratnik": {
+      "team": "RED BULL BORA",
+      "slot": 8
+    },
+    "Van Baarle": {
+      "team": "SOUDAL QUICKSTEP",
+      "slot": 1
+    },
+    "T. Merlier": {
+      "team": "SOUDAL QUICKSTEP",
+      "slot": 2
+    },
+    "J. Stuyven": {
+      "team": "SOUDAL QUICKSTEP",
+      "slot": 3
+    },
+    "V.Paret-Peintre": {
+      "team": "SOUDAL QUICKSTEP",
+      "slot": 4
+    },
+    "I.van Wilder": {
+      "team": "SOUDAL QUICKSTEP",
+      "slot": 5
+    },
+    "L. Vervaeke": {
+      "team": "SOUDAL QUICKSTEP",
+      "slot": 6
+    },
+    "Lerberghe": {
+      "team": "SOUDAL QUICKSTEP",
+      "slot": 7
+    },
+    "Eenkhoorn": {
+      "team": "SOUDAL QUICKSTEP",
+      "slot": 8
+    },
+    "B’Connor": {
+      "team": "JAYCO ALULA",
+      "slot": 1
+    },
+    "P. Ackermann": {
+      "team": "JAYCO ALULA",
+      "slot": 2
+    },
+    "Plapp": {
+      "team": "JAYCO ALULA",
+      "slot": 3
+    },
+    "M. Matthews": {
+      "team": "JAYCO ALULA",
+      "slot": 4
+    },
+    "L. Durbridge": {
+      "team": "JAYCO ALULA",
+      "slot": 5
+    },
+    "Schmid": {
+      "team": "JAYCO ALULA",
+      "slot": 6
+    },
+    "Engelhardt": {
+      "team": "JAYCO ALULA",
+      "slot": 7
+    },
+    "O’Brien": {
+      "team": "JAYCO ALULA",
+      "slot": 8
+    },
+    "F. van den Broek": {
+      "team": "PICNIC POSTNL",
+      "slot": 1
+    },
+    "W. Barguil": {
+      "team": "PICNIC POSTNL",
+      "slot": 2
+    },
+    "Bittner": {
+      "team": "PICNIC POSTNL",
+      "slot": 3
+    },
+    "Degenkolb": {
+      "team": "PICNIC POSTNL",
+      "slot": 4
+    },
+    "J.vdBerg": {
+      "team": "PICNIC POSTNL",
+      "slot": 5
+    },
+    "Biesterbos": {
+      "team": "PICNIC POSTNL",
+      "slot": 6
+    },
+    "Dhondt": {
+      "team": "PICNIC POSTNL",
+      "slot": 7
+    },
+    "Markl": {
+      "team": "PICNIC POSTNL",
+      "slot": 8
+    },
+    "Vingegaard": {
+      "team": "VISMA LEASE A BIKE",
+      "slot": 1
+    },
+    "Jorgenson": {
+      "team": "VISMA LEASE A BIKE",
+      "slot": 2
+    },
+    "Kuss": {
+      "team": "VISMA LEASE A BIKE",
+      "slot": 3
+    },
+    "Campenaerts": {
+      "team": "VISMA LEASE A BIKE",
+      "slot": 4
+    },
+    "Armirall": {
+      "team": "VISMA LEASE A BIKE",
+      "slot": 5
+    },
+    "Affini": {
+      "team": "VISMA LEASE A BIKE",
+      "slot": 6
+    },
+    "Strand Hagenes": {
+      "team": "VISMA LEASE A BIKE",
+      "slot": 7
+    },
+    "Piganzoli": {
+      "team": "VISMA LEASE A BIKE",
+      "slot": 8
+    },
+    "M. Storer": {
+      "team": "TUDOR PRO CYCLING",
+      "slot": 1
+    },
+    "Alaphilippe": {
+      "team": "TUDOR PRO CYCLING",
+      "slot": 2
+    },
+    "Haller": {
+      "team": "TUDOR PRO CYCLING",
+      "slot": 3
+    },
+    "M. Trentin": {
+      "team": "TUDOR PRO CYCLING",
+      "slot": 4
+    },
+    "Pluimers": {
+      "team": "TUDOR PRO CYCLING",
+      "slot": 5
+    },
+    "De Kleijn": {
+      "team": "TUDOR PRO CYCLING",
+      "slot": 6
+    },
+    "Voisard": {
+      "team": "TUDOR PRO CYCLING",
+      "slot": 7
+    },
+    "Hirschi": {
+      "team": "TUDOR PRO CYCLING",
+      "slot": 8
+    },
+    "Pogacar": {
+      "team": "UAE TEAM EMIRATES",
+      "slot": 1
+    },
+    "Del Torro Romero": {
+      "team": "UAE TEAM EMIRATES",
+      "slot": 2
+    },
+    "A.Yates": {
+      "team": "UAE TEAM EMIRATES",
+      "slot": 3
+    },
+    "Wellens": {
+      "team": "UAE TEAM EMIRATES",
+      "slot": 4
+    },
+    "Politt": {
+      "team": "UAE TEAM EMIRATES",
+      "slot": 5
+    },
+    "Vermeersch": {
+      "team": "UAE TEAM EMIRATES",
+      "slot": 6
+    },
+    "McNulty": {
+      "team": "UAE TEAM EMIRATES",
+      "slot": 7
+    },
+    "Grosschartner": {
+      "team": "UAE TEAM EMIRATES",
+      "slot": 8
+    },
+    "T.H. Johannessen": {
+      "team": "UNO X MOBILITY",
+      "slot": 1
+    },
+    "M. Cort": {
+      "team": "UNO X MOBILITY",
+      "slot": 2
+    },
+    "Traeen": {
+      "team": "UNO X MOBILITY",
+      "slot": 3
+    },
+    "Abrahamsen": {
+      "team": "UNO X MOBILITY",
+      "slot": 4
+    },
+    "Waerenskjold": {
+      "team": "UNO X MOBILITY",
+      "slot": 5
+    },
+    "Skaarseth": {
+      "team": "UNO X MOBILITY",
+      "slot": 6
+    },
+    "Charmig": {
+      "team": "UNO X MOBILITY",
+      "slot": 7
+    },
+    "A.H. Johannessen": {
+      "team": "UNO X MOBILITY",
+      "slot": 8
+    },
+    "S. Higuita": {
+      "team": "XDS ASTANA",
+      "slot": 1
+    },
+    "M. Teunissen": {
+      "team": "XDS ASTANA",
+      "slot": 2
+    },
+    "Tejada": {
+      "team": "XDS ASTANA",
+      "slot": 3
+    },
+    "Kanter": {
+      "team": "XDS ASTANA",
+      "slot": 4
+    },
+    "Gate": {
+      "team": "XDS ASTANA",
+      "slot": 5
+    },
+    "Velasco": {
+      "team": "XDS ASTANA",
+      "slot": 6
+    },
+    "Vinokourov": {
+      "team": "XDS ASTANA",
+      "slot": 7
+    },
+    "Ballerini": {
+      "team": "XDS ASTANA",
+      "slot": 8
+    },
+    "Turgis": {
+      "team": "TOTAL ENERGIES",
+      "slot": 1
+    },
+    "Jegat": {
+      "team": "TOTAL ENERGIES",
+      "slot": 2
+    },
+    "Breuillard": {
+      "team": "TOTAL ENERGIES",
+      "slot": 3
+    },
+    "Delbove": {
+      "team": "TOTAL ENERGIES",
+      "slot": 4
+    },
+    "Delettre": {
+      "team": "TOTAL ENERGIES",
+      "slot": 5
+    },
+    "Guernalec": {
+      "team": "TOTAL ENERGIES",
+      "slot": 6
+    },
+    "Le Berre": {
+      "team": "TOTAL ENERGIES",
+      "slot": 7
+    },
+    "Vercher": {
+      "team": "TOTAL ENERGIES",
+      "slot": 8
+    }
+  }
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tourtoto 2026 — Admin</title>
+<style>
+  :root { --bg:#f5f4f0; --card:#fff; --border:#ddd; --ink:#1c1c1c; --muted:#777; --warn:#c0392b; --ok:#2e8b3d; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: var(--bg); color: var(--ink); margin:0; }
+  header { background:#222; color:#fff; padding: 16px 20px; display:flex; justify-content:space-between; align-items:center; }
+  header h1 { margin:0; font-size:1.3rem; }
+  header a, header button { color:#fff; background:#444; border:1px solid #666; padding:6px 12px; border-radius:6px; text-decoration:none; cursor:pointer; font-size:0.9rem; }
+  header form { margin:0; }
+  main { max-width: 980px; margin: 0 auto; padding: 20px 16px 60px; }
+  .flash { background:#eaffea; border:1px solid var(--ok); color:#1a5c28; padding:8px 14px; border-radius:8px; margin-bottom:16px; }
+  section { margin-bottom: 34px; }
+  h2 { font-size:1.15rem; border-left:5px solid var(--warn); padding-left:8px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:14px; }
+  table { width:100%; border-collapse: collapse; font-size:0.9rem; }
+  th, td { padding:6px 8px; text-align:left; vertical-align: top; }
+  thead th { border-bottom:1px solid var(--border); }
+  tbody tr:nth-child(odd) { background:#fafafa; }
+  .muted { color: var(--muted); font-size:0.85rem; }
+  .badge { display:inline-block; background:var(--warn); color:#fff; border-radius:4px; padding:1px 7px; font-size:0.75rem; margin:1px 3px 1px 0; }
+  .badge-ok { background: var(--ok); }
+  input[type=text], input[type=number] { padding:4px 6px; border:1px solid #ccc; border-radius:5px; font-size:0.9rem; }
+  textarea { width:100%; font-family: inherit; font-size:0.85rem; padding:6px; border:1px solid #ccc; border-radius:6px; }
+  form.inline { display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
+  button, input[type=submit] { padding:5px 12px; border-radius:6px; border:1px solid #999; background:#f0f0f0; cursor:pointer; font-size:0.85rem; }
+  button:hover, input[type=submit]:hover { background:#e2e2e2; }
+  details { background:var(--card); border:1px solid var(--border); border-radius:8px; margin-bottom:8px; padding:10px 14px; }
+  details summary { cursor:pointer; font-weight:600; display:flex; gap:8px; align-items:center; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:10px; }
+  .grid2 label { display:block; font-size:0.8rem; color:var(--muted); margin-bottom:2px; }
+  .row3 { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:12px; margin-top:10px; }
+  @media (max-width:700px) { .grid2, .row3 { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Tourtoto 2026 — Admin</h1>
+  <div style="display:flex; gap:8px;">
+    <form action="{{ url_for('rebuild') }}" method="post"><button type="submit">Herbouw site</button></form>
+    <a href="{{ url_for('public_site') }}" target="_blank">Bekijk site</a>
+    <a href="{{ url_for('admin_logout') }}">Uitloggen</a>
+  </div>
+</header>
+
+<main>
+  {% if message %}<div class="flash">{{ message }}</div>{% endif %}
+
+  <section>
+    <h2>Nieuwe etappe-uitslag laden</h2>
+    <div class="card">
+      <p class="muted" style="margin-top:0;">Optie 1: laat deze server de uitslag zelf ophalen (werkt alleen
+        als deze server het internet op mag naar racecenter.letour.fr).</p>
+      <form class="inline" action="{{ url_for('scrape_stage_route') }}" method="post">
+        <input type="number" name="stage" placeholder="etappenummer" min="1" max="21" required style="width:9em;">
+        <button type="submit">Etappe ophalen</button>
+      </form>
+      <p class="muted" style="margin-top:16px;">Optie 2: draai lokaal op je eigen pc
+        <code>python scripts/scrape_results.py --stage N</code>, en upload hier het resulterende
+        <code>stage_NN.json</code>-bestand.</p>
+      <form class="inline" action="{{ url_for('upload_stage') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="stage_file" accept="application/json" required>
+        <button type="submit">Bestand uploaden</button>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <h2>Onopgeloste rennersnamen ({{ unresolved|length }})</h2>
+    <p class="muted">Deze namen komen niet overeen met de merkploegen-lijst, ook niet na normalisatie
+      (hoofdletters/initialen genegeerd). Kies de juiste renner, of negeer als het geen typefout is
+      (bijv. een reserverenner die niet in de lijst staat) — dan blijft hij 0 punten scoren tot je het oplost.</p>
+    {% if unresolved %}
+    <div class="card">
+      <table>
+        <thead><tr><th>Getypt</th><th>Gekozen door</th><th>Suggesties</th><th>Actie</th></tr></thead>
+        <tbody>
+          {% for raw, info in unresolved.items() %}
+          {% set outer_idx = loop.index0 %}
+          <tr>
+            <td><strong>{{ raw }}</strong></td>
+            <td class="muted">{{ info.picked_by|join(', ') }}</td>
+            <td class="muted">
+              {% if info.suggestions %}
+                {% for s in info.suggestions %}<a href="#" class="muted suggestion" style="text-decoration:underline;"
+                  data-target="canonical-{{ outer_idx }}" data-value="{{ s }}">{{ s }}</a>{% if not loop.last %} / {% endif %}{% endfor %}
+              {% else %}—{% endif %}
+            </td>
+            <td>
+              <form class="inline" action="{{ url_for('resolve_name') }}" method="post">
+                <input type="hidden" name="raw_name" value="{{ raw }}">
+                <input type="text" name="canonical" list="riders-datalist" placeholder="juiste naam (klik suggestie of typ zelf)"
+                       id="canonical-{{ outer_idx }}" required>
+                <button type="submit">Oplossen</button>
+              </form>
+              <form class="inline" action="{{ url_for('dismiss_name') }}" method="post" style="margin-top:4px;">
+                <input type="hidden" name="raw_name" value="{{ raw }}">
+                <button type="submit">Negeren (geen typefout, echt niet op de lijst)</button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <div class="card muted">Geen onopgeloste namen meer.</div>
+    {% endif %}
+    <datalist id="riders-datalist">
+      {% for r in master_riders %}<option value="{{ r }}">{% endfor %}
+    </datalist>
+  </section>
+
+  <section>
+    <h2>Koppeling met startlijst (rugnummers)</h2>
+    <p class="muted">Elke renner uit de merkploegen-lijst moet gekoppeld worden aan zijn officiële
+      rugnummer voordat etappe-uitslagen automatisch verwerkt kunnen worden. Dit is eenmalig werk —
+      elke koppeling moet je zelf bevestigen op de review-pagina, er wordt niets automatisch
+      overgenomen ook al doet het systeem wel een suggestie per renner.</p>
+    <div class="card">
+      <p style="margin:0 0 10px;"><strong>{{ n_bib_confirmed }}</strong> van de <strong>{{ n_bib_total }}</strong> renners bevestigd.</p>
+      <a href="{{ url_for('bib_review') }}"><button type="button">Open review-pagina &rarr;</button></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Deelnemers ({{ participants|length }})</h2>
+    {% for p in participants %}
+    <details {% if p._missing %}open{% endif %}>
+      <summary>
+        {{ p.name }}
+        {% if p._missing %}{% for m in p._missing %}<span class="badge">{{ m }}</span>{% endfor %}
+        {% else %}<span class="badge badge-ok">compleet</span>{% endif %}
+      </summary>
+      <form action="{{ url_for('save_participant', name=p.name) }}" method="post">
+        <div class="grid2">
+          <div>
+            <label>Hoofdploeg (1 renner per regel, volgorde = slot 1-10, optioneel " | Team")</label>
+            <textarea name="hoofdploeg" rows="11">{{ p._hoofd_lines }}</textarea>
+          </div>
+          <div>
+            <label>Pannenkoekenploeg (1 renner per regel, slot 1-15)</label>
+            <textarea name="pannenkoeken" rows="11">{{ p._pannen_lines }}</textarea>
+          </div>
+        </div>
+        <div class="row3">
+          <div>
+            <label>Jokeretappe</label>
+            <input type="number" name="joker_stage" min="1" max="21" value="{{ p.joker_stage or '' }}">
+          </div>
+          <div>
+            <label>Bonus: podium (3 namen, komma-gescheiden)</label>
+            <input type="text" name="bonus_podium" style="width:100%"
+                   value="{{ (p.bonus_answers.podium or [])|join(', ') }}">
+          </div>
+          <div>
+            <label>Bonus: tijdsverschil (sec) / uitvallers</label>
+            <div style="display:flex; gap:6px;">
+              <input type="number" name="bonus_gap" placeholder="sec" style="width:50%"
+                     value="{{ p.bonus_answers.gap_seconds if p.bonus_answers.gap_seconds is not none else '' }}">
+              <input type="number" name="bonus_dnf" placeholder="aantal" style="width:50%"
+                     value="{{ p.bonus_answers.dnf_count if p.bonus_answers.dnf_count is not none else '' }}">
+            </div>
+          </div>
+        </div>
+        <p><button type="submit">Opslaan — {{ p.name }}</button></p>
+      </form>
+    </details>
+    {% endfor %}
+  </section>
+</main>
+
+<script>
+  document.addEventListener('click', function (e) {
+    const link = e.target.closest('a.suggestion');
+    if (!link) return;
+    e.preventDefault();
+    document.getElementById(link.dataset.target).value = link.dataset.value;
+  });
+</script>
+
+</body>
+</html>

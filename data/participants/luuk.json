@@ -1,0 +1,127 @@
+{
+  "name": "Luuk",
+  "hoofdploeg": [
+    {
+      "slot": 1,
+      "rider": "Pogacar",
+      "team": "UAE"
+    },
+    {
+      "slot": 2,
+      "rider": "Pedersen",
+      "team": "Lidl"
+    },
+    {
+      "slot": 3,
+      "rider": "Kuss",
+      "team": "Visma"
+    },
+    {
+      "slot": 4,
+      "rider": "Kanter",
+      "team": "Astana"
+    },
+    {
+      "slot": 5,
+      "rider": "Vauquelin",
+      "team": "Ineos"
+    },
+    {
+      "slot": 6,
+      "rider": "Schmid",
+      "team": "Jayco"
+    },
+    {
+      "slot": 7,
+      "rider": "Riccitello",
+      "team": "Decathlon"
+    },
+    {
+      "slot": 8,
+      "rider": "Hirschi",
+      "team": "Tudor"
+    },
+    {
+      "slot": 9,
+      "rider": "vd Poel",
+      "team": "Alpecin"
+    },
+    {
+      "slot": 10,
+      "rider": "Merlier",
+      "team": "Soudal"
+    }
+  ],
+  "joker_stage": 5,
+  "pannenkoeken": [
+    {
+      "slot": 1,
+      "rider": "De Kleijn"
+    },
+    {
+      "slot": 2,
+      "rider": "Biersterbos"
+    },
+    {
+      "slot": 3,
+      "rider": "Cepeda"
+    },
+    {
+      "slot": 4,
+      "rider": "Charmig"
+    },
+    {
+      "slot": 5,
+      "rider": "Dhondt"
+    },
+    {
+      "slot": 6,
+      "rider": "Engelhardt"
+    },
+    {
+      "slot": 7,
+      "rider": "Gradek"
+    },
+    {
+      "slot": 8,
+      "rider": "Guernalec"
+    },
+    {
+      "slot": 9,
+      "rider": "Howson"
+    },
+    {
+      "slot": 10,
+      "rider": "Le Berre"
+    },
+    {
+      "slot": 11,
+      "rider": "Pacher"
+    },
+    {
+      "slot": 12,
+      "rider": "Skaarseth"
+    },
+    {
+      "slot": 13,
+      "rider": "Velasco"
+    },
+    {
+      "slot": 14,
+      "rider": "Voisard"
+    },
+    {
+      "slot": 15,
+      "rider": "Walker"
+    }
+  ],
+  "bonus_answers": {
+    "podium": [
+      "Pogacar",
+      "Vingegaard",
+      "Evenepoel"
+    ],
+    "gap_seconds": 185,
+    "dnf_count": 35
+  }
+}

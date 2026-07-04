@@ -1,0 +1,11 @@
+{
+  "stage": 1,
+  "stage_result": [
+    "Pogacar", "Vingegaard", "Evenepoel", "Philipsen", "Vd Poel",
+    "Skjelmose", "Lipowitz", "Ayuso", "Girmay", "Merlier"
+  ],
+  "gc": ["Pogacar", "Vingegaard", "Evenepoel", "Skjelmose", "Lipowitz"],
+  "points": ["Philipsen", "Pogacar", "Girmay"],
+  "mountains": ["Pogacar", "Vingegaard", "Evenepoel"],
+  "youth": ["Skjelmose", "Evenepoel", "Lipowitz"]
+}

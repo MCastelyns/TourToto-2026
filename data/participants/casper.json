@@ -1,0 +1,127 @@
+{
+  "name": "Casper",
+  "hoofdploeg": [
+    {
+      "slot": 1,
+      "rider": "Godon",
+      "team": "Ineos"
+    },
+    {
+      "slot": 2,
+      "rider": "Healy",
+      "team": "EF"
+    },
+    {
+      "slot": 3,
+      "rider": "Hirschi",
+      "team": "Tudor"
+    },
+    {
+      "slot": 4,
+      "rider": "Lipowitz",
+      "team": "Bora"
+    },
+    {
+      "slot": 5,
+      "rider": "Philipsen",
+      "team": "Alpecin"
+    },
+    {
+      "slot": 6,
+      "rider": "Pogacar",
+      "team": "UAE"
+    },
+    {
+      "slot": 7,
+      "rider": "Q.Simmons",
+      "team": "Lidl"
+    },
+    {
+      "slot": 8,
+      "rider": "Riccitello",
+      "team": "Decahtlon"
+    },
+    {
+      "slot": 9,
+      "rider": "V.Paret-Peintre",
+      "team": "Soudal"
+    },
+    {
+      "slot": 10,
+      "rider": "Vingegaard",
+      "team": "Visma"
+    }
+  ],
+  "joker_stage": 20,
+  "pannenkoeken": [
+    {
+      "slot": 1,
+      "rider": "Afonso"
+    },
+    {
+      "slot": 2,
+      "rider": "Allegaert"
+    },
+    {
+      "slot": 3,
+      "rider": "Azparren"
+    },
+    {
+      "slot": 4,
+      "rider": "Berre"
+    },
+    {
+      "slot": 5,
+      "rider": "Charming"
+    },
+    {
+      "slot": 6,
+      "rider": "Dhondt"
+    },
+    {
+      "slot": 7,
+      "rider": "Felix Parra"
+    },
+    {
+      "slot": 8,
+      "rider": "Markl"
+    },
+    {
+      "slot": 9,
+      "rider": "Maurisse"
+    },
+    {
+      "slot": 10,
+      "rider": "O'brien"
+    },
+    {
+      "slot": 11,
+      "rider": "Otruba"
+    },
+    {
+      "slot": 12,
+      "rider": "Skaarset"
+    },
+    {
+      "slot": 13,
+      "rider": "van Asbroeck"
+    },
+    {
+      "slot": 14,
+      "rider": "Vinokourov"
+    },
+    {
+      "slot": 15,
+      "rider": "Walker"
+    }
+  ],
+  "bonus_answers": {
+    "podium": [
+      "Pogacar",
+      "Vingegaard",
+      "Ayuso"
+    ],
+    "gap_seconds": 217,
+    "dnf_count": 34
+  }
+}

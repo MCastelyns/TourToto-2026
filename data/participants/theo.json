@@ -1,0 +1,127 @@
+{
+  "name": "Theo",
+  "hoofdploeg": [
+    {
+      "slot": 1,
+      "rider": "Pogacar",
+      "team": "UAE"
+    },
+    {
+      "slot": 2,
+      "rider": "Kooij",
+      "team": "Decathlon"
+    },
+    {
+      "slot": 3,
+      "rider": "Skjelmose",
+      "team": "Lidl"
+    },
+    {
+      "slot": 4,
+      "rider": "Mattews",
+      "team": "Jayca"
+    },
+    {
+      "slot": 5,
+      "rider": "Caruso",
+      "team": "Bahrein"
+    },
+    {
+      "slot": 6,
+      "rider": "Valgren",
+      "team": "EF"
+    },
+    {
+      "slot": 7,
+      "rider": "Felix Parra",
+      "team": "Caja"
+    },
+    {
+      "slot": 8,
+      "rider": "Tratnik",
+      "team": "Bora"
+    },
+    {
+      "slot": 9,
+      "rider": "Vingegaard",
+      "team": "Visma"
+    },
+    {
+      "slot": 10,
+      "rider": "Merlier",
+      "team": "Soudal"
+    }
+  ],
+  "joker_stage": 6,
+  "pannenkoeken": [
+    {
+      "slot": 1,
+      "rider": "Molenaar"
+    },
+    {
+      "slot": 2,
+      "rider": "Frigo"
+    },
+    {
+      "slot": 3,
+      "rider": "Stewart"
+    },
+    {
+      "slot": 4,
+      "rider": "Askey"
+    },
+    {
+      "slot": 5,
+      "rider": "Louvel"
+    },
+    {
+      "slot": 6,
+      "rider": "van Asbroeck"
+    },
+    {
+      "slot": 7,
+      "rider": "Neilands"
+    },
+    {
+      "slot": 8,
+      "rider": "Pluimers"
+    },
+    {
+      "slot": 9,
+      "rider": "de Kleijn"
+    },
+    {
+      "slot": 10,
+      "rider": "Voisard"
+    },
+    {
+      "slot": 11,
+      "rider": "Delbove"
+    },
+    {
+      "slot": 12,
+      "rider": "Delettre"
+    },
+    {
+      "slot": 13,
+      "rider": "Guernalec"
+    },
+    {
+      "slot": 14,
+      "rider": "Le Berre"
+    },
+    {
+      "slot": 15,
+      "rider": "Vercher"
+    }
+  ],
+  "bonus_answers": {
+    "podium": [
+      "Pogacar",
+      "Evenepoel",
+      "Vingegaard"
+    ],
+    "gap_seconds": 154,
+    "dnf_count": 23
+  }
+}

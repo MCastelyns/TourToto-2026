@@ -1,0 +1,126 @@
+{
+  "name": "Ferdi",
+  "hoofdploeg": [
+    {
+      "slot": 1,
+      "rider": "Pogacar",
+      "team": "UAE Emirates"
+    },
+    {
+      "slot": 2,
+      "rider": "J. Philipsen",
+      "team": "Alpacin-Premier Tech"
+    },
+    {
+      "slot": 3,
+      "rider": "Skjelmose",
+      "team": "Lidl Trek"
+    },
+    {
+      "slot": 4,
+      "rider": "Degenkolb",
+      "team": "Picnic PostNL"
+    },
+    {
+      "slot": 5,
+      "rider": "Vauquelin",
+      "team": "Ineos"
+    },
+    {
+      "slot": 6,
+      "rider": "Cees Bol",
+      "team": "Decathlon"
+    },
+    {
+      "slot": 7,
+      "rider": "Biermans",
+      "team": "Cofides"
+    },
+    {
+      "slot": 8,
+      "rider": "A.H. Johannessen",
+      "team": "UNO X MOBILITY"
+    },
+    {
+      "slot": 9,
+      "rider": "Vingegaard",
+      "team": "Visma Lease a bike"
+    },
+    {
+      "slot": 10,
+      "rider": "T. Merlier",
+      "team": "Soudal Quick Step"
+    }
+  ],
+  "joker_stage": 20,
+  "pannenkoeken": [
+    {
+      "slot": 1,
+      "rider": "Marsman"
+    },
+    {
+      "slot": 2,
+      "rider": "Baudin"
+    },
+    {
+      "slot": 3,
+      "rider": "van Mechelen"
+    },
+    {
+      "slot": 4,
+      "rider": "Aranburu"
+    },
+    {
+      "slot": 5,
+      "rider": "Benoot"
+    },
+    {
+      "slot": 6,
+      "rider": "Costiou"
+    },
+    {
+      "slot": 7,
+      "rider": "Ballerini"
+    },
+    {
+      "slot": 8,
+      "rider": "Slock"
+    },
+    {
+      "slot": 9,
+      "rider": "Meurisse"
+    },
+    {
+      "slot": 10,
+      "rider": "Berwick"
+    },
+    {
+      "slot": 11,
+      "rider": "van Asbroeck"
+    },
+    {
+      "slot": 12,
+      "rider": "Cepeda"
+    },
+    {
+      "slot": 13,
+      "rider": "O'Brien"
+    },
+    {
+      "slot": 14,
+      "rider": "Voisard"
+    },
+    {
+      "slot": 15,
+      "rider": "Vercher"
+    }
+  ],
+  "bonus_answers": {
+    "podium": [
+      "Pogacar. Vingegaard",
+      "Evenepoel"
+    ],
+    "gap_seconds": 180,
+    "dnf_count": 39
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "name": "Wim",
+  "hoofdploeg": [
+    {
+      "slot": 1,
+      "rider": "Pogacar",
+      "team": "UAE"
+    },
+    {
+      "slot": 2,
+      "rider": "Lipowitz",
+      "team": "Bora"
+    },
+    {
+      "slot": 3,
+      "rider": "Skjelmose",
+      "team": "Lidl"
+    },
+    {
+      "slot": 4,
+      "rider": "V.Paret-peintre",
+      "team": "Soudal"
+    },
+    {
+      "slot": 5,
+      "rider": "Vauquelin",
+      "team": "Ineos"
+    },
+    {
+      "slot": 6,
+      "rider": "Affini",
+      "team": "Visma"
+    },
+    {
+      "slot": 7,
+      "rider": "Vinokourov",
+      "team": "Astana"
+    },
+    {
+      "slot": 8,
+      "rider": "Hirschi",
+      "team": "Tudor"
+    },
+    {
+      "slot": 9,
+      "rider": "vd Poel",
+      "team": "Alpecin"
+    },
+    {
+      "slot": 10,
+      "rider": "Kooij",
+      "team": "Decathlon"
+    }
+  ],
+  "joker_stage": 5,
+  "pannenkoeken": [
+    {
+      "slot": 1,
+      "rider": "Marsman"
+    },
+    {
+      "slot": 2,
+      "rider": "Howson"
+    },
+    {
+      "slot": 3,
+      "rider": "Mechelen"
+    },
+    {
+      "slot": 4,
+      "rider": "Biermans"
+    },
+    {
+      "slot": 5,
+      "rider": "Costiou"
+    },
+    {
+      "slot": 6,
+      "rider": "Otruba"
+    },
+    {
+      "slot": 7,
+      "rider": "Askey"
+    },
+    {
+      "slot": 8,
+      "rider": "Verona"
+    },
+    {
+      "slot": 9,
+      "rider": "Slock"
+    },
+    {
+      "slot": 10,
+      "rider": "Romo"
+    },
+    {
+      "slot": 11,
+      "rider": "O'Brien"
+    },
+    {
+      "slot": 12,
+      "rider": "Biesterbos"
+    },
+    {
+      "slot": 13,
+      "rider": "Charmig"
+    },
+    {
+      "slot": 14,
+      "rider": "Gate"
+    },
+    {
+      "slot": 15,
+      "rider": "Breuillard"
+    }
+  ],
+  "bonus_answers": {
+    "podium": [
+      "Pogacar",
+      "Vingegaard",
+      "Lipowitz"
+    ],
+    "gap_seconds": null,
+    "dnf_count": null
+  }
+}

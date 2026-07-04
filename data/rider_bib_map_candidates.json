@@ -1,0 +1,7546 @@
+[
+  {
+    "master_rider": "Vd Poel",
+    "master_team": "ALPECIN",
+    "slot": 1,
+    "confirmed_bib": 101,
+    "suggested_bib": 101,
+    "candidates": [
+      {
+        "bib": 101,
+        "name": "Mathieu VAN DER POEL"
+      },
+      {
+        "bib": 102,
+        "name": "Ramses DEBRUYNE"
+      },
+      {
+        "bib": 103,
+        "name": "Silvan DILLIER"
+      },
+      {
+        "bib": 104,
+        "name": "Tim MARSMAN"
+      },
+      {
+        "bib": 105,
+        "name": "Jasper PHILIPSEN"
+      },
+      {
+        "bib": 106,
+        "name": "Edward PLANCKAERT"
+      },
+      {
+        "bib": 107,
+        "name": "Jonas RICKAERT"
+      },
+      {
+        "bib": 108,
+        "name": "Emiel VERSTRYNGE"
+      }
+    ]
+  },
+  {
+    "master_rider": "J. Philipsen",
+    "master_team": "ALPECIN",
+    "slot": 2,
+    "confirmed_bib": 105,
+    "suggested_bib": 105,
+    "candidates": [
+      {
+        "bib": 101,
+        "name": "Mathieu VAN DER POEL"
+      },
+      {
+        "bib": 102,
+        "name": "Ramses DEBRUYNE"
+      },
+      {
+        "bib": 103,
+        "name": "Silvan DILLIER"
+      },
+      {
+        "bib": 104,
+        "name": "Tim MARSMAN"
+      },
+      {
+        "bib": 105,
+        "name": "Jasper PHILIPSEN"
+      },
+      {
+        "bib": 106,
+        "name": "Edward PLANCKAERT"
+      },
+      {
+        "bib": 107,
+        "name": "Jonas RICKAERT"
+      },
+      {
+        "bib": 108,
+        "name": "Emiel VERSTRYNGE"
+      }
+    ]
+  },
+  {
+    "master_rider": "Dillier",
+    "master_team": "ALPECIN",
+    "slot": 3,
+    "confirmed_bib": 103,
+    "suggested_bib": 103,
+    "candidates": [
+      {
+        "bib": 101,
+        "name": "Mathieu VAN DER POEL"
+      },
+      {
+        "bib": 102,
+        "name": "Ramses DEBRUYNE"
+      },
+      {
+        "bib": 103,
+        "name": "Silvan DILLIER"
+      },
+      {
+        "bib": 104,
+        "name": "Tim MARSMAN"
+      },
+      {
+        "bib": 105,
+        "name": "Jasper PHILIPSEN"
+      },
+      {
+        "bib": 106,
+        "name": "Edward PLANCKAERT"
+      },
+      {
+        "bib": 107,
+        "name": "Jonas RICKAERT"
+      },
+      {
+        "bib": 108,
+        "name": "Emiel VERSTRYNGE"
+      }
+    ]
+  },
+  {
+    "master_rider": "Verstrynge",
+    "master_team": "ALPECIN",
+    "slot": 4,
+    "confirmed_bib": 108,
+    "suggested_bib": 108,
+    "candidates": [
+      {
+        "bib": 101,
+        "name": "Mathieu VAN DER POEL"
+      },
+      {
+        "bib": 102,
+        "name": "Ramses DEBRUYNE"
+      },
+      {
+        "bib": 103,
+        "name": "Silvan DILLIER"
+      },
+      {
+        "bib": 104,
+        "name": "Tim MARSMAN"
+      },
+      {
+        "bib": 105,
+        "name": "Jasper PHILIPSEN"
+      },
+      {
+        "bib": 106,
+        "name": "Edward PLANCKAERT"
+      },
+      {
+        "bib": 107,
+        "name": "Jonas RICKAERT"
+      },
+      {
+        "bib": 108,
+        "name": "Emiel VERSTRYNGE"
+      }
+    ]
+  },
+  {
+    "master_rider": "Rickaert",
+    "master_team": "ALPECIN",
+    "slot": 5,
+    "confirmed_bib": 107,
+    "suggested_bib": 107,
+    "candidates": [
+      {
+        "bib": 101,
+        "name": "Mathieu VAN DER POEL"
+      },
+      {
+        "bib": 102,
+        "name": "Ramses DEBRUYNE"
+      },
+      {
+        "bib": 103,
+        "name": "Silvan DILLIER"
+      },
+      {
+        "bib": 104,
+        "name": "Tim MARSMAN"
+      },
+      {
+        "bib": 105,
+        "name": "Jasper PHILIPSEN"
+      },
+      {
+        "bib": 106,
+        "name": "Edward PLANCKAERT"
+      },
+      {
+        "bib": 107,
+        "name": "Jonas RICKAERT"
+      },
+      {
+        "bib": 108,
+        "name": "Emiel VERSTRYNGE"
+      }
+    ]
+  },
+  {
+    "master_rider": "T.Marsman",
+    "master_team": "ALPECIN",
+    "slot": 6,
+    "confirmed_bib": 104,
+    "suggested_bib": 104,
+    "candidates": [
+      {
+        "bib": 101,
+        "name": "Mathieu VAN DER POEL"
+      },
+      {
+        "bib": 102,
+        "name": "Ramses DEBRUYNE"
+      },
+      {
+        "bib": 103,
+        "name": "Silvan DILLIER"
+      },
+      {
+        "bib": 104,
+        "name": "Tim MARSMAN"
+      },
+      {
+        "bib": 105,
+        "name": "Jasper PHILIPSEN"
+      },
+      {
+        "bib": 106,
+        "name": "Edward PLANCKAERT"
+      },
+      {
+        "bib": 107,
+        "name": "Jonas RICKAERT"
+      },
+      {
+        "bib": 108,
+        "name": "Emiel VERSTRYNGE"
+      }
+    ]
+  },
+  {
+    "master_rider": "Debruyne",
+    "master_team": "ALPECIN",
+    "slot": 7,
+    "confirmed_bib": 102,
+    "suggested_bib": 102,
+    "candidates": [
+      {
+        "bib": 101,
+        "name": "Mathieu VAN DER POEL"
+      },
+      {
+        "bib": 102,
+        "name": "Ramses DEBRUYNE"
+      },
+      {
+        "bib": 103,
+        "name": "Silvan DILLIER"
+      },
+      {
+        "bib": 104,
+        "name": "Tim MARSMAN"
+      },
+      {
+        "bib": 105,
+        "name": "Jasper PHILIPSEN"
+      },
+      {
+        "bib": 106,
+        "name": "Edward PLANCKAERT"
+      },
+      {
+        "bib": 107,
+        "name": "Jonas RICKAERT"
+      },
+      {
+        "bib": 108,
+        "name": "Emiel VERSTRYNGE"
+      }
+    ]
+  },
+  {
+    "master_rider": "Planckaert",
+    "master_team": "ALPECIN",
+    "slot": 8,
+    "confirmed_bib": 106,
+    "suggested_bib": 106,
+    "candidates": [
+      {
+        "bib": 101,
+        "name": "Mathieu VAN DER POEL"
+      },
+      {
+        "bib": 102,
+        "name": "Ramses DEBRUYNE"
+      },
+      {
+        "bib": 103,
+        "name": "Silvan DILLIER"
+      },
+      {
+        "bib": 104,
+        "name": "Tim MARSMAN"
+      },
+      {
+        "bib": 105,
+        "name": "Jasper PHILIPSEN"
+      },
+      {
+        "bib": 106,
+        "name": "Edward PLANCKAERT"
+      },
+      {
+        "bib": 107,
+        "name": "Jonas RICKAERT"
+      },
+      {
+        "bib": 108,
+        "name": "Emiel VERSTRYNGE"
+      }
+    ]
+  },
+  {
+    "master_rider": "T. Pidcock",
+    "master_team": "Pinarello Q36.5",
+    "slot": 1,
+    "confirmed_bib": 171,
+    "suggested_bib": 171,
+    "candidates": [
+      {
+        "bib": 171,
+        "name": "Tom PIDCOCK"
+      },
+      {
+        "bib": 172,
+        "name": "Xabier AZPARREN IRURZUN"
+      },
+      {
+        "bib": 173,
+        "name": "Christopher HARPER"
+      },
+      {
+        "bib": 174,
+        "name": "Quinten HERMANS"
+      },
+      {
+        "bib": 175,
+        "name": "Damien Craig HOWSON"
+      },
+      {
+        "bib": 176,
+        "name": "Xandro MEURISSE"
+      },
+      {
+        "bib": 177,
+        "name": "Brent VAN MOER"
+      },
+      {
+        "bib": 178,
+        "name": "Fred WRIGHT"
+      }
+    ]
+  },
+  {
+    "master_rider": "Wright",
+    "master_team": "Pinarello Q36.5",
+    "slot": 2,
+    "confirmed_bib": 178,
+    "suggested_bib": 178,
+    "candidates": [
+      {
+        "bib": 171,
+        "name": "Tom PIDCOCK"
+      },
+      {
+        "bib": 172,
+        "name": "Xabier AZPARREN IRURZUN"
+      },
+      {
+        "bib": 173,
+        "name": "Christopher HARPER"
+      },
+      {
+        "bib": 174,
+        "name": "Quinten HERMANS"
+      },
+      {
+        "bib": 175,
+        "name": "Damien Craig HOWSON"
+      },
+      {
+        "bib": 176,
+        "name": "Xandro MEURISSE"
+      },
+      {
+        "bib": 177,
+        "name": "Brent VAN MOER"
+      },
+      {
+        "bib": 178,
+        "name": "Fred WRIGHT"
+      }
+    ]
+  },
+  {
+    "master_rider": "Hermans",
+    "master_team": "Pinarello Q36.5",
+    "slot": 3,
+    "confirmed_bib": 174,
+    "suggested_bib": 174,
+    "candidates": [
+      {
+        "bib": 171,
+        "name": "Tom PIDCOCK"
+      },
+      {
+        "bib": 172,
+        "name": "Xabier AZPARREN IRURZUN"
+      },
+      {
+        "bib": 173,
+        "name": "Christopher HARPER"
+      },
+      {
+        "bib": 174,
+        "name": "Quinten HERMANS"
+      },
+      {
+        "bib": 175,
+        "name": "Damien Craig HOWSON"
+      },
+      {
+        "bib": 176,
+        "name": "Xandro MEURISSE"
+      },
+      {
+        "bib": 177,
+        "name": "Brent VAN MOER"
+      },
+      {
+        "bib": 178,
+        "name": "Fred WRIGHT"
+      }
+    ]
+  },
+  {
+    "master_rider": "Van Moer",
+    "master_team": "Pinarello Q36.5",
+    "slot": 4,
+    "confirmed_bib": 177,
+    "suggested_bib": 177,
+    "candidates": [
+      {
+        "bib": 171,
+        "name": "Tom PIDCOCK"
+      },
+      {
+        "bib": 172,
+        "name": "Xabier AZPARREN IRURZUN"
+      },
+      {
+        "bib": 173,
+        "name": "Christopher HARPER"
+      },
+      {
+        "bib": 174,
+        "name": "Quinten HERMANS"
+      },
+      {
+        "bib": 175,
+        "name": "Damien Craig HOWSON"
+      },
+      {
+        "bib": 176,
+        "name": "Xandro MEURISSE"
+      },
+      {
+        "bib": 177,
+        "name": "Brent VAN MOER"
+      },
+      {
+        "bib": 178,
+        "name": "Fred WRIGHT"
+      }
+    ]
+  },
+  {
+    "master_rider": "Chris Harper",
+    "master_team": "Pinarello Q36.5",
+    "slot": 5,
+    "confirmed_bib": 173,
+    "suggested_bib": 173,
+    "candidates": [
+      {
+        "bib": 171,
+        "name": "Tom PIDCOCK"
+      },
+      {
+        "bib": 172,
+        "name": "Xabier AZPARREN IRURZUN"
+      },
+      {
+        "bib": 173,
+        "name": "Christopher HARPER"
+      },
+      {
+        "bib": 174,
+        "name": "Quinten HERMANS"
+      },
+      {
+        "bib": 175,
+        "name": "Damien Craig HOWSON"
+      },
+      {
+        "bib": 176,
+        "name": "Xandro MEURISSE"
+      },
+      {
+        "bib": 177,
+        "name": "Brent VAN MOER"
+      },
+      {
+        "bib": 178,
+        "name": "Fred WRIGHT"
+      }
+    ]
+  },
+  {
+    "master_rider": "Howson",
+    "master_team": "Pinarello Q36.5",
+    "slot": 6,
+    "confirmed_bib": 175,
+    "suggested_bib": 175,
+    "candidates": [
+      {
+        "bib": 171,
+        "name": "Tom PIDCOCK"
+      },
+      {
+        "bib": 172,
+        "name": "Xabier AZPARREN IRURZUN"
+      },
+      {
+        "bib": 173,
+        "name": "Christopher HARPER"
+      },
+      {
+        "bib": 174,
+        "name": "Quinten HERMANS"
+      },
+      {
+        "bib": 175,
+        "name": "Damien Craig HOWSON"
+      },
+      {
+        "bib": 176,
+        "name": "Xandro MEURISSE"
+      },
+      {
+        "bib": 177,
+        "name": "Brent VAN MOER"
+      },
+      {
+        "bib": 178,
+        "name": "Fred WRIGHT"
+      }
+    ]
+  },
+  {
+    "master_rider": "Azparren",
+    "master_team": "Pinarello Q36.5",
+    "slot": 7,
+    "confirmed_bib": 172,
+    "suggested_bib": 172,
+    "candidates": [
+      {
+        "bib": 171,
+        "name": "Tom PIDCOCK"
+      },
+      {
+        "bib": 172,
+        "name": "Xabier AZPARREN IRURZUN"
+      },
+      {
+        "bib": 173,
+        "name": "Christopher HARPER"
+      },
+      {
+        "bib": 174,
+        "name": "Quinten HERMANS"
+      },
+      {
+        "bib": 175,
+        "name": "Damien Craig HOWSON"
+      },
+      {
+        "bib": 176,
+        "name": "Xandro MEURISSE"
+      },
+      {
+        "bib": 177,
+        "name": "Brent VAN MOER"
+      },
+      {
+        "bib": 178,
+        "name": "Fred WRIGHT"
+      }
+    ]
+  },
+  {
+    "master_rider": "Meurisse",
+    "master_team": "Pinarello Q36.5",
+    "slot": 8,
+    "confirmed_bib": 176,
+    "suggested_bib": 176,
+    "candidates": [
+      {
+        "bib": 171,
+        "name": "Tom PIDCOCK"
+      },
+      {
+        "bib": 172,
+        "name": "Xabier AZPARREN IRURZUN"
+      },
+      {
+        "bib": 173,
+        "name": "Christopher HARPER"
+      },
+      {
+        "bib": 174,
+        "name": "Quinten HERMANS"
+      },
+      {
+        "bib": 175,
+        "name": "Damien Craig HOWSON"
+      },
+      {
+        "bib": 176,
+        "name": "Xandro MEURISSE"
+      },
+      {
+        "bib": 177,
+        "name": "Brent VAN MOER"
+      },
+      {
+        "bib": 178,
+        "name": "Fred WRIGHT"
+      }
+    ]
+  },
+  {
+    "master_rider": "L. Martinez",
+    "master_team": "BAHRAIN",
+    "slot": 1,
+    "confirmed_bib": 71,
+    "suggested_bib": 71,
+    "candidates": [
+      {
+        "bib": 71,
+        "name": "Lenny MARTINEZ"
+      },
+      {
+        "bib": 72,
+        "name": "Phil BAUHAUS"
+      },
+      {
+        "bib": 73,
+        "name": "Damiano CARUSO"
+      },
+      {
+        "bib": 74,
+        "name": "Kamil GRADEK"
+      },
+      {
+        "bib": 75,
+        "name": "Matej MOHORIC"
+      },
+      {
+        "bib": 76,
+        "name": "Robert STANNARD"
+      },
+      {
+        "bib": 77,
+        "name": "Antonio TIBERI"
+      },
+      {
+        "bib": 78,
+        "name": "Vlad VAN MECHELEN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Tiberi",
+    "master_team": "BAHRAIN",
+    "slot": 2,
+    "confirmed_bib": 77,
+    "suggested_bib": 77,
+    "candidates": [
+      {
+        "bib": 71,
+        "name": "Lenny MARTINEZ"
+      },
+      {
+        "bib": 72,
+        "name": "Phil BAUHAUS"
+      },
+      {
+        "bib": 73,
+        "name": "Damiano CARUSO"
+      },
+      {
+        "bib": 74,
+        "name": "Kamil GRADEK"
+      },
+      {
+        "bib": 75,
+        "name": "Matej MOHORIC"
+      },
+      {
+        "bib": 76,
+        "name": "Robert STANNARD"
+      },
+      {
+        "bib": 77,
+        "name": "Antonio TIBERI"
+      },
+      {
+        "bib": 78,
+        "name": "Vlad VAN MECHELEN"
+      }
+    ]
+  },
+  {
+    "master_rider": "M. Mohoric",
+    "master_team": "BAHRAIN",
+    "slot": 3,
+    "confirmed_bib": 75,
+    "suggested_bib": 75,
+    "candidates": [
+      {
+        "bib": 71,
+        "name": "Lenny MARTINEZ"
+      },
+      {
+        "bib": 72,
+        "name": "Phil BAUHAUS"
+      },
+      {
+        "bib": 73,
+        "name": "Damiano CARUSO"
+      },
+      {
+        "bib": 74,
+        "name": "Kamil GRADEK"
+      },
+      {
+        "bib": 75,
+        "name": "Matej MOHORIC"
+      },
+      {
+        "bib": 76,
+        "name": "Robert STANNARD"
+      },
+      {
+        "bib": 77,
+        "name": "Antonio TIBERI"
+      },
+      {
+        "bib": 78,
+        "name": "Vlad VAN MECHELEN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Bauhaus",
+    "master_team": "BAHRAIN",
+    "slot": 4,
+    "confirmed_bib": 72,
+    "suggested_bib": 72,
+    "candidates": [
+      {
+        "bib": 71,
+        "name": "Lenny MARTINEZ"
+      },
+      {
+        "bib": 72,
+        "name": "Phil BAUHAUS"
+      },
+      {
+        "bib": 73,
+        "name": "Damiano CARUSO"
+      },
+      {
+        "bib": 74,
+        "name": "Kamil GRADEK"
+      },
+      {
+        "bib": 75,
+        "name": "Matej MOHORIC"
+      },
+      {
+        "bib": 76,
+        "name": "Robert STANNARD"
+      },
+      {
+        "bib": 77,
+        "name": "Antonio TIBERI"
+      },
+      {
+        "bib": 78,
+        "name": "Vlad VAN MECHELEN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Caruso",
+    "master_team": "BAHRAIN",
+    "slot": 5,
+    "confirmed_bib": 73,
+    "suggested_bib": 73,
+    "candidates": [
+      {
+        "bib": 71,
+        "name": "Lenny MARTINEZ"
+      },
+      {
+        "bib": 72,
+        "name": "Phil BAUHAUS"
+      },
+      {
+        "bib": 73,
+        "name": "Damiano CARUSO"
+      },
+      {
+        "bib": 74,
+        "name": "Kamil GRADEK"
+      },
+      {
+        "bib": 75,
+        "name": "Matej MOHORIC"
+      },
+      {
+        "bib": 76,
+        "name": "Robert STANNARD"
+      },
+      {
+        "bib": 77,
+        "name": "Antonio TIBERI"
+      },
+      {
+        "bib": 78,
+        "name": "Vlad VAN MECHELEN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Gradek",
+    "master_team": "BAHRAIN",
+    "slot": 6,
+    "confirmed_bib": 74,
+    "suggested_bib": 74,
+    "candidates": [
+      {
+        "bib": 71,
+        "name": "Lenny MARTINEZ"
+      },
+      {
+        "bib": 72,
+        "name": "Phil BAUHAUS"
+      },
+      {
+        "bib": 73,
+        "name": "Damiano CARUSO"
+      },
+      {
+        "bib": 74,
+        "name": "Kamil GRADEK"
+      },
+      {
+        "bib": 75,
+        "name": "Matej MOHORIC"
+      },
+      {
+        "bib": 76,
+        "name": "Robert STANNARD"
+      },
+      {
+        "bib": 77,
+        "name": "Antonio TIBERI"
+      },
+      {
+        "bib": 78,
+        "name": "Vlad VAN MECHELEN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Stannard",
+    "master_team": "BAHRAIN",
+    "slot": 7,
+    "confirmed_bib": 76,
+    "suggested_bib": 76,
+    "candidates": [
+      {
+        "bib": 71,
+        "name": "Lenny MARTINEZ"
+      },
+      {
+        "bib": 72,
+        "name": "Phil BAUHAUS"
+      },
+      {
+        "bib": 73,
+        "name": "Damiano CARUSO"
+      },
+      {
+        "bib": 74,
+        "name": "Kamil GRADEK"
+      },
+      {
+        "bib": 75,
+        "name": "Matej MOHORIC"
+      },
+      {
+        "bib": 76,
+        "name": "Robert STANNARD"
+      },
+      {
+        "bib": 77,
+        "name": "Antonio TIBERI"
+      },
+      {
+        "bib": 78,
+        "name": "Vlad VAN MECHELEN"
+      }
+    ]
+  },
+  {
+    "master_rider": "vanMechelen",
+    "master_team": "BAHRAIN",
+    "slot": 8,
+    "confirmed_bib": 78,
+    "suggested_bib": 78,
+    "candidates": [
+      {
+        "bib": 71,
+        "name": "Lenny MARTINEZ"
+      },
+      {
+        "bib": 72,
+        "name": "Phil BAUHAUS"
+      },
+      {
+        "bib": 73,
+        "name": "Damiano CARUSO"
+      },
+      {
+        "bib": 74,
+        "name": "Kamil GRADEK"
+      },
+      {
+        "bib": 75,
+        "name": "Matej MOHORIC"
+      },
+      {
+        "bib": 76,
+        "name": "Robert STANNARD"
+      },
+      {
+        "bib": 77,
+        "name": "Antonio TIBERI"
+      },
+      {
+        "bib": 78,
+        "name": "Vlad VAN MECHELEN"
+      }
+    ]
+  },
+  {
+    "master_rider": "B.Thomas",
+    "master_team": "COFIDIS",
+    "slot": 1,
+    "confirmed_bib": 168,
+    "suggested_bib": 168,
+    "candidates": [
+      {
+        "bib": 161,
+        "name": "Ion IZAGIRRE INSAUSTI"
+      },
+      {
+        "bib": 162,
+        "name": "Piet ALLEGAERT"
+      },
+      {
+        "bib": 163,
+        "name": "Alex ARANBURU DEVA"
+      },
+      {
+        "bib": 164,
+        "name": "Jenthe BIERMANS"
+      },
+      {
+        "bib": 165,
+        "name": "Milan FRETIN"
+      },
+      {
+        "bib": 166,
+        "name": "Alex KIRSCH"
+      },
+      {
+        "bib": 167,
+        "name": "Hugo PAGE"
+      },
+      {
+        "bib": 168,
+        "name": "Benjamin THOMAS"
+      }
+    ]
+  },
+  {
+    "master_rider": "I.Izagirre",
+    "master_team": "COFIDIS",
+    "slot": 2,
+    "confirmed_bib": 161,
+    "suggested_bib": 161,
+    "candidates": [
+      {
+        "bib": 161,
+        "name": "Ion IZAGIRRE INSAUSTI"
+      },
+      {
+        "bib": 162,
+        "name": "Piet ALLEGAERT"
+      },
+      {
+        "bib": 163,
+        "name": "Alex ARANBURU DEVA"
+      },
+      {
+        "bib": 164,
+        "name": "Jenthe BIERMANS"
+      },
+      {
+        "bib": 165,
+        "name": "Milan FRETIN"
+      },
+      {
+        "bib": 166,
+        "name": "Alex KIRSCH"
+      },
+      {
+        "bib": 167,
+        "name": "Hugo PAGE"
+      },
+      {
+        "bib": 168,
+        "name": "Benjamin THOMAS"
+      }
+    ]
+  },
+  {
+    "master_rider": "Kirsch",
+    "master_team": "COFIDIS",
+    "slot": 3,
+    "confirmed_bib": 166,
+    "suggested_bib": 166,
+    "candidates": [
+      {
+        "bib": 161,
+        "name": "Ion IZAGIRRE INSAUSTI"
+      },
+      {
+        "bib": 162,
+        "name": "Piet ALLEGAERT"
+      },
+      {
+        "bib": 163,
+        "name": "Alex ARANBURU DEVA"
+      },
+      {
+        "bib": 164,
+        "name": "Jenthe BIERMANS"
+      },
+      {
+        "bib": 165,
+        "name": "Milan FRETIN"
+      },
+      {
+        "bib": 166,
+        "name": "Alex KIRSCH"
+      },
+      {
+        "bib": 167,
+        "name": "Hugo PAGE"
+      },
+      {
+        "bib": 168,
+        "name": "Benjamin THOMAS"
+      }
+    ]
+  },
+  {
+    "master_rider": "Fretin",
+    "master_team": "COFIDIS",
+    "slot": 4,
+    "confirmed_bib": 165,
+    "suggested_bib": 165,
+    "candidates": [
+      {
+        "bib": 161,
+        "name": "Ion IZAGIRRE INSAUSTI"
+      },
+      {
+        "bib": 162,
+        "name": "Piet ALLEGAERT"
+      },
+      {
+        "bib": 163,
+        "name": "Alex ARANBURU DEVA"
+      },
+      {
+        "bib": 164,
+        "name": "Jenthe BIERMANS"
+      },
+      {
+        "bib": 165,
+        "name": "Milan FRETIN"
+      },
+      {
+        "bib": 166,
+        "name": "Alex KIRSCH"
+      },
+      {
+        "bib": 167,
+        "name": "Hugo PAGE"
+      },
+      {
+        "bib": 168,
+        "name": "Benjamin THOMAS"
+      }
+    ]
+  },
+  {
+    "master_rider": "Page",
+    "master_team": "COFIDIS",
+    "slot": 5,
+    "confirmed_bib": 167,
+    "suggested_bib": 167,
+    "candidates": [
+      {
+        "bib": 161,
+        "name": "Ion IZAGIRRE INSAUSTI"
+      },
+      {
+        "bib": 162,
+        "name": "Piet ALLEGAERT"
+      },
+      {
+        "bib": 163,
+        "name": "Alex ARANBURU DEVA"
+      },
+      {
+        "bib": 164,
+        "name": "Jenthe BIERMANS"
+      },
+      {
+        "bib": 165,
+        "name": "Milan FRETIN"
+      },
+      {
+        "bib": 166,
+        "name": "Alex KIRSCH"
+      },
+      {
+        "bib": 167,
+        "name": "Hugo PAGE"
+      },
+      {
+        "bib": 168,
+        "name": "Benjamin THOMAS"
+      }
+    ]
+  },
+  {
+    "master_rider": "Allegaert",
+    "master_team": "COFIDIS",
+    "slot": 6,
+    "confirmed_bib": 162,
+    "suggested_bib": 162,
+    "candidates": [
+      {
+        "bib": 161,
+        "name": "Ion IZAGIRRE INSAUSTI"
+      },
+      {
+        "bib": 162,
+        "name": "Piet ALLEGAERT"
+      },
+      {
+        "bib": 163,
+        "name": "Alex ARANBURU DEVA"
+      },
+      {
+        "bib": 164,
+        "name": "Jenthe BIERMANS"
+      },
+      {
+        "bib": 165,
+        "name": "Milan FRETIN"
+      },
+      {
+        "bib": 166,
+        "name": "Alex KIRSCH"
+      },
+      {
+        "bib": 167,
+        "name": "Hugo PAGE"
+      },
+      {
+        "bib": 168,
+        "name": "Benjamin THOMAS"
+      }
+    ]
+  },
+  {
+    "master_rider": "Biermans",
+    "master_team": "COFIDIS",
+    "slot": 7,
+    "confirmed_bib": 164,
+    "suggested_bib": 164,
+    "candidates": [
+      {
+        "bib": 161,
+        "name": "Ion IZAGIRRE INSAUSTI"
+      },
+      {
+        "bib": 162,
+        "name": "Piet ALLEGAERT"
+      },
+      {
+        "bib": 163,
+        "name": "Alex ARANBURU DEVA"
+      },
+      {
+        "bib": 164,
+        "name": "Jenthe BIERMANS"
+      },
+      {
+        "bib": 165,
+        "name": "Milan FRETIN"
+      },
+      {
+        "bib": 166,
+        "name": "Alex KIRSCH"
+      },
+      {
+        "bib": 167,
+        "name": "Hugo PAGE"
+      },
+      {
+        "bib": 168,
+        "name": "Benjamin THOMAS"
+      }
+    ]
+  },
+  {
+    "master_rider": "Aranburu",
+    "master_team": "COFIDIS",
+    "slot": 8,
+    "confirmed_bib": 163,
+    "suggested_bib": 163,
+    "candidates": [
+      {
+        "bib": 161,
+        "name": "Ion IZAGIRRE INSAUSTI"
+      },
+      {
+        "bib": 162,
+        "name": "Piet ALLEGAERT"
+      },
+      {
+        "bib": 163,
+        "name": "Alex ARANBURU DEVA"
+      },
+      {
+        "bib": 164,
+        "name": "Jenthe BIERMANS"
+      },
+      {
+        "bib": 165,
+        "name": "Milan FRETIN"
+      },
+      {
+        "bib": 166,
+        "name": "Alex KIRSCH"
+      },
+      {
+        "bib": 167,
+        "name": "Hugo PAGE"
+      },
+      {
+        "bib": 168,
+        "name": "Benjamin THOMAS"
+      }
+    ]
+  },
+  {
+    "master_rider": "P. Seixas",
+    "master_team": "DECATHLON",
+    "slot": 1,
+    "confirmed_bib": 51,
+    "suggested_bib": 51,
+    "candidates": [
+      {
+        "bib": 51,
+        "name": "Paul SEIXAS"
+      },
+      {
+        "bib": 52,
+        "name": "Tiesj BENOOT"
+      },
+      {
+        "bib": 53,
+        "name": "Cees BOL"
+      },
+      {
+        "bib": 54,
+        "name": "Daan HOOLE"
+      },
+      {
+        "bib": 55,
+        "name": "Olav KOOIJ"
+      },
+      {
+        "bib": 56,
+        "name": "Aurélien PARET PEINTRE"
+      },
+      {
+        "bib": 57,
+        "name": "Nicolas PRODHOMME"
+      },
+      {
+        "bib": 58,
+        "name": "Matthew RICCITELLO"
+      }
+    ]
+  },
+  {
+    "master_rider": "O. Kooij",
+    "master_team": "DECATHLON",
+    "slot": 2,
+    "confirmed_bib": 55,
+    "suggested_bib": 55,
+    "candidates": [
+      {
+        "bib": 51,
+        "name": "Paul SEIXAS"
+      },
+      {
+        "bib": 52,
+        "name": "Tiesj BENOOT"
+      },
+      {
+        "bib": 53,
+        "name": "Cees BOL"
+      },
+      {
+        "bib": 54,
+        "name": "Daan HOOLE"
+      },
+      {
+        "bib": 55,
+        "name": "Olav KOOIJ"
+      },
+      {
+        "bib": 56,
+        "name": "Aurélien PARET PEINTRE"
+      },
+      {
+        "bib": 57,
+        "name": "Nicolas PRODHOMME"
+      },
+      {
+        "bib": 58,
+        "name": "Matthew RICCITELLO"
+      }
+    ]
+  },
+  {
+    "master_rider": "A.Paret-Pientre",
+    "master_team": "DECATHLON",
+    "slot": 3,
+    "confirmed_bib": 56,
+    "suggested_bib": 56,
+    "candidates": [
+      {
+        "bib": 51,
+        "name": "Paul SEIXAS"
+      },
+      {
+        "bib": 52,
+        "name": "Tiesj BENOOT"
+      },
+      {
+        "bib": 53,
+        "name": "Cees BOL"
+      },
+      {
+        "bib": 54,
+        "name": "Daan HOOLE"
+      },
+      {
+        "bib": 55,
+        "name": "Olav KOOIJ"
+      },
+      {
+        "bib": 56,
+        "name": "Aurélien PARET PEINTRE"
+      },
+      {
+        "bib": 57,
+        "name": "Nicolas PRODHOMME"
+      },
+      {
+        "bib": 58,
+        "name": "Matthew RICCITELLO"
+      }
+    ]
+  },
+  {
+    "master_rider": "Prodhomme",
+    "master_team": "DECATHLON",
+    "slot": 4,
+    "confirmed_bib": 57,
+    "suggested_bib": 57,
+    "candidates": [
+      {
+        "bib": 51,
+        "name": "Paul SEIXAS"
+      },
+      {
+        "bib": 52,
+        "name": "Tiesj BENOOT"
+      },
+      {
+        "bib": 53,
+        "name": "Cees BOL"
+      },
+      {
+        "bib": 54,
+        "name": "Daan HOOLE"
+      },
+      {
+        "bib": 55,
+        "name": "Olav KOOIJ"
+      },
+      {
+        "bib": 56,
+        "name": "Aurélien PARET PEINTRE"
+      },
+      {
+        "bib": 57,
+        "name": "Nicolas PRODHOMME"
+      },
+      {
+        "bib": 58,
+        "name": "Matthew RICCITELLO"
+      }
+    ]
+  },
+  {
+    "master_rider": "D. Hoole",
+    "master_team": "DECATHLON",
+    "slot": 5,
+    "confirmed_bib": 54,
+    "suggested_bib": 54,
+    "candidates": [
+      {
+        "bib": 51,
+        "name": "Paul SEIXAS"
+      },
+      {
+        "bib": 52,
+        "name": "Tiesj BENOOT"
+      },
+      {
+        "bib": 53,
+        "name": "Cees BOL"
+      },
+      {
+        "bib": 54,
+        "name": "Daan HOOLE"
+      },
+      {
+        "bib": 55,
+        "name": "Olav KOOIJ"
+      },
+      {
+        "bib": 56,
+        "name": "Aurélien PARET PEINTRE"
+      },
+      {
+        "bib": 57,
+        "name": "Nicolas PRODHOMME"
+      },
+      {
+        "bib": 58,
+        "name": "Matthew RICCITELLO"
+      }
+    ]
+  },
+  {
+    "master_rider": "Cees Bol",
+    "master_team": "DECATHLON",
+    "slot": 6,
+    "confirmed_bib": 53,
+    "suggested_bib": 53,
+    "candidates": [
+      {
+        "bib": 51,
+        "name": "Paul SEIXAS"
+      },
+      {
+        "bib": 52,
+        "name": "Tiesj BENOOT"
+      },
+      {
+        "bib": 53,
+        "name": "Cees BOL"
+      },
+      {
+        "bib": 54,
+        "name": "Daan HOOLE"
+      },
+      {
+        "bib": 55,
+        "name": "Olav KOOIJ"
+      },
+      {
+        "bib": 56,
+        "name": "Aurélien PARET PEINTRE"
+      },
+      {
+        "bib": 57,
+        "name": "Nicolas PRODHOMME"
+      },
+      {
+        "bib": 58,
+        "name": "Matthew RICCITELLO"
+      }
+    ]
+  },
+  {
+    "master_rider": "Riccitello",
+    "master_team": "DECATHLON",
+    "slot": 7,
+    "confirmed_bib": 58,
+    "suggested_bib": 58,
+    "candidates": [
+      {
+        "bib": 51,
+        "name": "Paul SEIXAS"
+      },
+      {
+        "bib": 52,
+        "name": "Tiesj BENOOT"
+      },
+      {
+        "bib": 53,
+        "name": "Cees BOL"
+      },
+      {
+        "bib": 54,
+        "name": "Daan HOOLE"
+      },
+      {
+        "bib": 55,
+        "name": "Olav KOOIJ"
+      },
+      {
+        "bib": 56,
+        "name": "Aurélien PARET PEINTRE"
+      },
+      {
+        "bib": 57,
+        "name": "Nicolas PRODHOMME"
+      },
+      {
+        "bib": 58,
+        "name": "Matthew RICCITELLO"
+      }
+    ]
+  },
+  {
+    "master_rider": "T.Benoot",
+    "master_team": "DECATHLON",
+    "slot": 8,
+    "confirmed_bib": 52,
+    "suggested_bib": 52,
+    "candidates": [
+      {
+        "bib": 51,
+        "name": "Paul SEIXAS"
+      },
+      {
+        "bib": 52,
+        "name": "Tiesj BENOOT"
+      },
+      {
+        "bib": 53,
+        "name": "Cees BOL"
+      },
+      {
+        "bib": 54,
+        "name": "Daan HOOLE"
+      },
+      {
+        "bib": 55,
+        "name": "Olav KOOIJ"
+      },
+      {
+        "bib": 56,
+        "name": "Aurélien PARET PEINTRE"
+      },
+      {
+        "bib": 57,
+        "name": "Nicolas PRODHOMME"
+      },
+      {
+        "bib": 58,
+        "name": "Matthew RICCITELLO"
+      }
+    ]
+  },
+  {
+    "master_rider": "R. Carapaz",
+    "master_team": "EF EDUCATION",
+    "slot": 1,
+    "confirmed_bib": 41,
+    "suggested_bib": 41,
+    "candidates": [
+      {
+        "bib": 41,
+        "name": "Richard CARAPAZ"
+      },
+      {
+        "bib": 42,
+        "name": "Kasper ASGREEN"
+      },
+      {
+        "bib": 43,
+        "name": "Alex BAUDIN"
+      },
+      {
+        "bib": 44,
+        "name": "Ben HEALY"
+      },
+      {
+        "bib": 45,
+        "name": "Sean QUINN"
+      },
+      {
+        "bib": 46,
+        "name": "Georg STEINHAUSER"
+      },
+      {
+        "bib": 47,
+        "name": "Michael VALGREN"
+      },
+      {
+        "bib": 48,
+        "name": "Max WALKER"
+      }
+    ]
+  },
+  {
+    "master_rider": "K. Asgreen",
+    "master_team": "EF EDUCATION",
+    "slot": 2,
+    "confirmed_bib": 42,
+    "suggested_bib": 42,
+    "candidates": [
+      {
+        "bib": 41,
+        "name": "Richard CARAPAZ"
+      },
+      {
+        "bib": 42,
+        "name": "Kasper ASGREEN"
+      },
+      {
+        "bib": 43,
+        "name": "Alex BAUDIN"
+      },
+      {
+        "bib": 44,
+        "name": "Ben HEALY"
+      },
+      {
+        "bib": 45,
+        "name": "Sean QUINN"
+      },
+      {
+        "bib": 46,
+        "name": "Georg STEINHAUSER"
+      },
+      {
+        "bib": 47,
+        "name": "Michael VALGREN"
+      },
+      {
+        "bib": 48,
+        "name": "Max WALKER"
+      }
+    ]
+  },
+  {
+    "master_rider": "B. Healy",
+    "master_team": "EF EDUCATION",
+    "slot": 3,
+    "confirmed_bib": 44,
+    "suggested_bib": 44,
+    "candidates": [
+      {
+        "bib": 41,
+        "name": "Richard CARAPAZ"
+      },
+      {
+        "bib": 42,
+        "name": "Kasper ASGREEN"
+      },
+      {
+        "bib": 43,
+        "name": "Alex BAUDIN"
+      },
+      {
+        "bib": 44,
+        "name": "Ben HEALY"
+      },
+      {
+        "bib": 45,
+        "name": "Sean QUINN"
+      },
+      {
+        "bib": 46,
+        "name": "Georg STEINHAUSER"
+      },
+      {
+        "bib": 47,
+        "name": "Michael VALGREN"
+      },
+      {
+        "bib": 48,
+        "name": "Max WALKER"
+      }
+    ]
+  },
+  {
+    "master_rider": "Quinn",
+    "master_team": "EF EDUCATION",
+    "slot": 4,
+    "confirmed_bib": 45,
+    "suggested_bib": 45,
+    "candidates": [
+      {
+        "bib": 41,
+        "name": "Richard CARAPAZ"
+      },
+      {
+        "bib": 42,
+        "name": "Kasper ASGREEN"
+      },
+      {
+        "bib": 43,
+        "name": "Alex BAUDIN"
+      },
+      {
+        "bib": 44,
+        "name": "Ben HEALY"
+      },
+      {
+        "bib": 45,
+        "name": "Sean QUINN"
+      },
+      {
+        "bib": 46,
+        "name": "Georg STEINHAUSER"
+      },
+      {
+        "bib": 47,
+        "name": "Michael VALGREN"
+      },
+      {
+        "bib": 48,
+        "name": "Max WALKER"
+      }
+    ]
+  },
+  {
+    "master_rider": "Steinhauser",
+    "master_team": "EF EDUCATION",
+    "slot": 5,
+    "confirmed_bib": 46,
+    "suggested_bib": 46,
+    "candidates": [
+      {
+        "bib": 41,
+        "name": "Richard CARAPAZ"
+      },
+      {
+        "bib": 42,
+        "name": "Kasper ASGREEN"
+      },
+      {
+        "bib": 43,
+        "name": "Alex BAUDIN"
+      },
+      {
+        "bib": 44,
+        "name": "Ben HEALY"
+      },
+      {
+        "bib": 45,
+        "name": "Sean QUINN"
+      },
+      {
+        "bib": 46,
+        "name": "Georg STEINHAUSER"
+      },
+      {
+        "bib": 47,
+        "name": "Michael VALGREN"
+      },
+      {
+        "bib": 48,
+        "name": "Max WALKER"
+      }
+    ]
+  },
+  {
+    "master_rider": "Valgren",
+    "master_team": "EF EDUCATION",
+    "slot": 6,
+    "confirmed_bib": 47,
+    "suggested_bib": 47,
+    "candidates": [
+      {
+        "bib": 41,
+        "name": "Richard CARAPAZ"
+      },
+      {
+        "bib": 42,
+        "name": "Kasper ASGREEN"
+      },
+      {
+        "bib": 43,
+        "name": "Alex BAUDIN"
+      },
+      {
+        "bib": 44,
+        "name": "Ben HEALY"
+      },
+      {
+        "bib": 45,
+        "name": "Sean QUINN"
+      },
+      {
+        "bib": 46,
+        "name": "Georg STEINHAUSER"
+      },
+      {
+        "bib": 47,
+        "name": "Michael VALGREN"
+      },
+      {
+        "bib": 48,
+        "name": "Max WALKER"
+      }
+    ]
+  },
+  {
+    "master_rider": "Walker",
+    "master_team": "EF EDUCATION",
+    "slot": 7,
+    "confirmed_bib": 48,
+    "suggested_bib": 48,
+    "candidates": [
+      {
+        "bib": 41,
+        "name": "Richard CARAPAZ"
+      },
+      {
+        "bib": 42,
+        "name": "Kasper ASGREEN"
+      },
+      {
+        "bib": 43,
+        "name": "Alex BAUDIN"
+      },
+      {
+        "bib": 44,
+        "name": "Ben HEALY"
+      },
+      {
+        "bib": 45,
+        "name": "Sean QUINN"
+      },
+      {
+        "bib": 46,
+        "name": "Georg STEINHAUSER"
+      },
+      {
+        "bib": 47,
+        "name": "Michael VALGREN"
+      },
+      {
+        "bib": 48,
+        "name": "Max WALKER"
+      }
+    ]
+  },
+  {
+    "master_rider": "Baudin",
+    "master_team": "EF EDUCATION",
+    "slot": 8,
+    "confirmed_bib": 43,
+    "suggested_bib": 43,
+    "candidates": [
+      {
+        "bib": 41,
+        "name": "Richard CARAPAZ"
+      },
+      {
+        "bib": 42,
+        "name": "Kasper ASGREEN"
+      },
+      {
+        "bib": 43,
+        "name": "Alex BAUDIN"
+      },
+      {
+        "bib": 44,
+        "name": "Ben HEALY"
+      },
+      {
+        "bib": 45,
+        "name": "Sean QUINN"
+      },
+      {
+        "bib": 46,
+        "name": "Georg STEINHAUSER"
+      },
+      {
+        "bib": 47,
+        "name": "Michael VALGREN"
+      },
+      {
+        "bib": 48,
+        "name": "Max WALKER"
+      }
+    ]
+  },
+  {
+    "master_rider": "R. Gregoire",
+    "master_team": "GROUPAMA FDJ",
+    "slot": 1,
+    "confirmed_bib": 181,
+    "suggested_bib": 181,
+    "candidates": [
+      {
+        "bib": 181,
+        "name": "Romain GREGOIRE"
+      },
+      {
+        "bib": 182,
+        "name": "Clément BERTHET"
+      },
+      {
+        "bib": 183,
+        "name": "Clément BRAZ AFONSO"
+      },
+      {
+        "bib": 184,
+        "name": "Ewen COSTIOU"
+      },
+      {
+        "bib": 185,
+        "name": "Lorenzo GERMANI"
+      },
+      {
+        "bib": 186,
+        "name": "Guillaume MARTIN GUYONNET"
+      },
+      {
+        "bib": 187,
+        "name": "Quentin PACHER"
+      },
+      {
+        "bib": 188,
+        "name": "Clément RUSSO"
+      }
+    ]
+  },
+  {
+    "master_rider": "G. Martin",
+    "master_team": "GROUPAMA FDJ",
+    "slot": 2,
+    "confirmed_bib": 186,
+    "suggested_bib": 186,
+    "candidates": [
+      {
+        "bib": 181,
+        "name": "Romain GREGOIRE"
+      },
+      {
+        "bib": 182,
+        "name": "Clément BERTHET"
+      },
+      {
+        "bib": 183,
+        "name": "Clément BRAZ AFONSO"
+      },
+      {
+        "bib": 184,
+        "name": "Ewen COSTIOU"
+      },
+      {
+        "bib": 185,
+        "name": "Lorenzo GERMANI"
+      },
+      {
+        "bib": 186,
+        "name": "Guillaume MARTIN GUYONNET"
+      },
+      {
+        "bib": 187,
+        "name": "Quentin PACHER"
+      },
+      {
+        "bib": 188,
+        "name": "Clément RUSSO"
+      }
+    ]
+  },
+  {
+    "master_rider": "Pacher",
+    "master_team": "GROUPAMA FDJ",
+    "slot": 3,
+    "confirmed_bib": 187,
+    "suggested_bib": 187,
+    "candidates": [
+      {
+        "bib": 181,
+        "name": "Romain GREGOIRE"
+      },
+      {
+        "bib": 182,
+        "name": "Clément BERTHET"
+      },
+      {
+        "bib": 183,
+        "name": "Clément BRAZ AFONSO"
+      },
+      {
+        "bib": 184,
+        "name": "Ewen COSTIOU"
+      },
+      {
+        "bib": 185,
+        "name": "Lorenzo GERMANI"
+      },
+      {
+        "bib": 186,
+        "name": "Guillaume MARTIN GUYONNET"
+      },
+      {
+        "bib": 187,
+        "name": "Quentin PACHER"
+      },
+      {
+        "bib": 188,
+        "name": "Clément RUSSO"
+      }
+    ]
+  },
+  {
+    "master_rider": "Russo",
+    "master_team": "GROUPAMA FDJ",
+    "slot": 4,
+    "confirmed_bib": 188,
+    "suggested_bib": 188,
+    "candidates": [
+      {
+        "bib": 181,
+        "name": "Romain GREGOIRE"
+      },
+      {
+        "bib": 182,
+        "name": "Clément BERTHET"
+      },
+      {
+        "bib": 183,
+        "name": "Clément BRAZ AFONSO"
+      },
+      {
+        "bib": 184,
+        "name": "Ewen COSTIOU"
+      },
+      {
+        "bib": 185,
+        "name": "Lorenzo GERMANI"
+      },
+      {
+        "bib": 186,
+        "name": "Guillaume MARTIN GUYONNET"
+      },
+      {
+        "bib": 187,
+        "name": "Quentin PACHER"
+      },
+      {
+        "bib": 188,
+        "name": "Clément RUSSO"
+      }
+    ]
+  },
+  {
+    "master_rider": "Germani",
+    "master_team": "GROUPAMA FDJ",
+    "slot": 5,
+    "confirmed_bib": 185,
+    "suggested_bib": 185,
+    "candidates": [
+      {
+        "bib": 181,
+        "name": "Romain GREGOIRE"
+      },
+      {
+        "bib": 182,
+        "name": "Clément BERTHET"
+      },
+      {
+        "bib": 183,
+        "name": "Clément BRAZ AFONSO"
+      },
+      {
+        "bib": 184,
+        "name": "Ewen COSTIOU"
+      },
+      {
+        "bib": 185,
+        "name": "Lorenzo GERMANI"
+      },
+      {
+        "bib": 186,
+        "name": "Guillaume MARTIN GUYONNET"
+      },
+      {
+        "bib": 187,
+        "name": "Quentin PACHER"
+      },
+      {
+        "bib": 188,
+        "name": "Clément RUSSO"
+      }
+    ]
+  },
+  {
+    "master_rider": "Berthet",
+    "master_team": "GROUPAMA FDJ",
+    "slot": 6,
+    "confirmed_bib": 182,
+    "suggested_bib": 182,
+    "candidates": [
+      {
+        "bib": 181,
+        "name": "Romain GREGOIRE"
+      },
+      {
+        "bib": 182,
+        "name": "Clément BERTHET"
+      },
+      {
+        "bib": 183,
+        "name": "Clément BRAZ AFONSO"
+      },
+      {
+        "bib": 184,
+        "name": "Ewen COSTIOU"
+      },
+      {
+        "bib": 185,
+        "name": "Lorenzo GERMANI"
+      },
+      {
+        "bib": 186,
+        "name": "Guillaume MARTIN GUYONNET"
+      },
+      {
+        "bib": 187,
+        "name": "Quentin PACHER"
+      },
+      {
+        "bib": 188,
+        "name": "Clément RUSSO"
+      }
+    ]
+  },
+  {
+    "master_rider": "Costiou",
+    "master_team": "GROUPAMA FDJ",
+    "slot": 7,
+    "confirmed_bib": 184,
+    "suggested_bib": 184,
+    "candidates": [
+      {
+        "bib": 181,
+        "name": "Romain GREGOIRE"
+      },
+      {
+        "bib": 182,
+        "name": "Clément BERTHET"
+      },
+      {
+        "bib": 183,
+        "name": "Clément BRAZ AFONSO"
+      },
+      {
+        "bib": 184,
+        "name": "Ewen COSTIOU"
+      },
+      {
+        "bib": 185,
+        "name": "Lorenzo GERMANI"
+      },
+      {
+        "bib": 186,
+        "name": "Guillaume MARTIN GUYONNET"
+      },
+      {
+        "bib": 187,
+        "name": "Quentin PACHER"
+      },
+      {
+        "bib": 188,
+        "name": "Clément RUSSO"
+      }
+    ]
+  },
+  {
+    "master_rider": "Afonso",
+    "master_team": "GROUPAMA FDJ",
+    "slot": 8,
+    "confirmed_bib": 183,
+    "suggested_bib": 183,
+    "candidates": [
+      {
+        "bib": 181,
+        "name": "Romain GREGOIRE"
+      },
+      {
+        "bib": 182,
+        "name": "Clément BERTHET"
+      },
+      {
+        "bib": 183,
+        "name": "Clément BRAZ AFONSO"
+      },
+      {
+        "bib": 184,
+        "name": "Ewen COSTIOU"
+      },
+      {
+        "bib": 185,
+        "name": "Lorenzo GERMANI"
+      },
+      {
+        "bib": 186,
+        "name": "Guillaume MARTIN GUYONNET"
+      },
+      {
+        "bib": 187,
+        "name": "Quentin PACHER"
+      },
+      {
+        "bib": 188,
+        "name": "Clément RUSSO"
+      }
+    ]
+  },
+  {
+    "master_rider": "T. Arensman",
+    "master_team": "Netcompany INEOS",
+    "slot": 1,
+    "confirmed_bib": 82,
+    "suggested_bib": 82,
+    "candidates": [
+      {
+        "bib": 81,
+        "name": "Egan BERNAL GOMEZ"
+      },
+      {
+        "bib": 82,
+        "name": "Thymen ARENSMAN"
+      },
+      {
+        "bib": 83,
+        "name": "Tobias FOSS"
+      },
+      {
+        "bib": 84,
+        "name": "Filippo GANNA"
+      },
+      {
+        "bib": 85,
+        "name": "Dorian GODON"
+      },
+      {
+        "bib": 86,
+        "name": "Michal KWIATKOWSKI"
+      },
+      {
+        "bib": 87,
+        "name": "Joshua TARLING"
+      },
+      {
+        "bib": 88,
+        "name": "Kévin VAUQUELIN"
+      }
+    ]
+  },
+  {
+    "master_rider": "F. Ganna",
+    "master_team": "Netcompany INEOS",
+    "slot": 2,
+    "confirmed_bib": 84,
+    "suggested_bib": 84,
+    "candidates": [
+      {
+        "bib": 81,
+        "name": "Egan BERNAL GOMEZ"
+      },
+      {
+        "bib": 82,
+        "name": "Thymen ARENSMAN"
+      },
+      {
+        "bib": 83,
+        "name": "Tobias FOSS"
+      },
+      {
+        "bib": 84,
+        "name": "Filippo GANNA"
+      },
+      {
+        "bib": 85,
+        "name": "Dorian GODON"
+      },
+      {
+        "bib": 86,
+        "name": "Michal KWIATKOWSKI"
+      },
+      {
+        "bib": 87,
+        "name": "Joshua TARLING"
+      },
+      {
+        "bib": 88,
+        "name": "Kévin VAUQUELIN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Bernal",
+    "master_team": "Netcompany INEOS",
+    "slot": 3,
+    "confirmed_bib": 81,
+    "suggested_bib": 81,
+    "candidates": [
+      {
+        "bib": 81,
+        "name": "Egan BERNAL GOMEZ"
+      },
+      {
+        "bib": 82,
+        "name": "Thymen ARENSMAN"
+      },
+      {
+        "bib": 83,
+        "name": "Tobias FOSS"
+      },
+      {
+        "bib": 84,
+        "name": "Filippo GANNA"
+      },
+      {
+        "bib": 85,
+        "name": "Dorian GODON"
+      },
+      {
+        "bib": 86,
+        "name": "Michal KWIATKOWSKI"
+      },
+      {
+        "bib": 87,
+        "name": "Joshua TARLING"
+      },
+      {
+        "bib": 88,
+        "name": "Kévin VAUQUELIN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Kwiatkowski",
+    "master_team": "Netcompany INEOS",
+    "slot": 4,
+    "confirmed_bib": 86,
+    "suggested_bib": 86,
+    "candidates": [
+      {
+        "bib": 81,
+        "name": "Egan BERNAL GOMEZ"
+      },
+      {
+        "bib": 82,
+        "name": "Thymen ARENSMAN"
+      },
+      {
+        "bib": 83,
+        "name": "Tobias FOSS"
+      },
+      {
+        "bib": 84,
+        "name": "Filippo GANNA"
+      },
+      {
+        "bib": 85,
+        "name": "Dorian GODON"
+      },
+      {
+        "bib": 86,
+        "name": "Michal KWIATKOWSKI"
+      },
+      {
+        "bib": 87,
+        "name": "Joshua TARLING"
+      },
+      {
+        "bib": 88,
+        "name": "Kévin VAUQUELIN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Vauquelin",
+    "master_team": "Netcompany INEOS",
+    "slot": 5,
+    "confirmed_bib": 88,
+    "suggested_bib": 88,
+    "candidates": [
+      {
+        "bib": 81,
+        "name": "Egan BERNAL GOMEZ"
+      },
+      {
+        "bib": 82,
+        "name": "Thymen ARENSMAN"
+      },
+      {
+        "bib": 83,
+        "name": "Tobias FOSS"
+      },
+      {
+        "bib": 84,
+        "name": "Filippo GANNA"
+      },
+      {
+        "bib": 85,
+        "name": "Dorian GODON"
+      },
+      {
+        "bib": 86,
+        "name": "Michal KWIATKOWSKI"
+      },
+      {
+        "bib": 87,
+        "name": "Joshua TARLING"
+      },
+      {
+        "bib": 88,
+        "name": "Kévin VAUQUELIN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Godon",
+    "master_team": "Netcompany INEOS",
+    "slot": 6,
+    "confirmed_bib": 85,
+    "suggested_bib": 85,
+    "candidates": [
+      {
+        "bib": 81,
+        "name": "Egan BERNAL GOMEZ"
+      },
+      {
+        "bib": 82,
+        "name": "Thymen ARENSMAN"
+      },
+      {
+        "bib": 83,
+        "name": "Tobias FOSS"
+      },
+      {
+        "bib": 84,
+        "name": "Filippo GANNA"
+      },
+      {
+        "bib": 85,
+        "name": "Dorian GODON"
+      },
+      {
+        "bib": 86,
+        "name": "Michal KWIATKOWSKI"
+      },
+      {
+        "bib": 87,
+        "name": "Joshua TARLING"
+      },
+      {
+        "bib": 88,
+        "name": "Kévin VAUQUELIN"
+      }
+    ]
+  },
+  {
+    "master_rider": "T. Voss",
+    "master_team": "Netcompany INEOS",
+    "slot": 7,
+    "confirmed_bib": 83,
+    "suggested_bib": null,
+    "candidates": [
+      {
+        "bib": 81,
+        "name": "Egan BERNAL GOMEZ"
+      },
+      {
+        "bib": 82,
+        "name": "Thymen ARENSMAN"
+      },
+      {
+        "bib": 83,
+        "name": "Tobias FOSS"
+      },
+      {
+        "bib": 84,
+        "name": "Filippo GANNA"
+      },
+      {
+        "bib": 85,
+        "name": "Dorian GODON"
+      },
+      {
+        "bib": 86,
+        "name": "Michal KWIATKOWSKI"
+      },
+      {
+        "bib": 87,
+        "name": "Joshua TARLING"
+      },
+      {
+        "bib": 88,
+        "name": "Kévin VAUQUELIN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Joshua Tarling",
+    "master_team": "Netcompany INEOS",
+    "slot": 8,
+    "confirmed_bib": 87,
+    "suggested_bib": 87,
+    "candidates": [
+      {
+        "bib": 81,
+        "name": "Egan BERNAL GOMEZ"
+      },
+      {
+        "bib": 82,
+        "name": "Thymen ARENSMAN"
+      },
+      {
+        "bib": 83,
+        "name": "Tobias FOSS"
+      },
+      {
+        "bib": 84,
+        "name": "Filippo GANNA"
+      },
+      {
+        "bib": 85,
+        "name": "Dorian GODON"
+      },
+      {
+        "bib": 86,
+        "name": "Michal KWIATKOWSKI"
+      },
+      {
+        "bib": 87,
+        "name": "Joshua TARLING"
+      },
+      {
+        "bib": 88,
+        "name": "Kévin VAUQUELIN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Gaviria",
+    "master_team": "Caja Rural Serguros RGA",
+    "slot": 1,
+    "confirmed_bib": 221,
+    "suggested_bib": 221,
+    "candidates": [
+      {
+        "bib": 221,
+        "name": "Fernando GAVIRIA RENDON"
+      },
+      {
+        "bib": 222,
+        "name": "Abel BALDERSTONE ROUMENS"
+      },
+      {
+        "bib": 223,
+        "name": "Sebastian BERWICK"
+      },
+      {
+        "bib": 224,
+        "name": "Alex MOLENAAR"
+      },
+      {
+        "bib": 225,
+        "name": "Joel NICOLAU BELTRAN"
+      },
+      {
+        "bib": 226,
+        "name": "Stefano OLDANI"
+      },
+      {
+        "bib": 227,
+        "name": "Jakub OTRUBA"
+      },
+      {
+        "bib": 228,
+        "name": "Jose Felix PARRA CUERDA"
+      }
+    ]
+  },
+  {
+    "master_rider": "Balderstone",
+    "master_team": "Caja Rural Serguros RGA",
+    "slot": 2,
+    "confirmed_bib": 222,
+    "suggested_bib": 222,
+    "candidates": [
+      {
+        "bib": 221,
+        "name": "Fernando GAVIRIA RENDON"
+      },
+      {
+        "bib": 222,
+        "name": "Abel BALDERSTONE ROUMENS"
+      },
+      {
+        "bib": 223,
+        "name": "Sebastian BERWICK"
+      },
+      {
+        "bib": 224,
+        "name": "Alex MOLENAAR"
+      },
+      {
+        "bib": 225,
+        "name": "Joel NICOLAU BELTRAN"
+      },
+      {
+        "bib": 226,
+        "name": "Stefano OLDANI"
+      },
+      {
+        "bib": 227,
+        "name": "Jakub OTRUBA"
+      },
+      {
+        "bib": 228,
+        "name": "Jose Felix PARRA CUERDA"
+      }
+    ]
+  },
+  {
+    "master_rider": "Molenaar",
+    "master_team": "Caja Rural Serguros RGA",
+    "slot": 3,
+    "confirmed_bib": 224,
+    "suggested_bib": 224,
+    "candidates": [
+      {
+        "bib": 221,
+        "name": "Fernando GAVIRIA RENDON"
+      },
+      {
+        "bib": 222,
+        "name": "Abel BALDERSTONE ROUMENS"
+      },
+      {
+        "bib": 223,
+        "name": "Sebastian BERWICK"
+      },
+      {
+        "bib": 224,
+        "name": "Alex MOLENAAR"
+      },
+      {
+        "bib": 225,
+        "name": "Joel NICOLAU BELTRAN"
+      },
+      {
+        "bib": 226,
+        "name": "Stefano OLDANI"
+      },
+      {
+        "bib": 227,
+        "name": "Jakub OTRUBA"
+      },
+      {
+        "bib": 228,
+        "name": "Jose Felix PARRA CUERDA"
+      }
+    ]
+  },
+  {
+    "master_rider": "Nicolau Beltran",
+    "master_team": "Caja Rural Serguros RGA",
+    "slot": 4,
+    "confirmed_bib": 225,
+    "suggested_bib": 225,
+    "candidates": [
+      {
+        "bib": 221,
+        "name": "Fernando GAVIRIA RENDON"
+      },
+      {
+        "bib": 222,
+        "name": "Abel BALDERSTONE ROUMENS"
+      },
+      {
+        "bib": 223,
+        "name": "Sebastian BERWICK"
+      },
+      {
+        "bib": 224,
+        "name": "Alex MOLENAAR"
+      },
+      {
+        "bib": 225,
+        "name": "Joel NICOLAU BELTRAN"
+      },
+      {
+        "bib": 226,
+        "name": "Stefano OLDANI"
+      },
+      {
+        "bib": 227,
+        "name": "Jakub OTRUBA"
+      },
+      {
+        "bib": 228,
+        "name": "Jose Felix PARRA CUERDA"
+      }
+    ]
+  },
+  {
+    "master_rider": "Oldani",
+    "master_team": "Caja Rural Serguros RGA",
+    "slot": 5,
+    "confirmed_bib": 226,
+    "suggested_bib": 226,
+    "candidates": [
+      {
+        "bib": 221,
+        "name": "Fernando GAVIRIA RENDON"
+      },
+      {
+        "bib": 222,
+        "name": "Abel BALDERSTONE ROUMENS"
+      },
+      {
+        "bib": 223,
+        "name": "Sebastian BERWICK"
+      },
+      {
+        "bib": 224,
+        "name": "Alex MOLENAAR"
+      },
+      {
+        "bib": 225,
+        "name": "Joel NICOLAU BELTRAN"
+      },
+      {
+        "bib": 226,
+        "name": "Stefano OLDANI"
+      },
+      {
+        "bib": 227,
+        "name": "Jakub OTRUBA"
+      },
+      {
+        "bib": 228,
+        "name": "Jose Felix PARRA CUERDA"
+      }
+    ]
+  },
+  {
+    "master_rider": "Otruba",
+    "master_team": "Caja Rural Serguros RGA",
+    "slot": 6,
+    "confirmed_bib": 227,
+    "suggested_bib": 227,
+    "candidates": [
+      {
+        "bib": 221,
+        "name": "Fernando GAVIRIA RENDON"
+      },
+      {
+        "bib": 222,
+        "name": "Abel BALDERSTONE ROUMENS"
+      },
+      {
+        "bib": 223,
+        "name": "Sebastian BERWICK"
+      },
+      {
+        "bib": 224,
+        "name": "Alex MOLENAAR"
+      },
+      {
+        "bib": 225,
+        "name": "Joel NICOLAU BELTRAN"
+      },
+      {
+        "bib": 226,
+        "name": "Stefano OLDANI"
+      },
+      {
+        "bib": 227,
+        "name": "Jakub OTRUBA"
+      },
+      {
+        "bib": 228,
+        "name": "Jose Felix PARRA CUERDA"
+      }
+    ]
+  },
+  {
+    "master_rider": "Felix Parra",
+    "master_team": "Caja Rural Serguros RGA",
+    "slot": 7,
+    "confirmed_bib": 228,
+    "suggested_bib": 228,
+    "candidates": [
+      {
+        "bib": 221,
+        "name": "Fernando GAVIRIA RENDON"
+      },
+      {
+        "bib": 222,
+        "name": "Abel BALDERSTONE ROUMENS"
+      },
+      {
+        "bib": 223,
+        "name": "Sebastian BERWICK"
+      },
+      {
+        "bib": 224,
+        "name": "Alex MOLENAAR"
+      },
+      {
+        "bib": 225,
+        "name": "Joel NICOLAU BELTRAN"
+      },
+      {
+        "bib": 226,
+        "name": "Stefano OLDANI"
+      },
+      {
+        "bib": 227,
+        "name": "Jakub OTRUBA"
+      },
+      {
+        "bib": 228,
+        "name": "Jose Felix PARRA CUERDA"
+      }
+    ]
+  },
+  {
+    "master_rider": "Berwick",
+    "master_team": "Caja Rural Serguros RGA",
+    "slot": 8,
+    "confirmed_bib": 223,
+    "suggested_bib": 223,
+    "candidates": [
+      {
+        "bib": 221,
+        "name": "Fernando GAVIRIA RENDON"
+      },
+      {
+        "bib": 222,
+        "name": "Abel BALDERSTONE ROUMENS"
+      },
+      {
+        "bib": 223,
+        "name": "Sebastian BERWICK"
+      },
+      {
+        "bib": 224,
+        "name": "Alex MOLENAAR"
+      },
+      {
+        "bib": 225,
+        "name": "Joel NICOLAU BELTRAN"
+      },
+      {
+        "bib": 226,
+        "name": "Stefano OLDANI"
+      },
+      {
+        "bib": 227,
+        "name": "Jakub OTRUBA"
+      },
+      {
+        "bib": 228,
+        "name": "Jose Felix PARRA CUERDA"
+      }
+    ]
+  },
+  {
+    "master_rider": "G. Bennett",
+    "master_team": "NSN Cycling",
+    "slot": 1,
+    "confirmed_bib": 133,
+    "suggested_bib": 133,
+    "candidates": [
+      {
+        "bib": 131,
+        "name": "Biniam GIRMAY"
+      },
+      {
+        "bib": 132,
+        "name": "Lewis ASKEY"
+      },
+      {
+        "bib": 133,
+        "name": "George BENNETT"
+      },
+      {
+        "bib": 134,
+        "name": "Marco FRIGO"
+      },
+      {
+        "bib": 135,
+        "name": "Matis LOUVEL"
+      },
+      {
+        "bib": 136,
+        "name": "Krists NEILANDS"
+      },
+      {
+        "bib": 137,
+        "name": "Jake STEWART"
+      },
+      {
+        "bib": 138,
+        "name": "Tom VAN ASBROECK"
+      }
+    ]
+  },
+  {
+    "master_rider": "Girmay",
+    "master_team": "NSN Cycling",
+    "slot": 2,
+    "confirmed_bib": 131,
+    "suggested_bib": 131,
+    "candidates": [
+      {
+        "bib": 131,
+        "name": "Biniam GIRMAY"
+      },
+      {
+        "bib": 132,
+        "name": "Lewis ASKEY"
+      },
+      {
+        "bib": 133,
+        "name": "George BENNETT"
+      },
+      {
+        "bib": 134,
+        "name": "Marco FRIGO"
+      },
+      {
+        "bib": 135,
+        "name": "Matis LOUVEL"
+      },
+      {
+        "bib": 136,
+        "name": "Krists NEILANDS"
+      },
+      {
+        "bib": 137,
+        "name": "Jake STEWART"
+      },
+      {
+        "bib": 138,
+        "name": "Tom VAN ASBROECK"
+      }
+    ]
+  },
+  {
+    "master_rider": "M. Frigo",
+    "master_team": "NSN Cycling",
+    "slot": 3,
+    "confirmed_bib": 134,
+    "suggested_bib": 134,
+    "candidates": [
+      {
+        "bib": 131,
+        "name": "Biniam GIRMAY"
+      },
+      {
+        "bib": 132,
+        "name": "Lewis ASKEY"
+      },
+      {
+        "bib": 133,
+        "name": "George BENNETT"
+      },
+      {
+        "bib": 134,
+        "name": "Marco FRIGO"
+      },
+      {
+        "bib": 135,
+        "name": "Matis LOUVEL"
+      },
+      {
+        "bib": 136,
+        "name": "Krists NEILANDS"
+      },
+      {
+        "bib": 137,
+        "name": "Jake STEWART"
+      },
+      {
+        "bib": 138,
+        "name": "Tom VAN ASBROECK"
+      }
+    ]
+  },
+  {
+    "master_rider": "Stewart",
+    "master_team": "NSN Cycling",
+    "slot": 4,
+    "confirmed_bib": 137,
+    "suggested_bib": 137,
+    "candidates": [
+      {
+        "bib": 131,
+        "name": "Biniam GIRMAY"
+      },
+      {
+        "bib": 132,
+        "name": "Lewis ASKEY"
+      },
+      {
+        "bib": 133,
+        "name": "George BENNETT"
+      },
+      {
+        "bib": 134,
+        "name": "Marco FRIGO"
+      },
+      {
+        "bib": 135,
+        "name": "Matis LOUVEL"
+      },
+      {
+        "bib": 136,
+        "name": "Krists NEILANDS"
+      },
+      {
+        "bib": 137,
+        "name": "Jake STEWART"
+      },
+      {
+        "bib": 138,
+        "name": "Tom VAN ASBROECK"
+      }
+    ]
+  },
+  {
+    "master_rider": "Askey",
+    "master_team": "NSN Cycling",
+    "slot": 5,
+    "confirmed_bib": 132,
+    "suggested_bib": 132,
+    "candidates": [
+      {
+        "bib": 131,
+        "name": "Biniam GIRMAY"
+      },
+      {
+        "bib": 132,
+        "name": "Lewis ASKEY"
+      },
+      {
+        "bib": 133,
+        "name": "George BENNETT"
+      },
+      {
+        "bib": 134,
+        "name": "Marco FRIGO"
+      },
+      {
+        "bib": 135,
+        "name": "Matis LOUVEL"
+      },
+      {
+        "bib": 136,
+        "name": "Krists NEILANDS"
+      },
+      {
+        "bib": 137,
+        "name": "Jake STEWART"
+      },
+      {
+        "bib": 138,
+        "name": "Tom VAN ASBROECK"
+      }
+    ]
+  },
+  {
+    "master_rider": "Louvel",
+    "master_team": "NSN Cycling",
+    "slot": 6,
+    "confirmed_bib": 135,
+    "suggested_bib": 135,
+    "candidates": [
+      {
+        "bib": 131,
+        "name": "Biniam GIRMAY"
+      },
+      {
+        "bib": 132,
+        "name": "Lewis ASKEY"
+      },
+      {
+        "bib": 133,
+        "name": "George BENNETT"
+      },
+      {
+        "bib": 134,
+        "name": "Marco FRIGO"
+      },
+      {
+        "bib": 135,
+        "name": "Matis LOUVEL"
+      },
+      {
+        "bib": 136,
+        "name": "Krists NEILANDS"
+      },
+      {
+        "bib": 137,
+        "name": "Jake STEWART"
+      },
+      {
+        "bib": 138,
+        "name": "Tom VAN ASBROECK"
+      }
+    ]
+  },
+  {
+    "master_rider": "Van Asbroeck",
+    "master_team": "NSN Cycling",
+    "slot": 7,
+    "confirmed_bib": 138,
+    "suggested_bib": 138,
+    "candidates": [
+      {
+        "bib": 131,
+        "name": "Biniam GIRMAY"
+      },
+      {
+        "bib": 132,
+        "name": "Lewis ASKEY"
+      },
+      {
+        "bib": 133,
+        "name": "George BENNETT"
+      },
+      {
+        "bib": 134,
+        "name": "Marco FRIGO"
+      },
+      {
+        "bib": 135,
+        "name": "Matis LOUVEL"
+      },
+      {
+        "bib": 136,
+        "name": "Krists NEILANDS"
+      },
+      {
+        "bib": 137,
+        "name": "Jake STEWART"
+      },
+      {
+        "bib": 138,
+        "name": "Tom VAN ASBROECK"
+      }
+    ]
+  },
+  {
+    "master_rider": "Neilands",
+    "master_team": "NSN Cycling",
+    "slot": 8,
+    "confirmed_bib": 136,
+    "suggested_bib": 136,
+    "candidates": [
+      {
+        "bib": 131,
+        "name": "Biniam GIRMAY"
+      },
+      {
+        "bib": 132,
+        "name": "Lewis ASKEY"
+      },
+      {
+        "bib": 133,
+        "name": "George BENNETT"
+      },
+      {
+        "bib": 134,
+        "name": "Marco FRIGO"
+      },
+      {
+        "bib": 135,
+        "name": "Matis LOUVEL"
+      },
+      {
+        "bib": 136,
+        "name": "Krists NEILANDS"
+      },
+      {
+        "bib": 137,
+        "name": "Jake STEWART"
+      },
+      {
+        "bib": 138,
+        "name": "Tom VAN ASBROECK"
+      }
+    ]
+  },
+  {
+    "master_rider": "Ayuso",
+    "master_team": "LIDL TREK",
+    "slot": 1,
+    "confirmed_bib": 31,
+    "suggested_bib": 31,
+    "candidates": [
+      {
+        "bib": 31,
+        "name": "Juan AYUSO PESQUERA"
+      },
+      {
+        "bib": 32,
+        "name": "Derek James GEE"
+      },
+      {
+        "bib": 33,
+        "name": "Mads PEDERSEN"
+      },
+      {
+        "bib": 34,
+        "name": "Quinn SIMMONS"
+      },
+      {
+        "bib": 35,
+        "name": "Mattias SKJELMOSE"
+      },
+      {
+        "bib": 36,
+        "name": "Toms SKUJINS"
+      },
+      {
+        "bib": 37,
+        "name": "Mathias VACEK"
+      },
+      {
+        "bib": 38,
+        "name": "Carlos VERONA QUINTANILLA"
+      }
+    ]
+  },
+  {
+    "master_rider": "Pedersen",
+    "master_team": "LIDL TREK",
+    "slot": 2,
+    "confirmed_bib": 33,
+    "suggested_bib": 33,
+    "candidates": [
+      {
+        "bib": 31,
+        "name": "Juan AYUSO PESQUERA"
+      },
+      {
+        "bib": 32,
+        "name": "Derek James GEE"
+      },
+      {
+        "bib": 33,
+        "name": "Mads PEDERSEN"
+      },
+      {
+        "bib": 34,
+        "name": "Quinn SIMMONS"
+      },
+      {
+        "bib": 35,
+        "name": "Mattias SKJELMOSE"
+      },
+      {
+        "bib": 36,
+        "name": "Toms SKUJINS"
+      },
+      {
+        "bib": 37,
+        "name": "Mathias VACEK"
+      },
+      {
+        "bib": 38,
+        "name": "Carlos VERONA QUINTANILLA"
+      }
+    ]
+  },
+  {
+    "master_rider": "Skjelmose",
+    "master_team": "LIDL TREK",
+    "slot": 3,
+    "confirmed_bib": 35,
+    "suggested_bib": 35,
+    "candidates": [
+      {
+        "bib": 31,
+        "name": "Juan AYUSO PESQUERA"
+      },
+      {
+        "bib": 32,
+        "name": "Derek James GEE"
+      },
+      {
+        "bib": 33,
+        "name": "Mads PEDERSEN"
+      },
+      {
+        "bib": 34,
+        "name": "Quinn SIMMONS"
+      },
+      {
+        "bib": 35,
+        "name": "Mattias SKJELMOSE"
+      },
+      {
+        "bib": 36,
+        "name": "Toms SKUJINS"
+      },
+      {
+        "bib": 37,
+        "name": "Mathias VACEK"
+      },
+      {
+        "bib": 38,
+        "name": "Carlos VERONA QUINTANILLA"
+      }
+    ]
+  },
+  {
+    "master_rider": "Gee-West",
+    "master_team": "LIDL TREK",
+    "slot": 4,
+    "confirmed_bib": 32,
+    "suggested_bib": 32,
+    "candidates": [
+      {
+        "bib": 31,
+        "name": "Juan AYUSO PESQUERA"
+      },
+      {
+        "bib": 32,
+        "name": "Derek James GEE"
+      },
+      {
+        "bib": 33,
+        "name": "Mads PEDERSEN"
+      },
+      {
+        "bib": 34,
+        "name": "Quinn SIMMONS"
+      },
+      {
+        "bib": 35,
+        "name": "Mattias SKJELMOSE"
+      },
+      {
+        "bib": 36,
+        "name": "Toms SKUJINS"
+      },
+      {
+        "bib": 37,
+        "name": "Mathias VACEK"
+      },
+      {
+        "bib": 38,
+        "name": "Carlos VERONA QUINTANILLA"
+      }
+    ]
+  },
+  {
+    "master_rider": "Q. Simmons",
+    "master_team": "LIDL TREK",
+    "slot": 5,
+    "confirmed_bib": 34,
+    "suggested_bib": 34,
+    "candidates": [
+      {
+        "bib": 31,
+        "name": "Juan AYUSO PESQUERA"
+      },
+      {
+        "bib": 32,
+        "name": "Derek James GEE"
+      },
+      {
+        "bib": 33,
+        "name": "Mads PEDERSEN"
+      },
+      {
+        "bib": 34,
+        "name": "Quinn SIMMONS"
+      },
+      {
+        "bib": 35,
+        "name": "Mattias SKJELMOSE"
+      },
+      {
+        "bib": 36,
+        "name": "Toms SKUJINS"
+      },
+      {
+        "bib": 37,
+        "name": "Mathias VACEK"
+      },
+      {
+        "bib": 38,
+        "name": "Carlos VERONA QUINTANILLA"
+      }
+    ]
+  },
+  {
+    "master_rider": "Verona",
+    "master_team": "LIDL TREK",
+    "slot": 6,
+    "confirmed_bib": 38,
+    "suggested_bib": 38,
+    "candidates": [
+      {
+        "bib": 31,
+        "name": "Juan AYUSO PESQUERA"
+      },
+      {
+        "bib": 32,
+        "name": "Derek James GEE"
+      },
+      {
+        "bib": 33,
+        "name": "Mads PEDERSEN"
+      },
+      {
+        "bib": 34,
+        "name": "Quinn SIMMONS"
+      },
+      {
+        "bib": 35,
+        "name": "Mattias SKJELMOSE"
+      },
+      {
+        "bib": 36,
+        "name": "Toms SKUJINS"
+      },
+      {
+        "bib": 37,
+        "name": "Mathias VACEK"
+      },
+      {
+        "bib": 38,
+        "name": "Carlos VERONA QUINTANILLA"
+      }
+    ]
+  },
+  {
+    "master_rider": "M. Vacek",
+    "master_team": "LIDL TREK",
+    "slot": 7,
+    "confirmed_bib": 37,
+    "suggested_bib": 37,
+    "candidates": [
+      {
+        "bib": 31,
+        "name": "Juan AYUSO PESQUERA"
+      },
+      {
+        "bib": 32,
+        "name": "Derek James GEE"
+      },
+      {
+        "bib": 33,
+        "name": "Mads PEDERSEN"
+      },
+      {
+        "bib": 34,
+        "name": "Quinn SIMMONS"
+      },
+      {
+        "bib": 35,
+        "name": "Mattias SKJELMOSE"
+      },
+      {
+        "bib": 36,
+        "name": "Toms SKUJINS"
+      },
+      {
+        "bib": 37,
+        "name": "Mathias VACEK"
+      },
+      {
+        "bib": 38,
+        "name": "Carlos VERONA QUINTANILLA"
+      }
+    ]
+  },
+  {
+    "master_rider": "Skujins",
+    "master_team": "LIDL TREK",
+    "slot": 8,
+    "confirmed_bib": 36,
+    "suggested_bib": 36,
+    "candidates": [
+      {
+        "bib": 31,
+        "name": "Juan AYUSO PESQUERA"
+      },
+      {
+        "bib": 32,
+        "name": "Derek James GEE"
+      },
+      {
+        "bib": 33,
+        "name": "Mads PEDERSEN"
+      },
+      {
+        "bib": 34,
+        "name": "Quinn SIMMONS"
+      },
+      {
+        "bib": 35,
+        "name": "Mattias SKJELMOSE"
+      },
+      {
+        "bib": 36,
+        "name": "Toms SKUJINS"
+      },
+      {
+        "bib": 37,
+        "name": "Mathias VACEK"
+      },
+      {
+        "bib": 38,
+        "name": "Carlos VERONA QUINTANILLA"
+      }
+    ]
+  },
+  {
+    "master_rider": "De Lie",
+    "master_team": "LOTTO Intermarche",
+    "slot": 1,
+    "confirmed_bib": 151,
+    "suggested_bib": 151,
+    "candidates": [
+      {
+        "bib": 151,
+        "name": "Arnaud DE LIE"
+      },
+      {
+        "bib": 152,
+        "name": "Huub ARTZ"
+      },
+      {
+        "bib": 153,
+        "name": "Jenno BERCKMOES"
+      },
+      {
+        "bib": 154,
+        "name": "Lars CRAPS"
+      },
+      {
+        "bib": 155,
+        "name": "Liam SLOCK"
+      },
+      {
+        "bib": 156,
+        "name": "Lennert VAN EETVELT"
+      },
+      {
+        "bib": 157,
+        "name": "Baptiste VEISTROFFER"
+      },
+      {
+        "bib": 158,
+        "name": "Georg ZIMMERMANN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Van Eetvelt",
+    "master_team": "LOTTO Intermarche",
+    "slot": 2,
+    "confirmed_bib": 156,
+    "suggested_bib": 156,
+    "candidates": [
+      {
+        "bib": 151,
+        "name": "Arnaud DE LIE"
+      },
+      {
+        "bib": 152,
+        "name": "Huub ARTZ"
+      },
+      {
+        "bib": 153,
+        "name": "Jenno BERCKMOES"
+      },
+      {
+        "bib": 154,
+        "name": "Lars CRAPS"
+      },
+      {
+        "bib": 155,
+        "name": "Liam SLOCK"
+      },
+      {
+        "bib": 156,
+        "name": "Lennert VAN EETVELT"
+      },
+      {
+        "bib": 157,
+        "name": "Baptiste VEISTROFFER"
+      },
+      {
+        "bib": 158,
+        "name": "Georg ZIMMERMANN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Zimmermann",
+    "master_team": "LOTTO Intermarche",
+    "slot": 3,
+    "confirmed_bib": 158,
+    "suggested_bib": 158,
+    "candidates": [
+      {
+        "bib": 151,
+        "name": "Arnaud DE LIE"
+      },
+      {
+        "bib": 152,
+        "name": "Huub ARTZ"
+      },
+      {
+        "bib": 153,
+        "name": "Jenno BERCKMOES"
+      },
+      {
+        "bib": 154,
+        "name": "Lars CRAPS"
+      },
+      {
+        "bib": 155,
+        "name": "Liam SLOCK"
+      },
+      {
+        "bib": 156,
+        "name": "Lennert VAN EETVELT"
+      },
+      {
+        "bib": 157,
+        "name": "Baptiste VEISTROFFER"
+      },
+      {
+        "bib": 158,
+        "name": "Georg ZIMMERMANN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Artz",
+    "master_team": "LOTTO Intermarche",
+    "slot": 4,
+    "confirmed_bib": 152,
+    "suggested_bib": 152,
+    "candidates": [
+      {
+        "bib": 151,
+        "name": "Arnaud DE LIE"
+      },
+      {
+        "bib": 152,
+        "name": "Huub ARTZ"
+      },
+      {
+        "bib": 153,
+        "name": "Jenno BERCKMOES"
+      },
+      {
+        "bib": 154,
+        "name": "Lars CRAPS"
+      },
+      {
+        "bib": 155,
+        "name": "Liam SLOCK"
+      },
+      {
+        "bib": 156,
+        "name": "Lennert VAN EETVELT"
+      },
+      {
+        "bib": 157,
+        "name": "Baptiste VEISTROFFER"
+      },
+      {
+        "bib": 158,
+        "name": "Georg ZIMMERMANN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Berckmoes",
+    "master_team": "LOTTO Intermarche",
+    "slot": 5,
+    "confirmed_bib": 153,
+    "suggested_bib": 153,
+    "candidates": [
+      {
+        "bib": 151,
+        "name": "Arnaud DE LIE"
+      },
+      {
+        "bib": 152,
+        "name": "Huub ARTZ"
+      },
+      {
+        "bib": 153,
+        "name": "Jenno BERCKMOES"
+      },
+      {
+        "bib": 154,
+        "name": "Lars CRAPS"
+      },
+      {
+        "bib": 155,
+        "name": "Liam SLOCK"
+      },
+      {
+        "bib": 156,
+        "name": "Lennert VAN EETVELT"
+      },
+      {
+        "bib": 157,
+        "name": "Baptiste VEISTROFFER"
+      },
+      {
+        "bib": 158,
+        "name": "Georg ZIMMERMANN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Craps",
+    "master_team": "LOTTO Intermarche",
+    "slot": 6,
+    "confirmed_bib": 154,
+    "suggested_bib": 154,
+    "candidates": [
+      {
+        "bib": 151,
+        "name": "Arnaud DE LIE"
+      },
+      {
+        "bib": 152,
+        "name": "Huub ARTZ"
+      },
+      {
+        "bib": 153,
+        "name": "Jenno BERCKMOES"
+      },
+      {
+        "bib": 154,
+        "name": "Lars CRAPS"
+      },
+      {
+        "bib": 155,
+        "name": "Liam SLOCK"
+      },
+      {
+        "bib": 156,
+        "name": "Lennert VAN EETVELT"
+      },
+      {
+        "bib": 157,
+        "name": "Baptiste VEISTROFFER"
+      },
+      {
+        "bib": 158,
+        "name": "Georg ZIMMERMANN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Slock",
+    "master_team": "LOTTO Intermarche",
+    "slot": 7,
+    "confirmed_bib": 155,
+    "suggested_bib": 155,
+    "candidates": [
+      {
+        "bib": 151,
+        "name": "Arnaud DE LIE"
+      },
+      {
+        "bib": 152,
+        "name": "Huub ARTZ"
+      },
+      {
+        "bib": 153,
+        "name": "Jenno BERCKMOES"
+      },
+      {
+        "bib": 154,
+        "name": "Lars CRAPS"
+      },
+      {
+        "bib": 155,
+        "name": "Liam SLOCK"
+      },
+      {
+        "bib": 156,
+        "name": "Lennert VAN EETVELT"
+      },
+      {
+        "bib": 157,
+        "name": "Baptiste VEISTROFFER"
+      },
+      {
+        "bib": 158,
+        "name": "Georg ZIMMERMANN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Veistroffer",
+    "master_team": "LOTTO Intermarche",
+    "slot": 8,
+    "confirmed_bib": 157,
+    "suggested_bib": 157,
+    "candidates": [
+      {
+        "bib": 151,
+        "name": "Arnaud DE LIE"
+      },
+      {
+        "bib": 152,
+        "name": "Huub ARTZ"
+      },
+      {
+        "bib": 153,
+        "name": "Jenno BERCKMOES"
+      },
+      {
+        "bib": 154,
+        "name": "Lars CRAPS"
+      },
+      {
+        "bib": 155,
+        "name": "Liam SLOCK"
+      },
+      {
+        "bib": 156,
+        "name": "Lennert VAN EETVELT"
+      },
+      {
+        "bib": 157,
+        "name": "Baptiste VEISTROFFER"
+      },
+      {
+        "bib": 158,
+        "name": "Georg ZIMMERMANN"
+      }
+    ]
+  },
+  {
+    "master_rider": "Uijtdebroeks",
+    "master_team": "MOVISTAR",
+    "slot": 1,
+    "confirmed_bib": 141,
+    "suggested_bib": 141,
+    "candidates": [
+      {
+        "bib": 141,
+        "name": "Cian UIJTDEBROEKS"
+      },
+      {
+        "bib": 142,
+        "name": "Pablo CASTRILLO ZAPATER"
+      },
+      {
+        "bib": 143,
+        "name": "Jefferson CEPEDA"
+      },
+      {
+        "bib": 144,
+        "name": "Raul GARCIA PIERNA"
+      },
+      {
+        "bib": 145,
+        "name": "Michel HEßMANN"
+      },
+      {
+        "bib": 146,
+        "name": "Nelson OLIVEIRA"
+      },
+      {
+        "bib": 147,
+        "name": "Javier ROMO OLIVER"
+      },
+      {
+        "bib": 148,
+        "name": "Einer RUBIO REYES"
+      }
+    ]
+  },
+  {
+    "master_rider": "Einer Rubio",
+    "master_team": "MOVISTAR",
+    "slot": 2,
+    "confirmed_bib": 148,
+    "suggested_bib": 148,
+    "candidates": [
+      {
+        "bib": 141,
+        "name": "Cian UIJTDEBROEKS"
+      },
+      {
+        "bib": 142,
+        "name": "Pablo CASTRILLO ZAPATER"
+      },
+      {
+        "bib": 143,
+        "name": "Jefferson CEPEDA"
+      },
+      {
+        "bib": 144,
+        "name": "Raul GARCIA PIERNA"
+      },
+      {
+        "bib": 145,
+        "name": "Michel HEßMANN"
+      },
+      {
+        "bib": 146,
+        "name": "Nelson OLIVEIRA"
+      },
+      {
+        "bib": 147,
+        "name": "Javier ROMO OLIVER"
+      },
+      {
+        "bib": 148,
+        "name": "Einer RUBIO REYES"
+      }
+    ]
+  },
+  {
+    "master_rider": "Castrillo Zapater",
+    "master_team": "MOVISTAR",
+    "slot": 3,
+    "confirmed_bib": 142,
+    "suggested_bib": 142,
+    "candidates": [
+      {
+        "bib": 141,
+        "name": "Cian UIJTDEBROEKS"
+      },
+      {
+        "bib": 142,
+        "name": "Pablo CASTRILLO ZAPATER"
+      },
+      {
+        "bib": 143,
+        "name": "Jefferson CEPEDA"
+      },
+      {
+        "bib": 144,
+        "name": "Raul GARCIA PIERNA"
+      },
+      {
+        "bib": 145,
+        "name": "Michel HEßMANN"
+      },
+      {
+        "bib": 146,
+        "name": "Nelson OLIVEIRA"
+      },
+      {
+        "bib": 147,
+        "name": "Javier ROMO OLIVER"
+      },
+      {
+        "bib": 148,
+        "name": "Einer RUBIO REYES"
+      }
+    ]
+  },
+  {
+    "master_rider": "Pierna",
+    "master_team": "MOVISTAR",
+    "slot": 4,
+    "confirmed_bib": 144,
+    "suggested_bib": 144,
+    "candidates": [
+      {
+        "bib": 141,
+        "name": "Cian UIJTDEBROEKS"
+      },
+      {
+        "bib": 142,
+        "name": "Pablo CASTRILLO ZAPATER"
+      },
+      {
+        "bib": 143,
+        "name": "Jefferson CEPEDA"
+      },
+      {
+        "bib": 144,
+        "name": "Raul GARCIA PIERNA"
+      },
+      {
+        "bib": 145,
+        "name": "Michel HEßMANN"
+      },
+      {
+        "bib": 146,
+        "name": "Nelson OLIVEIRA"
+      },
+      {
+        "bib": 147,
+        "name": "Javier ROMO OLIVER"
+      },
+      {
+        "bib": 148,
+        "name": "Einer RUBIO REYES"
+      }
+    ]
+  },
+  {
+    "master_rider": "Romo",
+    "master_team": "MOVISTAR",
+    "slot": 5,
+    "confirmed_bib": 147,
+    "suggested_bib": 147,
+    "candidates": [
+      {
+        "bib": 141,
+        "name": "Cian UIJTDEBROEKS"
+      },
+      {
+        "bib": 142,
+        "name": "Pablo CASTRILLO ZAPATER"
+      },
+      {
+        "bib": 143,
+        "name": "Jefferson CEPEDA"
+      },
+      {
+        "bib": 144,
+        "name": "Raul GARCIA PIERNA"
+      },
+      {
+        "bib": 145,
+        "name": "Michel HEßMANN"
+      },
+      {
+        "bib": 146,
+        "name": "Nelson OLIVEIRA"
+      },
+      {
+        "bib": 147,
+        "name": "Javier ROMO OLIVER"
+      },
+      {
+        "bib": 148,
+        "name": "Einer RUBIO REYES"
+      }
+    ]
+  },
+  {
+    "master_rider": "Hessmann",
+    "master_team": "MOVISTAR",
+    "slot": 6,
+    "confirmed_bib": 145,
+    "suggested_bib": null,
+    "candidates": [
+      {
+        "bib": 141,
+        "name": "Cian UIJTDEBROEKS"
+      },
+      {
+        "bib": 142,
+        "name": "Pablo CASTRILLO ZAPATER"
+      },
+      {
+        "bib": 143,
+        "name": "Jefferson CEPEDA"
+      },
+      {
+        "bib": 144,
+        "name": "Raul GARCIA PIERNA"
+      },
+      {
+        "bib": 145,
+        "name": "Michel HEßMANN"
+      },
+      {
+        "bib": 146,
+        "name": "Nelson OLIVEIRA"
+      },
+      {
+        "bib": 147,
+        "name": "Javier ROMO OLIVER"
+      },
+      {
+        "bib": 148,
+        "name": "Einer RUBIO REYES"
+      }
+    ]
+  },
+  {
+    "master_rider": "Cepeda",
+    "master_team": "MOVISTAR",
+    "slot": 7,
+    "confirmed_bib": 143,
+    "suggested_bib": 143,
+    "candidates": [
+      {
+        "bib": 141,
+        "name": "Cian UIJTDEBROEKS"
+      },
+      {
+        "bib": 142,
+        "name": "Pablo CASTRILLO ZAPATER"
+      },
+      {
+        "bib": 143,
+        "name": "Jefferson CEPEDA"
+      },
+      {
+        "bib": 144,
+        "name": "Raul GARCIA PIERNA"
+      },
+      {
+        "bib": 145,
+        "name": "Michel HEßMANN"
+      },
+      {
+        "bib": 146,
+        "name": "Nelson OLIVEIRA"
+      },
+      {
+        "bib": 147,
+        "name": "Javier ROMO OLIVER"
+      },
+      {
+        "bib": 148,
+        "name": "Einer RUBIO REYES"
+      }
+    ]
+  },
+  {
+    "master_rider": "N.Oliveira",
+    "master_team": "MOVISTAR",
+    "slot": 8,
+    "confirmed_bib": 146,
+    "suggested_bib": 146,
+    "candidates": [
+      {
+        "bib": 141,
+        "name": "Cian UIJTDEBROEKS"
+      },
+      {
+        "bib": 142,
+        "name": "Pablo CASTRILLO ZAPATER"
+      },
+      {
+        "bib": 143,
+        "name": "Jefferson CEPEDA"
+      },
+      {
+        "bib": 144,
+        "name": "Raul GARCIA PIERNA"
+      },
+      {
+        "bib": 145,
+        "name": "Michel HEßMANN"
+      },
+      {
+        "bib": 146,
+        "name": "Nelson OLIVEIRA"
+      },
+      {
+        "bib": 147,
+        "name": "Javier ROMO OLIVER"
+      },
+      {
+        "bib": 148,
+        "name": "Einer RUBIO REYES"
+      }
+    ]
+  },
+  {
+    "master_rider": "Evenepoel",
+    "master_team": "RED BULL BORA",
+    "slot": 1,
+    "confirmed_bib": 21,
+    "suggested_bib": 21,
+    "candidates": [
+      {
+        "bib": 21,
+        "name": "Remco EVENEPOEL"
+      },
+      {
+        "bib": 22,
+        "name": "Mattia CATTANEO"
+      },
+      {
+        "bib": 23,
+        "name": "Nico DENZ"
+      },
+      {
+        "bib": 24,
+        "name": "Jai HINDLEY"
+      },
+      {
+        "bib": 25,
+        "name": "Florian LIPOWITZ"
+      },
+      {
+        "bib": 26,
+        "name": "Jan TRATNIK"
+      },
+      {
+        "bib": 27,
+        "name": "Tim VAN DIJKE"
+      },
+      {
+        "bib": 28,
+        "name": "Maxim VAN GILS"
+      }
+    ]
+  },
+  {
+    "master_rider": "F. Lipowitz",
+    "master_team": "RED BULL BORA",
+    "slot": 2,
+    "confirmed_bib": 25,
+    "suggested_bib": 25,
+    "candidates": [
+      {
+        "bib": 21,
+        "name": "Remco EVENEPOEL"
+      },
+      {
+        "bib": 22,
+        "name": "Mattia CATTANEO"
+      },
+      {
+        "bib": 23,
+        "name": "Nico DENZ"
+      },
+      {
+        "bib": 24,
+        "name": "Jai HINDLEY"
+      },
+      {
+        "bib": 25,
+        "name": "Florian LIPOWITZ"
+      },
+      {
+        "bib": 26,
+        "name": "Jan TRATNIK"
+      },
+      {
+        "bib": 27,
+        "name": "Tim VAN DIJKE"
+      },
+      {
+        "bib": 28,
+        "name": "Maxim VAN GILS"
+      }
+    ]
+  },
+  {
+    "master_rider": "J. Hindley",
+    "master_team": "RED BULL BORA",
+    "slot": 3,
+    "confirmed_bib": 24,
+    "suggested_bib": 24,
+    "candidates": [
+      {
+        "bib": 21,
+        "name": "Remco EVENEPOEL"
+      },
+      {
+        "bib": 22,
+        "name": "Mattia CATTANEO"
+      },
+      {
+        "bib": 23,
+        "name": "Nico DENZ"
+      },
+      {
+        "bib": 24,
+        "name": "Jai HINDLEY"
+      },
+      {
+        "bib": 25,
+        "name": "Florian LIPOWITZ"
+      },
+      {
+        "bib": 26,
+        "name": "Jan TRATNIK"
+      },
+      {
+        "bib": 27,
+        "name": "Tim VAN DIJKE"
+      },
+      {
+        "bib": 28,
+        "name": "Maxim VAN GILS"
+      }
+    ]
+  },
+  {
+    "master_rider": "Van Gils",
+    "master_team": "RED BULL BORA",
+    "slot": 4,
+    "confirmed_bib": 28,
+    "suggested_bib": 28,
+    "candidates": [
+      {
+        "bib": 21,
+        "name": "Remco EVENEPOEL"
+      },
+      {
+        "bib": 22,
+        "name": "Mattia CATTANEO"
+      },
+      {
+        "bib": 23,
+        "name": "Nico DENZ"
+      },
+      {
+        "bib": 24,
+        "name": "Jai HINDLEY"
+      },
+      {
+        "bib": 25,
+        "name": "Florian LIPOWITZ"
+      },
+      {
+        "bib": 26,
+        "name": "Jan TRATNIK"
+      },
+      {
+        "bib": 27,
+        "name": "Tim VAN DIJKE"
+      },
+      {
+        "bib": 28,
+        "name": "Maxim VAN GILS"
+      }
+    ]
+  },
+  {
+    "master_rider": "T. van Dijke",
+    "master_team": "RED BULL BORA",
+    "slot": 5,
+    "confirmed_bib": 27,
+    "suggested_bib": 27,
+    "candidates": [
+      {
+        "bib": 21,
+        "name": "Remco EVENEPOEL"
+      },
+      {
+        "bib": 22,
+        "name": "Mattia CATTANEO"
+      },
+      {
+        "bib": 23,
+        "name": "Nico DENZ"
+      },
+      {
+        "bib": 24,
+        "name": "Jai HINDLEY"
+      },
+      {
+        "bib": 25,
+        "name": "Florian LIPOWITZ"
+      },
+      {
+        "bib": 26,
+        "name": "Jan TRATNIK"
+      },
+      {
+        "bib": 27,
+        "name": "Tim VAN DIJKE"
+      },
+      {
+        "bib": 28,
+        "name": "Maxim VAN GILS"
+      }
+    ]
+  },
+  {
+    "master_rider": "Cattaneo",
+    "master_team": "RED BULL BORA",
+    "slot": 6,
+    "confirmed_bib": 22,
+    "suggested_bib": 22,
+    "candidates": [
+      {
+        "bib": 21,
+        "name": "Remco EVENEPOEL"
+      },
+      {
+        "bib": 22,
+        "name": "Mattia CATTANEO"
+      },
+      {
+        "bib": 23,
+        "name": "Nico DENZ"
+      },
+      {
+        "bib": 24,
+        "name": "Jai HINDLEY"
+      },
+      {
+        "bib": 25,
+        "name": "Florian LIPOWITZ"
+      },
+      {
+        "bib": 26,
+        "name": "Jan TRATNIK"
+      },
+      {
+        "bib": 27,
+        "name": "Tim VAN DIJKE"
+      },
+      {
+        "bib": 28,
+        "name": "Maxim VAN GILS"
+      }
+    ]
+  },
+  {
+    "master_rider": "Denz",
+    "master_team": "RED BULL BORA",
+    "slot": 7,
+    "confirmed_bib": 23,
+    "suggested_bib": 23,
+    "candidates": [
+      {
+        "bib": 21,
+        "name": "Remco EVENEPOEL"
+      },
+      {
+        "bib": 22,
+        "name": "Mattia CATTANEO"
+      },
+      {
+        "bib": 23,
+        "name": "Nico DENZ"
+      },
+      {
+        "bib": 24,
+        "name": "Jai HINDLEY"
+      },
+      {
+        "bib": 25,
+        "name": "Florian LIPOWITZ"
+      },
+      {
+        "bib": 26,
+        "name": "Jan TRATNIK"
+      },
+      {
+        "bib": 27,
+        "name": "Tim VAN DIJKE"
+      },
+      {
+        "bib": 28,
+        "name": "Maxim VAN GILS"
+      }
+    ]
+  },
+  {
+    "master_rider": "Tratnik",
+    "master_team": "RED BULL BORA",
+    "slot": 8,
+    "confirmed_bib": 26,
+    "suggested_bib": 26,
+    "candidates": [
+      {
+        "bib": 21,
+        "name": "Remco EVENEPOEL"
+      },
+      {
+        "bib": 22,
+        "name": "Mattia CATTANEO"
+      },
+      {
+        "bib": 23,
+        "name": "Nico DENZ"
+      },
+      {
+        "bib": 24,
+        "name": "Jai HINDLEY"
+      },
+      {
+        "bib": 25,
+        "name": "Florian LIPOWITZ"
+      },
+      {
+        "bib": 26,
+        "name": "Jan TRATNIK"
+      },
+      {
+        "bib": 27,
+        "name": "Tim VAN DIJKE"
+      },
+      {
+        "bib": 28,
+        "name": "Maxim VAN GILS"
+      }
+    ]
+  },
+  {
+    "master_rider": "Van Baarle",
+    "master_team": "SOUDAL QUICKSTEP",
+    "slot": 1,
+    "confirmed_bib": 95,
+    "suggested_bib": 95,
+    "candidates": [
+      {
+        "bib": 91,
+        "name": "Tim MERLIER"
+      },
+      {
+        "bib": 92,
+        "name": "Pascal EENKHOORN"
+      },
+      {
+        "bib": 93,
+        "name": "Valentin PARET PEINTRE"
+      },
+      {
+        "bib": 94,
+        "name": "Jasper STUYVEN"
+      },
+      {
+        "bib": 95,
+        "name": "Dylan VAN BAARLE"
+      },
+      {
+        "bib": 96,
+        "name": "Bert VAN LERBERGHE"
+      },
+      {
+        "bib": 97,
+        "name": "Ilan VAN WILDER"
+      },
+      {
+        "bib": 98,
+        "name": "Louis VERVAEKE"
+      }
+    ]
+  },
+  {
+    "master_rider": "T. Merlier",
+    "master_team": "SOUDAL QUICKSTEP",
+    "slot": 2,
+    "confirmed_bib": 91,
+    "suggested_bib": 91,
+    "candidates": [
+      {
+        "bib": 91,
+        "name": "Tim MERLIER"
+      },
+      {
+        "bib": 92,
+        "name": "Pascal EENKHOORN"
+      },
+      {
+        "bib": 93,
+        "name": "Valentin PARET PEINTRE"
+      },
+      {
+        "bib": 94,
+        "name": "Jasper STUYVEN"
+      },
+      {
+        "bib": 95,
+        "name": "Dylan VAN BAARLE"
+      },
+      {
+        "bib": 96,
+        "name": "Bert VAN LERBERGHE"
+      },
+      {
+        "bib": 97,
+        "name": "Ilan VAN WILDER"
+      },
+      {
+        "bib": 98,
+        "name": "Louis VERVAEKE"
+      }
+    ]
+  },
+  {
+    "master_rider": "J. Stuyven",
+    "master_team": "SOUDAL QUICKSTEP",
+    "slot": 3,
+    "confirmed_bib": 94,
+    "suggested_bib": 94,
+    "candidates": [
+      {
+        "bib": 91,
+        "name": "Tim MERLIER"
+      },
+      {
+        "bib": 92,
+        "name": "Pascal EENKHOORN"
+      },
+      {
+        "bib": 93,
+        "name": "Valentin PARET PEINTRE"
+      },
+      {
+        "bib": 94,
+        "name": "Jasper STUYVEN"
+      },
+      {
+        "bib": 95,
+        "name": "Dylan VAN BAARLE"
+      },
+      {
+        "bib": 96,
+        "name": "Bert VAN LERBERGHE"
+      },
+      {
+        "bib": 97,
+        "name": "Ilan VAN WILDER"
+      },
+      {
+        "bib": 98,
+        "name": "Louis VERVAEKE"
+      }
+    ]
+  },
+  {
+    "master_rider": "V.Paret-Peintre",
+    "master_team": "SOUDAL QUICKSTEP",
+    "slot": 4,
+    "confirmed_bib": 93,
+    "suggested_bib": 93,
+    "candidates": [
+      {
+        "bib": 91,
+        "name": "Tim MERLIER"
+      },
+      {
+        "bib": 92,
+        "name": "Pascal EENKHOORN"
+      },
+      {
+        "bib": 93,
+        "name": "Valentin PARET PEINTRE"
+      },
+      {
+        "bib": 94,
+        "name": "Jasper STUYVEN"
+      },
+      {
+        "bib": 95,
+        "name": "Dylan VAN BAARLE"
+      },
+      {
+        "bib": 96,
+        "name": "Bert VAN LERBERGHE"
+      },
+      {
+        "bib": 97,
+        "name": "Ilan VAN WILDER"
+      },
+      {
+        "bib": 98,
+        "name": "Louis VERVAEKE"
+      }
+    ]
+  },
+  {
+    "master_rider": "I.van Wilder",
+    "master_team": "SOUDAL QUICKSTEP",
+    "slot": 5,
+    "confirmed_bib": 97,
+    "suggested_bib": 97,
+    "candidates": [
+      {
+        "bib": 91,
+        "name": "Tim MERLIER"
+      },
+      {
+        "bib": 92,
+        "name": "Pascal EENKHOORN"
+      },
+      {
+        "bib": 93,
+        "name": "Valentin PARET PEINTRE"
+      },
+      {
+        "bib": 94,
+        "name": "Jasper STUYVEN"
+      },
+      {
+        "bib": 95,
+        "name": "Dylan VAN BAARLE"
+      },
+      {
+        "bib": 96,
+        "name": "Bert VAN LERBERGHE"
+      },
+      {
+        "bib": 97,
+        "name": "Ilan VAN WILDER"
+      },
+      {
+        "bib": 98,
+        "name": "Louis VERVAEKE"
+      }
+    ]
+  },
+  {
+    "master_rider": "L. Vervaeke",
+    "master_team": "SOUDAL QUICKSTEP",
+    "slot": 6,
+    "confirmed_bib": 98,
+    "suggested_bib": 98,
+    "candidates": [
+      {
+        "bib": 91,
+        "name": "Tim MERLIER"
+      },
+      {
+        "bib": 92,
+        "name": "Pascal EENKHOORN"
+      },
+      {
+        "bib": 93,
+        "name": "Valentin PARET PEINTRE"
+      },
+      {
+        "bib": 94,
+        "name": "Jasper STUYVEN"
+      },
+      {
+        "bib": 95,
+        "name": "Dylan VAN BAARLE"
+      },
+      {
+        "bib": 96,
+        "name": "Bert VAN LERBERGHE"
+      },
+      {
+        "bib": 97,
+        "name": "Ilan VAN WILDER"
+      },
+      {
+        "bib": 98,
+        "name": "Louis VERVAEKE"
+      }
+    ]
+  },
+  {
+    "master_rider": "Lerberghe",
+    "master_team": "SOUDAL QUICKSTEP",
+    "slot": 7,
+    "confirmed_bib": 96,
+    "suggested_bib": 96,
+    "candidates": [
+      {
+        "bib": 91,
+        "name": "Tim MERLIER"
+      },
+      {
+        "bib": 92,
+        "name": "Pascal EENKHOORN"
+      },
+      {
+        "bib": 93,
+        "name": "Valentin PARET PEINTRE"
+      },
+      {
+        "bib": 94,
+        "name": "Jasper STUYVEN"
+      },
+      {
+        "bib": 95,
+        "name": "Dylan VAN BAARLE"
+      },
+      {
+        "bib": 96,
+        "name": "Bert VAN LERBERGHE"
+      },
+      {
+        "bib": 97,
+        "name": "Ilan VAN WILDER"
+      },
+      {
+        "bib": 98,
+        "name": "Louis VERVAEKE"
+      }
+    ]
+  },
+  {
+    "master_rider": "Eenkhoorn",
+    "master_team": "SOUDAL QUICKSTEP",
+    "slot": 8,
+    "confirmed_bib": 92,
+    "suggested_bib": 92,
+    "candidates": [
+      {
+        "bib": 91,
+        "name": "Tim MERLIER"
+      },
+      {
+        "bib": 92,
+        "name": "Pascal EENKHOORN"
+      },
+      {
+        "bib": 93,
+        "name": "Valentin PARET PEINTRE"
+      },
+      {
+        "bib": 94,
+        "name": "Jasper STUYVEN"
+      },
+      {
+        "bib": 95,
+        "name": "Dylan VAN BAARLE"
+      },
+      {
+        "bib": 96,
+        "name": "Bert VAN LERBERGHE"
+      },
+      {
+        "bib": 97,
+        "name": "Ilan VAN WILDER"
+      },
+      {
+        "bib": 98,
+        "name": "Louis VERVAEKE"
+      }
+    ]
+  },
+  {
+    "master_rider": "B’Connor",
+    "master_team": "JAYCO ALULA",
+    "slot": 1,
+    "confirmed_bib": 111,
+    "suggested_bib": null,
+    "candidates": [
+      {
+        "bib": 111,
+        "name": "Ben O'CONNOR"
+      },
+      {
+        "bib": 112,
+        "name": "Pascal ACKERMANN"
+      },
+      {
+        "bib": 113,
+        "name": "Luke DURBRIDGE"
+      },
+      {
+        "bib": 114,
+        "name": "Felix ENGELHARDT"
+      },
+      {
+        "bib": 115,
+        "name": "Michael MATTHEWS"
+      },
+      {
+        "bib": 116,
+        "name": "Kelland O’BRIEN"
+      },
+      {
+        "bib": 117,
+        "name": "Luke PLAPP"
+      },
+      {
+        "bib": 118,
+        "name": "Mauro SCHMID"
+      }
+    ]
+  },
+  {
+    "master_rider": "P. Ackermann",
+    "master_team": "JAYCO ALULA",
+    "slot": 2,
+    "confirmed_bib": 112,
+    "suggested_bib": 112,
+    "candidates": [
+      {
+        "bib": 111,
+        "name": "Ben O'CONNOR"
+      },
+      {
+        "bib": 112,
+        "name": "Pascal ACKERMANN"
+      },
+      {
+        "bib": 113,
+        "name": "Luke DURBRIDGE"
+      },
+      {
+        "bib": 114,
+        "name": "Felix ENGELHARDT"
+      },
+      {
+        "bib": 115,
+        "name": "Michael MATTHEWS"
+      },
+      {
+        "bib": 116,
+        "name": "Kelland O’BRIEN"
+      },
+      {
+        "bib": 117,
+        "name": "Luke PLAPP"
+      },
+      {
+        "bib": 118,
+        "name": "Mauro SCHMID"
+      }
+    ]
+  },
+  {
+    "master_rider": "Plapp",
+    "master_team": "JAYCO ALULA",
+    "slot": 3,
+    "confirmed_bib": 117,
+    "suggested_bib": 117,
+    "candidates": [
+      {
+        "bib": 111,
+        "name": "Ben O'CONNOR"
+      },
+      {
+        "bib": 112,
+        "name": "Pascal ACKERMANN"
+      },
+      {
+        "bib": 113,
+        "name": "Luke DURBRIDGE"
+      },
+      {
+        "bib": 114,
+        "name": "Felix ENGELHARDT"
+      },
+      {
+        "bib": 115,
+        "name": "Michael MATTHEWS"
+      },
+      {
+        "bib": 116,
+        "name": "Kelland O’BRIEN"
+      },
+      {
+        "bib": 117,
+        "name": "Luke PLAPP"
+      },
+      {
+        "bib": 118,
+        "name": "Mauro SCHMID"
+      }
+    ]
+  },
+  {
+    "master_rider": "M. Matthews",
+    "master_team": "JAYCO ALULA",
+    "slot": 4,
+    "confirmed_bib": 115,
+    "suggested_bib": 115,
+    "candidates": [
+      {
+        "bib": 111,
+        "name": "Ben O'CONNOR"
+      },
+      {
+        "bib": 112,
+        "name": "Pascal ACKERMANN"
+      },
+      {
+        "bib": 113,
+        "name": "Luke DURBRIDGE"
+      },
+      {
+        "bib": 114,
+        "name": "Felix ENGELHARDT"
+      },
+      {
+        "bib": 115,
+        "name": "Michael MATTHEWS"
+      },
+      {
+        "bib": 116,
+        "name": "Kelland O’BRIEN"
+      },
+      {
+        "bib": 117,
+        "name": "Luke PLAPP"
+      },
+      {
+        "bib": 118,
+        "name": "Mauro SCHMID"
+      }
+    ]
+  },
+  {
+    "master_rider": "L. Durbridge",
+    "master_team": "JAYCO ALULA",
+    "slot": 5,
+    "confirmed_bib": 113,
+    "suggested_bib": 113,
+    "candidates": [
+      {
+        "bib": 111,
+        "name": "Ben O'CONNOR"
+      },
+      {
+        "bib": 112,
+        "name": "Pascal ACKERMANN"
+      },
+      {
+        "bib": 113,
+        "name": "Luke DURBRIDGE"
+      },
+      {
+        "bib": 114,
+        "name": "Felix ENGELHARDT"
+      },
+      {
+        "bib": 115,
+        "name": "Michael MATTHEWS"
+      },
+      {
+        "bib": 116,
+        "name": "Kelland O’BRIEN"
+      },
+      {
+        "bib": 117,
+        "name": "Luke PLAPP"
+      },
+      {
+        "bib": 118,
+        "name": "Mauro SCHMID"
+      }
+    ]
+  },
+  {
+    "master_rider": "Schmid",
+    "master_team": "JAYCO ALULA",
+    "slot": 6,
+    "confirmed_bib": 118,
+    "suggested_bib": 118,
+    "candidates": [
+      {
+        "bib": 111,
+        "name": "Ben O'CONNOR"
+      },
+      {
+        "bib": 112,
+        "name": "Pascal ACKERMANN"
+      },
+      {
+        "bib": 113,
+        "name": "Luke DURBRIDGE"
+      },
+      {
+        "bib": 114,
+        "name": "Felix ENGELHARDT"
+      },
+      {
+        "bib": 115,
+        "name": "Michael MATTHEWS"
+      },
+      {
+        "bib": 116,
+        "name": "Kelland O’BRIEN"
+      },
+      {
+        "bib": 117,
+        "name": "Luke PLAPP"
+      },
+      {
+        "bib": 118,
+        "name": "Mauro SCHMID"
+      }
+    ]
+  },
+  {
+    "master_rider": "Engelhardt",
+    "master_team": "JAYCO ALULA",
+    "slot": 7,
+    "confirmed_bib": 114,
+    "suggested_bib": 114,
+    "candidates": [
+      {
+        "bib": 111,
+        "name": "Ben O'CONNOR"
+      },
+      {
+        "bib": 112,
+        "name": "Pascal ACKERMANN"
+      },
+      {
+        "bib": 113,
+        "name": "Luke DURBRIDGE"
+      },
+      {
+        "bib": 114,
+        "name": "Felix ENGELHARDT"
+      },
+      {
+        "bib": 115,
+        "name": "Michael MATTHEWS"
+      },
+      {
+        "bib": 116,
+        "name": "Kelland O’BRIEN"
+      },
+      {
+        "bib": 117,
+        "name": "Luke PLAPP"
+      },
+      {
+        "bib": 118,
+        "name": "Mauro SCHMID"
+      }
+    ]
+  },
+  {
+    "master_rider": "O’Brien",
+    "master_team": "JAYCO ALULA",
+    "slot": 8,
+    "confirmed_bib": 116,
+    "suggested_bib": 116,
+    "candidates": [
+      {
+        "bib": 111,
+        "name": "Ben O'CONNOR"
+      },
+      {
+        "bib": 112,
+        "name": "Pascal ACKERMANN"
+      },
+      {
+        "bib": 113,
+        "name": "Luke DURBRIDGE"
+      },
+      {
+        "bib": 114,
+        "name": "Felix ENGELHARDT"
+      },
+      {
+        "bib": 115,
+        "name": "Michael MATTHEWS"
+      },
+      {
+        "bib": 116,
+        "name": "Kelland O’BRIEN"
+      },
+      {
+        "bib": 117,
+        "name": "Luke PLAPP"
+      },
+      {
+        "bib": 118,
+        "name": "Mauro SCHMID"
+      }
+    ]
+  },
+  {
+    "master_rider": "F. van den Broek",
+    "master_team": "PICNIC POSTNL",
+    "slot": 1,
+    "confirmed_bib": 218,
+    "suggested_bib": 218,
+    "candidates": [
+      {
+        "bib": 211,
+        "name": "Warren BARGUIL"
+      },
+      {
+        "bib": 212,
+        "name": "Frits BIESTERBOS"
+      },
+      {
+        "bib": 213,
+        "name": "Pavel BITTNER"
+      },
+      {
+        "bib": 214,
+        "name": "John DEGENKOLB"
+      },
+      {
+        "bib": 215,
+        "name": "Robbe DHONDT"
+      },
+      {
+        "bib": 216,
+        "name": "Niklas MÄRKL"
+      },
+      {
+        "bib": 217,
+        "name": "Julius VAN DEN BERG"
+      },
+      {
+        "bib": 218,
+        "name": "Frank VAN DEN BROEK"
+      }
+    ]
+  },
+  {
+    "master_rider": "W. Barguil",
+    "master_team": "PICNIC POSTNL",
+    "slot": 2,
+    "confirmed_bib": 211,
+    "suggested_bib": 211,
+    "candidates": [
+      {
+        "bib": 211,
+        "name": "Warren BARGUIL"
+      },
+      {
+        "bib": 212,
+        "name": "Frits BIESTERBOS"
+      },
+      {
+        "bib": 213,
+        "name": "Pavel BITTNER"
+      },
+      {
+        "bib": 214,
+        "name": "John DEGENKOLB"
+      },
+      {
+        "bib": 215,
+        "name": "Robbe DHONDT"
+      },
+      {
+        "bib": 216,
+        "name": "Niklas MÄRKL"
+      },
+      {
+        "bib": 217,
+        "name": "Julius VAN DEN BERG"
+      },
+      {
+        "bib": 218,
+        "name": "Frank VAN DEN BROEK"
+      }
+    ]
+  },
+  {
+    "master_rider": "Bittner",
+    "master_team": "PICNIC POSTNL",
+    "slot": 3,
+    "confirmed_bib": 213,
+    "suggested_bib": 213,
+    "candidates": [
+      {
+        "bib": 211,
+        "name": "Warren BARGUIL"
+      },
+      {
+        "bib": 212,
+        "name": "Frits BIESTERBOS"
+      },
+      {
+        "bib": 213,
+        "name": "Pavel BITTNER"
+      },
+      {
+        "bib": 214,
+        "name": "John DEGENKOLB"
+      },
+      {
+        "bib": 215,
+        "name": "Robbe DHONDT"
+      },
+      {
+        "bib": 216,
+        "name": "Niklas MÄRKL"
+      },
+      {
+        "bib": 217,
+        "name": "Julius VAN DEN BERG"
+      },
+      {
+        "bib": 218,
+        "name": "Frank VAN DEN BROEK"
+      }
+    ]
+  },
+  {
+    "master_rider": "Degenkolb",
+    "master_team": "PICNIC POSTNL",
+    "slot": 4,
+    "confirmed_bib": 214,
+    "suggested_bib": 214,
+    "candidates": [
+      {
+        "bib": 211,
+        "name": "Warren BARGUIL"
+      },
+      {
+        "bib": 212,
+        "name": "Frits BIESTERBOS"
+      },
+      {
+        "bib": 213,
+        "name": "Pavel BITTNER"
+      },
+      {
+        "bib": 214,
+        "name": "John DEGENKOLB"
+      },
+      {
+        "bib": 215,
+        "name": "Robbe DHONDT"
+      },
+      {
+        "bib": 216,
+        "name": "Niklas MÄRKL"
+      },
+      {
+        "bib": 217,
+        "name": "Julius VAN DEN BERG"
+      },
+      {
+        "bib": 218,
+        "name": "Frank VAN DEN BROEK"
+      }
+    ]
+  },
+  {
+    "master_rider": "J.vdBerg",
+    "master_team": "PICNIC POSTNL",
+    "slot": 5,
+    "confirmed_bib": 217,
+    "suggested_bib": 217,
+    "candidates": [
+      {
+        "bib": 211,
+        "name": "Warren BARGUIL"
+      },
+      {
+        "bib": 212,
+        "name": "Frits BIESTERBOS"
+      },
+      {
+        "bib": 213,
+        "name": "Pavel BITTNER"
+      },
+      {
+        "bib": 214,
+        "name": "John DEGENKOLB"
+      },
+      {
+        "bib": 215,
+        "name": "Robbe DHONDT"
+      },
+      {
+        "bib": 216,
+        "name": "Niklas MÄRKL"
+      },
+      {
+        "bib": 217,
+        "name": "Julius VAN DEN BERG"
+      },
+      {
+        "bib": 218,
+        "name": "Frank VAN DEN BROEK"
+      }
+    ]
+  },
+  {
+    "master_rider": "Biesterbos",
+    "master_team": "PICNIC POSTNL",
+    "slot": 6,
+    "confirmed_bib": 212,
+    "suggested_bib": 212,
+    "candidates": [
+      {
+        "bib": 211,
+        "name": "Warren BARGUIL"
+      },
+      {
+        "bib": 212,
+        "name": "Frits BIESTERBOS"
+      },
+      {
+        "bib": 213,
+        "name": "Pavel BITTNER"
+      },
+      {
+        "bib": 214,
+        "name": "John DEGENKOLB"
+      },
+      {
+        "bib": 215,
+        "name": "Robbe DHONDT"
+      },
+      {
+        "bib": 216,
+        "name": "Niklas MÄRKL"
+      },
+      {
+        "bib": 217,
+        "name": "Julius VAN DEN BERG"
+      },
+      {
+        "bib": 218,
+        "name": "Frank VAN DEN BROEK"
+      }
+    ]
+  },
+  {
+    "master_rider": "Dhondt",
+    "master_team": "PICNIC POSTNL",
+    "slot": 7,
+    "confirmed_bib": 215,
+    "suggested_bib": 215,
+    "candidates": [
+      {
+        "bib": 211,
+        "name": "Warren BARGUIL"
+      },
+      {
+        "bib": 212,
+        "name": "Frits BIESTERBOS"
+      },
+      {
+        "bib": 213,
+        "name": "Pavel BITTNER"
+      },
+      {
+        "bib": 214,
+        "name": "John DEGENKOLB"
+      },
+      {
+        "bib": 215,
+        "name": "Robbe DHONDT"
+      },
+      {
+        "bib": 216,
+        "name": "Niklas MÄRKL"
+      },
+      {
+        "bib": 217,
+        "name": "Julius VAN DEN BERG"
+      },
+      {
+        "bib": 218,
+        "name": "Frank VAN DEN BROEK"
+      }
+    ]
+  },
+  {
+    "master_rider": "Markl",
+    "master_team": "PICNIC POSTNL",
+    "slot": 8,
+    "confirmed_bib": 216,
+    "suggested_bib": 216,
+    "candidates": [
+      {
+        "bib": 211,
+        "name": "Warren BARGUIL"
+      },
+      {
+        "bib": 212,
+        "name": "Frits BIESTERBOS"
+      },
+      {
+        "bib": 213,
+        "name": "Pavel BITTNER"
+      },
+      {
+        "bib": 214,
+        "name": "John DEGENKOLB"
+      },
+      {
+        "bib": 215,
+        "name": "Robbe DHONDT"
+      },
+      {
+        "bib": 216,
+        "name": "Niklas MÄRKL"
+      },
+      {
+        "bib": 217,
+        "name": "Julius VAN DEN BERG"
+      },
+      {
+        "bib": 218,
+        "name": "Frank VAN DEN BROEK"
+      }
+    ]
+  },
+  {
+    "master_rider": "Vingegaard",
+    "master_team": "VISMA LEASE A BIKE",
+    "slot": 1,
+    "confirmed_bib": 11,
+    "suggested_bib": 11,
+    "candidates": [
+      {
+        "bib": 11,
+        "name": "Jonas VINGEGAARD HANSEN"
+      },
+      {
+        "bib": 12,
+        "name": "Edoardo AFFINI"
+      },
+      {
+        "bib": 13,
+        "name": "Bruno ARMIRAIL"
+      },
+      {
+        "bib": 14,
+        "name": "Victor CAMPENAERTS"
+      },
+      {
+        "bib": 15,
+        "name": "Per Strand HAGENES"
+      },
+      {
+        "bib": 16,
+        "name": "Matteo JORGENSON"
+      },
+      {
+        "bib": 17,
+        "name": "Sepp KUSS"
+      },
+      {
+        "bib": 18,
+        "name": "Davide PIGANZOLI"
+      }
+    ]
+  },
+  {
+    "master_rider": "Jorgenson",
+    "master_team": "VISMA LEASE A BIKE",
+    "slot": 2,
+    "confirmed_bib": 16,
+    "suggested_bib": 16,
+    "candidates": [
+      {
+        "bib": 11,
+        "name": "Jonas VINGEGAARD HANSEN"
+      },
+      {
+        "bib": 12,
+        "name": "Edoardo AFFINI"
+      },
+      {
+        "bib": 13,
+        "name": "Bruno ARMIRAIL"
+      },
+      {
+        "bib": 14,
+        "name": "Victor CAMPENAERTS"
+      },
+      {
+        "bib": 15,
+        "name": "Per Strand HAGENES"
+      },
+      {
+        "bib": 16,
+        "name": "Matteo JORGENSON"
+      },
+      {
+        "bib": 17,
+        "name": "Sepp KUSS"
+      },
+      {
+        "bib": 18,
+        "name": "Davide PIGANZOLI"
+      }
+    ]
+  },
+  {
+    "master_rider": "Kuss",
+    "master_team": "VISMA LEASE A BIKE",
+    "slot": 3,
+    "confirmed_bib": 17,
+    "suggested_bib": 17,
+    "candidates": [
+      {
+        "bib": 11,
+        "name": "Jonas VINGEGAARD HANSEN"
+      },
+      {
+        "bib": 12,
+        "name": "Edoardo AFFINI"
+      },
+      {
+        "bib": 13,
+        "name": "Bruno ARMIRAIL"
+      },
+      {
+        "bib": 14,
+        "name": "Victor CAMPENAERTS"
+      },
+      {
+        "bib": 15,
+        "name": "Per Strand HAGENES"
+      },
+      {
+        "bib": 16,
+        "name": "Matteo JORGENSON"
+      },
+      {
+        "bib": 17,
+        "name": "Sepp KUSS"
+      },
+      {
+        "bib": 18,
+        "name": "Davide PIGANZOLI"
+      }
+    ]
+  },
+  {
+    "master_rider": "Campenaerts",
+    "master_team": "VISMA LEASE A BIKE",
+    "slot": 4,
+    "confirmed_bib": 14,
+    "suggested_bib": 14,
+    "candidates": [
+      {
+        "bib": 11,
+        "name": "Jonas VINGEGAARD HANSEN"
+      },
+      {
+        "bib": 12,
+        "name": "Edoardo AFFINI"
+      },
+      {
+        "bib": 13,
+        "name": "Bruno ARMIRAIL"
+      },
+      {
+        "bib": 14,
+        "name": "Victor CAMPENAERTS"
+      },
+      {
+        "bib": 15,
+        "name": "Per Strand HAGENES"
+      },
+      {
+        "bib": 16,
+        "name": "Matteo JORGENSON"
+      },
+      {
+        "bib": 17,
+        "name": "Sepp KUSS"
+      },
+      {
+        "bib": 18,
+        "name": "Davide PIGANZOLI"
+      }
+    ]
+  },
+  {
+    "master_rider": "Armirall",
+    "master_team": "VISMA LEASE A BIKE",
+    "slot": 5,
+    "confirmed_bib": 13,
+    "suggested_bib": null,
+    "candidates": [
+      {
+        "bib": 11,
+        "name": "Jonas VINGEGAARD HANSEN"
+      },
+      {
+        "bib": 12,
+        "name": "Edoardo AFFINI"
+      },
+      {
+        "bib": 13,
+        "name": "Bruno ARMIRAIL"
+      },
+      {
+        "bib": 14,
+        "name": "Victor CAMPENAERTS"
+      },
+      {
+        "bib": 15,
+        "name": "Per Strand HAGENES"
+      },
+      {
+        "bib": 16,
+        "name": "Matteo JORGENSON"
+      },
+      {
+        "bib": 17,
+        "name": "Sepp KUSS"
+      },
+      {
+        "bib": 18,
+        "name": "Davide PIGANZOLI"
+      }
+    ]
+  },
+  {
+    "master_rider": "Affini",
+    "master_team": "VISMA LEASE A BIKE",
+    "slot": 6,
+    "confirmed_bib": 12,
+    "suggested_bib": 12,
+    "candidates": [
+      {
+        "bib": 11,
+        "name": "Jonas VINGEGAARD HANSEN"
+      },
+      {
+        "bib": 12,
+        "name": "Edoardo AFFINI"
+      },
+      {
+        "bib": 13,
+        "name": "Bruno ARMIRAIL"
+      },
+      {
+        "bib": 14,
+        "name": "Victor CAMPENAERTS"
+      },
+      {
+        "bib": 15,
+        "name": "Per Strand HAGENES"
+      },
+      {
+        "bib": 16,
+        "name": "Matteo JORGENSON"
+      },
+      {
+        "bib": 17,
+        "name": "Sepp KUSS"
+      },
+      {
+        "bib": 18,
+        "name": "Davide PIGANZOLI"
+      }
+    ]
+  },
+  {
+    "master_rider": "Strand Hagenes",
+    "master_team": "VISMA LEASE A BIKE",
+    "slot": 7,
+    "confirmed_bib": 15,
+    "suggested_bib": 15,
+    "candidates": [
+      {
+        "bib": 11,
+        "name": "Jonas VINGEGAARD HANSEN"
+      },
+      {
+        "bib": 12,
+        "name": "Edoardo AFFINI"
+      },
+      {
+        "bib": 13,
+        "name": "Bruno ARMIRAIL"
+      },
+      {
+        "bib": 14,
+        "name": "Victor CAMPENAERTS"
+      },
+      {
+        "bib": 15,
+        "name": "Per Strand HAGENES"
+      },
+      {
+        "bib": 16,
+        "name": "Matteo JORGENSON"
+      },
+      {
+        "bib": 17,
+        "name": "Sepp KUSS"
+      },
+      {
+        "bib": 18,
+        "name": "Davide PIGANZOLI"
+      }
+    ]
+  },
+  {
+    "master_rider": "Piganzoli",
+    "master_team": "VISMA LEASE A BIKE",
+    "slot": 8,
+    "confirmed_bib": 18,
+    "suggested_bib": 18,
+    "candidates": [
+      {
+        "bib": 11,
+        "name": "Jonas VINGEGAARD HANSEN"
+      },
+      {
+        "bib": 12,
+        "name": "Edoardo AFFINI"
+      },
+      {
+        "bib": 13,
+        "name": "Bruno ARMIRAIL"
+      },
+      {
+        "bib": 14,
+        "name": "Victor CAMPENAERTS"
+      },
+      {
+        "bib": 15,
+        "name": "Per Strand HAGENES"
+      },
+      {
+        "bib": 16,
+        "name": "Matteo JORGENSON"
+      },
+      {
+        "bib": 17,
+        "name": "Sepp KUSS"
+      },
+      {
+        "bib": 18,
+        "name": "Davide PIGANZOLI"
+      }
+    ]
+  },
+  {
+    "master_rider": "M. Storer",
+    "master_team": "TUDOR PRO CYCLING",
+    "slot": 1,
+    "confirmed_bib": 196,
+    "suggested_bib": 196,
+    "candidates": [
+      {
+        "bib": 191,
+        "name": "Julian ALAPHILIPPE"
+      },
+      {
+        "bib": 192,
+        "name": "Arvid DE KLEIJN"
+      },
+      {
+        "bib": 193,
+        "name": "Marco HALLER"
+      },
+      {
+        "bib": 194,
+        "name": "Marc HIRSCHI"
+      },
+      {
+        "bib": 195,
+        "name": "Rick PLUIMERS"
+      },
+      {
+        "bib": 196,
+        "name": "Michael STORER"
+      },
+      {
+        "bib": 197,
+        "name": "Matteo TRENTIN"
+      },
+      {
+        "bib": 198,
+        "name": "Yannis VOISARD"
+      }
+    ]
+  },
+  {
+    "master_rider": "Alaphilippe",
+    "master_team": "TUDOR PRO CYCLING",
+    "slot": 2,
+    "confirmed_bib": 191,
+    "suggested_bib": 191,
+    "candidates": [
+      {
+        "bib": 191,
+        "name": "Julian ALAPHILIPPE"
+      },
+      {
+        "bib": 192,
+        "name": "Arvid DE KLEIJN"
+      },
+      {
+        "bib": 193,
+        "name": "Marco HALLER"
+      },
+      {
+        "bib": 194,
+        "name": "Marc HIRSCHI"
+      },
+      {
+        "bib": 195,
+        "name": "Rick PLUIMERS"
+      },
+      {
+        "bib": 196,
+        "name": "Michael STORER"
+      },
+      {
+        "bib": 197,
+        "name": "Matteo TRENTIN"
+      },
+      {
+        "bib": 198,
+        "name": "Yannis VOISARD"
+      }
+    ]
+  },
+  {
+    "master_rider": "Haller",
+    "master_team": "TUDOR PRO CYCLING",
+    "slot": 3,
+    "confirmed_bib": 193,
+    "suggested_bib": 193,
+    "candidates": [
+      {
+        "bib": 191,
+        "name": "Julian ALAPHILIPPE"
+      },
+      {
+        "bib": 192,
+        "name": "Arvid DE KLEIJN"
+      },
+      {
+        "bib": 193,
+        "name": "Marco HALLER"
+      },
+      {
+        "bib": 194,
+        "name": "Marc HIRSCHI"
+      },
+      {
+        "bib": 195,
+        "name": "Rick PLUIMERS"
+      },
+      {
+        "bib": 196,
+        "name": "Michael STORER"
+      },
+      {
+        "bib": 197,
+        "name": "Matteo TRENTIN"
+      },
+      {
+        "bib": 198,
+        "name": "Yannis VOISARD"
+      }
+    ]
+  },
+  {
+    "master_rider": "M. Trentin",
+    "master_team": "TUDOR PRO CYCLING",
+    "slot": 4,
+    "confirmed_bib": 197,
+    "suggested_bib": 197,
+    "candidates": [
+      {
+        "bib": 191,
+        "name": "Julian ALAPHILIPPE"
+      },
+      {
+        "bib": 192,
+        "name": "Arvid DE KLEIJN"
+      },
+      {
+        "bib": 193,
+        "name": "Marco HALLER"
+      },
+      {
+        "bib": 194,
+        "name": "Marc HIRSCHI"
+      },
+      {
+        "bib": 195,
+        "name": "Rick PLUIMERS"
+      },
+      {
+        "bib": 196,
+        "name": "Michael STORER"
+      },
+      {
+        "bib": 197,
+        "name": "Matteo TRENTIN"
+      },
+      {
+        "bib": 198,
+        "name": "Yannis VOISARD"
+      }
+    ]
+  },
+  {
+    "master_rider": "Pluimers",
+    "master_team": "TUDOR PRO CYCLING",
+    "slot": 5,
+    "confirmed_bib": 195,
+    "suggested_bib": 195,
+    "candidates": [
+      {
+        "bib": 191,
+        "name": "Julian ALAPHILIPPE"
+      },
+      {
+        "bib": 192,
+        "name": "Arvid DE KLEIJN"
+      },
+      {
+        "bib": 193,
+        "name": "Marco HALLER"
+      },
+      {
+        "bib": 194,
+        "name": "Marc HIRSCHI"
+      },
+      {
+        "bib": 195,
+        "name": "Rick PLUIMERS"
+      },
+      {
+        "bib": 196,
+        "name": "Michael STORER"
+      },
+      {
+        "bib": 197,
+        "name": "Matteo TRENTIN"
+      },
+      {
+        "bib": 198,
+        "name": "Yannis VOISARD"
+      }
+    ]
+  },
+  {
+    "master_rider": "De Kleijn",
+    "master_team": "TUDOR PRO CYCLING",
+    "slot": 6,
+    "confirmed_bib": 192,
+    "suggested_bib": 192,
+    "candidates": [
+      {
+        "bib": 191,
+        "name": "Julian ALAPHILIPPE"
+      },
+      {
+        "bib": 192,
+        "name": "Arvid DE KLEIJN"
+      },
+      {
+        "bib": 193,
+        "name": "Marco HALLER"
+      },
+      {
+        "bib": 194,
+        "name": "Marc HIRSCHI"
+      },
+      {
+        "bib": 195,
+        "name": "Rick PLUIMERS"
+      },
+      {
+        "bib": 196,
+        "name": "Michael STORER"
+      },
+      {
+        "bib": 197,
+        "name": "Matteo TRENTIN"
+      },
+      {
+        "bib": 198,
+        "name": "Yannis VOISARD"
+      }
+    ]
+  },
+  {
+    "master_rider": "Voisard",
+    "master_team": "TUDOR PRO CYCLING",
+    "slot": 7,
+    "confirmed_bib": 198,
+    "suggested_bib": 198,
+    "candidates": [
+      {
+        "bib": 191,
+        "name": "Julian ALAPHILIPPE"
+      },
+      {
+        "bib": 192,
+        "name": "Arvid DE KLEIJN"
+      },
+      {
+        "bib": 193,
+        "name": "Marco HALLER"
+      },
+      {
+        "bib": 194,
+        "name": "Marc HIRSCHI"
+      },
+      {
+        "bib": 195,
+        "name": "Rick PLUIMERS"
+      },
+      {
+        "bib": 196,
+        "name": "Michael STORER"
+      },
+      {
+        "bib": 197,
+        "name": "Matteo TRENTIN"
+      },
+      {
+        "bib": 198,
+        "name": "Yannis VOISARD"
+      }
+    ]
+  },
+  {
+    "master_rider": "Hirschi",
+    "master_team": "TUDOR PRO CYCLING",
+    "slot": 8,
+    "confirmed_bib": 194,
+    "suggested_bib": 194,
+    "candidates": [
+      {
+        "bib": 191,
+        "name": "Julian ALAPHILIPPE"
+      },
+      {
+        "bib": 192,
+        "name": "Arvid DE KLEIJN"
+      },
+      {
+        "bib": 193,
+        "name": "Marco HALLER"
+      },
+      {
+        "bib": 194,
+        "name": "Marc HIRSCHI"
+      },
+      {
+        "bib": 195,
+        "name": "Rick PLUIMERS"
+      },
+      {
+        "bib": 196,
+        "name": "Michael STORER"
+      },
+      {
+        "bib": 197,
+        "name": "Matteo TRENTIN"
+      },
+      {
+        "bib": 198,
+        "name": "Yannis VOISARD"
+      }
+    ]
+  },
+  {
+    "master_rider": "Pogacar",
+    "master_team": "UAE TEAM EMIRATES",
+    "slot": 1,
+    "confirmed_bib": 1,
+    "suggested_bib": 1,
+    "candidates": [
+      {
+        "bib": 1,
+        "name": "Tadej POGACAR"
+      },
+      {
+        "bib": 2,
+        "name": "Isaac DEL TORO ROMERO"
+      },
+      {
+        "bib": 3,
+        "name": "Felix GROSSSCHARTNER"
+      },
+      {
+        "bib": 4,
+        "name": "Brandon MCNULTY"
+      },
+      {
+        "bib": 5,
+        "name": "Nils POLITT"
+      },
+      {
+        "bib": 6,
+        "name": "Florian VERMEERSCH"
+      },
+      {
+        "bib": 7,
+        "name": "Tim WELLENS"
+      },
+      {
+        "bib": 8,
+        "name": "Adam YATES"
+      }
+    ]
+  },
+  {
+    "master_rider": "Del Torro Romero",
+    "master_team": "UAE TEAM EMIRATES",
+    "slot": 2,
+    "confirmed_bib": 2,
+    "suggested_bib": 2,
+    "candidates": [
+      {
+        "bib": 1,
+        "name": "Tadej POGACAR"
+      },
+      {
+        "bib": 2,
+        "name": "Isaac DEL TORO ROMERO"
+      },
+      {
+        "bib": 3,
+        "name": "Felix GROSSSCHARTNER"
+      },
+      {
+        "bib": 4,
+        "name": "Brandon MCNULTY"
+      },
+      {
+        "bib": 5,
+        "name": "Nils POLITT"
+      },
+      {
+        "bib": 6,
+        "name": "Florian VERMEERSCH"
+      },
+      {
+        "bib": 7,
+        "name": "Tim WELLENS"
+      },
+      {
+        "bib": 8,
+        "name": "Adam YATES"
+      }
+    ]
+  },
+  {
+    "master_rider": "A.Yates",
+    "master_team": "UAE TEAM EMIRATES",
+    "slot": 3,
+    "confirmed_bib": 8,
+    "suggested_bib": 8,
+    "candidates": [
+      {
+        "bib": 1,
+        "name": "Tadej POGACAR"
+      },
+      {
+        "bib": 2,
+        "name": "Isaac DEL TORO ROMERO"
+      },
+      {
+        "bib": 3,
+        "name": "Felix GROSSSCHARTNER"
+      },
+      {
+        "bib": 4,
+        "name": "Brandon MCNULTY"
+      },
+      {
+        "bib": 5,
+        "name": "Nils POLITT"
+      },
+      {
+        "bib": 6,
+        "name": "Florian VERMEERSCH"
+      },
+      {
+        "bib": 7,
+        "name": "Tim WELLENS"
+      },
+      {
+        "bib": 8,
+        "name": "Adam YATES"
+      }
+    ]
+  },
+  {
+    "master_rider": "Wellens",
+    "master_team": "UAE TEAM EMIRATES",
+    "slot": 4,
+    "confirmed_bib": 7,
+    "suggested_bib": 7,
+    "candidates": [
+      {
+        "bib": 1,
+        "name": "Tadej POGACAR"
+      },
+      {
+        "bib": 2,
+        "name": "Isaac DEL TORO ROMERO"
+      },
+      {
+        "bib": 3,
+        "name": "Felix GROSSSCHARTNER"
+      },
+      {
+        "bib": 4,
+        "name": "Brandon MCNULTY"
+      },
+      {
+        "bib": 5,
+        "name": "Nils POLITT"
+      },
+      {
+        "bib": 6,
+        "name": "Florian VERMEERSCH"
+      },
+      {
+        "bib": 7,
+        "name": "Tim WELLENS"
+      },
+      {
+        "bib": 8,
+        "name": "Adam YATES"
+      }
+    ]
+  },
+  {
+    "master_rider": "Politt",
+    "master_team": "UAE TEAM EMIRATES",
+    "slot": 5,
+    "confirmed_bib": 5,
+    "suggested_bib": 5,
+    "candidates": [
+      {
+        "bib": 1,
+        "name": "Tadej POGACAR"
+      },
+      {
+        "bib": 2,
+        "name": "Isaac DEL TORO ROMERO"
+      },
+      {
+        "bib": 3,
+        "name": "Felix GROSSSCHARTNER"
+      },
+      {
+        "bib": 4,
+        "name": "Brandon MCNULTY"
+      },
+      {
+        "bib": 5,
+        "name": "Nils POLITT"
+      },
+      {
+        "bib": 6,
+        "name": "Florian VERMEERSCH"
+      },
+      {
+        "bib": 7,
+        "name": "Tim WELLENS"
+      },
+      {
+        "bib": 8,
+        "name": "Adam YATES"
+      }
+    ]
+  },
+  {
+    "master_rider": "Vermeersch",
+    "master_team": "UAE TEAM EMIRATES",
+    "slot": 6,
+    "confirmed_bib": 6,
+    "suggested_bib": 6,
+    "candidates": [
+      {
+        "bib": 1,
+        "name": "Tadej POGACAR"
+      },
+      {
+        "bib": 2,
+        "name": "Isaac DEL TORO ROMERO"
+      },
+      {
+        "bib": 3,
+        "name": "Felix GROSSSCHARTNER"
+      },
+      {
+        "bib": 4,
+        "name": "Brandon MCNULTY"
+      },
+      {
+        "bib": 5,
+        "name": "Nils POLITT"
+      },
+      {
+        "bib": 6,
+        "name": "Florian VERMEERSCH"
+      },
+      {
+        "bib": 7,
+        "name": "Tim WELLENS"
+      },
+      {
+        "bib": 8,
+        "name": "Adam YATES"
+      }
+    ]
+  },
+  {
+    "master_rider": "McNulty",
+    "master_team": "UAE TEAM EMIRATES",
+    "slot": 7,
+    "confirmed_bib": 4,
+    "suggested_bib": 4,
+    "candidates": [
+      {
+        "bib": 1,
+        "name": "Tadej POGACAR"
+      },
+      {
+        "bib": 2,
+        "name": "Isaac DEL TORO ROMERO"
+      },
+      {
+        "bib": 3,
+        "name": "Felix GROSSSCHARTNER"
+      },
+      {
+        "bib": 4,
+        "name": "Brandon MCNULTY"
+      },
+      {
+        "bib": 5,
+        "name": "Nils POLITT"
+      },
+      {
+        "bib": 6,
+        "name": "Florian VERMEERSCH"
+      },
+      {
+        "bib": 7,
+        "name": "Tim WELLENS"
+      },
+      {
+        "bib": 8,
+        "name": "Adam YATES"
+      }
+    ]
+  },
+  {
+    "master_rider": "Grosschartner",
+    "master_team": "UAE TEAM EMIRATES",
+    "slot": 8,
+    "confirmed_bib": 3,
+    "suggested_bib": null,
+    "candidates": [
+      {
+        "bib": 1,
+        "name": "Tadej POGACAR"
+      },
+      {
+        "bib": 2,
+        "name": "Isaac DEL TORO ROMERO"
+      },
+      {
+        "bib": 3,
+        "name": "Felix GROSSSCHARTNER"
+      },
+      {
+        "bib": 4,
+        "name": "Brandon MCNULTY"
+      },
+      {
+        "bib": 5,
+        "name": "Nils POLITT"
+      },
+      {
+        "bib": 6,
+        "name": "Florian VERMEERSCH"
+      },
+      {
+        "bib": 7,
+        "name": "Tim WELLENS"
+      },
+      {
+        "bib": 8,
+        "name": "Adam YATES"
+      }
+    ]
+  },
+  {
+    "master_rider": "T.H. Johannessen",
+    "master_team": "UNO X MOBILITY",
+    "slot": 1,
+    "confirmed_bib": 121,
+    "suggested_bib": null,
+    "candidates": [
+      {
+        "bib": 121,
+        "name": "Tobias JOHANNESSEN"
+      },
+      {
+        "bib": 122,
+        "name": "Jonas ABRAHAMSEN"
+      },
+      {
+        "bib": 123,
+        "name": "Anthon CHARMIG"
+      },
+      {
+        "bib": 124,
+        "name": "Magnus CORT NIELSEN"
+      },
+      {
+        "bib": 125,
+        "name": "Anders JOHANNESSEN"
+      },
+      {
+        "bib": 126,
+        "name": "Anders SKAARSETH"
+      },
+      {
+        "bib": 127,
+        "name": "Torstein TRÆEN"
+      },
+      {
+        "bib": 128,
+        "name": "Soren WÆRENSKJOLD"
+      }
+    ]
+  },
+  {
+    "master_rider": "M. Cort",
+    "master_team": "UNO X MOBILITY",
+    "slot": 2,
+    "confirmed_bib": 124,
+    "suggested_bib": 124,
+    "candidates": [
+      {
+        "bib": 121,
+        "name": "Tobias JOHANNESSEN"
+      },
+      {
+        "bib": 122,
+        "name": "Jonas ABRAHAMSEN"
+      },
+      {
+        "bib": 123,
+        "name": "Anthon CHARMIG"
+      },
+      {
+        "bib": 124,
+        "name": "Magnus CORT NIELSEN"
+      },
+      {
+        "bib": 125,
+        "name": "Anders JOHANNESSEN"
+      },
+      {
+        "bib": 126,
+        "name": "Anders SKAARSETH"
+      },
+      {
+        "bib": 127,
+        "name": "Torstein TRÆEN"
+      },
+      {
+        "bib": 128,
+        "name": "Soren WÆRENSKJOLD"
+      }
+    ]
+  },
+  {
+    "master_rider": "Traeen",
+    "master_team": "UNO X MOBILITY",
+    "slot": 3,
+    "confirmed_bib": 127,
+    "suggested_bib": null,
+    "candidates": [
+      {
+        "bib": 121,
+        "name": "Tobias JOHANNESSEN"
+      },
+      {
+        "bib": 122,
+        "name": "Jonas ABRAHAMSEN"
+      },
+      {
+        "bib": 123,
+        "name": "Anthon CHARMIG"
+      },
+      {
+        "bib": 124,
+        "name": "Magnus CORT NIELSEN"
+      },
+      {
+        "bib": 125,
+        "name": "Anders JOHANNESSEN"
+      },
+      {
+        "bib": 126,
+        "name": "Anders SKAARSETH"
+      },
+      {
+        "bib": 127,
+        "name": "Torstein TRÆEN"
+      },
+      {
+        "bib": 128,
+        "name": "Soren WÆRENSKJOLD"
+      }
+    ]
+  },
+  {
+    "master_rider": "Abrahamsen",
+    "master_team": "UNO X MOBILITY",
+    "slot": 4,
+    "confirmed_bib": 122,
+    "suggested_bib": 122,
+    "candidates": [
+      {
+        "bib": 121,
+        "name": "Tobias JOHANNESSEN"
+      },
+      {
+        "bib": 122,
+        "name": "Jonas ABRAHAMSEN"
+      },
+      {
+        "bib": 123,
+        "name": "Anthon CHARMIG"
+      },
+      {
+        "bib": 124,
+        "name": "Magnus CORT NIELSEN"
+      },
+      {
+        "bib": 125,
+        "name": "Anders JOHANNESSEN"
+      },
+      {
+        "bib": 126,
+        "name": "Anders SKAARSETH"
+      },
+      {
+        "bib": 127,
+        "name": "Torstein TRÆEN"
+      },
+      {
+        "bib": 128,
+        "name": "Soren WÆRENSKJOLD"
+      }
+    ]
+  },
+  {
+    "master_rider": "Waerenskjold",
+    "master_team": "UNO X MOBILITY",
+    "slot": 5,
+    "confirmed_bib": 128,
+    "suggested_bib": null,
+    "candidates": [
+      {
+        "bib": 121,
+        "name": "Tobias JOHANNESSEN"
+      },
+      {
+        "bib": 122,
+        "name": "Jonas ABRAHAMSEN"
+      },
+      {
+        "bib": 123,
+        "name": "Anthon CHARMIG"
+      },
+      {
+        "bib": 124,
+        "name": "Magnus CORT NIELSEN"
+      },
+      {
+        "bib": 125,
+        "name": "Anders JOHANNESSEN"
+      },
+      {
+        "bib": 126,
+        "name": "Anders SKAARSETH"
+      },
+      {
+        "bib": 127,
+        "name": "Torstein TRÆEN"
+      },
+      {
+        "bib": 128,
+        "name": "Soren WÆRENSKJOLD"
+      }
+    ]
+  },
+  {
+    "master_rider": "Skaarseth",
+    "master_team": "UNO X MOBILITY",
+    "slot": 6,
+    "confirmed_bib": 126,
+    "suggested_bib": 126,
+    "candidates": [
+      {
+        "bib": 121,
+        "name": "Tobias JOHANNESSEN"
+      },
+      {
+        "bib": 122,
+        "name": "Jonas ABRAHAMSEN"
+      },
+      {
+        "bib": 123,
+        "name": "Anthon CHARMIG"
+      },
+      {
+        "bib": 124,
+        "name": "Magnus CORT NIELSEN"
+      },
+      {
+        "bib": 125,
+        "name": "Anders JOHANNESSEN"
+      },
+      {
+        "bib": 126,
+        "name": "Anders SKAARSETH"
+      },
+      {
+        "bib": 127,
+        "name": "Torstein TRÆEN"
+      },
+      {
+        "bib": 128,
+        "name": "Soren WÆRENSKJOLD"
+      }
+    ]
+  },
+  {
+    "master_rider": "Charmig",
+    "master_team": "UNO X MOBILITY",
+    "slot": 7,
+    "confirmed_bib": 123,
+    "suggested_bib": 123,
+    "candidates": [
+      {
+        "bib": 121,
+        "name": "Tobias JOHANNESSEN"
+      },
+      {
+        "bib": 122,
+        "name": "Jonas ABRAHAMSEN"
+      },
+      {
+        "bib": 123,
+        "name": "Anthon CHARMIG"
+      },
+      {
+        "bib": 124,
+        "name": "Magnus CORT NIELSEN"
+      },
+      {
+        "bib": 125,
+        "name": "Anders JOHANNESSEN"
+      },
+      {
+        "bib": 126,
+        "name": "Anders SKAARSETH"
+      },
+      {
+        "bib": 127,
+        "name": "Torstein TRÆEN"
+      },
+      {
+        "bib": 128,
+        "name": "Soren WÆRENSKJOLD"
+      }
+    ]
+  },
+  {
+    "master_rider": "A.H. Johannessen",
+    "master_team": "UNO X MOBILITY",
+    "slot": 8,
+    "confirmed_bib": 125,
+    "suggested_bib": null,
+    "candidates": [
+      {
+        "bib": 121,
+        "name": "Tobias JOHANNESSEN"
+      },
+      {
+        "bib": 122,
+        "name": "Jonas ABRAHAMSEN"
+      },
+      {
+        "bib": 123,
+        "name": "Anthon CHARMIG"
+      },
+      {
+        "bib": 124,
+        "name": "Magnus CORT NIELSEN"
+      },
+      {
+        "bib": 125,
+        "name": "Anders JOHANNESSEN"
+      },
+      {
+        "bib": 126,
+        "name": "Anders SKAARSETH"
+      },
+      {
+        "bib": 127,
+        "name": "Torstein TRÆEN"
+      },
+      {
+        "bib": 128,
+        "name": "Soren WÆRENSKJOLD"
+      }
+    ]
+  },
+  {
+    "master_rider": "S. Higuita",
+    "master_team": "XDS ASTANA",
+    "slot": 1,
+    "confirmed_bib": 61,
+    "suggested_bib": 61,
+    "candidates": [
+      {
+        "bib": 61,
+        "name": "Sergio HIGUITA GARCIA"
+      },
+      {
+        "bib": 62,
+        "name": "Davide BALLERINI"
+      },
+      {
+        "bib": 63,
+        "name": "Aaron Murray GATE"
+      },
+      {
+        "bib": 64,
+        "name": "Max KANTER"
+      },
+      {
+        "bib": 65,
+        "name": "Harold TEJADA CANACUE"
+      },
+      {
+        "bib": 66,
+        "name": "Mike TEUNISSEN"
+      },
+      {
+        "bib": 67,
+        "name": "Simone VELASCO"
+      },
+      {
+        "bib": 68,
+        "name": "Nicolya VINOKUROV"
+      }
+    ]
+  },
+  {
+    "master_rider": "M. Teunissen",
+    "master_team": "XDS ASTANA",
+    "slot": 2,
+    "confirmed_bib": 66,
+    "suggested_bib": 66,
+    "candidates": [
+      {
+        "bib": 61,
+        "name": "Sergio HIGUITA GARCIA"
+      },
+      {
+        "bib": 62,
+        "name": "Davide BALLERINI"
+      },
+      {
+        "bib": 63,
+        "name": "Aaron Murray GATE"
+      },
+      {
+        "bib": 64,
+        "name": "Max KANTER"
+      },
+      {
+        "bib": 65,
+        "name": "Harold TEJADA CANACUE"
+      },
+      {
+        "bib": 66,
+        "name": "Mike TEUNISSEN"
+      },
+      {
+        "bib": 67,
+        "name": "Simone VELASCO"
+      },
+      {
+        "bib": 68,
+        "name": "Nicolya VINOKUROV"
+      }
+    ]
+  },
+  {
+    "master_rider": "Tejada",
+    "master_team": "XDS ASTANA",
+    "slot": 3,
+    "confirmed_bib": 65,
+    "suggested_bib": 65,
+    "candidates": [
+      {
+        "bib": 61,
+        "name": "Sergio HIGUITA GARCIA"
+      },
+      {
+        "bib": 62,
+        "name": "Davide BALLERINI"
+      },
+      {
+        "bib": 63,
+        "name": "Aaron Murray GATE"
+      },
+      {
+        "bib": 64,
+        "name": "Max KANTER"
+      },
+      {
+        "bib": 65,
+        "name": "Harold TEJADA CANACUE"
+      },
+      {
+        "bib": 66,
+        "name": "Mike TEUNISSEN"
+      },
+      {
+        "bib": 67,
+        "name": "Simone VELASCO"
+      },
+      {
+        "bib": 68,
+        "name": "Nicolya VINOKUROV"
+      }
+    ]
+  },
+  {
+    "master_rider": "Kanter",
+    "master_team": "XDS ASTANA",
+    "slot": 4,
+    "confirmed_bib": 64,
+    "suggested_bib": 64,
+    "candidates": [
+      {
+        "bib": 61,
+        "name": "Sergio HIGUITA GARCIA"
+      },
+      {
+        "bib": 62,
+        "name": "Davide BALLERINI"
+      },
+      {
+        "bib": 63,
+        "name": "Aaron Murray GATE"
+      },
+      {
+        "bib": 64,
+        "name": "Max KANTER"
+      },
+      {
+        "bib": 65,
+        "name": "Harold TEJADA CANACUE"
+      },
+      {
+        "bib": 66,
+        "name": "Mike TEUNISSEN"
+      },
+      {
+        "bib": 67,
+        "name": "Simone VELASCO"
+      },
+      {
+        "bib": 68,
+        "name": "Nicolya VINOKUROV"
+      }
+    ]
+  },
+  {
+    "master_rider": "Gate",
+    "master_team": "XDS ASTANA",
+    "slot": 5,
+    "confirmed_bib": 63,
+    "suggested_bib": 63,
+    "candidates": [
+      {
+        "bib": 61,
+        "name": "Sergio HIGUITA GARCIA"
+      },
+      {
+        "bib": 62,
+        "name": "Davide BALLERINI"
+      },
+      {
+        "bib": 63,
+        "name": "Aaron Murray GATE"
+      },
+      {
+        "bib": 64,
+        "name": "Max KANTER"
+      },
+      {
+        "bib": 65,
+        "name": "Harold TEJADA CANACUE"
+      },
+      {
+        "bib": 66,
+        "name": "Mike TEUNISSEN"
+      },
+      {
+        "bib": 67,
+        "name": "Simone VELASCO"
+      },
+      {
+        "bib": 68,
+        "name": "Nicolya VINOKUROV"
+      }
+    ]
+  },
+  {
+    "master_rider": "Velasco",
+    "master_team": "XDS ASTANA",
+    "slot": 6,
+    "confirmed_bib": 67,
+    "suggested_bib": 67,
+    "candidates": [
+      {
+        "bib": 61,
+        "name": "Sergio HIGUITA GARCIA"
+      },
+      {
+        "bib": 62,
+        "name": "Davide BALLERINI"
+      },
+      {
+        "bib": 63,
+        "name": "Aaron Murray GATE"
+      },
+      {
+        "bib": 64,
+        "name": "Max KANTER"
+      },
+      {
+        "bib": 65,
+        "name": "Harold TEJADA CANACUE"
+      },
+      {
+        "bib": 66,
+        "name": "Mike TEUNISSEN"
+      },
+      {
+        "bib": 67,
+        "name": "Simone VELASCO"
+      },
+      {
+        "bib": 68,
+        "name": "Nicolya VINOKUROV"
+      }
+    ]
+  },
+  {
+    "master_rider": "Vinokourov",
+    "master_team": "XDS ASTANA",
+    "slot": 7,
+    "confirmed_bib": 68,
+    "suggested_bib": null,
+    "candidates": [
+      {
+        "bib": 61,
+        "name": "Sergio HIGUITA GARCIA"
+      },
+      {
+        "bib": 62,
+        "name": "Davide BALLERINI"
+      },
+      {
+        "bib": 63,
+        "name": "Aaron Murray GATE"
+      },
+      {
+        "bib": 64,
+        "name": "Max KANTER"
+      },
+      {
+        "bib": 65,
+        "name": "Harold TEJADA CANACUE"
+      },
+      {
+        "bib": 66,
+        "name": "Mike TEUNISSEN"
+      },
+      {
+        "bib": 67,
+        "name": "Simone VELASCO"
+      },
+      {
+        "bib": 68,
+        "name": "Nicolya VINOKUROV"
+      }
+    ]
+  },
+  {
+    "master_rider": "Ballerini",
+    "master_team": "XDS ASTANA",
+    "slot": 8,
+    "confirmed_bib": 62,
+    "suggested_bib": 62,
+    "candidates": [
+      {
+        "bib": 61,
+        "name": "Sergio HIGUITA GARCIA"
+      },
+      {
+        "bib": 62,
+        "name": "Davide BALLERINI"
+      },
+      {
+        "bib": 63,
+        "name": "Aaron Murray GATE"
+      },
+      {
+        "bib": 64,
+        "name": "Max KANTER"
+      },
+      {
+        "bib": 65,
+        "name": "Harold TEJADA CANACUE"
+      },
+      {
+        "bib": 66,
+        "name": "Mike TEUNISSEN"
+      },
+      {
+        "bib": 67,
+        "name": "Simone VELASCO"
+      },
+      {
+        "bib": 68,
+        "name": "Nicolya VINOKUROV"
+      }
+    ]
+  },
+  {
+    "master_rider": "Turgis",
+    "master_team": "TOTAL ENERGIES",
+    "slot": 1,
+    "confirmed_bib": 207,
+    "suggested_bib": 207,
+    "candidates": [
+      {
+        "bib": 201,
+        "name": "Jordan JEGAT"
+      },
+      {
+        "bib": 202,
+        "name": "Nicolas BREUILLARD"
+      },
+      {
+        "bib": 203,
+        "name": "Joris DELBOVE"
+      },
+      {
+        "bib": 204,
+        "name": "Alexandre DELETTRE"
+      },
+      {
+        "bib": 205,
+        "name": "Thibault GUERNALEC"
+      },
+      {
+        "bib": 206,
+        "name": "Mathis LE BERRE"
+      },
+      {
+        "bib": 207,
+        "name": "Anthony TURGIS"
+      },
+      {
+        "bib": 208,
+        "name": "Matteo VERCHER"
+      }
+    ]
+  },
+  {
+    "master_rider": "Jegat",
+    "master_team": "TOTAL ENERGIES",
+    "slot": 2,
+    "confirmed_bib": 201,
+    "suggested_bib": 201,
+    "candidates": [
+      {
+        "bib": 201,
+        "name": "Jordan JEGAT"
+      },
+      {
+        "bib": 202,
+        "name": "Nicolas BREUILLARD"
+      },
+      {
+        "bib": 203,
+        "name": "Joris DELBOVE"
+      },
+      {
+        "bib": 204,
+        "name": "Alexandre DELETTRE"
+      },
+      {
+        "bib": 205,
+        "name": "Thibault GUERNALEC"
+      },
+      {
+        "bib": 206,
+        "name": "Mathis LE BERRE"
+      },
+      {
+        "bib": 207,
+        "name": "Anthony TURGIS"
+      },
+      {
+        "bib": 208,
+        "name": "Matteo VERCHER"
+      }
+    ]
+  },
+  {
+    "master_rider": "Breuillard",
+    "master_team": "TOTAL ENERGIES",
+    "slot": 3,
+    "confirmed_bib": 202,
+    "suggested_bib": 202,
+    "candidates": [
+      {
+        "bib": 201,
+        "name": "Jordan JEGAT"
+      },
+      {
+        "bib": 202,
+        "name": "Nicolas BREUILLARD"
+      },
+      {
+        "bib": 203,
+        "name": "Joris DELBOVE"
+      },
+      {
+        "bib": 204,
+        "name": "Alexandre DELETTRE"
+      },
+      {
+        "bib": 205,
+        "name": "Thibault GUERNALEC"
+      },
+      {
+        "bib": 206,
+        "name": "Mathis LE BERRE"
+      },
+      {
+        "bib": 207,
+        "name": "Anthony TURGIS"
+      },
+      {
+        "bib": 208,
+        "name": "Matteo VERCHER"
+      }
+    ]
+  },
+  {
+    "master_rider": "Delbove",
+    "master_team": "TOTAL ENERGIES",
+    "slot": 4,
+    "confirmed_bib": 203,
+    "suggested_bib": 203,
+    "candidates": [
+      {
+        "bib": 201,
+        "name": "Jordan JEGAT"
+      },
+      {
+        "bib": 202,
+        "name": "Nicolas BREUILLARD"
+      },
+      {
+        "bib": 203,
+        "name": "Joris DELBOVE"
+      },
+      {
+        "bib": 204,
+        "name": "Alexandre DELETTRE"
+      },
+      {
+        "bib": 205,
+        "name": "Thibault GUERNALEC"
+      },
+      {
+        "bib": 206,
+        "name": "Mathis LE BERRE"
+      },
+      {
+        "bib": 207,
+        "name": "Anthony TURGIS"
+      },
+      {
+        "bib": 208,
+        "name": "Matteo VERCHER"
+      }
+    ]
+  },
+  {
+    "master_rider": "Delettre",
+    "master_team": "TOTAL ENERGIES",
+    "slot": 5,
+    "confirmed_bib": 204,
+    "suggested_bib": 204,
+    "candidates": [
+      {
+        "bib": 201,
+        "name": "Jordan JEGAT"
+      },
+      {
+        "bib": 202,
+        "name": "Nicolas BREUILLARD"
+      },
+      {
+        "bib": 203,
+        "name": "Joris DELBOVE"
+      },
+      {
+        "bib": 204,
+        "name": "Alexandre DELETTRE"
+      },
+      {
+        "bib": 205,
+        "name": "Thibault GUERNALEC"
+      },
+      {
+        "bib": 206,
+        "name": "Mathis LE BERRE"
+      },
+      {
+        "bib": 207,
+        "name": "Anthony TURGIS"
+      },
+      {
+        "bib": 208,
+        "name": "Matteo VERCHER"
+      }
+    ]
+  },
+  {
+    "master_rider": "Guernalec",
+    "master_team": "TOTAL ENERGIES",
+    "slot": 6,
+    "confirmed_bib": 205,
+    "suggested_bib": 205,
+    "candidates": [
+      {
+        "bib": 201,
+        "name": "Jordan JEGAT"
+      },
+      {
+        "bib": 202,
+        "name": "Nicolas BREUILLARD"
+      },
+      {
+        "bib": 203,
+        "name": "Joris DELBOVE"
+      },
+      {
+        "bib": 204,
+        "name": "Alexandre DELETTRE"
+      },
+      {
+        "bib": 205,
+        "name": "Thibault GUERNALEC"
+      },
+      {
+        "bib": 206,
+        "name": "Mathis LE BERRE"
+      },
+      {
+        "bib": 207,
+        "name": "Anthony TURGIS"
+      },
+      {
+        "bib": 208,
+        "name": "Matteo VERCHER"
+      }
+    ]
+  },
+  {
+    "master_rider": "Le Berre",
+    "master_team": "TOTAL ENERGIES",
+    "slot": 7,
+    "confirmed_bib": 206,
+    "suggested_bib": 206,
+    "candidates": [
+      {
+        "bib": 201,
+        "name": "Jordan JEGAT"
+      },
+      {
+        "bib": 202,
+        "name": "Nicolas BREUILLARD"
+      },
+      {
+        "bib": 203,
+        "name": "Joris DELBOVE"
+      },
+      {
+        "bib": 204,
+        "name": "Alexandre DELETTRE"
+      },
+      {
+        "bib": 205,
+        "name": "Thibault GUERNALEC"
+      },
+      {
+        "bib": 206,
+        "name": "Mathis LE BERRE"
+      },
+      {
+        "bib": 207,
+        "name": "Anthony TURGIS"
+      },
+      {
+        "bib": 208,
+        "name": "Matteo VERCHER"
+      }
+    ]
+  },
+  {
+    "master_rider": "Vercher",
+    "master_team": "TOTAL ENERGIES",
+    "slot": 8,
+    "confirmed_bib": 208,
+    "suggested_bib": 208,
+    "candidates": [
+      {
+        "bib": 201,
+        "name": "Jordan JEGAT"
+      },
+      {
+        "bib": 202,
+        "name": "Nicolas BREUILLARD"
+      },
+      {
+        "bib": 203,
+        "name": "Joris DELBOVE"
+      },
+      {
+        "bib": 204,
+        "name": "Alexandre DELETTRE"
+      },
+      {
+        "bib": 205,
+        "name": "Thibault GUERNALEC"
+      },
+      {
+        "bib": 206,
+        "name": "Mathis LE BERRE"
+      },
+      {
+        "bib": 207,
+        "name": "Anthony TURGIS"
+      },
+      {
+        "bib": 208,
+        "name": "Matteo VERCHER"
+      }
+    ]
+  }
+]

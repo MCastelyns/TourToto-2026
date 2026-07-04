@@ -1,0 +1,127 @@
+{
+  "name": "Jeroen",
+  "hoofdploeg": [
+    {
+      "slot": 1,
+      "rider": "Pogacar",
+      "team": "UAE"
+    },
+    {
+      "slot": 2,
+      "rider": "Kooij",
+      "team": "Decathlon"
+    },
+    {
+      "slot": 3,
+      "rider": "Healy",
+      "team": "EF"
+    },
+    {
+      "slot": 4,
+      "rider": "Abrahamsen",
+      "team": "Uno X"
+    },
+    {
+      "slot": 5,
+      "rider": "Q.Simmons",
+      "team": "Lidl"
+    },
+    {
+      "slot": 6,
+      "rider": "Affini",
+      "team": "Visma"
+    },
+    {
+      "slot": 7,
+      "rider": "Cepeda",
+      "team": "Movistar"
+    },
+    {
+      "slot": 8,
+      "rider": "Hirschi",
+      "team": "Tudor"
+    },
+    {
+      "slot": 9,
+      "rider": "vd Poel",
+      "team": "Alpecin"
+    },
+    {
+      "slot": 10,
+      "rider": "Merlier",
+      "team": "Soudal"
+    }
+  ],
+  "joker_stage": 2,
+  "pannenkoeken": [
+    {
+      "slot": 1,
+      "rider": "Hermans"
+    },
+    {
+      "slot": 2,
+      "rider": "van Moer"
+    },
+    {
+      "slot": 3,
+      "rider": "Harper"
+    },
+    {
+      "slot": 4,
+      "rider": "Howson"
+    },
+    {
+      "slot": 5,
+      "rider": "Azparen"
+    },
+    {
+      "slot": 6,
+      "rider": "Maurisse"
+    },
+    {
+      "slot": 7,
+      "rider": "Biermans"
+    },
+    {
+      "slot": 8,
+      "rider": "Aranburu"
+    },
+    {
+      "slot": 9,
+      "rider": "Balderstone"
+    },
+    {
+      "slot": 10,
+      "rider": "Molenaar"
+    },
+    {
+      "slot": 11,
+      "rider": "Beltran"
+    },
+    {
+      "slot": 12,
+      "rider": "Oldani"
+    },
+    {
+      "slot": 13,
+      "rider": "Otruba"
+    },
+    {
+      "slot": 14,
+      "rider": "Felix Parra"
+    },
+    {
+      "slot": 15,
+      "rider": "Berwick"
+    }
+  ],
+  "bonus_answers": {
+    "podium": [
+      "Pogacar",
+      "Vingegaard",
+      "Seixas"
+    ],
+    "gap_seconds": 111,
+    "dnf_count": 18
+  }
+}

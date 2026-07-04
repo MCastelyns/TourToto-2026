@@ -1,0 +1,127 @@
+{
+  "name": "Elise",
+  "hoofdploeg": [
+    {
+      "slot": 1,
+      "rider": "Evenepoel",
+      "team": null
+    },
+    {
+      "slot": 2,
+      "rider": "Philipsen",
+      "team": null
+    },
+    {
+      "slot": 3,
+      "rider": "Kuss",
+      "team": null
+    },
+    {
+      "slot": 4,
+      "rider": "Vauquelin",
+      "team": null
+    },
+    {
+      "slot": 5,
+      "rider": "Trentin",
+      "team": null
+    },
+    {
+      "slot": 6,
+      "rider": "Schmid",
+      "team": null
+    },
+    {
+      "slot": 7,
+      "rider": "Riccitello",
+      "team": null
+    },
+    {
+      "slot": 8,
+      "rider": "Aranburu",
+      "team": null
+    },
+    {
+      "slot": 9,
+      "rider": "Pogacar",
+      "team": null
+    },
+    {
+      "slot": 10,
+      "rider": "Merlier",
+      "team": null
+    }
+  ],
+  "joker_stage": 6,
+  "pannenkoeken": [
+    {
+      "slot": 1,
+      "rider": "Vercher"
+    },
+    {
+      "slot": 2,
+      "rider": "Le Berre"
+    },
+    {
+      "slot": 3,
+      "rider": "Quernalec"
+    },
+    {
+      "slot": 4,
+      "rider": "Delettre"
+    },
+    {
+      "slot": 5,
+      "rider": "Delbove"
+    },
+    {
+      "slot": 6,
+      "rider": "Breuillard"
+    },
+    {
+      "slot": 7,
+      "rider": "Charmig"
+    },
+    {
+      "slot": 8,
+      "rider": "Skaarseth"
+    },
+    {
+      "slot": 9,
+      "rider": "Dhondt"
+    },
+    {
+      "slot": 10,
+      "rider": "Markl"
+    },
+    {
+      "slot": 11,
+      "rider": "Johannessen"
+    },
+    {
+      "slot": 12,
+      "rider": "Waerenskjold"
+    },
+    {
+      "slot": 13,
+      "rider": "Voisard"
+    },
+    {
+      "slot": 14,
+      "rider": "Vermeersch"
+    },
+    {
+      "slot": 15,
+      "rider": "O'Brien"
+    }
+  ],
+  "bonus_answers": {
+    "podium": [
+      "Pogacar",
+      "Vingegaard",
+      "Evenepoel"
+    ],
+    "gap_seconds": 96,
+    "dnf_count": 33
+  }
+}

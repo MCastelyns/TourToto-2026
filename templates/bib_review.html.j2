@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tourtoto 2026 — Rugnummers koppelen</title>
+<style>
+  :root { --bg:#f5f4f0; --card:#fff; --border:#ddd; --ink:#1c1c1c; --muted:#777; --warn:#c0392b; --ok:#2e8b3d; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: var(--bg); color: var(--ink); margin:0; }
+  header { background:#222; color:#fff; padding: 16px 20px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:5; }
+  header h1 { margin:0; font-size:1.2rem; }
+  header a, header button { color:#fff; background:#444; border:1px solid #666; padding:6px 12px; border-radius:6px; text-decoration:none; cursor:pointer; font-size:0.9rem; }
+  main { max-width: 900px; margin: 0 auto; padding: 20px 16px 80px; }
+  .flash { background:#eaffea; border:1px solid var(--ok); color:#1a5c28; padding:8px 14px; border-radius:8px; margin-bottom:16px; }
+  .intro { font-size:0.88rem; color:var(--muted); margin-bottom: 16px; }
+  .team { background:var(--card); border:1px solid var(--border); border-radius:10px; margin-bottom:14px; overflow:hidden; }
+  .team h2 { font-size:1rem; margin:0; padding:10px 14px; background:#eee; border-bottom:1px solid var(--border); }
+  table { width:100%; border-collapse: collapse; font-size:0.9rem; }
+  td { padding:7px 12px; vertical-align: middle; }
+  tr.status-confirmed { background: #f0fff2; }
+  tr.status-suggested { background: #fff; }
+  tr.status-none { background: #fff6f0; }
+  .badge { display:inline-block; border-radius:4px; padding:1px 7px; font-size:0.72rem; color:#fff; }
+  .badge-confirmed { background: var(--ok); }
+  .badge-suggested { background: #999; }
+  .badge-none { background: var(--warn); }
+  select { padding:4px 6px; border:1px solid #ccc; border-radius:5px; font-size:0.87rem; max-width: 320px; }
+  .submit-bar { position:sticky; bottom:0; background:var(--bg); padding:14px 0; border-top:1px solid var(--border); }
+  .submit-bar button { padding:10px 22px; font-size:1rem; border-radius:8px; border:1px solid #999; background:#2e8b3d; color:#fff; cursor:pointer; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Rugnummers koppelen</h1>
+  <a href="{{ url_for('admin_index') }}">&larr; Terug naar admin</a>
+</header>
+
+<main>
+  <form method="post" action="{{ url_for('confirm_bib_map') }}">
+  {% if message %}<div class="flash">{{ message }}</div>{% endif %}
+  <p class="intro">Voor elke renner: controleer de voorgeselecteerde suggestie (indien aanwezig) of
+    kies zelf de juiste ploeggenoot. Leeg laten = nog niet bevestigd (renner scoort dan 0 punten
+    totdat je terugkomt). Niets wordt opgeslagen totdat je onderaan op "Bevestig alle koppelingen" klikt.</p>
+
+  {% set idx = namespace(n=0) %}
+  {% for team_name, riders in teams.items() %}
+  <div class="team">
+    <h2>{{ team_name }}</h2>
+    <table>
+      {% for r in riders %}
+      {% set idx.n = idx.n + 1 %}
+      {% set status = 'confirmed' if r.confirmed_bib else ('suggested' if r.suggested_bib else 'none') %}
+      <tr class="status-{{ status }}">
+        <td style="width:2em; color:var(--muted);">{{ r.slot }}</td>
+        <td style="width:35%;"><strong>{{ r.master_rider }}</strong></td>
+        <td style="width:5em;">
+          <span class="badge badge-{{ status }}">{{ {'confirmed':'bevestigd','suggested':'suggestie','none':'geen match'}[status] }}</span>
+        </td>
+        <td>
+          <input type="hidden" name="rider__{{ idx.n }}" value="{{ r.master_rider }}">
+          <select name="bib__{{ idx.n }}">
+            <option value="">-- kies renner --</option>
+            {% for c in r.candidates %}
+            {% set preselect = r.confirmed_bib if r.confirmed_bib else r.suggested_bib %}
+            <option value="{{ c.bib }}" {% if preselect == c.bib %}selected{% endif %}>{{ c.name }} (#{{ c.bib }})</option>
+            {% endfor %}
+          </select>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  {% endfor %}
+
+  <div class="submit-bar">
+    <button type="submit">Bevestig alle koppelingen</button>
+  </div>
+  </form>
+</main>
+
+</body>
+</html>

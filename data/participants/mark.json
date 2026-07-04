@@ -1,0 +1,127 @@
+{
+  "name": "Mark",
+  "hoofdploeg": [
+    {
+      "slot": 1,
+      "rider": "Pogacar",
+      "team": "UAE"
+    },
+    {
+      "slot": 2,
+      "rider": "Philipsen",
+      "team": "Alpecin"
+    },
+    {
+      "slot": 3,
+      "rider": "Zimmerman",
+      "team": "Lotto"
+    },
+    {
+      "slot": 4,
+      "rider": "Bauhaus",
+      "team": "Bahrein"
+    },
+    {
+      "slot": 5,
+      "rider": "Vauquelin",
+      "team": "Ineos"
+    },
+    {
+      "slot": 6,
+      "rider": "Velasco",
+      "team": "Astana"
+    },
+    {
+      "slot": 7,
+      "rider": "Biermans",
+      "team": "Cofidis"
+    },
+    {
+      "slot": 8,
+      "rider": "T. Benoot",
+      "team": "Decahtlon"
+    },
+    {
+      "slot": 9,
+      "rider": "Vingegaard",
+      "team": "Visma"
+    },
+    {
+      "slot": 10,
+      "rider": "Pedersen",
+      "team": "Lidl"
+    }
+  ],
+  "joker_stage": 20,
+  "pannenkoeken": [
+    {
+      "slot": 1,
+      "rider": "Veistroffer"
+    },
+    {
+      "slot": 2,
+      "rider": "Slock"
+    },
+    {
+      "slot": 3,
+      "rider": "Eenkhoorn"
+    },
+    {
+      "slot": 4,
+      "rider": "Viosard"
+    },
+    {
+      "slot": 5,
+      "rider": "Charmig"
+    },
+    {
+      "slot": 6,
+      "rider": "Vercher"
+    },
+    {
+      "slot": 7,
+      "rider": "Tratnik"
+    },
+    {
+      "slot": 8,
+      "rider": "debruyne"
+    },
+    {
+      "slot": 9,
+      "rider": "Riccitello"
+    },
+    {
+      "slot": 10,
+      "rider": "Denz"
+    },
+    {
+      "slot": 11,
+      "rider": "Markl"
+    },
+    {
+      "slot": 12,
+      "rider": "Le Berre"
+    },
+    {
+      "slot": 13,
+      "rider": "Baudin"
+    },
+    {
+      "slot": 14,
+      "rider": "Afonso"
+    },
+    {
+      "slot": 15,
+      "rider": "Meurisse"
+    }
+  ],
+  "bonus_answers": {
+    "podium": [
+      "Pogacar",
+      "Vingegaard",
+      "Lipowitz"
+    ],
+    "gap_seconds": null,
+    "dnf_count": 31
+  }
+}

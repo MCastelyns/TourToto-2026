@@ -1,0 +1,127 @@
+{
+  "name": "Anita",
+  "hoofdploeg": [
+    {
+      "slot": 1,
+      "rider": "Pogacar",
+      "team": null
+    },
+    {
+      "slot": 2,
+      "rider": "Philipsen",
+      "team": null
+    },
+    {
+      "slot": 3,
+      "rider": "Hindley",
+      "team": null
+    },
+    {
+      "slot": 4,
+      "rider": "Bauhaus",
+      "team": null
+    },
+    {
+      "slot": 5,
+      "rider": "Waerenskjold",
+      "team": null
+    },
+    {
+      "slot": 6,
+      "rider": "Godon",
+      "team": null
+    },
+    {
+      "slot": 7,
+      "rider": "Lerberghe",
+      "team": null
+    },
+    {
+      "slot": 8,
+      "rider": "Ballerini",
+      "team": null
+    },
+    {
+      "slot": 9,
+      "rider": "Vingegaard",
+      "team": null
+    },
+    {
+      "slot": 10,
+      "rider": "Kooij",
+      "team": null
+    }
+  ],
+  "joker_stage": 20,
+  "pannenkoeken": [
+    {
+      "slot": 1,
+      "rider": "Romo"
+    },
+    {
+      "slot": 2,
+      "rider": "Hessmann"
+    },
+    {
+      "slot": 3,
+      "rider": "Cepeda"
+    },
+    {
+      "slot": 4,
+      "rider": "Pierna"
+    },
+    {
+      "slot": 5,
+      "rider": "Jegat"
+    },
+    {
+      "slot": 6,
+      "rider": "Haller"
+    },
+    {
+      "slot": 7,
+      "rider": "Bierterbos"
+    },
+    {
+      "slot": 8,
+      "rider": "vd Berg"
+    },
+    {
+      "slot": 9,
+      "rider": "Tratnik"
+    },
+    {
+      "slot": 10,
+      "rider": "Denz"
+    },
+    {
+      "slot": 11,
+      "rider": "van Dijke"
+    },
+    {
+      "slot": 12,
+      "rider": "Traeen"
+    },
+    {
+      "slot": 13,
+      "rider": "Plapp"
+    },
+    {
+      "slot": 14,
+      "rider": "Slock"
+    },
+    {
+      "slot": 15,
+      "rider": "Craps"
+    }
+  ],
+  "bonus_answers": {
+    "podium": [
+      "Pogacar",
+      "Vingegaard",
+      "Seixas"
+    ],
+    "gap_seconds": 63,
+    "dnf_count": 28
+  }
+}
