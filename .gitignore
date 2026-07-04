@@ -3,3 +3,4 @@ __pycache__/
 data/computed/
 data/admin_password.json
 data/flask_secret_key.txt
+NOTES.md
