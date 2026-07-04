@@ -1,17 +1,19 @@
 """
-Unified Tourtoto 2026 web app.
+Unified Tourtoto 2026 web app - runs locally only.
 
-  /            public read-only dashboard (site/index.html) - no login needed
+  /            local preview of the public dashboard (docs/index.html)
   /admin       password-protected admin panel (fix rider names, edit picks,
-               confirm bib mappings, rebuild the site)
+               confirm bib mappings, load new etappe results, publish)
 
 Run locally:
     python scripts/app.py
-    -> http://127.0.0.1:5000            (public site)
+    -> http://127.0.0.1:5000            (public site preview)
     -> http://127.0.0.1:5000/admin      (first visit asks you to set a password)
 
-Deploy: see README.md for PythonAnywhere setup. This module's top-level `app`
-object is the WSGI entry point a host imports (e.g. `from app import app`).
+The actual public site is GitHub Pages, serving docs/ on the main branch -
+"Publish" in /admin commits + pushes docs/index.html there. Everything else
+(scraping, editing picks, rebuilding) stays local; nothing is hosted
+publicly except the static docs/index.html GitHub Pages serves.
 
 The admin password is stored in plain text in data/admin_password.json
 (gitignored - never commit it). That's an explicit, accepted trade-off: this
@@ -22,6 +24,7 @@ import difflib
 import functools
 import json
 import secrets
+import subprocess
 from pathlib import Path
 
 from flask import Flask, redirect, render_template, request, session, url_for
@@ -330,6 +333,35 @@ def rebuild():
     scoring.main()
     generate_site.main()
     return redirect(url_for("admin_index", msg="Site herbouwd — bekijk hem op /"))
+
+
+@app.route("/admin/publish", methods=["POST"])
+@login_required
+def publish():
+    """Commits + pushes docs/index.html to GitHub, which GitHub Pages serves
+    publicly. Relies on git already being able to push from this machine
+    (whatever credential helper/SSH key you normally use for git push)."""
+    def run(*args):
+        return subprocess.run(args, cwd=ROOT, capture_output=True, text=True)
+
+    add = run("git", "add", "docs/index.html")
+    if add.returncode != 0:
+        return redirect(url_for("admin_index", msg=f"git add mislukt: {add.stderr.strip()}"))
+
+    # returncode 0 = nothing staged (docs/index.html unchanged), 1 = there is a staged diff
+    staged_diff = run("git", "diff", "--cached", "--quiet", "--", "docs/index.html")
+    if staged_diff.returncode == 0:
+        return redirect(url_for("admin_index", msg="Niets nieuws om te publiceren — docs/index.html is ongewijzigd."))
+
+    commit = run("git", "commit", "-m", "Update results", "--", "docs/index.html")
+    if commit.returncode != 0:
+        return redirect(url_for("admin_index", msg=f"git commit mislukt: {(commit.stdout + commit.stderr).strip()}"))
+
+    push = run("git", "push")
+    if push.returncode != 0:
+        return redirect(url_for("admin_index", msg=f"git push mislukt: {push.stderr.strip()}"))
+
+    return redirect(url_for("admin_index", msg="Gepubliceerd — live over ~1 minuut op GitHub Pages."))
 
 
 @app.route("/admin/scrape-stage", methods=["POST"])

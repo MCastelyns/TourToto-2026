@@ -43,7 +43,8 @@
   <h1>Tourtoto 2026 — Admin</h1>
   <div style="display:flex; gap:8px;">
     <form action="{{ url_for('rebuild') }}" method="post"><button type="submit">Herbouw site</button></form>
-    <a href="{{ url_for('public_site') }}" target="_blank">Bekijk site</a>
+    <form action="{{ url_for('publish') }}" method="post"><button type="submit">Publiceer naar GitHub Pages</button></form>
+    <a href="{{ url_for('public_site') }}" target="_blank">Bekijk lokale preview</a>
     <a href="{{ url_for('admin_logout') }}">Uitloggen</a>
   </div>
 </header>
