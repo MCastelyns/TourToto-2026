@@ -123,7 +123,7 @@
 {%- if name in rider_info -%}
 {%- set info = rider_info[name] -%}
 class="rider-name" data-tooltip="#{{ info.slot }} in {{ info.team }}
-{{ info.n_owners }}/{{ info.n_participants }} deelnemers hebben hem
+{{ info.n_owners }}/{{ info.n_participants }} keer gekozen
 Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
 {%- endif -%}
 {%- endmacro %}
