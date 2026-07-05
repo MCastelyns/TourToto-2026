@@ -10,6 +10,8 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
 
+from names import build_resolver
+
 ROOT = Path(__file__).resolve().parent.parent
 STANDINGS_PATH = ROOT / "data" / "computed" / "standings.json"
 PARTICIPANTS_DIR = ROOT / "data" / "participants"
@@ -35,14 +37,26 @@ def load_withdrawn():
     return set()
 
 
-def count_owners(rosters):
-    """How many participants have each rider somewhere on their hoofdploeg or
-    pannenkoeken (counted once per participant, even if on both)."""
+def all_raw_picks(rosters):
+    names = set()
+    for data in rosters.values():
+        names |= {r["rider"] for r in data["hoofdploeg"]}
+        names |= {r["rider"] for r in data["pannenkoeken"]}
+    return names
+
+
+def count_owners(rosters, resolve):
+    """How many participants have each rider (by canonical name) somewhere on
+    their hoofdploeg or pannenkoeken (counted once per participant, even if on
+    both). Resolves each pick first so spelling variants of the same rider
+    (e.g. "Philipsen" vs the canonical "J. Philipsen") aren't double-counted
+    as two different riders."""
     counts = {}
     for data in rosters.values():
-        riders_this_participant = {r["rider"] for r in data["hoofdploeg"]} | {r["rider"] for r in data["pannenkoeken"]}
-        for rider in riders_this_participant:
-            counts[rider] = counts.get(rider, 0) + 1
+        raw_names = {r["rider"] for r in data["hoofdploeg"]} | {r["rider"] for r in data["pannenkoeken"]}
+        canonical_names = {resolve(n) or n for n in raw_names}
+        for name in canonical_names:
+            counts[name] = counts.get(name, 0) + 1
     return counts
 
 
@@ -51,13 +65,27 @@ def build_rider_info(rosters):
     fields for the tooltip: how many participants picked them, and whether
     they're currently marked as withdrawn."""
     rider_info = json.loads(TEAMS_MASTER_PATH.read_text(encoding="utf-8"))["riders"]
-    owner_counts = count_owners(rosters)
+    resolve = build_resolver(list(rider_info.keys()))
+
+    owner_counts = count_owners(rosters, resolve)
     withdrawn = load_withdrawn()
     n_participants = len(rosters)
     for name, info in rider_info.items():
         info["n_owners"] = owner_counts.get(name, 0)
         info["n_participants"] = n_participants
         info["withdrawn"] = name in withdrawn
+
+    # Let template lookups (roster display, tooltips) succeed for whatever
+    # spelling a participant actually typed, not just the exact canonical
+    # form - otherwise e.g. "Philipsen" silently shows no team while
+    # "J. Philipsen" would.
+    for raw_name in all_raw_picks(rosters):
+        if raw_name in rider_info:
+            continue
+        canonical = resolve(raw_name)
+        if canonical:
+            rider_info[raw_name] = rider_info[canonical]
+
     return rider_info
 
 

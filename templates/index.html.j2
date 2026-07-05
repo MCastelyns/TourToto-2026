@@ -238,7 +238,7 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
         <div>
           <h4>Hoofdploeg</h4>
           <ol>
-            {% for r in roster.hoofdploeg %}<li>{% if r.rider in unresolved_names %}<span class="unresolved" data-tooltip="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">{{ r.rider }}</span>{% else %}{{ r.rider }}{% endif %}{% if r.team %} <span style="color:var(--muted)">({{ r.team }})</span>{% endif %}</li>{% endfor %}
+            {% for r in roster.hoofdploeg %}<li>{% if r.rider in unresolved_names %}<span class="unresolved" data-tooltip="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">{{ r.rider }}</span>{% else %}{{ r.rider }}{% endif %}{% if r.rider in rider_info %} <span style="color:var(--muted)">({{ rider_info[r.rider].team }})</span>{% endif %}</li>{% endfor %}
           </ol>
         </div>
         <div>
