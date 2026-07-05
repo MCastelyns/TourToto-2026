@@ -89,6 +89,21 @@
   .muted-note { color: var(--muted); font-size: 0.85rem; font-style: italic; margin: 0; }
   .rider-name { cursor: help; border-bottom: 1px dotted var(--muted); }
   footer { text-align: center; color: var(--muted); font-size: 0.82rem; padding: 20px; }
+  .tooltip-popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    max-width: 260px;
+    background: #222;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    white-space: pre-line;
+    pointer-events: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  }
 </style>
 </head>
 <body>
@@ -98,7 +113,7 @@
   <p>
     1 van de 21 etappes verwerkt
     
-    &middot; laatst bijgewerkt: 04-07-2026 23:28
+    &middot; laatst bijgewerkt: 05-07-2026 13:21
   </p>
 </header>
 
@@ -126,7 +141,7 @@
             <td>Ingrid</td>
             
             
-            <td class="stage-cell joker-cell" title="Vingegaard: 15
+            <td class="stage-cell joker-cell" data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">52</td>
             
@@ -137,7 +152,7 @@ Totaal: 26">52</td>
             <td>Mirjam</td>
             
             
-            <td class="stage-cell joker-cell" title="Vingegaard: 15
+            <td class="stage-cell joker-cell" data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">52</td>
             
@@ -148,7 +163,7 @@ Totaal: 26">52</td>
             <td>Casper</td>
             
             
-            <td class="stage-cell " title="Vingegaard: 15
+            <td class="stage-cell " data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
@@ -160,7 +175,7 @@ Totaal: 29">29</td>
             <td>Ger</td>
             
             
-            <td class="stage-cell " title="Vingegaard: 15
+            <td class="stage-cell " data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
@@ -172,7 +187,7 @@ Totaal: 29">29</td>
             <td>Hans</td>
             
             
-            <td class="stage-cell " title="Vingegaard: 15
+            <td class="stage-cell " data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
@@ -184,7 +199,7 @@ Totaal: 29">29</td>
             <td>Willem</td>
             
             
-            <td class="stage-cell " title="Vingegaard: 15
+            <td class="stage-cell " data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
@@ -196,7 +211,7 @@ Totaal: 29">29</td>
             <td>Wilma</td>
             
             
-            <td class="stage-cell " title="Vingegaard: 15
+            <td class="stage-cell " data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
@@ -208,7 +223,7 @@ Totaal: 29">29</td>
             <td>Sharon</td>
             
             
-            <td class="stage-cell " title="Vingegaard: 15
+            <td class="stage-cell " data-tooltip="Vingegaard: 15
 Pogacar: 11
 T. Voss: 2
 Totaal: 28">28</td>
@@ -220,7 +235,7 @@ Totaal: 28">28</td>
             <td>Anita</td>
             
             
-            <td class="stage-cell " title="Vingegaard: 15
+            <td class="stage-cell " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
@@ -231,7 +246,7 @@ Totaal: 26">26</td>
             <td>Ferdi</td>
             
             
-            <td class="stage-cell " title="Vingegaard: 15
+            <td class="stage-cell " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
@@ -242,7 +257,7 @@ Totaal: 26">26</td>
             <td>Jeffrey</td>
             
             
-            <td class="stage-cell " title="Vingegaard: 15
+            <td class="stage-cell " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
@@ -253,7 +268,7 @@ Totaal: 26">26</td>
             <td>Kevin</td>
             
             
-            <td class="stage-cell " title="Vingegaard: 15
+            <td class="stage-cell " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
@@ -264,7 +279,7 @@ Totaal: 26">26</td>
             <td>Mark</td>
             
             
-            <td class="stage-cell " title="Vingegaard: 15
+            <td class="stage-cell " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
@@ -275,7 +290,7 @@ Totaal: 26">26</td>
             <td>Mitchel</td>
             
             
-            <td class="stage-cell " title="Vingegaard: 15
+            <td class="stage-cell " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
@@ -286,7 +301,7 @@ Totaal: 26">26</td>
             <td>Sepp</td>
             
             
-            <td class="stage-cell " title="Vingegaard: 15
+            <td class="stage-cell " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
@@ -297,7 +312,7 @@ Totaal: 26">26</td>
             <td>Theo</td>
             
             
-            <td class="stage-cell " title="Vingegaard: 15
+            <td class="stage-cell " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
@@ -308,7 +323,7 @@ Totaal: 26">26</td>
             <td>Paul</td>
             
             
-            <td class="stage-cell " title="Pogacar: 11
+            <td class="stage-cell " data-tooltip="Pogacar: 11
 Piganzoli: 5
 F. Lipowitz: 3
 P. Seixas: 1
@@ -321,7 +336,7 @@ Totaal: 20">20</td>
             <td>Elise</td>
             
             
-            <td class="stage-cell " title="Pogacar: 11
+            <td class="stage-cell " data-tooltip="Pogacar: 11
 Evenepoel: 7
 Totaal: 18">18</td>
             
@@ -332,7 +347,7 @@ Totaal: 18">18</td>
             <td>Wim</td>
             
             
-            <td class="stage-cell " title="Pogacar: 11
+            <td class="stage-cell " data-tooltip="Pogacar: 11
 F. Lipowitz: 3
 Totaal: 14">14</td>
             
@@ -343,7 +358,7 @@ Totaal: 14">14</td>
             <td>Jeroen</td>
             
             
-            <td class="stage-cell " title="Pogacar: 11
+            <td class="stage-cell " data-tooltip="Pogacar: 11
 Totaal: 11">11</td>
             
             <td class="total">11</td>
@@ -353,7 +368,7 @@ Totaal: 11">11</td>
             <td>Luuk</td>
             
             
-            <td class="stage-cell " title="Pogacar: 11
+            <td class="stage-cell " data-tooltip="Pogacar: 11
 Totaal: 11">11</td>
             
             <td class="total">11</td>
@@ -381,7 +396,7 @@ Totaal: 11">11</td>
             <td>Anita</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -390,7 +405,7 @@ Totaal: 11">11</td>
             <td>Casper</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -399,7 +414,7 @@ Totaal: 11">11</td>
             <td>Elise</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -408,7 +423,7 @@ Totaal: 11">11</td>
             <td>Ferdi</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -417,7 +432,7 @@ Totaal: 11">11</td>
             <td>Ger</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -426,7 +441,7 @@ Totaal: 11">11</td>
             <td>Hans</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -435,7 +450,7 @@ Totaal: 11">11</td>
             <td>Ingrid</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -444,7 +459,7 @@ Totaal: 11">11</td>
             <td>Jeffrey</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -453,7 +468,7 @@ Totaal: 11">11</td>
             <td>Jeroen</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -462,7 +477,7 @@ Totaal: 11">11</td>
             <td>Kevin</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -471,7 +486,7 @@ Totaal: 11">11</td>
             <td>Luuk</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -480,7 +495,7 @@ Totaal: 11">11</td>
             <td>Mark</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -489,7 +504,7 @@ Totaal: 11">11</td>
             <td>Mirjam</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -498,7 +513,7 @@ Totaal: 11">11</td>
             <td>Mitchel</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -507,7 +522,7 @@ Totaal: 11">11</td>
             <td>Paul</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -516,7 +531,7 @@ Totaal: 11">11</td>
             <td>Sepp</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -525,7 +540,7 @@ Totaal: 11">11</td>
             <td>Sharon</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -534,7 +549,7 @@ Totaal: 11">11</td>
             <td>Theo</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -543,7 +558,7 @@ Totaal: 11">11</td>
             <td>Willem</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -552,7 +567,7 @@ Totaal: 11">11</td>
             <td>Wilma</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -561,7 +576,7 @@ Totaal: 11">11</td>
             <td>Wim</td>
             
             
-            <td class="stage-cell" title="Totaal: 0">0</td>
+            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
             
             <td class="total">0</td>
           </tr>
@@ -585,15 +600,15 @@ Totaal: 11">11</td>
           <table>
             <tbody>
               
-              <tr><td class="rank-num">1</td><td><span class="rider-name" title="#1 in VISMA LEASE A BIKE">Vingegaard</span></td><td class="total">5</td></tr>
+              <tr><td class="rank-num">1</td><td><span class="rider-name" data-tooltip="#1 in VISMA LEASE A BIKE">Vingegaard</span></td><td class="total">5</td></tr>
               
-              <tr><td class="rank-num">2</td><td><span class="rider-name" title="#2 in Netcompany INEOS">F. Ganna</span></td><td class="total">4</td></tr>
+              <tr><td class="rank-num">2</td><td><span class="rider-name" data-tooltip="#2 in Netcompany INEOS">F. Ganna</span></td><td class="total">4</td></tr>
               
-              <tr><td class="rank-num">3</td><td><span class="rider-name" title="#1 in UAE TEAM EMIRATES">Pogacar</span></td><td class="total">3</td></tr>
+              <tr><td class="rank-num">3</td><td><span class="rider-name" data-tooltip="#1 in UAE TEAM EMIRATES">Pogacar</span></td><td class="total">3</td></tr>
               
-              <tr><td class="rank-num">4</td><td><span class="rider-name" title="#1 in LIDL TREK">Ayuso</span></td><td class="total">2</td></tr>
+              <tr><td class="rank-num">4</td><td><span class="rider-name" data-tooltip="#1 in LIDL TREK">Ayuso</span></td><td class="total">2</td></tr>
               
-              <tr><td class="rank-num">5</td><td><span class="rider-name" title="#1 in RED BULL BORA">Evenepoel</span></td><td class="total">1</td></tr>
+              <tr><td class="rank-num">5</td><td><span class="rider-name" data-tooltip="#1 in RED BULL BORA">Evenepoel</span></td><td class="total">1</td></tr>
               
             </tbody>
           </table>
@@ -620,11 +635,11 @@ Totaal: 11">11</td>
           <table>
             <tbody>
               
-              <tr><td class="rank-num">1</td><td><span class="rider-name" title="#1 in LIDL TREK">Ayuso</span></td><td class="total">3</td></tr>
+              <tr><td class="rank-num">1</td><td><span class="rider-name" data-tooltip="#1 in LIDL TREK">Ayuso</span></td><td class="total">3</td></tr>
               
-              <tr><td class="rank-num">2</td><td><span class="rider-name" title="#2 in UAE TEAM EMIRATES">Del Torro Romero</span></td><td class="total">2</td></tr>
+              <tr><td class="rank-num">2</td><td><span class="rider-name" data-tooltip="#2 in UAE TEAM EMIRATES">Del Torro Romero</span></td><td class="total">2</td></tr>
               
-              <tr><td class="rank-num">3</td><td><span class="rider-name" title="#8 in VISMA LEASE A BIKE">Piganzoli</span></td><td class="total">1</td></tr>
+              <tr><td class="rank-num">3</td><td><span class="rider-name" data-tooltip="#8 in VISMA LEASE A BIKE">Piganzoli</span></td><td class="total">1</td></tr>
               
             </tbody>
           </table>
@@ -637,25 +652,25 @@ Totaal: 11">11</td>
           <table>
             <tbody>
               
-              <tr><td class="rank-num">1</td><td><span class="rider-name" title="#1 in VISMA LEASE A BIKE">Vingegaard</span></td><td class="total">10</td></tr>
+              <tr><td class="rank-num">1</td><td><span class="rider-name" data-tooltip="#1 in VISMA LEASE A BIKE">Vingegaard</span></td><td class="total">10</td></tr>
               
-              <tr><td class="rank-num">2</td><td><span class="rider-name" title="#2 in Netcompany INEOS">F. Ganna</span></td><td class="total">9</td></tr>
+              <tr><td class="rank-num">2</td><td><span class="rider-name" data-tooltip="#2 in Netcompany INEOS">F. Ganna</span></td><td class="total">9</td></tr>
               
-              <tr><td class="rank-num">3</td><td><span class="rider-name" title="#1 in UAE TEAM EMIRATES">Pogacar</span></td><td class="total">8</td></tr>
+              <tr><td class="rank-num">3</td><td><span class="rider-name" data-tooltip="#1 in UAE TEAM EMIRATES">Pogacar</span></td><td class="total">8</td></tr>
               
-              <tr><td class="rank-num">4</td><td><span class="rider-name" title="#1 in LIDL TREK">Ayuso</span></td><td class="total">7</td></tr>
+              <tr><td class="rank-num">4</td><td><span class="rider-name" data-tooltip="#1 in LIDL TREK">Ayuso</span></td><td class="total">7</td></tr>
               
-              <tr><td class="rank-num">5</td><td><span class="rider-name" title="#1 in RED BULL BORA">Evenepoel</span></td><td class="total">6</td></tr>
+              <tr><td class="rank-num">5</td><td><span class="rider-name" data-tooltip="#1 in RED BULL BORA">Evenepoel</span></td><td class="total">6</td></tr>
               
-              <tr><td class="rank-num">6</td><td><span class="rider-name" title="#2 in UAE TEAM EMIRATES">Del Torro Romero</span></td><td class="total">5</td></tr>
+              <tr><td class="rank-num">6</td><td><span class="rider-name" data-tooltip="#2 in UAE TEAM EMIRATES">Del Torro Romero</span></td><td class="total">5</td></tr>
               
-              <tr><td class="rank-num">7</td><td><span class="rider-name" title="#8 in VISMA LEASE A BIKE">Piganzoli</span></td><td class="total">4</td></tr>
+              <tr><td class="rank-num">7</td><td><span class="rider-name" data-tooltip="#8 in VISMA LEASE A BIKE">Piganzoli</span></td><td class="total">4</td></tr>
               
-              <tr><td class="rank-num">8</td><td><span class="rider-name" title="#2 in RED BULL BORA">F. Lipowitz</span></td><td class="total">3</td></tr>
+              <tr><td class="rank-num">8</td><td><span class="rider-name" data-tooltip="#2 in RED BULL BORA">F. Lipowitz</span></td><td class="total">3</td></tr>
               
-              <tr><td class="rank-num">9</td><td><span class="rider-name" title="#7 in Netcompany INEOS">T. Voss</span></td><td class="total">2</td></tr>
+              <tr><td class="rank-num">9</td><td><span class="rider-name" data-tooltip="#7 in Netcompany INEOS">T. Voss</span></td><td class="total">2</td></tr>
               
-              <tr><td class="rank-num">10</td><td><span class="rider-name" title="#1 in DECATHLON">P. Seixas</span></td><td class="total">1</td></tr>
+              <tr><td class="rank-num">10</td><td><span class="rider-name" data-tooltip="#1 in DECATHLON">P. Seixas</span></td><td class="total">1</td></tr>
               
             </tbody>
           </table>
@@ -668,25 +683,25 @@ Totaal: 11">11</td>
         <thead><tr><th>Renner</th><th>Punten</th></tr></thead>
         <tbody>
           
-          <tr><td><span class="rider-name" title="#1 in VISMA LEASE A BIKE">Vingegaard</span></td><td class="total">15</td></tr>
+          <tr><td><span class="rider-name" data-tooltip="#1 in VISMA LEASE A BIKE">Vingegaard</span></td><td class="total">15</td></tr>
           
-          <tr><td><span class="rider-name" title="#2 in Netcompany INEOS">F. Ganna</span></td><td class="total">13</td></tr>
+          <tr><td><span class="rider-name" data-tooltip="#2 in Netcompany INEOS">F. Ganna</span></td><td class="total">13</td></tr>
           
-          <tr><td><span class="rider-name" title="#1 in LIDL TREK">Ayuso</span></td><td class="total">12</td></tr>
+          <tr><td><span class="rider-name" data-tooltip="#1 in LIDL TREK">Ayuso</span></td><td class="total">12</td></tr>
           
-          <tr><td><span class="rider-name" title="#1 in UAE TEAM EMIRATES">Pogacar</span></td><td class="total">11</td></tr>
+          <tr><td><span class="rider-name" data-tooltip="#1 in UAE TEAM EMIRATES">Pogacar</span></td><td class="total">11</td></tr>
           
-          <tr><td><span class="rider-name" title="#1 in RED BULL BORA">Evenepoel</span></td><td class="total">7</td></tr>
+          <tr><td><span class="rider-name" data-tooltip="#1 in RED BULL BORA">Evenepoel</span></td><td class="total">7</td></tr>
           
-          <tr><td><span class="rider-name" title="#2 in UAE TEAM EMIRATES">Del Torro Romero</span></td><td class="total">7</td></tr>
+          <tr><td><span class="rider-name" data-tooltip="#2 in UAE TEAM EMIRATES">Del Torro Romero</span></td><td class="total">7</td></tr>
           
-          <tr><td><span class="rider-name" title="#8 in VISMA LEASE A BIKE">Piganzoli</span></td><td class="total">5</td></tr>
+          <tr><td><span class="rider-name" data-tooltip="#8 in VISMA LEASE A BIKE">Piganzoli</span></td><td class="total">5</td></tr>
           
-          <tr><td><span class="rider-name" title="#2 in RED BULL BORA">F. Lipowitz</span></td><td class="total">3</td></tr>
+          <tr><td><span class="rider-name" data-tooltip="#2 in RED BULL BORA">F. Lipowitz</span></td><td class="total">3</td></tr>
           
-          <tr><td><span class="rider-name" title="#7 in Netcompany INEOS">T. Voss</span></td><td class="total">2</td></tr>
+          <tr><td><span class="rider-name" data-tooltip="#7 in Netcompany INEOS">T. Voss</span></td><td class="total">2</td></tr>
           
-          <tr><td><span class="rider-name" title="#1 in DECATHLON">P. Seixas</span></td><td class="total">1</td></tr>
+          <tr><td><span class="rider-name" data-tooltip="#1 in DECATHLON">P. Seixas</span></td><td class="total">1</td></tr>
           
         </tbody>
       </table>
@@ -1021,7 +1036,7 @@ Totaal: 11">11</td>
           <h4>Pannenkoekenploeg</h4>
           
           <ol>
-            <li>Biesterbos</li><li>Dhondt</li><li>Germani</li><li>Gradek</li><li>Hessmann</li><li>Howson</li><li>O&#39;brien</li><li>Russo</li><li>Stewart</li><li>Stock</li><li>van Asbroek</li><li>vd Berg</li><li><span class="unresolved" title="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Verstraten</span></li><li>Walker</li><li>Zimmerman</li>
+            <li>Biesterbos</li><li>Dhondt</li><li>Germani</li><li>Gradek</li><li>Hessmann</li><li>Howson</li><li>O&#39;brien</li><li>Russo</li><li>Stewart</li><li>Stock</li><li>van Asbroek</li><li>vd Berg</li><li><span class="unresolved" data-tooltip="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Verstraten</span></li><li>Walker</li><li>Zimmerman</li>
           </ol>
           
         </div>
@@ -1099,7 +1114,7 @@ Totaal: 11">11</td>
           <h4>Pannenkoekenploeg</h4>
           
           <ol>
-            <li><span class="unresolved" title="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Declercq</span></li><li>Denz</li><li>Dillier</li><li>Gradek</li><li>Hoole</li><li><span class="unresolved" title="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Jansen</span></li><li><span class="unresolved" title="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Juul-Jensen</span></li><li><span class="unresolved" title="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Laengen</span></li><li>Politt</li><li><span class="unresolved" title="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Sagiv</span></li><li><span class="unresolved" title="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Sutterlin</span></li><li><span class="unresolved" title="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Theuns</span></li><li>van Dijke</li><li><span class="unresolved" title="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">van Poppel</span></li><li><span class="unresolved" title="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Vermote</span></li>
+            <li><span class="unresolved" data-tooltip="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Declercq</span></li><li>Denz</li><li>Dillier</li><li>Gradek</li><li>Hoole</li><li><span class="unresolved" data-tooltip="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Jansen</span></li><li><span class="unresolved" data-tooltip="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Juul-Jensen</span></li><li><span class="unresolved" data-tooltip="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Laengen</span></li><li>Politt</li><li><span class="unresolved" data-tooltip="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Sagiv</span></li><li><span class="unresolved" data-tooltip="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Sutterlin</span></li><li><span class="unresolved" data-tooltip="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Theuns</span></li><li>van Dijke</li><li><span class="unresolved" data-tooltip="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">van Poppel</span></li><li><span class="unresolved" data-tooltip="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Vermote</span></li>
           </ol>
           
         </div>
@@ -1203,7 +1218,7 @@ Totaal: 11">11</td>
           <h4>Pannenkoekenploeg</h4>
           
           <ol>
-            <li>Hessmann</li><li>Tratnik</li><li><span class="unresolved" title="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Verstraffe</span></li><li>Planckaert</li><li>Felix Parra</li><li>Gradek</li><li>Prodhomme</li><li>Louvel</li><li>Le Berre</li><li>Traeen</li><li>Craps</li><li>Page</li><li>Pacher</li><li>Dillier</li><li>Biermans</li>
+            <li>Hessmann</li><li>Tratnik</li><li><span class="unresolved" data-tooltip="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">Verstraffe</span></li><li>Planckaert</li><li>Felix Parra</li><li>Gradek</li><li>Prodhomme</li><li>Louvel</li><li>Le Berre</li><li>Traeen</li><li>Craps</li><li>Page</li><li>Pacher</li><li>Dillier</li><li>Biermans</li>
           </ol>
           
         </div>
@@ -1247,6 +1262,55 @@ Totaal: 11">11</td>
 </main>
 
 <footer>Tourtoto 2026 &middot; Mitchel Castelyns</footer>
+
+<div id="tooltip-popup" class="tooltip-popup"></div>
+<script>
+(function () {
+  var popup = document.getElementById('tooltip-popup');
+  var active = null;
+
+  function show(el) {
+    popup.textContent = el.dataset.tooltip;
+    popup.style.display = 'block';
+    var rect = el.getBoundingClientRect();
+    var popupRect = popup.getBoundingClientRect();
+    var left = rect.left + rect.width / 2 - popupRect.width / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - popupRect.width - 8));
+    var top = rect.top - popupRect.height - 8;
+    if (top < 8) top = rect.bottom + 8;
+    popup.style.left = left + 'px';
+    popup.style.top = top + 'px';
+    active = el;
+  }
+
+  function hide() {
+    popup.style.display = 'none';
+    active = null;
+  }
+
+  // desktop hover
+  document.addEventListener('mouseover', function (e) {
+    var el = e.target.closest && e.target.closest('[data-tooltip]');
+    if (el) show(el);
+  });
+  document.addEventListener('mouseout', function (e) {
+    var el = e.target.closest && e.target.closest('[data-tooltip]');
+    if (el && !el.contains(e.relatedTarget)) hide();
+  });
+
+  // mobile tap (and desktop click) - tap the same one again, or elsewhere, to close
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest && e.target.closest('[data-tooltip]');
+    if (el) {
+      e.preventDefault();
+      if (active === el) hide();
+      else show(el);
+    } else {
+      hide();
+    }
+  });
+})();
+</script>
 
 </body>
 </html>

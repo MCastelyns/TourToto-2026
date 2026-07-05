@@ -89,6 +89,21 @@
   .muted-note { color: var(--muted); font-size: 0.85rem; font-style: italic; margin: 0; }
   .rider-name { cursor: help; border-bottom: 1px dotted var(--muted); }
   footer { text-align: center; color: var(--muted); font-size: 0.82rem; padding: 20px; }
+  .tooltip-popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    max-width: 260px;
+    background: #222;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    white-space: pre-line;
+    pointer-events: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  }
 </style>
 </head>
 <body>
@@ -106,7 +121,7 @@
 
 {% macro rider_name(name) -%}
 {%- if name in rider_info -%}
-<span class="rider-name" title="#{{ rider_info[name].slot }} in {{ rider_info[name].team }}">{{ name }}</span>
+<span class="rider-name" data-tooltip="#{{ rider_info[name].slot }} in {{ rider_info[name].team }}">{{ name }}</span>
 {%- else -%}
 {{ name }}
 {%- endif -%}
@@ -138,7 +153,7 @@
             <td>{{ p.name }}</td>
             {% for s in stages_available %}
             {% set st = p.hoofdploeg.by_stage[s|string] %}
-            <td class="stage-cell {{ 'joker-cell' if st.joker else '' }}" title="{{ st.tooltip }}">{{ st.score }}</td>
+            <td class="stage-cell {{ 'joker-cell' if st.joker else '' }}" data-tooltip="{{ st.tooltip }}">{{ st.score }}</td>
             {% endfor %}
             <td class="total">{{ p.hoofdploeg.total }}</td>
           </tr>
@@ -165,7 +180,7 @@
             <td>{{ p.name }}</td>
             {% for s in stages_available %}
             {% set st = p.pannenkoeken.by_stage[s|string] %}
-            <td class="stage-cell" title="{{ st.tooltip }}">{{ st.score }}</td>
+            <td class="stage-cell" data-tooltip="{{ st.tooltip }}">{{ st.score }}</td>
             {% endfor %}
             <td class="total">{{ p.pannenkoeken.total }}</td>
           </tr>
@@ -222,14 +237,14 @@
         <div>
           <h4>Hoofdploeg</h4>
           <ol>
-            {% for r in roster.hoofdploeg %}<li>{% if r.rider in unresolved_names %}<span class="unresolved" title="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">{{ r.rider }}</span>{% else %}{{ r.rider }}{% endif %}{% if r.team %} <span style="color:var(--muted)">({{ r.team }})</span>{% endif %}</li>{% endfor %}
+            {% for r in roster.hoofdploeg %}<li>{% if r.rider in unresolved_names %}<span class="unresolved" data-tooltip="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">{{ r.rider }}</span>{% else %}{{ r.rider }}{% endif %}{% if r.team %} <span style="color:var(--muted)">({{ r.team }})</span>{% endif %}</li>{% endfor %}
           </ol>
         </div>
         <div>
           <h4>Pannenkoekenploeg</h4>
           {% if roster.pannenkoeken %}
           <ol>
-            {% for r in roster.pannenkoeken %}<li>{% if r.rider in unresolved_names %}<span class="unresolved" title="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">{{ r.rider }}</span>{% else %}{{ r.rider }}{% endif %}</li>{% endfor %}
+            {% for r in roster.pannenkoeken %}<li>{% if r.rider in unresolved_names %}<span class="unresolved" data-tooltip="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">{{ r.rider }}</span>{% else %}{{ r.rider }}{% endif %}</li>{% endfor %}
           </ol>
           {% else %}
           <p style="color:var(--muted); font-style:italic;">Nog niet ingeleverd</p>
@@ -249,6 +264,55 @@
 </main>
 
 <footer>Tourtoto 2026 &middot; Mitchel Castelyns</footer>
+
+<div id="tooltip-popup" class="tooltip-popup"></div>
+<script>
+(function () {
+  var popup = document.getElementById('tooltip-popup');
+  var active = null;
+
+  function show(el) {
+    popup.textContent = el.dataset.tooltip;
+    popup.style.display = 'block';
+    var rect = el.getBoundingClientRect();
+    var popupRect = popup.getBoundingClientRect();
+    var left = rect.left + rect.width / 2 - popupRect.width / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - popupRect.width - 8));
+    var top = rect.top - popupRect.height - 8;
+    if (top < 8) top = rect.bottom + 8;
+    popup.style.left = left + 'px';
+    popup.style.top = top + 'px';
+    active = el;
+  }
+
+  function hide() {
+    popup.style.display = 'none';
+    active = null;
+  }
+
+  // desktop hover
+  document.addEventListener('mouseover', function (e) {
+    var el = e.target.closest && e.target.closest('[data-tooltip]');
+    if (el) show(el);
+  });
+  document.addEventListener('mouseout', function (e) {
+    var el = e.target.closest && e.target.closest('[data-tooltip]');
+    if (el && !el.contains(e.relatedTarget)) hide();
+  });
+
+  // mobile tap (and desktop click) - tap the same one again, or elsewhere, to close
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest && e.target.closest('[data-tooltip]');
+    if (el) {
+      e.preventDefault();
+      if (active === el) hide();
+      else show(el);
+    } else {
+      hide();
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
