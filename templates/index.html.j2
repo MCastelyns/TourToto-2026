@@ -119,11 +119,12 @@
 
 <main>
 
-{% macro rider_name(name) -%}
+{% macro rider_attrs(name) -%}
 {%- if name in rider_info -%}
-<span class="rider-name" data-tooltip="#{{ rider_info[name].slot }} in {{ rider_info[name].team }}">{{ name }}</span>
-{%- else -%}
-{{ name }}
+{%- set info = rider_info[name] -%}
+class="rider-name" data-tooltip="#{{ info.slot }} in {{ info.team }}
+{{ info.n_owners }}/{{ info.n_participants }} deelnemers hebben hem
+Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
 {%- endif -%}
 {%- endmacro %}
 
@@ -204,7 +205,7 @@
           <table>
             <tbody>
               {% for row in b.components[key] %}
-              <tr><td class="rank-num">{{ row.rank }}</td><td>{{ rider_name(row.rider) }}</td><td class="total">{{ row.points }}</td></tr>
+              <tr><td class="rank-num">{{ row.rank }}</td><td {{ rider_attrs(row.rider) }}>{{ row.rider }}</td><td class="total">{{ row.points }}</td></tr>
               {% endfor %}
             </tbody>
           </table>
@@ -219,7 +220,7 @@
         <thead><tr><th>Renner</th><th>Punten</th></tr></thead>
         <tbody>
           {% for row in b.totals %}
-          <tr><td>{{ rider_name(row.rider) }}</td><td class="total">{{ row.points }}</td></tr>
+          <tr><td {{ rider_attrs(row.rider) }}>{{ row.rider }}</td><td class="total">{{ row.points }}</td></tr>
           {% endfor %}
         </tbody>
       </table>

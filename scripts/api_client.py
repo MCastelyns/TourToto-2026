@@ -5,7 +5,12 @@ This is an undocumented backend discovered by inspecting the Race Center SPA's
 JS bundles (it's a Vue/Quasar app with a `LiveData.fetch(bindName)` -> GET
 `/api/{bindName}` pattern). Known binds:
 
-  allCompetitors-{year}    -> full startlist: bib, firstname, lastname, $team
+  allCompetitors-{year}    -> full startlist: bib, firstname, lastname, $team,
+                              and a "withdrew" field ({"code": N, ...}) once a
+                              rider abandons/is disqualified/etc - absent while
+                              still in the race. Found via the SPA's Vue
+                              components (`e.$t("lab_withdraw_"+Math.abs(t.withdrew.code))`),
+                              not a separate ranking type.
   team-{year}              -> the 23 trade teams: code, name, _id
   rankingType-{year}-{n}   -> ALL classifications after stage n, as a list of
                               {"type": <code>, "rankings": [...]} objects.
@@ -36,6 +41,14 @@ def _get(path):
 
 def get_all_competitors(year):
     return _get(f"allCompetitors-{year}")
+
+
+def get_withdrawn_bibs(year):
+    """Bib numbers currently marked as withdrawn (abandon/DNS/DSQ/etc -
+    the API doesn't distinguish the reason in a field we've seen populated
+    yet, just presence of "withdrew")."""
+    competitors = get_all_competitors(year) or []
+    return {c["bib"] for c in competitors if c.get("withdrew")}
 
 
 def get_teams(year):

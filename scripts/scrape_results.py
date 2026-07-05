@@ -37,11 +37,12 @@ import argparse
 import json
 from pathlib import Path
 
-from api_client import get_ranking_types
+from api_client import get_ranking_types, get_withdrawn_bibs
 
 ROOT = Path(__file__).resolve().parent.parent
 BIB_MAP_PATH = ROOT / "data" / "rider_bib_map.json"
 RESULTS_DIR = ROOT / "data" / "results"
+WITHDRAWN_PATH = ROOT / "data" / "withdrawn_riders.json"
 
 TYPE_TO_FIELD = {
     "ite": ("stage_result", 10),
@@ -138,7 +139,23 @@ def scrape_stage(stage, year=2026):
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     out_path = RESULTS_DIR / f"stage_{stage:02d}.json"
     out_path.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    n_withdrawn = refresh_withdrawn_riders(year, bib_to_name)
+    if n_withdrawn:
+        notes.append(f"{n_withdrawn} renner(s) momenteel als uitgevallen gemarkeerd door de Tour-API.")
+
     return result, notes, warnings
+
+
+def refresh_withdrawn_riders(year, bib_to_name):
+    """Re-checks the full startlist for who's currently marked as withdrawn
+    (abandon/DNS/DSQ/etc) and overwrites data/withdrawn_riders.json with the
+    current list of canonical rider names. Safe to call every time a stage is
+    scraped - it always reflects the live state, not an accumulation."""
+    withdrawn_bibs = get_withdrawn_bibs(year)
+    withdrawn_names = sorted(bib_to_name[bib] for bib in withdrawn_bibs if bib in bib_to_name)
+    WITHDRAWN_PATH.write_text(json.dumps(withdrawn_names, indent=2, ensure_ascii=False), encoding="utf-8")
+    return len(withdrawn_names)
 
 
 def main():
