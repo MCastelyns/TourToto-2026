@@ -4,7 +4,7 @@ One-time (per season) build of the rider <-> official bib number review queue.
 Why this exists: the scraper reports results by bib number (the only truly
 unambiguous ID). Everything downstream (scoring.py) works with our existing
 master-roster rider names, so this mapping is the ONE place bib<->name
-matching needs to happen — and it needs to be exactly right, once, forever.
+matching needs to happen - and it needs to be exactly right, once, forever.
 
 This script does NOT commit anything by itself. It only computes a
 best-guess suggestion per rider (via formatting-tolerant surname matching:

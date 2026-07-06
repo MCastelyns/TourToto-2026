@@ -143,7 +143,7 @@ def find_optimal_matches(participants, stage_breakdowns):
 
 def main():
     if not STANDINGS_PATH.exists():
-        raise SystemExit("data/computed/standings.json not found — run scoring.py first")
+        raise SystemExit("data/computed/standings.json not found - run scoring.py first")
 
     standings = json.loads(STANDINGS_PATH.read_text(encoding="utf-8"))
     rosters = load_participant_rosters()

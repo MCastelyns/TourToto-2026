@@ -332,7 +332,7 @@ def save_participant(name):
 def rebuild():
     scoring.main()
     generate_site.main()
-    return redirect(url_for("admin_index", msg="Site herbouwd — bekijk hem op /"))
+    return redirect(url_for("admin_index", msg="Site herbouwd - bekijk hem op /"))
 
 
 @app.route("/admin/publish", methods=["POST"])
@@ -351,7 +351,7 @@ def publish():
     # returncode 0 = nothing staged (docs/index.html unchanged), 1 = there is a staged diff
     staged_diff = run("git", "diff", "--cached", "--quiet", "--", "docs/index.html")
     if staged_diff.returncode == 0:
-        return redirect(url_for("admin_index", msg="Niets nieuws om te publiceren — docs/index.html is ongewijzigd."))
+        return redirect(url_for("admin_index", msg="Niets nieuws om te publiceren - docs/index.html is ongewijzigd."))
 
     commit = run("git", "commit", "-m", "Update results", "--", "docs/index.html")
     if commit.returncode != 0:
@@ -361,7 +361,7 @@ def publish():
     if push.returncode != 0:
         return redirect(url_for("admin_index", msg=f"git push mislukt: {push.stderr.strip()}"))
 
-    return redirect(url_for("admin_index", msg="Gepubliceerd — live over ~1 minuut op GitHub Pages."))
+    return redirect(url_for("admin_index", msg="Gepubliceerd - live over ~1 minuut op GitHub Pages."))
 
 
 @app.route("/admin/scrape-stage", methods=["POST"])

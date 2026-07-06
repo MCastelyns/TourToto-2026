@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tourtoto 2026 — Admin</title>
+<title>Tourtoto 2026 - Admin</title>
 <style>
   :root { --bg:#f5f4f0; --card:#fff; --border:#ddd; --ink:#1c1c1c; --muted:#777; --warn:#c0392b; --ok:#2e8b3d; }
   * { box-sizing: border-box; }
@@ -40,7 +40,7 @@
 <body>
 
 <header>
-  <h1>Tourtoto 2026 — Admin</h1>
+  <h1>Tourtoto 2026 - Admin</h1>
   <div style="display:flex; gap:8px;">
     <form action="{{ url_for('rebuild') }}" method="post"><button type="submit">Herbouw site</button></form>
     <form action="{{ url_for('publish') }}" method="post"><button type="submit">Publiceer naar GitHub Pages</button></form>
@@ -75,7 +75,7 @@
     <h2>Onopgeloste rennersnamen ({{ unresolved|length }})</h2>
     <p class="muted">Deze namen komen niet overeen met de merkploegen-lijst, ook niet na normalisatie
       (hoofdletters/initialen genegeerd). Kies de juiste renner, of negeer als het geen typefout is
-      (bijv. een reserverenner die niet in de lijst staat) — dan blijft hij 0 punten scoren tot je het oplost.</p>
+      (bijv. een reserverenner die niet in de lijst staat) - dan blijft hij 0 punten scoren tot je het oplost.</p>
     {% if unresolved %}
     <div class="card">
       <table>
@@ -90,7 +90,7 @@
               {% if info.suggestions %}
                 {% for s in info.suggestions %}<a href="#" class="muted suggestion" style="text-decoration:underline;"
                   data-target="canonical-{{ outer_idx }}" data-value="{{ s }}">{{ s }}</a>{% if not loop.last %} / {% endif %}{% endfor %}
-              {% else %}—{% endif %}
+              {% else %}-{% endif %}
             </td>
             <td>
               <form class="inline" action="{{ url_for('resolve_name') }}" method="post">
@@ -120,7 +120,7 @@
   <section>
     <h2>Koppeling met startlijst (rugnummers)</h2>
     <p class="muted">Elke renner uit de merkploegen-lijst moet gekoppeld worden aan zijn officiële
-      rugnummer voordat etappe-uitslagen automatisch verwerkt kunnen worden. Dit is eenmalig werk —
+      rugnummer voordat etappe-uitslagen automatisch verwerkt kunnen worden. Dit is eenmalig werk -
       elke koppeling moet je zelf bevestigen op de review-pagina, er wordt niets automatisch
       overgenomen ook al doet het systeem wel een suggestie per renner.</p>
     <div class="card">
@@ -169,7 +169,7 @@
             </div>
           </div>
         </div>
-        <p><button type="submit">Opslaan — {{ p.name }}</button></p>
+        <p><button type="submit">Opslaan - {{ p.name }}</button></p>
       </form>
     </details>
     {% endfor %}
