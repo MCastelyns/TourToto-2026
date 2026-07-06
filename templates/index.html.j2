@@ -62,16 +62,23 @@
   details {
     background: var(--card);
     border: 1px solid var(--border);
+    border-left: 4px solid var(--groen);
     border-radius: 8px;
     margin-bottom: 8px;
     padding: 10px 14px;
+    transition: background 0.15s ease;
   }
+  details:hover { background: #f7fbf8; }
   details summary {
     cursor: pointer;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
+  .chevron { display: inline-block; color: var(--groen); transition: transform 0.15s ease; margin-right: 8px; }
+  details[open] .chevron { transform: rotate(90deg); }
+  .stage-preview { font-weight: 400; font-size: 0.85rem; color: var(--muted); }
   .roster-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 12px; }
   @media (max-width: 700px) { .roster-grid { grid-template-columns: 1fr; } }
   .roster-grid ol { margin: 4px 0; padding-left: 22px; }
@@ -79,7 +86,8 @@
   .bonus-answers { margin-top: 10px; font-size: 0.9rem; color: #444; }
   .bonus-answers div { margin-top: 3px; }
   .unresolved { color: var(--bol); text-decoration: underline dotted; cursor: help; }
-  .stage-cell { width: 3em; text-align: center; cursor: help; }
+  .stage-cell { width: 3em; text-align: center; }
+  td.stage-cell { cursor: help; }
   .joker-cell { background: var(--geel); font-weight: 700; border-radius: 5px; }
   .breakdown-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 12px; }
   @media (max-width: 700px) { .breakdown-grid { grid-template-columns: 1fr; } }
@@ -138,7 +146,7 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
 {% macro rank_badge(name, changes) -%}
 {%- if name in changes and changes[name] != 0 -%}
 {%- set delta = changes[name] -%}
-<span class="rank-change {{ 'rank-up' if delta > 0 else 'rank-down' }}" data-tooltip="{{ 'Steeg' if delta > 0 else 'Zakte' }} {{ delta|abs }} plek{{ 'en' if delta|abs != 1 else '' }} sinds vorige etappe">{% if delta > 0 %}&#9650;{% else %}&#9660;{% endif %}{{ delta|abs }}</span>
+<span class="rank-change {{ 'rank-up' if delta > 0 else 'rank-down' }}">{% if delta > 0 %}&#9650;{% else %}&#9660;{% endif %}{{ delta|abs }}</span>
 {%- endif -%}
 {%- endmacro %}
 
@@ -183,7 +191,14 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
     {% for s in stages_available|reverse %}
     {% set b = stage_breakdowns[s|string] %}
     <details {% if loop.first %}open{% endif %}>
-      <summary>Etappe {{ s }}</summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Etappe {{ s }}</span>
+        {% if b.components.stage_result %}
+        <span class="stage-preview">Winnaar: {{ b.components.stage_result[0].rider }}</span>
+        {% elif b.components.gc %}
+        <span class="stage-preview">Geel: {{ b.components.gc[0].rider }}</span>
+        {% endif %}
+      </summary>
       <div class="breakdown-grid">
         {% for key, label in [('gc','Gele trui'), ('points','Groene trui'), ('mountains','Bergtrui (bolletjes)'), ('youth','Witte trui'), ('stage_result','Dag-uitslag (etappe)')] %}
         <div>
@@ -247,7 +262,10 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
     <h2>Teams &amp; koersvragen</h2>
     {% for name, roster in rosters.items() %}
     <details>
-      <summary>{{ name }}{% if roster.joker_stage %} <span class="joker">joker: etappe {{ roster.joker_stage }}</span>{% endif %}</summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>{{ name }}</span>
+        {% if roster.joker_stage %}<span class="joker">joker: etappe {{ roster.joker_stage }}</span>{% endif %}
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>

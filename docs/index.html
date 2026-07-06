@@ -62,16 +62,23 @@
   details {
     background: var(--card);
     border: 1px solid var(--border);
+    border-left: 4px solid var(--groen);
     border-radius: 8px;
     margin-bottom: 8px;
     padding: 10px 14px;
+    transition: background 0.15s ease;
   }
+  details:hover { background: #f7fbf8; }
   details summary {
     cursor: pointer;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
+  .chevron { display: inline-block; color: var(--groen); transition: transform 0.15s ease; margin-right: 8px; }
+  details[open] .chevron { transform: rotate(90deg); }
+  .stage-preview { font-weight: 400; font-size: 0.85rem; color: var(--muted); }
   .roster-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 12px; }
   @media (max-width: 700px) { .roster-grid { grid-template-columns: 1fr; } }
   .roster-grid ol { margin: 4px 0; padding-left: 22px; }
@@ -79,7 +86,8 @@
   .bonus-answers { margin-top: 10px; font-size: 0.9rem; color: #444; }
   .bonus-answers div { margin-top: 3px; }
   .unresolved { color: var(--bol); text-decoration: underline dotted; cursor: help; }
-  .stage-cell { width: 3em; text-align: center; cursor: help; }
+  .stage-cell { width: 3em; text-align: center; }
+  td.stage-cell { cursor: help; }
   .joker-cell { background: var(--geel); font-weight: 700; border-radius: 5px; }
   .breakdown-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 12px; }
   @media (max-width: 700px) { .breakdown-grid { grid-template-columns: 1fr; } }
@@ -120,7 +128,7 @@
   <p>
     2 van de 21 etappes verwerkt
     
-    &middot; laatst bijgewerkt: 06-07-2026 06:35
+    &middot; laatst bijgewerkt: 06-07-2026 06:41
   </p>
 </header>
 
@@ -180,7 +188,7 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Sepp<span class="rank-change rank-up" data-tooltip="Steeg 12 pleken sinds vorige etappe">&#9650;12</span></td>
+            <td>Sepp<span class="rank-change rank-up">&#9650;12</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Vingegaard: 15
@@ -214,7 +222,7 @@ Totaal: 32">32</td>
           </tr>
           
           <tr>
-            <td>Ferdi<span class="rank-change rank-up" data-tooltip="Steeg 5 pleken sinds vorige etappe">&#9650;5</span></td>
+            <td>Ferdi<span class="rank-change rank-up">&#9650;5</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Vingegaard: 15
@@ -231,7 +239,7 @@ Totaal: 32">32</td>
           </tr>
           
           <tr>
-            <td>Jeffrey<span class="rank-change rank-up" data-tooltip="Steeg 5 pleken sinds vorige etappe">&#9650;5</span></td>
+            <td>Jeffrey<span class="rank-change rank-up">&#9650;5</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Vingegaard: 15
@@ -248,7 +256,7 @@ Totaal: 32">32</td>
           </tr>
           
           <tr>
-            <td>Mitchel<span class="rank-change rank-up" data-tooltip="Steeg 7 pleken sinds vorige etappe">&#9650;7</span></td>
+            <td>Mitchel<span class="rank-change rank-up">&#9650;7</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Vingegaard: 15
@@ -265,7 +273,7 @@ Totaal: 32">32</td>
           </tr>
           
           <tr>
-            <td>Theo<span class="rank-change rank-up" data-tooltip="Steeg 8 pleken sinds vorige etappe">&#9650;8</span></td>
+            <td>Theo<span class="rank-change rank-up">&#9650;8</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Vingegaard: 15
@@ -282,7 +290,7 @@ Totaal: 32">32</td>
           </tr>
           
           <tr>
-            <td>Casper<span class="rank-change rank-down" data-tooltip="Zakte 6 pleken sinds vorige etappe">&#9660;6</span></td>
+            <td>Casper<span class="rank-change rank-down">&#9660;6</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Vingegaard: 15
@@ -299,7 +307,7 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Hans<span class="rank-change rank-down" data-tooltip="Zakte 5 pleken sinds vorige etappe">&#9660;5</span></td>
+            <td>Hans<span class="rank-change rank-down">&#9660;5</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Vingegaard: 15
@@ -316,7 +324,7 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Willem<span class="rank-change rank-down" data-tooltip="Zakte 5 pleken sinds vorige etappe">&#9660;5</span></td>
+            <td>Willem<span class="rank-change rank-down">&#9660;5</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Vingegaard: 15
@@ -333,7 +341,7 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Wilma<span class="rank-change rank-down" data-tooltip="Zakte 5 pleken sinds vorige etappe">&#9660;5</span></td>
+            <td>Wilma<span class="rank-change rank-down">&#9660;5</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Vingegaard: 15
@@ -350,7 +358,7 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Sharon<span class="rank-change rank-down" data-tooltip="Zakte 5 pleken sinds vorige etappe">&#9660;5</span></td>
+            <td>Sharon<span class="rank-change rank-down">&#9660;5</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Vingegaard: 15
@@ -367,7 +375,7 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Anita<span class="rank-change rank-down" data-tooltip="Zakte 5 pleken sinds vorige etappe">&#9660;5</span></td>
+            <td>Anita<span class="rank-change rank-down">&#9660;5</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Vingegaard: 15
@@ -383,7 +391,7 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Kevin<span class="rank-change rank-down" data-tooltip="Zakte 3 pleken sinds vorige etappe">&#9660;3</span></td>
+            <td>Kevin<span class="rank-change rank-down">&#9660;3</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Vingegaard: 15
@@ -399,7 +407,7 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Mark<span class="rank-change rank-down" data-tooltip="Zakte 3 pleken sinds vorige etappe">&#9660;3</span></td>
+            <td>Mark<span class="rank-change rank-down">&#9660;3</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Vingegaard: 15
@@ -415,7 +423,7 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Elise<span class="rank-change rank-up" data-tooltip="Steeg 1 plek sinds vorige etappe">&#9650;1</span></td>
+            <td>Elise<span class="rank-change rank-up">&#9650;1</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Pogacar: 11
@@ -431,7 +439,7 @@ Totaal: 25">25</td>
           </tr>
           
           <tr>
-            <td>Jeroen<span class="rank-change rank-up" data-tooltip="Steeg 2 pleken sinds vorige etappe">&#9650;2</span></td>
+            <td>Jeroen<span class="rank-change rank-up">&#9650;2</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Pogacar: 11
@@ -445,7 +453,7 @@ Totaal: 14">28</td>
           </tr>
           
           <tr>
-            <td>Paul<span class="rank-change rank-down" data-tooltip="Zakte 2 pleken sinds vorige etappe">&#9660;2</span></td>
+            <td>Paul<span class="rank-change rank-down">&#9660;2</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Pogacar: 11
@@ -463,7 +471,7 @@ Totaal: 17">17</td>
           </tr>
           
           <tr>
-            <td>Wim<span class="rank-change rank-down" data-tooltip="Zakte 1 plek sinds vorige etappe">&#9660;1</span></td>
+            <td>Wim<span class="rank-change rank-down">&#9660;1</span></td>
             
             
             <td class="stage-cell  " data-tooltip="Pogacar: 11
@@ -502,7 +510,12 @@ Totaal: 14">14</td>
     
     
     <details open>
-      <summary>Etappe 2</summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Etappe 2</span>
+        
+        <span class="stage-preview">Winnaar: Del Torro Romero</span>
+        
+      </summary>
       <div class="breakdown-grid">
         
         <div>
@@ -724,7 +737,12 @@ Uitgevallen: Nee">Engelhardt</td><td class="total">1</td></tr>
     
     
     <details >
-      <summary>Etappe 1</summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Etappe 1</span>
+        
+        <span class="stage-preview">Winnaar: Vingegaard</span>
+        
+      </summary>
       <div class="breakdown-grid">
         
         <div>
@@ -936,7 +954,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
           </tr>
           
           <tr>
-            <td>Ferdi<span class="rank-change rank-up" data-tooltip="Steeg 1 plek sinds vorige etappe">&#9650;1</span></td>
+            <td>Ferdi<span class="rank-change rank-up">&#9650;1</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -948,7 +966,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
           </tr>
           
           <tr>
-            <td>Ger<span class="rank-change rank-up" data-tooltip="Steeg 1 plek sinds vorige etappe">&#9650;1</span></td>
+            <td>Ger<span class="rank-change rank-up">&#9650;1</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -960,7 +978,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
           </tr>
           
           <tr>
-            <td>Hans<span class="rank-change rank-up" data-tooltip="Steeg 1 plek sinds vorige etappe">&#9650;1</span></td>
+            <td>Hans<span class="rank-change rank-up">&#9650;1</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -972,7 +990,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
           </tr>
           
           <tr>
-            <td>Ingrid<span class="rank-change rank-up" data-tooltip="Steeg 1 plek sinds vorige etappe">&#9650;1</span></td>
+            <td>Ingrid<span class="rank-change rank-up">&#9650;1</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -984,7 +1002,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
           </tr>
           
           <tr>
-            <td>Kevin<span class="rank-change rank-up" data-tooltip="Steeg 3 pleken sinds vorige etappe">&#9650;3</span></td>
+            <td>Kevin<span class="rank-change rank-up">&#9650;3</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -996,7 +1014,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
           </tr>
           
           <tr>
-            <td>Mark<span class="rank-change rank-up" data-tooltip="Steeg 4 pleken sinds vorige etappe">&#9650;4</span></td>
+            <td>Mark<span class="rank-change rank-up">&#9650;4</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -1008,7 +1026,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
           </tr>
           
           <tr>
-            <td>Mirjam<span class="rank-change rank-up" data-tooltip="Steeg 4 pleken sinds vorige etappe">&#9650;4</span></td>
+            <td>Mirjam<span class="rank-change rank-up">&#9650;4</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -1020,7 +1038,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
           </tr>
           
           <tr>
-            <td>Mitchel<span class="rank-change rank-up" data-tooltip="Steeg 4 pleken sinds vorige etappe">&#9650;4</span></td>
+            <td>Mitchel<span class="rank-change rank-up">&#9650;4</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -1032,7 +1050,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
           </tr>
           
           <tr>
-            <td>Paul<span class="rank-change rank-up" data-tooltip="Steeg 4 pleken sinds vorige etappe">&#9650;4</span></td>
+            <td>Paul<span class="rank-change rank-up">&#9650;4</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -1044,7 +1062,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
           </tr>
           
           <tr>
-            <td>Sepp<span class="rank-change rank-up" data-tooltip="Steeg 4 pleken sinds vorige etappe">&#9650;4</span></td>
+            <td>Sepp<span class="rank-change rank-up">&#9650;4</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -1056,7 +1074,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
           </tr>
           
           <tr>
-            <td>Willem<span class="rank-change rank-up" data-tooltip="Steeg 6 pleken sinds vorige etappe">&#9650;6</span></td>
+            <td>Willem<span class="rank-change rank-up">&#9650;6</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -1068,7 +1086,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
           </tr>
           
           <tr>
-            <td>Wilma<span class="rank-change rank-up" data-tooltip="Steeg 6 pleken sinds vorige etappe">&#9650;6</span></td>
+            <td>Wilma<span class="rank-change rank-up">&#9650;6</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -1080,7 +1098,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
           </tr>
           
           <tr>
-            <td>Wim<span class="rank-change rank-up" data-tooltip="Steeg 6 pleken sinds vorige etappe">&#9650;6</span></td>
+            <td>Wim<span class="rank-change rank-up">&#9650;6</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -1092,7 +1110,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
           </tr>
           
           <tr>
-            <td>Jeffrey<span class="rank-change rank-down" data-tooltip="Zakte 8 pleken sinds vorige etappe">&#9660;8</span></td>
+            <td>Jeffrey<span class="rank-change rank-down">&#9660;8</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -1105,7 +1123,7 @@ Totaal: 1">1</td>
           </tr>
           
           <tr>
-            <td>Luuk<span class="rank-change rank-down" data-tooltip="Zakte 6 pleken sinds vorige etappe">&#9660;6</span></td>
+            <td>Luuk<span class="rank-change rank-down">&#9660;6</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -1118,7 +1136,7 @@ Totaal: 1">1</td>
           </tr>
           
           <tr>
-            <td>Sharon<span class="rank-change rank-down" data-tooltip="Zakte 1 plek sinds vorige etappe">&#9660;1</span></td>
+            <td>Sharon<span class="rank-change rank-down">&#9660;1</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -1131,7 +1149,7 @@ Totaal: 1">1</td>
           </tr>
           
           <tr>
-            <td>Elise<span class="rank-change rank-down" data-tooltip="Zakte 16 pleken sinds vorige etappe">&#9660;16</span></td>
+            <td>Elise<span class="rank-change rank-down">&#9660;16</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -1144,7 +1162,7 @@ Totaal: 5">5</td>
           </tr>
           
           <tr>
-            <td>Jeroen<span class="rank-change rank-down" data-tooltip="Zakte 11 pleken sinds vorige etappe">&#9660;11</span></td>
+            <td>Jeroen<span class="rank-change rank-down">&#9660;11</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -1157,7 +1175,7 @@ Totaal: 5">5</td>
           </tr>
           
           <tr>
-            <td>Theo<span class="rank-change rank-down" data-tooltip="Zakte 3 pleken sinds vorige etappe">&#9660;3</span></td>
+            <td>Theo<span class="rank-change rank-down">&#9660;3</span></td>
             
             
             <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
@@ -1179,7 +1197,10 @@ Totaal: 5">5</td>
     <h2>Teams &amp; koersvragen</h2>
     
     <details>
-      <summary>Anita <span class="joker">joker: etappe 20</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Anita</span>
+        <span class="joker">joker: etappe 20</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1205,7 +1226,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Casper <span class="joker">joker: etappe 20</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Casper</span>
+        <span class="joker">joker: etappe 20</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1231,7 +1255,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Elise <span class="joker">joker: etappe 6</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Elise</span>
+        <span class="joker">joker: etappe 6</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1257,7 +1284,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Ferdi <span class="joker">joker: etappe 20</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Ferdi</span>
+        <span class="joker">joker: etappe 20</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1283,7 +1313,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Ger <span class="joker">joker: etappe 20</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Ger</span>
+        <span class="joker">joker: etappe 20</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1309,7 +1342,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Hans <span class="joker">joker: etappe 15</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Hans</span>
+        <span class="joker">joker: etappe 15</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1335,7 +1371,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Ingrid <span class="joker">joker: etappe 1</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Ingrid</span>
+        <span class="joker">joker: etappe 1</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1359,7 +1398,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Jeffrey <span class="joker">joker: etappe 11</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Jeffrey</span>
+        <span class="joker">joker: etappe 11</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1385,7 +1427,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Jeroen <span class="joker">joker: etappe 2</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Jeroen</span>
+        <span class="joker">joker: etappe 2</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1411,7 +1456,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Kevin <span class="joker">joker: etappe 20</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Kevin</span>
+        <span class="joker">joker: etappe 20</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1437,7 +1485,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Luuk <span class="joker">joker: etappe 5</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Luuk</span>
+        <span class="joker">joker: etappe 5</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1463,7 +1514,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Mark <span class="joker">joker: etappe 20</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Mark</span>
+        <span class="joker">joker: etappe 20</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1489,7 +1543,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Mirjam <span class="joker">joker: etappe 1</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Mirjam</span>
+        <span class="joker">joker: etappe 1</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1515,7 +1572,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Mitchel <span class="joker">joker: etappe 15</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Mitchel</span>
+        <span class="joker">joker: etappe 15</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1541,7 +1601,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Paul <span class="joker">joker: etappe 15</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Paul</span>
+        <span class="joker">joker: etappe 15</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1567,7 +1630,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Sepp <span class="joker">joker: etappe 2</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Sepp</span>
+        <span class="joker">joker: etappe 2</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1593,7 +1659,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Sharon <span class="joker">joker: etappe 20</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Sharon</span>
+        <span class="joker">joker: etappe 20</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1619,7 +1688,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Theo <span class="joker">joker: etappe 6</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Theo</span>
+        <span class="joker">joker: etappe 6</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1645,7 +1717,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Willem <span class="joker">joker: etappe 14</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Willem</span>
+        <span class="joker">joker: etappe 14</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1671,7 +1746,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Wilma</summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Wilma</span>
+        
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
@@ -1697,7 +1775,10 @@ Totaal: 5">5</td>
     </details>
     
     <details>
-      <summary>Wim <span class="joker">joker: etappe 5</span></summary>
+      <summary>
+        <span><span class="chevron">&#9656;</span>Wim</span>
+        <span class="joker">joker: etappe 5</span>
+      </summary>
       <div class="roster-grid">
         <div>
           <h4>Hoofdploeg</h4>
