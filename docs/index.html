@@ -89,6 +89,13 @@
   .muted-note { color: var(--muted); font-size: 0.85rem; font-style: italic; margin: 0; }
   .rider-name { cursor: help; border-bottom: 1px dotted var(--muted); }
   footer { text-align: center; color: var(--muted); font-size: 0.82rem; padding: 20px; }
+  th.latest-stage { background: var(--groen); color: #fff; }
+  td.latest-stage { background: #eaf5ec; }
+  td.latest-stage.joker-cell { background: var(--geel); }
+  .rank-change { font-size: 0.78rem; font-weight: 700; margin-left: 6px; }
+  .rank-up { color: var(--groen); }
+  .rank-down { color: var(--bol); }
+  .rank-same { color: var(--muted); }
   .tooltip-popup {
     display: none;
     position: fixed;
@@ -113,11 +120,13 @@
   <p>
     2 van de 21 etappes verwerkt
     
-    &middot; laatst bijgewerkt: 06-07-2026 06:23
+    &middot; laatst bijgewerkt: 06-07-2026 06:35
   </p>
 </header>
 
 <main>
+
+
 
 
 
@@ -131,7 +140,7 @@
         <thead>
           <tr>
             <th>Naam</th>
-            <th class="stage-cell">E1</th><th class="stage-cell">E2</th>
+            <th class="stage-cell ">E1</th><th class="stage-cell latest-stage">E2</th>
             <th>Totaal</th>
           </tr>
         </thead>
@@ -141,12 +150,12 @@
             <td>Ingrid</td>
             
             
-            <td class="stage-cell joker-cell" data-tooltip="Vingegaard: 15
+            <td class="stage-cell joker-cell " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">52</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
 Totaal: 32">32</td>
@@ -158,12 +167,12 @@ Totaal: 32">32</td>
             <td>Mirjam</td>
             
             
-            <td class="stage-cell joker-cell" data-tooltip="Vingegaard: 15
+            <td class="stage-cell joker-cell " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">52</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -171,15 +180,15 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Sepp</td>
+            <td>Sepp<span class="rank-change rank-up" data-tooltip="Steeg 12 pleken sinds vorige etappe">&#9650;12</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Vingegaard: 15
+            <td class="stage-cell  " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
-            <td class="stage-cell joker-cell" data-tooltip="Pogacar: 14
+            <td class="stage-cell joker-cell latest-stage" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">52</td>
             
@@ -190,13 +199,13 @@ Totaal: 26">52</td>
             <td>Ger</td>
             
             
-            <td class="stage-cell " data-tooltip="Vingegaard: 15
+            <td class="stage-cell  " data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
 Totaal: 32">32</td>
@@ -205,15 +214,15 @@ Totaal: 32">32</td>
           </tr>
           
           <tr>
-            <td>Ferdi</td>
+            <td>Ferdi<span class="rank-change rank-up" data-tooltip="Steeg 5 pleken sinds vorige etappe">&#9650;5</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Vingegaard: 15
+            <td class="stage-cell  " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
 Totaal: 32">32</td>
@@ -222,15 +231,15 @@ Totaal: 32">32</td>
           </tr>
           
           <tr>
-            <td>Jeffrey</td>
+            <td>Jeffrey<span class="rank-change rank-up" data-tooltip="Steeg 5 pleken sinds vorige etappe">&#9650;5</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Vingegaard: 15
+            <td class="stage-cell  " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
 Totaal: 32">32</td>
@@ -239,15 +248,15 @@ Totaal: 32">32</td>
           </tr>
           
           <tr>
-            <td>Mitchel</td>
+            <td>Mitchel<span class="rank-change rank-up" data-tooltip="Steeg 7 pleken sinds vorige etappe">&#9650;7</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Vingegaard: 15
+            <td class="stage-cell  " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
 Totaal: 32">32</td>
@@ -256,15 +265,15 @@ Totaal: 32">32</td>
           </tr>
           
           <tr>
-            <td>Theo</td>
+            <td>Theo<span class="rank-change rank-up" data-tooltip="Steeg 8 pleken sinds vorige etappe">&#9650;8</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Vingegaard: 15
+            <td class="stage-cell  " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
 Totaal: 32">32</td>
@@ -273,16 +282,16 @@ Totaal: 32">32</td>
           </tr>
           
           <tr>
-            <td>Casper</td>
+            <td>Casper<span class="rank-change rank-down" data-tooltip="Zakte 6 pleken sinds vorige etappe">&#9660;6</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Vingegaard: 15
+            <td class="stage-cell  " data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -290,16 +299,16 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Hans</td>
+            <td>Hans<span class="rank-change rank-down" data-tooltip="Zakte 5 pleken sinds vorige etappe">&#9660;5</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Vingegaard: 15
+            <td class="stage-cell  " data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -307,16 +316,16 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Willem</td>
+            <td>Willem<span class="rank-change rank-down" data-tooltip="Zakte 5 pleken sinds vorige etappe">&#9660;5</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Vingegaard: 15
+            <td class="stage-cell  " data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -324,16 +333,16 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Wilma</td>
+            <td>Wilma<span class="rank-change rank-down" data-tooltip="Zakte 5 pleken sinds vorige etappe">&#9660;5</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Vingegaard: 15
+            <td class="stage-cell  " data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -341,16 +350,16 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Sharon</td>
+            <td>Sharon<span class="rank-change rank-down" data-tooltip="Zakte 5 pleken sinds vorige etappe">&#9660;5</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Vingegaard: 15
+            <td class="stage-cell  " data-tooltip="Vingegaard: 15
 Pogacar: 11
 T. Voss: 2
 Totaal: 28">28</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -358,15 +367,15 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Anita</td>
+            <td>Anita<span class="rank-change rank-down" data-tooltip="Zakte 5 pleken sinds vorige etappe">&#9660;5</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Vingegaard: 15
+            <td class="stage-cell  " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -374,15 +383,15 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Kevin</td>
+            <td>Kevin<span class="rank-change rank-down" data-tooltip="Zakte 3 pleken sinds vorige etappe">&#9660;3</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Vingegaard: 15
+            <td class="stage-cell  " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -390,15 +399,15 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Mark</td>
+            <td>Mark<span class="rank-change rank-down" data-tooltip="Zakte 3 pleken sinds vorige etappe">&#9660;3</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Vingegaard: 15
+            <td class="stage-cell  " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -406,15 +415,15 @@ Totaal: 26">26</td>
           </tr>
           
           <tr>
-            <td>Elise</td>
+            <td>Elise<span class="rank-change rank-up" data-tooltip="Steeg 1 plek sinds vorige etappe">&#9650;1</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 11
+            <td class="stage-cell  " data-tooltip="Pogacar: 11
 Evenepoel: 7
 Totaal: 18">18</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Evenepoel: 11
 Totaal: 25">25</td>
             
@@ -422,31 +431,31 @@ Totaal: 25">25</td>
           </tr>
           
           <tr>
-            <td>Jeroen</td>
+            <td>Jeroen<span class="rank-change rank-up" data-tooltip="Steeg 2 pleken sinds vorige etappe">&#9650;2</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 11
+            <td class="stage-cell  " data-tooltip="Pogacar: 11
 Totaal: 11">11</td>
             
             
-            <td class="stage-cell joker-cell" data-tooltip="Pogacar: 14
+            <td class="stage-cell joker-cell latest-stage" data-tooltip="Pogacar: 14
 Totaal: 14">28</td>
             
             <td class="total">39</td>
           </tr>
           
           <tr>
-            <td>Paul</td>
+            <td>Paul<span class="rank-change rank-down" data-tooltip="Zakte 2 pleken sinds vorige etappe">&#9660;2</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 11
+            <td class="stage-cell  " data-tooltip="Pogacar: 11
 Piganzoli: 5
 F. Lipowitz: 3
 P. Seixas: 1
 Totaal: 20">20</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 P. Seixas: 3
 Totaal: 17">17</td>
             
@@ -454,15 +463,15 @@ Totaal: 17">17</td>
           </tr>
           
           <tr>
-            <td>Wim</td>
+            <td>Wim<span class="rank-change rank-down" data-tooltip="Zakte 1 plek sinds vorige etappe">&#9660;1</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 11
+            <td class="stage-cell  " data-tooltip="Pogacar: 11
 F. Lipowitz: 3
 Totaal: 14">14</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Skjelmose: 6
 Totaal: 20">20</td>
             
@@ -473,290 +482,14 @@ Totaal: 20">20</td>
             <td>Luuk</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 11
+            <td class="stage-cell  " data-tooltip="Pogacar: 11
 Totaal: 11">11</td>
             
             
-            <td class="stage-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
 Totaal: 14">14</td>
             
             <td class="total">25</td>
-          </tr>
-          
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="pannen">Pannenkoekenpoule</h2>
-    <div class="card">
-      <table>
-        <thead>
-          <tr>
-            <th>Naam</th>
-            <th class="stage-cell">E1</th><th class="stage-cell">E2</th>
-            <th>Totaal</th>
-          </tr>
-        </thead>
-        <tbody>
-          
-          <tr>
-            <td>Anita</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            <td class="total">0</td>
-          </tr>
-          
-          <tr>
-            <td>Casper</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            <td class="total">0</td>
-          </tr>
-          
-          <tr>
-            <td>Ferdi</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            <td class="total">0</td>
-          </tr>
-          
-          <tr>
-            <td>Ger</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            <td class="total">0</td>
-          </tr>
-          
-          <tr>
-            <td>Hans</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            <td class="total">0</td>
-          </tr>
-          
-          <tr>
-            <td>Ingrid</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            <td class="total">0</td>
-          </tr>
-          
-          <tr>
-            <td>Kevin</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            <td class="total">0</td>
-          </tr>
-          
-          <tr>
-            <td>Mark</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            <td class="total">0</td>
-          </tr>
-          
-          <tr>
-            <td>Mirjam</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            <td class="total">0</td>
-          </tr>
-          
-          <tr>
-            <td>Mitchel</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            <td class="total">0</td>
-          </tr>
-          
-          <tr>
-            <td>Paul</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            <td class="total">0</td>
-          </tr>
-          
-          <tr>
-            <td>Sepp</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            <td class="total">0</td>
-          </tr>
-          
-          <tr>
-            <td>Willem</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            <td class="total">0</td>
-          </tr>
-          
-          <tr>
-            <td>Wilma</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            <td class="total">0</td>
-          </tr>
-          
-          <tr>
-            <td>Wim</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            <td class="total">0</td>
-          </tr>
-          
-          <tr>
-            <td>Jeffrey</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Engelhardt: 1
-Totaal: 1">1</td>
-            
-            <td class="total">1</td>
-          </tr>
-          
-          <tr>
-            <td>Luuk</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Engelhardt: 1
-Totaal: 1">1</td>
-            
-            <td class="total">1</td>
-          </tr>
-          
-          <tr>
-            <td>Sharon</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Engelhardt: 1
-Totaal: 1">1</td>
-            
-            <td class="total">1</td>
-          </tr>
-          
-          <tr>
-            <td>Elise</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="T.H. Johannessen: 5
-Totaal: 5">5</td>
-            
-            <td class="total">5</td>
-          </tr>
-          
-          <tr>
-            <td>Jeroen</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Molenaar: 5
-Totaal: 5">5</td>
-            
-            <td class="total">5</td>
-          </tr>
-          
-          <tr>
-            <td>Theo</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Totaal: 0">0</td>
-            
-            
-            <td class="stage-cell" data-tooltip="Molenaar: 5
-Totaal: 5">5</td>
-            
-            <td class="total">5</td>
           </tr>
           
         </tbody>
@@ -1163,6 +896,282 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
       </table>
     </details>
     
+  </section>
+
+  <section>
+    <h2 class="pannen">Pannenkoekenpoule</h2>
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Naam</th>
+            <th class="stage-cell ">E1</th><th class="stage-cell latest-stage">E2</th>
+            <th>Totaal</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td>Anita</td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Casper</td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Ferdi<span class="rank-change rank-up" data-tooltip="Steeg 1 plek sinds vorige etappe">&#9650;1</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Ger<span class="rank-change rank-up" data-tooltip="Steeg 1 plek sinds vorige etappe">&#9650;1</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Hans<span class="rank-change rank-up" data-tooltip="Steeg 1 plek sinds vorige etappe">&#9650;1</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Ingrid<span class="rank-change rank-up" data-tooltip="Steeg 1 plek sinds vorige etappe">&#9650;1</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Kevin<span class="rank-change rank-up" data-tooltip="Steeg 3 pleken sinds vorige etappe">&#9650;3</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Mark<span class="rank-change rank-up" data-tooltip="Steeg 4 pleken sinds vorige etappe">&#9650;4</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Mirjam<span class="rank-change rank-up" data-tooltip="Steeg 4 pleken sinds vorige etappe">&#9650;4</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Mitchel<span class="rank-change rank-up" data-tooltip="Steeg 4 pleken sinds vorige etappe">&#9650;4</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Paul<span class="rank-change rank-up" data-tooltip="Steeg 4 pleken sinds vorige etappe">&#9650;4</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Sepp<span class="rank-change rank-up" data-tooltip="Steeg 4 pleken sinds vorige etappe">&#9650;4</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Willem<span class="rank-change rank-up" data-tooltip="Steeg 6 pleken sinds vorige etappe">&#9650;6</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Wilma<span class="rank-change rank-up" data-tooltip="Steeg 6 pleken sinds vorige etappe">&#9650;6</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Wim<span class="rank-change rank-up" data-tooltip="Steeg 6 pleken sinds vorige etappe">&#9650;6</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Jeffrey<span class="rank-change rank-down" data-tooltip="Zakte 8 pleken sinds vorige etappe">&#9660;8</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Engelhardt: 1
+Totaal: 1">1</td>
+            
+            <td class="total">1</td>
+          </tr>
+          
+          <tr>
+            <td>Luuk<span class="rank-change rank-down" data-tooltip="Zakte 6 pleken sinds vorige etappe">&#9660;6</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Engelhardt: 1
+Totaal: 1">1</td>
+            
+            <td class="total">1</td>
+          </tr>
+          
+          <tr>
+            <td>Sharon<span class="rank-change rank-down" data-tooltip="Zakte 1 plek sinds vorige etappe">&#9660;1</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Engelhardt: 1
+Totaal: 1">1</td>
+            
+            <td class="total">1</td>
+          </tr>
+          
+          <tr>
+            <td>Elise<span class="rank-change rank-down" data-tooltip="Zakte 16 pleken sinds vorige etappe">&#9660;16</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="T.H. Johannessen: 5
+Totaal: 5">5</td>
+            
+            <td class="total">5</td>
+          </tr>
+          
+          <tr>
+            <td>Jeroen<span class="rank-change rank-down" data-tooltip="Zakte 11 pleken sinds vorige etappe">&#9660;11</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Molenaar: 5
+Totaal: 5">5</td>
+            
+            <td class="total">5</td>
+          </tr>
+          
+          <tr>
+            <td>Theo<span class="rank-change rank-down" data-tooltip="Zakte 3 pleken sinds vorige etappe">&#9660;3</span></td>
+            
+            
+            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            
+            
+            <td class="stage-cell latest-stage" data-tooltip="Molenaar: 5
+Totaal: 5">5</td>
+            
+            <td class="total">5</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
   </section>
   
 

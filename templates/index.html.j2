@@ -89,6 +89,13 @@
   .muted-note { color: var(--muted); font-size: 0.85rem; font-style: italic; margin: 0; }
   .rider-name { cursor: help; border-bottom: 1px dotted var(--muted); }
   footer { text-align: center; color: var(--muted); font-size: 0.82rem; padding: 20px; }
+  th.latest-stage { background: var(--groen); color: #fff; }
+  td.latest-stage { background: #eaf5ec; }
+  td.latest-stage.joker-cell { background: var(--geel); }
+  .rank-change { font-size: 0.78rem; font-weight: 700; margin-left: 6px; }
+  .rank-up { color: var(--groen); }
+  .rank-down { color: var(--bol); }
+  .rank-same { color: var(--muted); }
   .tooltip-popup {
     display: none;
     position: fixed;
@@ -128,6 +135,13 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
 {%- endif -%}
 {%- endmacro %}
 
+{% macro rank_badge(name, changes) -%}
+{%- if name in changes and changes[name] != 0 -%}
+{%- set delta = changes[name] -%}
+<span class="rank-change {{ 'rank-up' if delta > 0 else 'rank-down' }}" data-tooltip="{{ 'Steeg' if delta > 0 else 'Zakte' }} {{ delta|abs }} plek{{ 'en' if delta|abs != 1 else '' }} sinds vorige etappe">{% if delta > 0 %}&#9650;{% else %}&#9660;{% endif %}{{ delta|abs }}</span>
+{%- endif -%}
+{%- endmacro %}
+
   {% if not stages_available %}
   <section>
     <div class="card">
@@ -144,46 +158,19 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
         <thead>
           <tr>
             <th>Naam</th>
-            {% for s in stages_available %}<th class="stage-cell">E{{ s }}</th>{% endfor %}
+            {% for s in stages_available %}<th class="stage-cell {{ 'latest-stage' if s == stages_available[-1] else '' }}">E{{ s }}</th>{% endfor %}
             <th>Totaal</th>
           </tr>
         </thead>
         <tbody>
           {% for p in hoofd_ranked %}
           <tr>
-            <td>{{ p.name }}</td>
+            <td>{{ p.name }}{{ rank_badge(p.name, hoofd_rank_changes) }}</td>
             {% for s in stages_available %}
             {% set st = p.hoofdploeg.by_stage[s|string] %}
-            <td class="stage-cell {{ 'joker-cell' if st.joker else '' }}" data-tooltip="{{ st.tooltip }}">{{ st.score }}</td>
+            <td class="stage-cell {{ 'joker-cell' if st.joker else '' }} {{ 'latest-stage' if s == stages_available[-1] else '' }}" data-tooltip="{{ st.tooltip }}">{{ st.score }}</td>
             {% endfor %}
             <td class="total">{{ p.hoofdploeg.total }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="pannen">Pannenkoekenpoule</h2>
-    <div class="card">
-      <table>
-        <thead>
-          <tr>
-            <th>Naam</th>
-            {% for s in stages_available %}<th class="stage-cell">E{{ s }}</th>{% endfor %}
-            <th>Totaal</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for p in pannen_ranked %}
-          <tr>
-            <td>{{ p.name }}</td>
-            {% for s in stages_available %}
-            {% set st = p.pannenkoeken.by_stage[s|string] %}
-            <td class="stage-cell" data-tooltip="{{ st.tooltip }}">{{ st.score }}</td>
-            {% endfor %}
-            <td class="total">{{ p.pannenkoeken.total }}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -226,6 +213,33 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
       </table>
     </details>
     {% endfor %}
+  </section>
+
+  <section>
+    <h2 class="pannen">Pannenkoekenpoule</h2>
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Naam</th>
+            {% for s in stages_available %}<th class="stage-cell {{ 'latest-stage' if s == stages_available[-1] else '' }}">E{{ s }}</th>{% endfor %}
+            <th>Totaal</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for p in pannen_ranked %}
+          <tr>
+            <td>{{ p.name }}{{ rank_badge(p.name, pannen_rank_changes) }}</td>
+            {% for s in stages_available %}
+            {% set st = p.pannenkoeken.by_stage[s|string] %}
+            <td class="stage-cell {{ 'latest-stage' if s == stages_available[-1] else '' }}" data-tooltip="{{ st.tooltip }}">{{ st.score }}</td>
+            {% endfor %}
+            <td class="total">{{ p.pannenkoeken.total }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
   </section>
   {% endif %}
 

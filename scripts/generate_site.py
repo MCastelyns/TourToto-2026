@@ -90,6 +90,24 @@ def build_rider_info(rosters):
     return rider_info
 
 
+def rank_changes(participants, team_key, stages_available, best_is_high):
+    """{participant_name: delta} comparing cumulative rank after the latest
+    stage to the rank after the previous one. Positive = moved up (better).
+    Empty dict if there's no previous stage to compare against."""
+    if len(stages_available) < 2:
+        return {}
+    latest, previous = stages_available[-1], stages_available[-2]
+
+    def ranks_at(stage_num):
+        key = str(stage_num)
+        cumulatives = [(p["name"], p[team_key]["by_stage"][key]["cumulative"]) for p in participants]
+        cumulatives.sort(key=lambda x: x[1], reverse=best_is_high)
+        return {name: i + 1 for i, (name, _) in enumerate(cumulatives)}
+
+    latest_ranks, previous_ranks = ranks_at(latest), ranks_at(previous)
+    return {name: previous_ranks[name] - latest_ranks[name] for name in latest_ranks}
+
+
 def main():
     if not STANDINGS_PATH.exists():
         raise SystemExit("data/computed/standings.json not found — run scoring.py first")
@@ -102,6 +120,9 @@ def main():
     pannen_ranked = sorted(standings["participants"], key=lambda p: p["pannenkoeken"]["total"])
 
     stages_available = standings["stages_available"]
+
+    hoofd_rank_changes = rank_changes(standings["participants"], "hoofdploeg", stages_available, best_is_high=True)
+    pannen_rank_changes = rank_changes(standings["participants"], "pannenkoeken", stages_available, best_is_high=False)
 
     env = Environment(loader=FileSystemLoader(str(TEMPLATES_DIR)), autoescape=True)
     template = env.get_template("index.html.j2")
@@ -116,6 +137,8 @@ def main():
         unresolved_names=set(standings.get("unresolved_names", [])),
         stage_breakdowns=standings.get("stage_breakdowns", {}),
         rider_info=rider_info,
+        hoofd_rank_changes=hoofd_rank_changes,
+        pannen_rank_changes=pannen_rank_changes,
         generated_at=datetime.now().strftime("%d-%m-%Y %H:%M"),
     )
 
