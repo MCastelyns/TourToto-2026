@@ -64,7 +64,10 @@ def count_owners(rosters, resolve):
 def build_rider_info(rosters):
     """Enriches the master roster's {team, slot} per rider with fun-diagnostic
     fields for the tooltip: how many participants picked them, and whether
-    they're currently marked as withdrawn."""
+    they're currently marked as withdrawn. Returns (rider_info, canonical_names)
+    - canonical_names is the master-roster name list before any raw-spelling
+    aliases get added, so callers that need "every real rider once" (e.g. the
+    full rider leaderboard) don't see the same rider twice under two keys."""
     rider_info = json.loads(TEAMS_MASTER_PATH.read_text(encoding="utf-8"))["riders"]
     resolve = build_resolver(list(rider_info.keys()))
 
@@ -75,6 +78,8 @@ def build_rider_info(rosters):
         info["n_owners"] = owner_counts.get(name, 0)
         info["n_participants"] = n_participants
         info["withdrawn"] = name in withdrawn
+
+    canonical_names = list(rider_info.keys())
 
     # Let template lookups (roster display, tooltips) succeed for whatever
     # spelling a participant actually typed, not just the exact canonical
@@ -87,7 +92,24 @@ def build_rider_info(rosters):
         if canonical:
             rider_info[raw_name] = rider_info[canonical]
 
-    return rider_info
+    return rider_info, canonical_names
+
+
+def build_rider_leaderboard(rider_info, canonical_names, rider_totals):
+    """Every rider in the master roster (not just ones who scored), with
+    their total points across the whole Tour so far - sorted highest first,
+    ties broken alphabetically."""
+    rows = [
+        {
+            "rider": name,
+            "team": rider_info[name]["team"],
+            "points": rider_totals.get(name, 0),
+            "withdrawn": rider_info[name]["withdrawn"],
+        }
+        for name in canonical_names
+    ]
+    rows.sort(key=lambda r: (-r["points"], r["rider"]))
+    return rows
 
 
 def rank_changes_by_stage(participants, team_key, stages_available, best_is_high):
@@ -148,7 +170,8 @@ def main():
 
     standings = json.loads(STANDINGS_PATH.read_text(encoding="utf-8"))
     rosters = load_participant_rosters()
-    rider_info = build_rider_info(rosters)
+    rider_info, canonical_rider_names = build_rider_info(rosters)
+    rider_leaderboard = build_rider_leaderboard(rider_info, canonical_rider_names, standings.get("rider_totals", {}))
 
     hoofd_ranked = sorted(standings["participants"], key=lambda p: -p["hoofdploeg"]["total"])
     pannen_ranked = sorted(standings["participants"], key=lambda p: p["pannenkoeken"]["total"])
@@ -176,6 +199,7 @@ def main():
         unresolved_names=set(standings.get("unresolved_names", [])),
         stage_breakdowns=standings.get("stage_breakdowns", {}),
         rider_info=rider_info,
+        rider_leaderboard=rider_leaderboard,
         hoofd_rank_changes=hoofd_rank_changes,
         pannen_rank_changes=pannen_rank_changes,
         hoofd_rank_changes_by_stage=hoofd_rank_changes_by_stage,

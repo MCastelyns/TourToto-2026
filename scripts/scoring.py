@@ -82,6 +82,17 @@ def team_stage_score(rider_names, stage_points):
     return sum(stage_points.get(name, 0) for name in rider_names)
 
 
+def total_points_by_rider(stages):
+    """{rider: points} summed across every loaded stage - how many points
+    each rider has scored over the whole Tour so far, independent of who
+    picked them."""
+    totals = {}
+    for stage_data in stages.values():
+        for rider, pts in stage_points_by_rider(stage_data).items():
+            totals[rider] = totals.get(rider, 0) + pts
+    return totals
+
+
 def optimal_hoofdploeg(stage_points, teams):
     """The theoretical best possible hoofdploeg score for one stage, per the
     draft rules: 2x rank-1 ("kopman", slots 1 and 9) + one each of rank 2-8
@@ -302,6 +313,7 @@ def main():
         "stage_breakdowns": {
             stage_num: stage_breakdown(stages[stage_num], master["teams"]) for stage_num in sorted(stages.keys())
         },
+        "rider_totals": total_points_by_rider(stages),
         "participants": [],
     }
 

@@ -123,6 +123,23 @@
   }
   .day-toggle button:hover { background: #f0f0ee; }
   .day-toggle button.active { background: var(--groen); color: #fff; border-color: var(--groen); }
+  .main-tabs { display: flex; gap: 8px; padding: 0 16px; margin-top: -2px; }
+  .main-tabs button {
+    border: 1px solid var(--border);
+    border-bottom: none;
+    background: #efeee9;
+    color: var(--muted);
+    border-radius: 8px 8px 0 0;
+    padding: 8px 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .main-tabs button.active { background: var(--bg); color: var(--ink); }
+  .main-tabs button:hover:not(.active) { background: #e4e2dc; }
+  .rider-points-card { max-height: 640px; overflow-y: auto; }
+  .rider-points-card table thead th { position: sticky; top: 0; background: var(--card); }
+  .withdrawn-tag { color: var(--bol); font-size: 0.78rem; font-style: italic; margin-left: 6px; }
   .tooltip-popup {
     display: none;
     position: fixed;
@@ -151,6 +168,11 @@
   </p>
 </header>
 
+<div class="main-tabs">
+  <button type="button" data-tab="klassement" class="active">Klassement</button>
+  <button type="button" data-tab="renners">Punten per renner</button>
+</div>
+
 <main>
 
 {% macro rider_attrs(name) -%}
@@ -166,6 +188,8 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
 {%- set delta = changes.get(name, 0) -%}
 <span class="rank-change {{ 'rank-up' if delta > 0 else ('rank-down' if delta < 0 else '') }}" {% if delta == 0 %}style="display:none"{% endif %}>{% if delta > 0 %}&#9650;{% elif delta < 0 %}&#9660;{% endif %}{{ delta|abs if delta != 0 else '' }}</span>
 {%- endmacro %}
+
+<div id="tab-klassement" class="tab-panel">
 
   {% if not stages_available %}
   <section>
@@ -328,6 +352,32 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
     {% endfor %}
   </section>
 
+</div>
+
+<div id="tab-renners" class="tab-panel" style="display:none">
+  <section>
+    <h2>Punten per renner (hele Tour)</h2>
+    <p class="muted-note" style="margin-bottom:12px;">Totaal aantal punten dat elke renner tot nu toe behaald heeft over alle etappes
+      samen (etappe-uitslag + gele/groene/bergtrui/witte trui), los van wie hem gekozen heeft.</p>
+    <div class="card rider-points-card">
+      <table>
+        <thead>
+          <tr><th>Renner</th><th>Team</th><th>Punten</th></tr>
+        </thead>
+        <tbody>
+          {% for r in rider_leaderboard %}
+          <tr>
+            <td>{{ r.rider }}{% if r.withdrawn %}<span class="withdrawn-tag">uitgevallen</span>{% endif %}</td>
+            <td style="color:var(--muted)">{{ r.team }}</td>
+            <td class="total">{{ r.points }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
 </main>
 
 <footer>Tourtoto 2026 &middot; Mitchel Castelyns</footer>
@@ -437,6 +487,19 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
       var day = btn.dataset.day === 'latest' ? 'latest' : parseInt(btn.dataset.day, 10);
       applyDay('hoofd-table', day, false);
       applyDay('pannen-table', day, true);
+    });
+  });
+})();
+
+(function () {
+  var tabButtons = document.querySelectorAll('.main-tabs button');
+  tabButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      tabButtons.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.tab-panel').forEach(function (panel) {
+        panel.style.display = panel.id === 'tab-' + btn.dataset.tab ? '' : 'none';
+      });
     });
   });
 })();

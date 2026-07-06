@@ -123,6 +123,23 @@
   }
   .day-toggle button:hover { background: #f0f0ee; }
   .day-toggle button.active { background: var(--groen); color: #fff; border-color: var(--groen); }
+  .main-tabs { display: flex; gap: 8px; padding: 0 16px; margin-top: -2px; }
+  .main-tabs button {
+    border: 1px solid var(--border);
+    border-bottom: none;
+    background: #efeee9;
+    color: var(--muted);
+    border-radius: 8px 8px 0 0;
+    padding: 8px 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .main-tabs button.active { background: var(--bg); color: var(--ink); }
+  .main-tabs button:hover:not(.active) { background: #e4e2dc; }
+  .rider-points-card { max-height: 640px; overflow-y: auto; }
+  .rider-points-card table thead th { position: sticky; top: 0; background: var(--card); }
+  .withdrawn-tag { color: var(--bol); font-size: 0.78rem; font-style: italic; margin-left: 6px; }
   .tooltip-popup {
     display: none;
     position: fixed;
@@ -147,15 +164,22 @@
   <p>
     3 van de 21 etappes verwerkt
     
-    &middot; laatst bijgewerkt: 06-07-2026 17:53
+    &middot; laatst bijgewerkt: 06-07-2026 19:04
   </p>
 </header>
+
+<div class="main-tabs">
+  <button type="button" data-tab="klassement" class="active">Klassement</button>
+  <button type="button" data-tab="renners">Punten per renner</button>
+</div>
 
 <main>
 
 
 
 
+
+<div id="tab-klassement" class="tab-panel">
 
   
 
@@ -2542,6 +2566,1130 @@ Totaal: 6">6</td>
     
   </section>
 
+</div>
+
+<div id="tab-renners" class="tab-panel" style="display:none">
+  <section>
+    <h2>Punten per renner (hele Tour)</h2>
+    <p class="muted-note" style="margin-bottom:12px;">Totaal aantal punten dat elke renner tot nu toe behaald heeft over alle etappes
+      samen (etappe-uitslag + gele/groene/bergtrui/witte trui), los van wie hem gekozen heeft.</p>
+    <div class="card rider-points-card">
+      <table>
+        <thead>
+          <tr><th>Renner</th><th>Team</th><th>Punten</th></tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td>Pogacar</td>
+            <td style="color:var(--muted)">UAE TEAM EMIRATES</td>
+            <td class="total">43</td>
+          </tr>
+          
+          <tr>
+            <td>Vingegaard</td>
+            <td style="color:var(--muted)">VISMA LEASE A BIKE</td>
+            <td class="total">42</td>
+          </tr>
+          
+          <tr>
+            <td>Del Torro Romero</td>
+            <td style="color:var(--muted)">UAE TEAM EMIRATES</td>
+            <td class="total">33</td>
+          </tr>
+          
+          <tr>
+            <td>Evenepoel</td>
+            <td style="color:var(--muted)">RED BULL BORA</td>
+            <td class="total">24</td>
+          </tr>
+          
+          <tr>
+            <td>Ayuso</td>
+            <td style="color:var(--muted)">LIDL TREK</td>
+            <td class="total">19</td>
+          </tr>
+          
+          <tr>
+            <td>F. Ganna</td>
+            <td style="color:var(--muted)">Netcompany INEOS</td>
+            <td class="total">13</td>
+          </tr>
+          
+          <tr>
+            <td>P. Seixas</td>
+            <td style="color:var(--muted)">DECATHLON</td>
+            <td class="total">12</td>
+          </tr>
+          
+          <tr>
+            <td>T.H. Johannessen</td>
+            <td style="color:var(--muted)">UNO X MOBILITY</td>
+            <td class="total">11</td>
+          </tr>
+          
+          <tr>
+            <td>R. Carapaz</td>
+            <td style="color:var(--muted)">EF EDUCATION</td>
+            <td class="total">8</td>
+          </tr>
+          
+          <tr>
+            <td>F. Lipowitz</td>
+            <td style="color:var(--muted)">RED BULL BORA</td>
+            <td class="total">7</td>
+          </tr>
+          
+          <tr>
+            <td>Skjelmose</td>
+            <td style="color:var(--muted)">LIDL TREK</td>
+            <td class="total">6</td>
+          </tr>
+          
+          <tr>
+            <td>Molenaar</td>
+            <td style="color:var(--muted)">Caja Rural Serguros RGA</td>
+            <td class="total">5</td>
+          </tr>
+          
+          <tr>
+            <td>Piganzoli</td>
+            <td style="color:var(--muted)">VISMA LEASE A BIKE</td>
+            <td class="total">5</td>
+          </tr>
+          
+          <tr>
+            <td>Van Eetvelt</td>
+            <td style="color:var(--muted)">LOTTO Intermarche</td>
+            <td class="total">5</td>
+          </tr>
+          
+          <tr>
+            <td>R. Gregoire</td>
+            <td style="color:var(--muted)">GROUPAMA FDJ</td>
+            <td class="total">4</td>
+          </tr>
+          
+          <tr>
+            <td>Baudin</td>
+            <td style="color:var(--muted)">EF EDUCATION</td>
+            <td class="total">3</td>
+          </tr>
+          
+          <tr>
+            <td>L. Martinez</td>
+            <td style="color:var(--muted)">BAHRAIN</td>
+            <td class="total">3</td>
+          </tr>
+          
+          <tr>
+            <td>McNulty</td>
+            <td style="color:var(--muted)">UAE TEAM EMIRATES</td>
+            <td class="total">2</td>
+          </tr>
+          
+          <tr>
+            <td>Prodhomme</td>
+            <td style="color:var(--muted)">DECATHLON</td>
+            <td class="total">2</td>
+          </tr>
+          
+          <tr>
+            <td>T. Voss</td>
+            <td style="color:var(--muted)">Netcompany INEOS</td>
+            <td class="total">2</td>
+          </tr>
+          
+          <tr>
+            <td>Engelhardt</td>
+            <td style="color:var(--muted)">JAYCO ALULA</td>
+            <td class="total">1</td>
+          </tr>
+          
+          <tr>
+            <td>Pierna</td>
+            <td style="color:var(--muted)">MOVISTAR</td>
+            <td class="total">1</td>
+          </tr>
+          
+          <tr>
+            <td>T. Pidcock</td>
+            <td style="color:var(--muted)">Pinarello Q36.5</td>
+            <td class="total">1</td>
+          </tr>
+          
+          <tr>
+            <td>A.H. Johannessen</td>
+            <td style="color:var(--muted)">UNO X MOBILITY</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>A.Paret-Pientre</td>
+            <td style="color:var(--muted)">DECATHLON</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>A.Yates</td>
+            <td style="color:var(--muted)">UAE TEAM EMIRATES</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Abrahamsen</td>
+            <td style="color:var(--muted)">UNO X MOBILITY</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Affini</td>
+            <td style="color:var(--muted)">VISMA LEASE A BIKE</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Afonso</td>
+            <td style="color:var(--muted)">GROUPAMA FDJ</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Alaphilippe</td>
+            <td style="color:var(--muted)">TUDOR PRO CYCLING</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Allegaert</td>
+            <td style="color:var(--muted)">COFIDIS</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Aranburu</td>
+            <td style="color:var(--muted)">COFIDIS</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Armirall</td>
+            <td style="color:var(--muted)">VISMA LEASE A BIKE</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Artz</td>
+            <td style="color:var(--muted)">LOTTO Intermarche</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Askey</td>
+            <td style="color:var(--muted)">NSN Cycling</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Azparren</td>
+            <td style="color:var(--muted)">Pinarello Q36.5</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>B. Healy</td>
+            <td style="color:var(--muted)">EF EDUCATION</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>B.Thomas</td>
+            <td style="color:var(--muted)">COFIDIS</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Balderstone</td>
+            <td style="color:var(--muted)">Caja Rural Serguros RGA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Ballerini</td>
+            <td style="color:var(--muted)">XDS ASTANA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Bauhaus</td>
+            <td style="color:var(--muted)">BAHRAIN</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Berckmoes</td>
+            <td style="color:var(--muted)">LOTTO Intermarche</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Bernal</td>
+            <td style="color:var(--muted)">Netcompany INEOS</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Berthet<span class="withdrawn-tag">uitgevallen</span></td>
+            <td style="color:var(--muted)">GROUPAMA FDJ</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Berwick</td>
+            <td style="color:var(--muted)">Caja Rural Serguros RGA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Biermans</td>
+            <td style="color:var(--muted)">COFIDIS</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Biesterbos</td>
+            <td style="color:var(--muted)">PICNIC POSTNL</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Bittner</td>
+            <td style="color:var(--muted)">PICNIC POSTNL</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Breuillard</td>
+            <td style="color:var(--muted)">TOTAL ENERGIES</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>B’Connor</td>
+            <td style="color:var(--muted)">JAYCO ALULA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Campenaerts</td>
+            <td style="color:var(--muted)">VISMA LEASE A BIKE</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Caruso</td>
+            <td style="color:var(--muted)">BAHRAIN</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Castrillo Zapater</td>
+            <td style="color:var(--muted)">MOVISTAR</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Cattaneo</td>
+            <td style="color:var(--muted)">RED BULL BORA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Cees Bol</td>
+            <td style="color:var(--muted)">DECATHLON</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Cepeda</td>
+            <td style="color:var(--muted)">MOVISTAR</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Charmig</td>
+            <td style="color:var(--muted)">UNO X MOBILITY</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Chris Harper</td>
+            <td style="color:var(--muted)">Pinarello Q36.5</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Costiou</td>
+            <td style="color:var(--muted)">GROUPAMA FDJ</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Craps</td>
+            <td style="color:var(--muted)">LOTTO Intermarche</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>D. Hoole</td>
+            <td style="color:var(--muted)">DECATHLON</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>De Kleijn</td>
+            <td style="color:var(--muted)">TUDOR PRO CYCLING</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>De Lie</td>
+            <td style="color:var(--muted)">LOTTO Intermarche</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Debruyne</td>
+            <td style="color:var(--muted)">ALPECIN</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Degenkolb</td>
+            <td style="color:var(--muted)">PICNIC POSTNL</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Delbove</td>
+            <td style="color:var(--muted)">TOTAL ENERGIES</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Delettre</td>
+            <td style="color:var(--muted)">TOTAL ENERGIES</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Denz</td>
+            <td style="color:var(--muted)">RED BULL BORA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Dhondt</td>
+            <td style="color:var(--muted)">PICNIC POSTNL</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Dillier</td>
+            <td style="color:var(--muted)">ALPECIN</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Eenkhoorn</td>
+            <td style="color:var(--muted)">SOUDAL QUICKSTEP</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Einer Rubio</td>
+            <td style="color:var(--muted)">MOVISTAR</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>F. van den Broek</td>
+            <td style="color:var(--muted)">PICNIC POSTNL</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Felix Parra</td>
+            <td style="color:var(--muted)">Caja Rural Serguros RGA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Fretin</td>
+            <td style="color:var(--muted)">COFIDIS</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>G. Bennett</td>
+            <td style="color:var(--muted)">NSN Cycling</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>G. Martin</td>
+            <td style="color:var(--muted)">GROUPAMA FDJ</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Gate</td>
+            <td style="color:var(--muted)">XDS ASTANA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Gaviria</td>
+            <td style="color:var(--muted)">Caja Rural Serguros RGA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Gee-West</td>
+            <td style="color:var(--muted)">LIDL TREK</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Germani</td>
+            <td style="color:var(--muted)">GROUPAMA FDJ</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Girmay</td>
+            <td style="color:var(--muted)">NSN Cycling</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Godon</td>
+            <td style="color:var(--muted)">Netcompany INEOS</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Gradek</td>
+            <td style="color:var(--muted)">BAHRAIN</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Grosschartner</td>
+            <td style="color:var(--muted)">UAE TEAM EMIRATES</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Guernalec</td>
+            <td style="color:var(--muted)">TOTAL ENERGIES</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Haller</td>
+            <td style="color:var(--muted)">TUDOR PRO CYCLING</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Hermans</td>
+            <td style="color:var(--muted)">Pinarello Q36.5</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Hessmann</td>
+            <td style="color:var(--muted)">MOVISTAR</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Hirschi</td>
+            <td style="color:var(--muted)">TUDOR PRO CYCLING</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Howson</td>
+            <td style="color:var(--muted)">Pinarello Q36.5</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>I.Izagirre</td>
+            <td style="color:var(--muted)">COFIDIS</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>I.van Wilder</td>
+            <td style="color:var(--muted)">SOUDAL QUICKSTEP</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>J. Hindley</td>
+            <td style="color:var(--muted)">RED BULL BORA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>J. Philipsen</td>
+            <td style="color:var(--muted)">ALPECIN</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>J. Stuyven</td>
+            <td style="color:var(--muted)">SOUDAL QUICKSTEP</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>J.vdBerg</td>
+            <td style="color:var(--muted)">PICNIC POSTNL</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Jegat</td>
+            <td style="color:var(--muted)">TOTAL ENERGIES</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Jorgenson</td>
+            <td style="color:var(--muted)">VISMA LEASE A BIKE</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Joshua Tarling</td>
+            <td style="color:var(--muted)">Netcompany INEOS</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>K. Asgreen</td>
+            <td style="color:var(--muted)">EF EDUCATION</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Kanter</td>
+            <td style="color:var(--muted)">XDS ASTANA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Kirsch</td>
+            <td style="color:var(--muted)">COFIDIS</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Kuss</td>
+            <td style="color:var(--muted)">VISMA LEASE A BIKE</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Kwiatkowski</td>
+            <td style="color:var(--muted)">Netcompany INEOS</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>L. Durbridge</td>
+            <td style="color:var(--muted)">JAYCO ALULA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>L. Vervaeke</td>
+            <td style="color:var(--muted)">SOUDAL QUICKSTEP</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Le Berre</td>
+            <td style="color:var(--muted)">TOTAL ENERGIES</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Lerberghe</td>
+            <td style="color:var(--muted)">SOUDAL QUICKSTEP</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Louvel</td>
+            <td style="color:var(--muted)">NSN Cycling</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>M. Cort</td>
+            <td style="color:var(--muted)">UNO X MOBILITY</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>M. Frigo</td>
+            <td style="color:var(--muted)">NSN Cycling</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>M. Matthews</td>
+            <td style="color:var(--muted)">JAYCO ALULA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>M. Mohoric</td>
+            <td style="color:var(--muted)">BAHRAIN</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>M. Storer</td>
+            <td style="color:var(--muted)">TUDOR PRO CYCLING</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>M. Teunissen</td>
+            <td style="color:var(--muted)">XDS ASTANA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>M. Trentin</td>
+            <td style="color:var(--muted)">TUDOR PRO CYCLING</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>M. Vacek</td>
+            <td style="color:var(--muted)">LIDL TREK</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Markl</td>
+            <td style="color:var(--muted)">PICNIC POSTNL</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Meurisse</td>
+            <td style="color:var(--muted)">Pinarello Q36.5</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>N.Oliveira</td>
+            <td style="color:var(--muted)">MOVISTAR</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Neilands</td>
+            <td style="color:var(--muted)">NSN Cycling</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Nicolau Beltran</td>
+            <td style="color:var(--muted)">Caja Rural Serguros RGA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>O. Kooij</td>
+            <td style="color:var(--muted)">DECATHLON</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Oldani</td>
+            <td style="color:var(--muted)">Caja Rural Serguros RGA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Otruba</td>
+            <td style="color:var(--muted)">Caja Rural Serguros RGA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>O’Brien</td>
+            <td style="color:var(--muted)">JAYCO ALULA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>P. Ackermann</td>
+            <td style="color:var(--muted)">JAYCO ALULA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Pacher</td>
+            <td style="color:var(--muted)">GROUPAMA FDJ</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Page</td>
+            <td style="color:var(--muted)">COFIDIS</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Pedersen</td>
+            <td style="color:var(--muted)">LIDL TREK</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Planckaert</td>
+            <td style="color:var(--muted)">ALPECIN</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Plapp</td>
+            <td style="color:var(--muted)">JAYCO ALULA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Pluimers</td>
+            <td style="color:var(--muted)">TUDOR PRO CYCLING</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Politt</td>
+            <td style="color:var(--muted)">UAE TEAM EMIRATES</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Q. Simmons</td>
+            <td style="color:var(--muted)">LIDL TREK</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Quinn</td>
+            <td style="color:var(--muted)">EF EDUCATION</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Riccitello</td>
+            <td style="color:var(--muted)">DECATHLON</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Rickaert</td>
+            <td style="color:var(--muted)">ALPECIN</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Romo</td>
+            <td style="color:var(--muted)">MOVISTAR</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Russo</td>
+            <td style="color:var(--muted)">GROUPAMA FDJ</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>S. Higuita</td>
+            <td style="color:var(--muted)">XDS ASTANA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Schmid</td>
+            <td style="color:var(--muted)">JAYCO ALULA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Skaarseth</td>
+            <td style="color:var(--muted)">UNO X MOBILITY</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Skujins</td>
+            <td style="color:var(--muted)">LIDL TREK</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Slock</td>
+            <td style="color:var(--muted)">LOTTO Intermarche</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Stannard</td>
+            <td style="color:var(--muted)">BAHRAIN</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Steinhauser</td>
+            <td style="color:var(--muted)">EF EDUCATION</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Stewart</td>
+            <td style="color:var(--muted)">NSN Cycling</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Strand Hagenes</td>
+            <td style="color:var(--muted)">VISMA LEASE A BIKE</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>T. Arensman</td>
+            <td style="color:var(--muted)">Netcompany INEOS</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>T. Merlier</td>
+            <td style="color:var(--muted)">SOUDAL QUICKSTEP</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>T. van Dijke</td>
+            <td style="color:var(--muted)">RED BULL BORA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>T.Benoot</td>
+            <td style="color:var(--muted)">DECATHLON</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>T.Marsman</td>
+            <td style="color:var(--muted)">ALPECIN</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Tejada</td>
+            <td style="color:var(--muted)">XDS ASTANA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Tiberi</td>
+            <td style="color:var(--muted)">BAHRAIN</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Traeen</td>
+            <td style="color:var(--muted)">UNO X MOBILITY</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Tratnik</td>
+            <td style="color:var(--muted)">RED BULL BORA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Turgis</td>
+            <td style="color:var(--muted)">TOTAL ENERGIES</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Uijtdebroeks</td>
+            <td style="color:var(--muted)">MOVISTAR</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>V.Paret-Peintre</td>
+            <td style="color:var(--muted)">SOUDAL QUICKSTEP</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Valgren</td>
+            <td style="color:var(--muted)">EF EDUCATION</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Van Asbroeck</td>
+            <td style="color:var(--muted)">NSN Cycling</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Van Baarle</td>
+            <td style="color:var(--muted)">SOUDAL QUICKSTEP</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Van Gils</td>
+            <td style="color:var(--muted)">RED BULL BORA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Van Moer</td>
+            <td style="color:var(--muted)">Pinarello Q36.5</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Vauquelin</td>
+            <td style="color:var(--muted)">Netcompany INEOS</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Vd Poel</td>
+            <td style="color:var(--muted)">ALPECIN</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Veistroffer</td>
+            <td style="color:var(--muted)">LOTTO Intermarche</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Velasco</td>
+            <td style="color:var(--muted)">XDS ASTANA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Vercher</td>
+            <td style="color:var(--muted)">TOTAL ENERGIES</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Vermeersch</td>
+            <td style="color:var(--muted)">UAE TEAM EMIRATES</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Verona</td>
+            <td style="color:var(--muted)">LIDL TREK</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Verstrynge</td>
+            <td style="color:var(--muted)">ALPECIN</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Vinokourov</td>
+            <td style="color:var(--muted)">XDS ASTANA</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Voisard</td>
+            <td style="color:var(--muted)">TUDOR PRO CYCLING</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>W. Barguil</td>
+            <td style="color:var(--muted)">PICNIC POSTNL</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Waerenskjold</td>
+            <td style="color:var(--muted)">UNO X MOBILITY</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Walker</td>
+            <td style="color:var(--muted)">EF EDUCATION</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Wellens</td>
+            <td style="color:var(--muted)">UAE TEAM EMIRATES</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Wright</td>
+            <td style="color:var(--muted)">Pinarello Q36.5</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>Zimmermann</td>
+            <td style="color:var(--muted)">LOTTO Intermarche</td>
+            <td class="total">0</td>
+          </tr>
+          
+          <tr>
+            <td>vanMechelen</td>
+            <td style="color:var(--muted)">BAHRAIN</td>
+            <td class="total">0</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
 </main>
 
 <footer>Tourtoto 2026 &middot; Mitchel Castelyns</footer>
@@ -2651,6 +3799,19 @@ Totaal: 6">6</td>
       var day = btn.dataset.day === 'latest' ? 'latest' : parseInt(btn.dataset.day, 10);
       applyDay('hoofd-table', day, false);
       applyDay('pannen-table', day, true);
+    });
+  });
+})();
+
+(function () {
+  var tabButtons = document.querySelectorAll('.main-tabs button');
+  tabButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      tabButtons.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.tab-panel').forEach(function (panel) {
+        panel.style.display = panel.id === 'tab-' + btn.dataset.tab ? '' : 'none';
+      });
     });
   });
 })();
