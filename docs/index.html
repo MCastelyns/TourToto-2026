@@ -110,6 +110,19 @@
   .rank-up { color: var(--groen); }
   .rank-down { color: var(--bol); }
   .rank-same { color: var(--muted); }
+  .day-toggle { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 10px; }
+  .day-toggle-label { color: var(--muted); font-size: 0.85rem; margin-right: 4px; }
+  .day-toggle button {
+    border: 1px solid var(--border);
+    background: #fff;
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    color: var(--ink);
+  }
+  .day-toggle button:hover { background: #f0f0ee; }
+  .day-toggle button.active { background: var(--groen); color: #fff; border-color: var(--groen); }
   .tooltip-popup {
     display: none;
     position: fixed;
@@ -134,7 +147,7 @@
   <p>
     2 van de 21 etappes verwerkt
     
-    &middot; laatst bijgewerkt: 06-07-2026 07:24
+    &middot; laatst bijgewerkt: 06-07-2026 17:44
   </p>
 </header>
 
@@ -149,87 +162,94 @@
   
   <section>
     <h2>Hoofdpoule</h2>
+    
+    <div class="day-toggle">
+      <span class="day-toggle-label">Stand na:</span>
+      <button type="button" data-day="1">Dag 1</button><button type="button" data-day="2">Dag 2</button>
+      <button type="button" data-day="latest" class="active">Actueel</button>
+    </div>
+    
     <div class="card">
-      <table>
+      <table id="hoofd-table" data-latest-stage="2">
         <thead>
           <tr>
             <th>Naam</th>
-            <th class="stage-cell ">E1</th><th class="stage-cell latest-stage">E2</th>
+            <th class="stage-cell " data-stage="1">E1</th><th class="stage-cell latest-stage" data-stage="2">E2</th>
             <th>Totaal</th>
           </tr>
         </thead>
         <tbody>
           
-          <tr>
+          <tr data-total="84" data-cum1="52" data-cum2="84">
             <td>Ingrid</td>
             
             
             
             
-            <td class="stage-cell joker-cell   " data-tooltip="Vingegaard: 15
+            <td class="stage-cell joker-cell   " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">52</td>
             
             
             
             
-            <td class="stage-cell  latest-stage record-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage record-cell " data-stage="2" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
 Totaal: 32
 
 Hoogste dagscore! (32 punten)">32</td>
             
-            <td class="total">84</td>
+            <td class="total total-cell">84</td>
           </tr>
           
-          <tr>
+          <tr data-total="78" data-cum1="52" data-cum2="78">
             <td>Mirjam</td>
             
             
             
             
-            <td class="stage-cell joker-cell   " data-tooltip="Vingegaard: 15
+            <td class="stage-cell joker-cell   " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">52</td>
             
             
             
             
-            <td class="stage-cell  latest-stage  " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage  " data-stage="2" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
-            <td class="total">78</td>
+            <td class="total total-cell">78</td>
           </tr>
           
-          <tr>
+          <tr data-total="78" data-cum1="26" data-cum2="78">
             <td>Sepp<span class="rank-change rank-up">&#9650;12</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Vingegaard: 15
+            <td class="stage-cell    " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
             
             
-            <td class="stage-cell joker-cell latest-stage  " data-tooltip="Pogacar: 14
+            <td class="stage-cell joker-cell latest-stage  " data-stage="2" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">52</td>
             
-            <td class="total">78</td>
+            <td class="total total-cell">78</td>
           </tr>
           
-          <tr>
+          <tr data-total="61" data-cum1="29" data-cum2="61">
             <td>Ger</td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Vingegaard: 15
+            <td class="stage-cell    " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
@@ -237,115 +257,115 @@ Totaal: 29">29</td>
             
             
             
-            <td class="stage-cell  latest-stage record-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage record-cell " data-stage="2" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
 Totaal: 32
 
 Hoogste dagscore! (32 punten)">32</td>
             
-            <td class="total">61</td>
+            <td class="total total-cell">61</td>
           </tr>
           
-          <tr>
+          <tr data-total="58" data-cum1="26" data-cum2="58">
             <td>Ferdi<span class="rank-change rank-up">&#9650;5</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Vingegaard: 15
+            <td class="stage-cell    " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
             
             
-            <td class="stage-cell  latest-stage record-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage record-cell " data-stage="2" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
 Totaal: 32
 
 Hoogste dagscore! (32 punten)">32</td>
             
-            <td class="total">58</td>
+            <td class="total total-cell">58</td>
           </tr>
           
-          <tr>
+          <tr data-total="58" data-cum1="26" data-cum2="58">
             <td>Jeffrey<span class="rank-change rank-up">&#9650;5</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Vingegaard: 15
+            <td class="stage-cell    " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
             
             
-            <td class="stage-cell  latest-stage record-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage record-cell " data-stage="2" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
 Totaal: 32
 
 Hoogste dagscore! (32 punten)">32</td>
             
-            <td class="total">58</td>
+            <td class="total total-cell">58</td>
           </tr>
           
-          <tr>
+          <tr data-total="58" data-cum1="26" data-cum2="58">
             <td>Mitchel<span class="rank-change rank-up">&#9650;7</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Vingegaard: 15
+            <td class="stage-cell    " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
             
             
-            <td class="stage-cell  latest-stage record-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage record-cell " data-stage="2" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
 Totaal: 32
 
 Hoogste dagscore! (32 punten)">32</td>
             
-            <td class="total">58</td>
+            <td class="total total-cell">58</td>
           </tr>
           
-          <tr>
+          <tr data-total="58" data-cum1="26" data-cum2="58">
             <td>Theo<span class="rank-change rank-up">&#9650;8</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Vingegaard: 15
+            <td class="stage-cell    " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
             
             
-            <td class="stage-cell  latest-stage record-cell " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage record-cell " data-stage="2" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
 Totaal: 32
 
 Hoogste dagscore! (32 punten)">32</td>
             
-            <td class="total">58</td>
+            <td class="total total-cell">58</td>
           </tr>
           
-          <tr>
+          <tr data-total="55" data-cum1="29" data-cum2="55">
             <td>Casper<span class="rank-change rank-down">&#9660;6</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Vingegaard: 15
+            <td class="stage-cell    " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
@@ -353,20 +373,20 @@ Totaal: 29">29</td>
             
             
             
-            <td class="stage-cell  latest-stage  " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage  " data-stage="2" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
-            <td class="total">55</td>
+            <td class="total total-cell">55</td>
           </tr>
           
-          <tr>
+          <tr data-total="55" data-cum1="29" data-cum2="55">
             <td>Hans<span class="rank-change rank-down">&#9660;5</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Vingegaard: 15
+            <td class="stage-cell    " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
@@ -374,20 +394,20 @@ Totaal: 29">29</td>
             
             
             
-            <td class="stage-cell  latest-stage  " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage  " data-stage="2" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
-            <td class="total">55</td>
+            <td class="total total-cell">55</td>
           </tr>
           
-          <tr>
+          <tr data-total="55" data-cum1="29" data-cum2="55">
             <td>Willem<span class="rank-change rank-down">&#9660;5</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Vingegaard: 15
+            <td class="stage-cell    " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
@@ -395,20 +415,20 @@ Totaal: 29">29</td>
             
             
             
-            <td class="stage-cell  latest-stage  " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage  " data-stage="2" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
-            <td class="total">55</td>
+            <td class="total total-cell">55</td>
           </tr>
           
-          <tr>
+          <tr data-total="55" data-cum1="29" data-cum2="55">
             <td>Wilma<span class="rank-change rank-down">&#9660;5</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Vingegaard: 15
+            <td class="stage-cell    " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
@@ -416,20 +436,20 @@ Totaal: 29">29</td>
             
             
             
-            <td class="stage-cell  latest-stage  " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage  " data-stage="2" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
-            <td class="total">55</td>
+            <td class="total total-cell">55</td>
           </tr>
           
-          <tr>
+          <tr data-total="54" data-cum1="28" data-cum2="54">
             <td>Sharon<span class="rank-change rank-down">&#9660;5</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Vingegaard: 15
+            <td class="stage-cell    " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
 T. Voss: 2
 Totaal: 28">28</td>
@@ -437,118 +457,118 @@ Totaal: 28">28</td>
             
             
             
-            <td class="stage-cell  latest-stage  " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage  " data-stage="2" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
-            <td class="total">54</td>
+            <td class="total total-cell">54</td>
           </tr>
           
-          <tr>
+          <tr data-total="52" data-cum1="26" data-cum2="52">
             <td>Anita<span class="rank-change rank-down">&#9660;5</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Vingegaard: 15
+            <td class="stage-cell    " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
             
             
-            <td class="stage-cell  latest-stage  " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage  " data-stage="2" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
-            <td class="total">52</td>
+            <td class="total total-cell">52</td>
           </tr>
           
-          <tr>
+          <tr data-total="52" data-cum1="26" data-cum2="52">
             <td>Kevin<span class="rank-change rank-down">&#9660;3</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Vingegaard: 15
+            <td class="stage-cell    " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
             
             
-            <td class="stage-cell  latest-stage  " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage  " data-stage="2" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
-            <td class="total">52</td>
+            <td class="total total-cell">52</td>
           </tr>
           
-          <tr>
+          <tr data-total="52" data-cum1="26" data-cum2="52">
             <td>Mark<span class="rank-change rank-down">&#9660;3</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Vingegaard: 15
+            <td class="stage-cell    " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
             
             
-            <td class="stage-cell  latest-stage  " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage  " data-stage="2" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
-            <td class="total">52</td>
+            <td class="total total-cell">52</td>
           </tr>
           
-          <tr>
+          <tr data-total="43" data-cum1="18" data-cum2="43">
             <td>Elise<span class="rank-change rank-up">&#9650;1</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Pogacar: 11
+            <td class="stage-cell    " data-stage="1" data-tooltip="Pogacar: 11
 Evenepoel: 7
 Totaal: 18">18</td>
             
             
             
             
-            <td class="stage-cell  latest-stage  " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage  " data-stage="2" data-tooltip="Pogacar: 14
 Evenepoel: 11
 Totaal: 25">25</td>
             
-            <td class="total">43</td>
+            <td class="total total-cell">43</td>
           </tr>
           
-          <tr>
+          <tr data-total="39" data-cum1="11" data-cum2="39">
             <td>Jeroen<span class="rank-change rank-up">&#9650;2</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Pogacar: 11
+            <td class="stage-cell    " data-stage="1" data-tooltip="Pogacar: 11
 Totaal: 11">11</td>
             
             
             
             
-            <td class="stage-cell joker-cell latest-stage  " data-tooltip="Pogacar: 14
+            <td class="stage-cell joker-cell latest-stage  " data-stage="2" data-tooltip="Pogacar: 14
 Totaal: 14">28</td>
             
-            <td class="total">39</td>
+            <td class="total total-cell">39</td>
           </tr>
           
-          <tr>
+          <tr data-total="37" data-cum1="20" data-cum2="37">
             <td>Paul<span class="rank-change rank-down">&#9660;2</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Pogacar: 11
+            <td class="stage-cell    " data-stage="1" data-tooltip="Pogacar: 11
 Piganzoli: 5
 F. Lipowitz: 3
 P. Seixas: 1
@@ -557,49 +577,49 @@ Totaal: 20">20</td>
             
             
             
-            <td class="stage-cell  latest-stage  " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage  " data-stage="2" data-tooltip="Pogacar: 14
 P. Seixas: 3
 Totaal: 17">17</td>
             
-            <td class="total">37</td>
+            <td class="total total-cell">37</td>
           </tr>
           
-          <tr>
+          <tr data-total="34" data-cum1="14" data-cum2="34">
             <td>Wim<span class="rank-change rank-down">&#9660;1</span></td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Pogacar: 11
+            <td class="stage-cell    " data-stage="1" data-tooltip="Pogacar: 11
 F. Lipowitz: 3
 Totaal: 14">14</td>
             
             
             
             
-            <td class="stage-cell  latest-stage  " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage  " data-stage="2" data-tooltip="Pogacar: 14
 Skjelmose: 6
 Totaal: 20">20</td>
             
-            <td class="total">34</td>
+            <td class="total total-cell">34</td>
           </tr>
           
-          <tr>
+          <tr data-total="25" data-cum1="11" data-cum2="25">
             <td>Luuk</td>
             
             
             
             
-            <td class="stage-cell    " data-tooltip="Pogacar: 11
+            <td class="stage-cell    " data-stage="1" data-tooltip="Pogacar: 11
 Totaal: 11">11</td>
             
             
             
             
-            <td class="stage-cell  latest-stage  " data-tooltip="Pogacar: 14
+            <td class="stage-cell  latest-stage  " data-stage="2" data-tooltip="Pogacar: 14
 Totaal: 14">14</td>
             
-            <td class="total">25</td>
+            <td class="total total-cell">25</td>
           </tr>
           
         </tbody>
@@ -1141,272 +1161,272 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
   <section>
     <h2 class="pannen">Pannenkoekenpoule</h2>
     <div class="card">
-      <table>
+      <table id="pannen-table" data-latest-stage="2">
         <thead>
           <tr>
             <th>Naam</th>
-            <th class="stage-cell ">E1</th><th class="stage-cell latest-stage">E2</th>
+            <th class="stage-cell " data-stage="1">E1</th><th class="stage-cell latest-stage" data-stage="2">E2</th>
             <th>Totaal</th>
           </tr>
         </thead>
         <tbody>
           
-          <tr>
+          <tr data-total="0" data-cum1="0" data-cum2="0">
             <td>Anita</td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Totaal: 0">0</td>
             
-            <td class="total">0</td>
+            <td class="total total-cell">0</td>
           </tr>
           
-          <tr>
+          <tr data-total="0" data-cum1="0" data-cum2="0">
             <td>Casper</td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Totaal: 0">0</td>
             
-            <td class="total">0</td>
+            <td class="total total-cell">0</td>
           </tr>
           
-          <tr>
+          <tr data-total="0" data-cum1="0" data-cum2="0">
             <td>Ferdi<span class="rank-change rank-up">&#9650;1</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Totaal: 0">0</td>
             
-            <td class="total">0</td>
+            <td class="total total-cell">0</td>
           </tr>
           
-          <tr>
+          <tr data-total="0" data-cum1="0" data-cum2="0">
             <td>Ger<span class="rank-change rank-up">&#9650;1</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Totaal: 0">0</td>
             
-            <td class="total">0</td>
+            <td class="total total-cell">0</td>
           </tr>
           
-          <tr>
+          <tr data-total="0" data-cum1="0" data-cum2="0">
             <td>Hans<span class="rank-change rank-up">&#9650;1</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Totaal: 0">0</td>
             
-            <td class="total">0</td>
+            <td class="total total-cell">0</td>
           </tr>
           
-          <tr>
+          <tr data-total="0" data-cum1="0" data-cum2="0">
             <td>Ingrid<span class="rank-change rank-up">&#9650;1</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Totaal: 0">0</td>
             
-            <td class="total">0</td>
+            <td class="total total-cell">0</td>
           </tr>
           
-          <tr>
+          <tr data-total="0" data-cum1="0" data-cum2="0">
             <td>Kevin<span class="rank-change rank-up">&#9650;3</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Totaal: 0">0</td>
             
-            <td class="total">0</td>
+            <td class="total total-cell">0</td>
           </tr>
           
-          <tr>
+          <tr data-total="0" data-cum1="0" data-cum2="0">
             <td>Mark<span class="rank-change rank-up">&#9650;4</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Totaal: 0">0</td>
             
-            <td class="total">0</td>
+            <td class="total total-cell">0</td>
           </tr>
           
-          <tr>
+          <tr data-total="0" data-cum1="0" data-cum2="0">
             <td>Mirjam<span class="rank-change rank-up">&#9650;4</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Totaal: 0">0</td>
             
-            <td class="total">0</td>
+            <td class="total total-cell">0</td>
           </tr>
           
-          <tr>
+          <tr data-total="0" data-cum1="0" data-cum2="0">
             <td>Mitchel<span class="rank-change rank-up">&#9650;4</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Totaal: 0">0</td>
             
-            <td class="total">0</td>
+            <td class="total total-cell">0</td>
           </tr>
           
-          <tr>
+          <tr data-total="0" data-cum1="0" data-cum2="0">
             <td>Paul<span class="rank-change rank-up">&#9650;4</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Totaal: 0">0</td>
             
-            <td class="total">0</td>
+            <td class="total total-cell">0</td>
           </tr>
           
-          <tr>
+          <tr data-total="0" data-cum1="0" data-cum2="0">
             <td>Sepp<span class="rank-change rank-up">&#9650;4</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Totaal: 0">0</td>
             
-            <td class="total">0</td>
+            <td class="total total-cell">0</td>
           </tr>
           
-          <tr>
+          <tr data-total="0" data-cum1="0" data-cum2="0">
             <td>Willem<span class="rank-change rank-up">&#9650;6</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Totaal: 0">0</td>
             
-            <td class="total">0</td>
+            <td class="total total-cell">0</td>
           </tr>
           
-          <tr>
+          <tr data-total="0" data-cum1="0" data-cum2="0">
             <td>Wilma<span class="rank-change rank-up">&#9650;6</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Totaal: 0">0</td>
             
-            <td class="total">0</td>
+            <td class="total total-cell">0</td>
           </tr>
           
-          <tr>
+          <tr data-total="0" data-cum1="0" data-cum2="0">
             <td>Wim<span class="rank-change rank-up">&#9650;6</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Totaal: 0">0</td>
             
-            <td class="total">0</td>
+            <td class="total total-cell">0</td>
           </tr>
           
-          <tr>
+          <tr data-total="1" data-cum1="0" data-cum2="1">
             <td>Jeffrey<span class="rank-change rank-down">&#9660;8</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Engelhardt: 1
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Engelhardt: 1
 Totaal: 1">1</td>
             
-            <td class="total">1</td>
+            <td class="total total-cell">1</td>
           </tr>
           
-          <tr>
+          <tr data-total="1" data-cum1="0" data-cum2="1">
             <td>Luuk<span class="rank-change rank-down">&#9660;6</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Engelhardt: 1
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Engelhardt: 1
 Totaal: 1">1</td>
             
-            <td class="total">1</td>
+            <td class="total total-cell">1</td>
           </tr>
           
-          <tr>
+          <tr data-total="1" data-cum1="0" data-cum2="1">
             <td>Sharon<span class="rank-change rank-down">&#9660;1</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Engelhardt: 1
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Engelhardt: 1
 Totaal: 1">1</td>
             
-            <td class="total">1</td>
+            <td class="total total-cell">1</td>
           </tr>
           
-          <tr>
+          <tr data-total="5" data-cum1="0" data-cum2="5">
             <td>Elise<span class="rank-change rank-down">&#9660;16</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="T.H. Johannessen: 5
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="T.H. Johannessen: 5
 Totaal: 5">5</td>
             
-            <td class="total">5</td>
+            <td class="total total-cell">5</td>
           </tr>
           
-          <tr>
+          <tr data-total="5" data-cum1="0" data-cum2="5">
             <td>Jeroen<span class="rank-change rank-down">&#9660;11</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Molenaar: 5
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Molenaar: 5
 Totaal: 5">5</td>
             
-            <td class="total">5</td>
+            <td class="total total-cell">5</td>
           </tr>
           
-          <tr>
+          <tr data-total="5" data-cum1="0" data-cum2="5">
             <td>Theo<span class="rank-change rank-down">&#9660;3</span></td>
             
             
-            <td class="stage-cell " data-tooltip="Totaal: 0">0</td>
+            <td class="stage-cell " data-stage="1" data-tooltip="Totaal: 0">0</td>
             
             
-            <td class="stage-cell latest-stage" data-tooltip="Molenaar: 5
+            <td class="stage-cell latest-stage" data-stage="2" data-tooltip="Molenaar: 5
 Totaal: 5">5</td>
             
-            <td class="total">5</td>
+            <td class="total total-cell">5</td>
           </tr>
           
         </tbody>
@@ -2076,6 +2096,55 @@ Totaal: 5">5</td>
     } else {
       hide();
     }
+  });
+})();
+
+(function () {
+  var toggle = document.querySelector('.day-toggle');
+  if (!toggle) return;
+  var buttons = toggle.querySelectorAll('button');
+
+  function applyDay(tableId, day, ascending) {
+    var table = document.getElementById(tableId);
+    if (!table) return;
+    var highlightStage = day === 'latest' ? table.dataset.latestStage : String(day);
+
+    table.querySelectorAll('[data-stage]').forEach(function (el) {
+      var visible = day === 'latest' || parseInt(el.dataset.stage, 10) <= day;
+      el.style.display = visible ? '' : 'none';
+      el.classList.toggle('latest-stage', el.dataset.stage === highlightStage);
+    });
+
+    var tbody = table.querySelector('tbody');
+    var rows = Array.from(tbody.querySelectorAll('tr'));
+
+    function valueFor(tr) {
+      var raw = day === 'latest' ? tr.dataset.total : tr.dataset['cum' + day];
+      return raw !== undefined ? parseFloat(raw) : 0;
+    }
+
+    rows.forEach(function (tr) {
+      var totalCell = tr.querySelector('.total-cell');
+      if (totalCell) totalCell.textContent = valueFor(tr);
+      tr.querySelectorAll('.rank-change').forEach(function (badge) {
+        badge.style.display = day === 'latest' ? '' : 'none';
+      });
+    });
+
+    rows.sort(function (a, b) {
+      return ascending ? valueFor(a) - valueFor(b) : valueFor(b) - valueFor(a);
+    });
+    rows.forEach(function (tr) { tbody.appendChild(tr); });
+  }
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      buttons.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var day = btn.dataset.day === 'latest' ? 'latest' : parseInt(btn.dataset.day, 10);
+      applyDay('hoofd-table', day, false);
+      applyDay('pannen-table', day, true);
+    });
   });
 })();
 </script>

@@ -110,6 +110,19 @@
   .rank-up { color: var(--groen); }
   .rank-down { color: var(--bol); }
   .rank-same { color: var(--muted); }
+  .day-toggle { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 10px; }
+  .day-toggle-label { color: var(--muted); font-size: 0.85rem; margin-right: 4px; }
+  .day-toggle button {
+    border: 1px solid var(--border);
+    background: #fff;
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    color: var(--ink);
+  }
+  .day-toggle button:hover { background: #f0f0ee; }
+  .day-toggle button.active { background: var(--groen); color: #fff; border-color: var(--groen); }
   .tooltip-popup {
     display: none;
     position: fixed;
@@ -167,30 +180,37 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
   {% if stages_available %}
   <section>
     <h2>Hoofdpoule</h2>
+    {% if stages_available|length > 1 %}
+    <div class="day-toggle">
+      <span class="day-toggle-label">Stand na:</span>
+      {% for s in stages_available %}<button type="button" data-day="{{ s }}">Dag {{ s }}</button>{% endfor %}
+      <button type="button" data-day="latest" class="active">Actueel</button>
+    </div>
+    {% endif %}
     <div class="card">
-      <table>
+      <table id="hoofd-table" data-latest-stage="{{ stages_available[-1] }}">
         <thead>
           <tr>
             <th>Naam</th>
-            {% for s in stages_available %}<th class="stage-cell {{ 'latest-stage' if s == stages_available[-1] else '' }}">E{{ s }}</th>{% endfor %}
+            {% for s in stages_available %}<th class="stage-cell {{ 'latest-stage' if s == stages_available[-1] else '' }}" data-stage="{{ s }}">E{{ s }}</th>{% endfor %}
             <th>Totaal</th>
           </tr>
         </thead>
         <tbody>
           {% for p in hoofd_ranked %}
-          <tr>
+          <tr data-total="{{ p.hoofdploeg.total }}"{% for s in stages_available %} data-cum{{ s }}="{{ p.hoofdploeg.by_stage[s|string].cumulative }}"{% endfor %}>
             <td>{{ p.name }}{{ rank_badge(p.name, hoofd_rank_changes) }}</td>
             {% for s in stages_available %}
             {% set st = p.hoofdploeg.by_stage[s|string] %}
             {% set is_record = (p.name, s) in dagscore_cells %}
             {% set is_optimal = (p.name, s) in optimal_cells %}
-            <td class="stage-cell {{ 'joker-cell' if st.joker else '' }} {{ 'latest-stage' if s == stages_available[-1] else '' }} {{ 'record-cell' if is_record else '' }} {{ 'optimal-cell' if is_optimal else '' }}" data-tooltip="{{ st.tooltip }}{% if is_record %}
+            <td class="stage-cell {{ 'joker-cell' if st.joker else '' }} {{ 'latest-stage' if s == stages_available[-1] else '' }} {{ 'record-cell' if is_record else '' }} {{ 'optimal-cell' if is_optimal else '' }}" data-stage="{{ s }}" data-tooltip="{{ st.tooltip }}{% if is_record %}
 
 Hoogste dagscore! ({{ dagscore_record }} punten){% endif %}{% if is_optimal %}
 
 Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{{ st.score }}</td>
             {% endfor %}
-            <td class="total">{{ p.hoofdploeg.total }}</td>
+            <td class="total total-cell">{{ p.hoofdploeg.total }}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -249,23 +269,23 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
   <section>
     <h2 class="pannen">Pannenkoekenpoule</h2>
     <div class="card">
-      <table>
+      <table id="pannen-table" data-latest-stage="{{ stages_available[-1] }}">
         <thead>
           <tr>
             <th>Naam</th>
-            {% for s in stages_available %}<th class="stage-cell {{ 'latest-stage' if s == stages_available[-1] else '' }}">E{{ s }}</th>{% endfor %}
+            {% for s in stages_available %}<th class="stage-cell {{ 'latest-stage' if s == stages_available[-1] else '' }}" data-stage="{{ s }}">E{{ s }}</th>{% endfor %}
             <th>Totaal</th>
           </tr>
         </thead>
         <tbody>
           {% for p in pannen_ranked %}
-          <tr>
+          <tr data-total="{{ p.pannenkoeken.total }}"{% for s in stages_available %} data-cum{{ s }}="{{ p.pannenkoeken.by_stage[s|string].cumulative }}"{% endfor %}>
             <td>{{ p.name }}{{ rank_badge(p.name, pannen_rank_changes) }}</td>
             {% for s in stages_available %}
             {% set st = p.pannenkoeken.by_stage[s|string] %}
-            <td class="stage-cell {{ 'latest-stage' if s == stages_available[-1] else '' }}" data-tooltip="{{ st.tooltip }}">{{ st.score }}</td>
+            <td class="stage-cell {{ 'latest-stage' if s == stages_available[-1] else '' }}" data-stage="{{ s }}" data-tooltip="{{ st.tooltip }}">{{ st.score }}</td>
             {% endfor %}
-            <td class="total">{{ p.pannenkoeken.total }}</td>
+            <td class="total total-cell">{{ p.pannenkoeken.total }}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -359,6 +379,55 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
     } else {
       hide();
     }
+  });
+})();
+
+(function () {
+  var toggle = document.querySelector('.day-toggle');
+  if (!toggle) return;
+  var buttons = toggle.querySelectorAll('button');
+
+  function applyDay(tableId, day, ascending) {
+    var table = document.getElementById(tableId);
+    if (!table) return;
+    var highlightStage = day === 'latest' ? table.dataset.latestStage : String(day);
+
+    table.querySelectorAll('[data-stage]').forEach(function (el) {
+      var visible = day === 'latest' || parseInt(el.dataset.stage, 10) <= day;
+      el.style.display = visible ? '' : 'none';
+      el.classList.toggle('latest-stage', el.dataset.stage === highlightStage);
+    });
+
+    var tbody = table.querySelector('tbody');
+    var rows = Array.from(tbody.querySelectorAll('tr'));
+
+    function valueFor(tr) {
+      var raw = day === 'latest' ? tr.dataset.total : tr.dataset['cum' + day];
+      return raw !== undefined ? parseFloat(raw) : 0;
+    }
+
+    rows.forEach(function (tr) {
+      var totalCell = tr.querySelector('.total-cell');
+      if (totalCell) totalCell.textContent = valueFor(tr);
+      tr.querySelectorAll('.rank-change').forEach(function (badge) {
+        badge.style.display = day === 'latest' ? '' : 'none';
+      });
+    });
+
+    rows.sort(function (a, b) {
+      return ascending ? valueFor(a) - valueFor(b) : valueFor(b) - valueFor(a);
+    });
+    rows.forEach(function (tr) { tbody.appendChild(tr); });
+  }
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      buttons.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var day = btn.dataset.day === 'latest' ? 'latest' : parseInt(btn.dataset.day, 10);
+      applyDay('hoofd-table', day, false);
+      applyDay('pannen-table', day, true);
+    });
   });
 })();
 </script>
