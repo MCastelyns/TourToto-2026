@@ -147,6 +147,18 @@
   .rider-points-card { max-height: 640px; overflow-y: auto; }
   .rider-points-card table thead th { position: sticky; top: 0; background: var(--card); }
   .withdrawn-tag { color: var(--bol); font-size: 0.78rem; font-style: italic; margin-left: 6px; }
+  .rider-search { margin-bottom: 10px; }
+  .rider-search input {
+    width: 100%;
+    max-width: 320px;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.92rem;
+    font-family: inherit;
+  }
+  .rider-search input:focus { outline: 2px solid var(--groen); }
+  .gekozen-cell { cursor: help; }
   .tooltip-popup {
     display: none;
     position: fixed;
@@ -171,7 +183,7 @@
   <p>
     3 van de 21 etappes verwerkt
     
-    &middot; laatst bijgewerkt: 06-07-2026 19:13
+    &middot; laatst bijgewerkt: 06-07-2026 19:18
   </p>
 </header>
 
@@ -2577,1116 +2589,1449 @@ Totaal: 6">6</td>
 
 <div id="tab-renners" class="tab-panel" style="display:none">
   <section>
-    <h2>Punten per renner (hele Tour)</h2>
+    <h2>Punten per renner</h2>
+    <div class="rider-search">
+      <input type="text" id="rider-search-input" placeholder="Zoek op naam of team...">
+    </div>
     <div class="card rider-points-card">
-      <table>
+      <table id="rider-points-table">
         <thead>
-          <tr><th>Renner</th><th>Team</th><th>Punten</th></tr>
+          <tr><th>Renner</th><th>Team</th><th>Punten</th><th>Gekozen</th></tr>
         </thead>
         <tbody>
           
-          <tr>
+          <tr data-search="pogacar uae team emirates">
             <td>Pogacar</td>
             <td style="color:var(--muted)">UAE TEAM EMIRATES</td>
             <td class="total">43</td>
+            <td class="gekozen-cell" data-tooltip="Anita
+Casper
+Elise
+Ferdi
+Ger
+Hans
+Ingrid
+Jeffrey
+Jeroen
+Kevin
+Luuk
+Mark
+Mirjam
+Mitchel
+Paul
+Sepp
+Sharon
+Theo
+Willem
+Wilma
+Wim">21/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="vingegaard visma lease a bike">
             <td>Vingegaard</td>
             <td style="color:var(--muted)">VISMA LEASE A BIKE</td>
             <td class="total">42</td>
+            <td class="gekozen-cell" data-tooltip="Anita
+Casper
+Ferdi
+Ger
+Hans
+Ingrid
+Jeffrey
+Kevin
+Mark
+Mirjam
+Mitchel
+Sepp
+Sharon
+Theo
+Willem
+Wilma">16/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="del torro romero uae team emirates">
             <td>Del Torro Romero</td>
             <td style="color:var(--muted)">UAE TEAM EMIRATES</td>
             <td class="total">33</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="evenepoel red bull bora">
             <td>Evenepoel</td>
             <td style="color:var(--muted)">RED BULL BORA</td>
             <td class="total">24</td>
+            <td class="gekozen-cell" data-tooltip="Elise">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="ayuso lidl trek">
             <td>Ayuso</td>
             <td style="color:var(--muted)">LIDL TREK</td>
             <td class="total">19</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="f. ganna netcompany ineos">
             <td>F. Ganna</td>
             <td style="color:var(--muted)">Netcompany INEOS</td>
             <td class="total">13</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="p. seixas decathlon">
             <td>P. Seixas</td>
             <td style="color:var(--muted)">DECATHLON</td>
             <td class="total">12</td>
+            <td class="gekozen-cell" data-tooltip="Paul">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="t.h. johannessen uno x mobility">
             <td>T.H. Johannessen</td>
             <td style="color:var(--muted)">UNO X MOBILITY</td>
             <td class="total">11</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="r. carapaz ef education">
             <td>R. Carapaz</td>
             <td style="color:var(--muted)">EF EDUCATION</td>
             <td class="total">8</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="f. lipowitz red bull bora">
             <td>F. Lipowitz</td>
             <td style="color:var(--muted)">RED BULL BORA</td>
             <td class="total">7</td>
+            <td class="gekozen-cell" data-tooltip="Casper
+Ger
+Hans
+Paul
+Willem
+Wilma
+Wim">7/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="skjelmose lidl trek">
             <td>Skjelmose</td>
             <td style="color:var(--muted)">LIDL TREK</td>
             <td class="total">6</td>
+            <td class="gekozen-cell" data-tooltip="Ferdi
+Ger
+Ingrid
+Jeffrey
+Mitchel
+Theo
+Wim">7/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="molenaar caja rural serguros rga">
             <td>Molenaar</td>
             <td style="color:var(--muted)">Caja Rural Serguros RGA</td>
             <td class="total">5</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="piganzoli visma lease a bike">
             <td>Piganzoli</td>
             <td style="color:var(--muted)">VISMA LEASE A BIKE</td>
             <td class="total">5</td>
+            <td class="gekozen-cell" data-tooltip="Paul">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="van eetvelt lotto intermarche">
             <td>Van Eetvelt</td>
             <td style="color:var(--muted)">LOTTO Intermarche</td>
             <td class="total">5</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="r. gregoire groupama fdj">
             <td>R. Gregoire</td>
             <td style="color:var(--muted)">GROUPAMA FDJ</td>
             <td class="total">4</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="baudin ef education">
             <td>Baudin</td>
             <td style="color:var(--muted)">EF EDUCATION</td>
             <td class="total">3</td>
+            <td class="gekozen-cell" data-tooltip="Willem">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="l. martinez bahrain">
             <td>L. Martinez</td>
             <td style="color:var(--muted)">BAHRAIN</td>
             <td class="total">3</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="mcnulty uae team emirates">
             <td>McNulty</td>
             <td style="color:var(--muted)">UAE TEAM EMIRATES</td>
             <td class="total">2</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="prodhomme decathlon">
             <td>Prodhomme</td>
             <td style="color:var(--muted)">DECATHLON</td>
             <td class="total">2</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="t. voss netcompany ineos">
             <td>T. Voss</td>
             <td style="color:var(--muted)">Netcompany INEOS</td>
             <td class="total">2</td>
+            <td class="gekozen-cell" data-tooltip="Sharon">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="engelhardt jayco alula">
             <td>Engelhardt</td>
             <td style="color:var(--muted)">JAYCO ALULA</td>
             <td class="total">1</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="pierna movistar">
             <td>Pierna</td>
             <td style="color:var(--muted)">MOVISTAR</td>
             <td class="total">1</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="t. pidcock pinarello q36.5">
             <td>T. Pidcock</td>
             <td style="color:var(--muted)">Pinarello Q36.5</td>
             <td class="total">1</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="a.h. johannessen uno x mobility">
             <td>A.H. Johannessen</td>
             <td style="color:var(--muted)">UNO X MOBILITY</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Ferdi">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="a.paret-pientre decathlon">
             <td>A.Paret-Pientre</td>
             <td style="color:var(--muted)">DECATHLON</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Paul">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="a.yates uae team emirates">
             <td>A.Yates</td>
             <td style="color:var(--muted)">UAE TEAM EMIRATES</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="abrahamsen uno x mobility">
             <td>Abrahamsen</td>
             <td style="color:var(--muted)">UNO X MOBILITY</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Ger
+Jeroen">2/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="affini visma lease a bike">
             <td>Affini</td>
             <td style="color:var(--muted)">VISMA LEASE A BIKE</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Jeroen
+Wim">2/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="afonso groupama fdj">
             <td>Afonso</td>
             <td style="color:var(--muted)">GROUPAMA FDJ</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="alaphilippe tudor pro cycling">
             <td>Alaphilippe</td>
             <td style="color:var(--muted)">TUDOR PRO CYCLING</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="allegaert cofidis">
             <td>Allegaert</td>
             <td style="color:var(--muted)">COFIDIS</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="aranburu cofidis">
             <td>Aranburu</td>
             <td style="color:var(--muted)">COFIDIS</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Elise
+Hans
+Mirjam
+Wilma">4/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="armirall visma lease a bike">
             <td>Armirall</td>
             <td style="color:var(--muted)">VISMA LEASE A BIKE</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="artz lotto intermarche">
             <td>Artz</td>
             <td style="color:var(--muted)">LOTTO Intermarche</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Ingrid">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="askey nsn cycling">
             <td>Askey</td>
             <td style="color:var(--muted)">NSN Cycling</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Hans">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="azparren pinarello q36.5">
             <td>Azparren</td>
             <td style="color:var(--muted)">Pinarello Q36.5</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="b. healy ef education">
             <td>B. Healy</td>
             <td style="color:var(--muted)">EF EDUCATION</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Casper
+Hans
+Jeroen
+Kevin
+Mirjam
+Paul
+Sharon
+Wilma">8/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="b.thomas cofidis">
             <td>B.Thomas</td>
             <td style="color:var(--muted)">COFIDIS</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="balderstone caja rural serguros rga">
             <td>Balderstone</td>
             <td style="color:var(--muted)">Caja Rural Serguros RGA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="ballerini xds astana">
             <td>Ballerini</td>
             <td style="color:var(--muted)">XDS ASTANA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Anita
+Jeffrey">2/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="bauhaus bahrain">
             <td>Bauhaus</td>
             <td style="color:var(--muted)">BAHRAIN</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Anita
+Mark
+Sharon
+Wilma">4/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="berckmoes lotto intermarche">
             <td>Berckmoes</td>
             <td style="color:var(--muted)">LOTTO Intermarche</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="bernal netcompany ineos">
             <td>Bernal</td>
             <td style="color:var(--muted)">Netcompany INEOS</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="berthet groupama fdj">
             <td>Berthet<span class="withdrawn-tag">uitgevallen</span></td>
             <td style="color:var(--muted)">GROUPAMA FDJ</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="berwick caja rural serguros rga">
             <td>Berwick</td>
             <td style="color:var(--muted)">Caja Rural Serguros RGA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="biermans cofidis">
             <td>Biermans</td>
             <td style="color:var(--muted)">COFIDIS</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Ferdi
+Ingrid
+Mark
+Sepp">4/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="biesterbos picnic postnl">
             <td>Biesterbos</td>
             <td style="color:var(--muted)">PICNIC POSTNL</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="bittner picnic postnl">
             <td>Bittner</td>
             <td style="color:var(--muted)">PICNIC POSTNL</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Willem">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="breuillard total energies">
             <td>Breuillard</td>
             <td style="color:var(--muted)">TOTAL ENERGIES</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="b’connor jayco alula">
             <td>B’Connor</td>
             <td style="color:var(--muted)">JAYCO ALULA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="campenaerts visma lease a bike">
             <td>Campenaerts</td>
             <td style="color:var(--muted)">VISMA LEASE A BIKE</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="caruso bahrain">
             <td>Caruso</td>
             <td style="color:var(--muted)">BAHRAIN</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Theo">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="castrillo zapater movistar">
             <td>Castrillo Zapater</td>
             <td style="color:var(--muted)">MOVISTAR</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="cattaneo red bull bora">
             <td>Cattaneo</td>
             <td style="color:var(--muted)">RED BULL BORA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="cees bol decathlon">
             <td>Cees Bol</td>
             <td style="color:var(--muted)">DECATHLON</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Ferdi
+Willem">2/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="cepeda movistar">
             <td>Cepeda</td>
             <td style="color:var(--muted)">MOVISTAR</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Jeroen">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="charmig uno x mobility">
             <td>Charmig</td>
             <td style="color:var(--muted)">UNO X MOBILITY</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="chris harper pinarello q36.5">
             <td>Chris Harper</td>
             <td style="color:var(--muted)">Pinarello Q36.5</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="costiou groupama fdj">
             <td>Costiou</td>
             <td style="color:var(--muted)">GROUPAMA FDJ</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="craps lotto intermarche">
             <td>Craps</td>
             <td style="color:var(--muted)">LOTTO Intermarche</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="d. hoole decathlon">
             <td>D. Hoole</td>
             <td style="color:var(--muted)">DECATHLON</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="de kleijn tudor pro cycling">
             <td>De Kleijn</td>
             <td style="color:var(--muted)">TUDOR PRO CYCLING</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Jeffrey
+Mitchel
+Sharon">3/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="de lie lotto intermarche">
             <td>De Lie</td>
             <td style="color:var(--muted)">LOTTO Intermarche</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="debruyne alpecin">
             <td>Debruyne</td>
             <td style="color:var(--muted)">ALPECIN</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="degenkolb picnic postnl">
             <td>Degenkolb</td>
             <td style="color:var(--muted)">PICNIC POSTNL</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Ferdi
+Ingrid">2/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="delbove total energies">
             <td>Delbove</td>
             <td style="color:var(--muted)">TOTAL ENERGIES</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="delettre total energies">
             <td>Delettre</td>
             <td style="color:var(--muted)">TOTAL ENERGIES</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="denz red bull bora">
             <td>Denz</td>
             <td style="color:var(--muted)">RED BULL BORA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="dhondt picnic postnl">
             <td>Dhondt</td>
             <td style="color:var(--muted)">PICNIC POSTNL</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="dillier alpecin">
             <td>Dillier</td>
             <td style="color:var(--muted)">ALPECIN</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="eenkhoorn soudal quickstep">
             <td>Eenkhoorn</td>
             <td style="color:var(--muted)">SOUDAL QUICKSTEP</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="einer rubio movistar">
             <td>Einer Rubio</td>
             <td style="color:var(--muted)">MOVISTAR</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="f. van den broek picnic postnl">
             <td>F. van den Broek</td>
             <td style="color:var(--muted)">PICNIC POSTNL</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="felix parra caja rural serguros rga">
             <td>Felix Parra</td>
             <td style="color:var(--muted)">Caja Rural Serguros RGA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Theo">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="fretin cofidis">
             <td>Fretin</td>
             <td style="color:var(--muted)">COFIDIS</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Jeffrey
+Willem">2/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="g. bennett nsn cycling">
             <td>G. Bennett</td>
             <td style="color:var(--muted)">NSN Cycling</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="g. martin groupama fdj">
             <td>G. Martin</td>
             <td style="color:var(--muted)">GROUPAMA FDJ</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="gate xds astana">
             <td>Gate</td>
             <td style="color:var(--muted)">XDS ASTANA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="gaviria caja rural serguros rga">
             <td>Gaviria</td>
             <td style="color:var(--muted)">Caja Rural Serguros RGA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="gee-west lidl trek">
             <td>Gee-West</td>
             <td style="color:var(--muted)">LIDL TREK</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="germani groupama fdj">
             <td>Germani</td>
             <td style="color:var(--muted)">GROUPAMA FDJ</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Ger">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="girmay nsn cycling">
             <td>Girmay</td>
             <td style="color:var(--muted)">NSN Cycling</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Ingrid
+Sharon">2/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="godon netcompany ineos">
             <td>Godon</td>
             <td style="color:var(--muted)">Netcompany INEOS</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Anita
+Casper
+Ger
+Paul">4/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="gradek bahrain">
             <td>Gradek</td>
             <td style="color:var(--muted)">BAHRAIN</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="grosschartner uae team emirates">
             <td>Grosschartner</td>
             <td style="color:var(--muted)">UAE TEAM EMIRATES</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="guernalec total energies">
             <td>Guernalec</td>
             <td style="color:var(--muted)">TOTAL ENERGIES</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="haller tudor pro cycling">
             <td>Haller</td>
             <td style="color:var(--muted)">TUDOR PRO CYCLING</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="hermans pinarello q36.5">
             <td>Hermans</td>
             <td style="color:var(--muted)">Pinarello Q36.5</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="hessmann movistar">
             <td>Hessmann</td>
             <td style="color:var(--muted)">MOVISTAR</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Ingrid">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="hirschi tudor pro cycling">
             <td>Hirschi</td>
             <td style="color:var(--muted)">TUDOR PRO CYCLING</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Casper
+Ingrid
+Jeroen
+Kevin
+Luuk
+Wim">6/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="howson pinarello q36.5">
             <td>Howson</td>
             <td style="color:var(--muted)">Pinarello Q36.5</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="i.izagirre cofidis">
             <td>I.Izagirre</td>
             <td style="color:var(--muted)">COFIDIS</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="i.van wilder soudal quickstep">
             <td>I.van Wilder</td>
             <td style="color:var(--muted)">SOUDAL QUICKSTEP</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Kevin
+Wilma">2/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="j. hindley red bull bora">
             <td>J. Hindley</td>
             <td style="color:var(--muted)">RED BULL BORA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Anita">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="j. philipsen alpecin">
             <td>J. Philipsen</td>
             <td style="color:var(--muted)">ALPECIN</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Anita
+Casper
+Elise
+Ferdi
+Ger
+Hans
+Ingrid
+Jeffrey
+Kevin
+Mark
+Mirjam
+Mitchel
+Paul
+Sepp
+Willem
+Wilma">16/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="j. stuyven soudal quickstep">
             <td>J. Stuyven</td>
             <td style="color:var(--muted)">SOUDAL QUICKSTEP</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="j.vdberg picnic postnl">
             <td>J.vdBerg</td>
             <td style="color:var(--muted)">PICNIC POSTNL</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="jegat total energies">
             <td>Jegat</td>
             <td style="color:var(--muted)">TOTAL ENERGIES</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="jorgenson visma lease a bike">
             <td>Jorgenson</td>
             <td style="color:var(--muted)">VISMA LEASE A BIKE</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="joshua tarling netcompany ineos">
             <td>Joshua Tarling</td>
             <td style="color:var(--muted)">Netcompany INEOS</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Mitchel
+Sepp">2/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="k. asgreen ef education">
             <td>K. Asgreen</td>
             <td style="color:var(--muted)">EF EDUCATION</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="kanter xds astana">
             <td>Kanter</td>
             <td style="color:var(--muted)">XDS ASTANA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Hans
+Luuk">2/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="kirsch cofidis">
             <td>Kirsch</td>
             <td style="color:var(--muted)">COFIDIS</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="kuss visma lease a bike">
             <td>Kuss</td>
             <td style="color:var(--muted)">VISMA LEASE A BIKE</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Elise
+Luuk">2/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="kwiatkowski netcompany ineos">
             <td>Kwiatkowski</td>
             <td style="color:var(--muted)">Netcompany INEOS</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="l. durbridge jayco alula">
             <td>L. Durbridge</td>
             <td style="color:var(--muted)">JAYCO ALULA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="l. vervaeke soudal quickstep">
             <td>L. Vervaeke</td>
             <td style="color:var(--muted)">SOUDAL QUICKSTEP</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="le berre total energies">
             <td>Le Berre</td>
             <td style="color:var(--muted)">TOTAL ENERGIES</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="lerberghe soudal quickstep">
             <td>Lerberghe</td>
             <td style="color:var(--muted)">SOUDAL QUICKSTEP</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Anita">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="louvel nsn cycling">
             <td>Louvel</td>
             <td style="color:var(--muted)">NSN Cycling</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="m. cort uno x mobility">
             <td>M. Cort</td>
             <td style="color:var(--muted)">UNO X MOBILITY</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="m. frigo nsn cycling">
             <td>M. Frigo</td>
             <td style="color:var(--muted)">NSN Cycling</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="m. matthews jayco alula">
             <td>M. Matthews</td>
             <td style="color:var(--muted)">JAYCO ALULA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Sepp
+Theo">2/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="m. mohoric bahrain">
             <td>M. Mohoric</td>
             <td style="color:var(--muted)">BAHRAIN</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Sepp">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="m. storer tudor pro cycling">
             <td>M. Storer</td>
             <td style="color:var(--muted)">TUDOR PRO CYCLING</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="m. teunissen xds astana">
             <td>M. Teunissen</td>
             <td style="color:var(--muted)">XDS ASTANA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="m. trentin tudor pro cycling">
             <td>M. Trentin</td>
             <td style="color:var(--muted)">TUDOR PRO CYCLING</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Elise">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="m. vacek lidl trek">
             <td>M. Vacek</td>
             <td style="color:var(--muted)">LIDL TREK</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Kevin
+Paul
+Willem">3/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="markl picnic postnl">
             <td>Markl</td>
             <td style="color:var(--muted)">PICNIC POSTNL</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="meurisse pinarello q36.5">
             <td>Meurisse</td>
             <td style="color:var(--muted)">Pinarello Q36.5</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="n.oliveira movistar">
             <td>N.Oliveira</td>
             <td style="color:var(--muted)">MOVISTAR</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Sharon">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="neilands nsn cycling">
             <td>Neilands</td>
             <td style="color:var(--muted)">NSN Cycling</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="nicolau beltran caja rural serguros rga">
             <td>Nicolau Beltran</td>
             <td style="color:var(--muted)">Caja Rural Serguros RGA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="o. kooij decathlon">
             <td>O. Kooij</td>
             <td style="color:var(--muted)">DECATHLON</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Anita
+Jeroen
+Kevin
+Sharon
+Theo
+Wim">6/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="oldani caja rural serguros rga">
             <td>Oldani</td>
             <td style="color:var(--muted)">Caja Rural Serguros RGA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="otruba caja rural serguros rga">
             <td>Otruba</td>
             <td style="color:var(--muted)">Caja Rural Serguros RGA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="o’brien jayco alula">
             <td>O’Brien</td>
             <td style="color:var(--muted)">JAYCO ALULA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="p. ackermann jayco alula">
             <td>P. Ackermann</td>
             <td style="color:var(--muted)">JAYCO ALULA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="pacher groupama fdj">
             <td>Pacher</td>
             <td style="color:var(--muted)">GROUPAMA FDJ</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="page cofidis">
             <td>Page</td>
             <td style="color:var(--muted)">COFIDIS</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="pedersen lidl trek">
             <td>Pedersen</td>
             <td style="color:var(--muted)">LIDL TREK</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Luuk
+Mark
+Mirjam">3/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="planckaert alpecin">
             <td>Planckaert</td>
             <td style="color:var(--muted)">ALPECIN</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="plapp jayco alula">
             <td>Plapp</td>
             <td style="color:var(--muted)">JAYCO ALULA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="pluimers tudor pro cycling">
             <td>Pluimers</td>
             <td style="color:var(--muted)">TUDOR PRO CYCLING</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="politt uae team emirates">
             <td>Politt</td>
             <td style="color:var(--muted)">UAE TEAM EMIRATES</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="q. simmons lidl trek">
             <td>Q. Simmons</td>
             <td style="color:var(--muted)">LIDL TREK</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Casper
+Jeroen
+Sepp
+Sharon">4/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="quinn ef education">
             <td>Quinn</td>
             <td style="color:var(--muted)">EF EDUCATION</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="riccitello decathlon">
             <td>Riccitello</td>
             <td style="color:var(--muted)">DECATHLON</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Casper
+Elise
+Hans
+Jeffrey
+Luuk
+Mirjam
+Mitchel
+Wilma">8/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="rickaert alpecin">
             <td>Rickaert</td>
             <td style="color:var(--muted)">ALPECIN</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="romo movistar">
             <td>Romo</td>
             <td style="color:var(--muted)">MOVISTAR</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="russo groupama fdj">
             <td>Russo</td>
             <td style="color:var(--muted)">GROUPAMA FDJ</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="s. higuita xds astana">
             <td>S. Higuita</td>
             <td style="color:var(--muted)">XDS ASTANA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="schmid jayco alula">
             <td>Schmid</td>
             <td style="color:var(--muted)">JAYCO ALULA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Elise
+Hans
+Kevin
+Luuk
+Mirjam
+Wilma">6/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="skaarseth uno x mobility">
             <td>Skaarseth</td>
             <td style="color:var(--muted)">UNO X MOBILITY</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="skujins lidl trek">
             <td>Skujins</td>
             <td style="color:var(--muted)">LIDL TREK</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="slock lotto intermarche">
             <td>Slock</td>
             <td style="color:var(--muted)">LOTTO Intermarche</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="stannard bahrain">
             <td>Stannard</td>
             <td style="color:var(--muted)">BAHRAIN</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="steinhauser ef education">
             <td>Steinhauser</td>
             <td style="color:var(--muted)">EF EDUCATION</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="stewart nsn cycling">
             <td>Stewart</td>
             <td style="color:var(--muted)">NSN Cycling</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="strand hagenes visma lease a bike">
             <td>Strand Hagenes</td>
             <td style="color:var(--muted)">VISMA LEASE A BIKE</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="t. arensman netcompany ineos">
             <td>T. Arensman</td>
             <td style="color:var(--muted)">Netcompany INEOS</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="t. merlier soudal quickstep">
             <td>T. Merlier</td>
             <td style="color:var(--muted)">SOUDAL QUICKSTEP</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Elise
+Ferdi
+Jeffrey
+Jeroen
+Luuk
+Mitchel
+Sepp
+Theo">8/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="t. van dijke red bull bora">
             <td>T. van Dijke</td>
             <td style="color:var(--muted)">RED BULL BORA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="t.benoot decathlon">
             <td>T.Benoot</td>
             <td style="color:var(--muted)">DECATHLON</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Mark">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="t.marsman alpecin">
             <td>T.Marsman</td>
             <td style="color:var(--muted)">ALPECIN</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="tejada xds astana">
             <td>Tejada</td>
             <td style="color:var(--muted)">XDS ASTANA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="tiberi bahrain">
             <td>Tiberi</td>
             <td style="color:var(--muted)">BAHRAIN</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="traeen uno x mobility">
             <td>Traeen</td>
             <td style="color:var(--muted)">UNO X MOBILITY</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="tratnik red bull bora">
             <td>Tratnik</td>
             <td style="color:var(--muted)">RED BULL BORA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Theo">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="turgis total energies">
             <td>Turgis</td>
             <td style="color:var(--muted)">TOTAL ENERGIES</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="uijtdebroeks movistar">
             <td>Uijtdebroeks</td>
             <td style="color:var(--muted)">MOVISTAR</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="v.paret-peintre soudal quickstep">
             <td>V.Paret-Peintre</td>
             <td style="color:var(--muted)">SOUDAL QUICKSTEP</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Casper
+Mirjam
+Wim">3/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="valgren ef education">
             <td>Valgren</td>
             <td style="color:var(--muted)">EF EDUCATION</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Sepp
+Theo">2/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="van asbroeck nsn cycling">
             <td>Van Asbroeck</td>
             <td style="color:var(--muted)">NSN Cycling</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Ger">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="van baarle soudal quickstep">
             <td>Van Baarle</td>
             <td style="color:var(--muted)">SOUDAL QUICKSTEP</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="van gils red bull bora">
             <td>Van Gils</td>
             <td style="color:var(--muted)">RED BULL BORA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Kevin
+Mitchel">2/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="van moer pinarello q36.5">
             <td>Van Moer</td>
             <td style="color:var(--muted)">Pinarello Q36.5</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="vauquelin netcompany ineos">
             <td>Vauquelin</td>
             <td style="color:var(--muted)">Netcompany INEOS</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Elise
+Ferdi
+Jeffrey
+Luuk
+Mark
+Mirjam
+Willem
+Wim">8/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="vd poel alpecin">
             <td>Vd Poel</td>
             <td style="color:var(--muted)">ALPECIN</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Jeroen
+Luuk
+Wim">3/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="veistroffer lotto intermarche">
             <td>Veistroffer</td>
             <td style="color:var(--muted)">LOTTO Intermarche</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="velasco xds astana">
             <td>Velasco</td>
             <td style="color:var(--muted)">XDS ASTANA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Mark">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="vercher total energies">
             <td>Vercher</td>
             <td style="color:var(--muted)">TOTAL ENERGIES</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="vermeersch uae team emirates">
             <td>Vermeersch</td>
             <td style="color:var(--muted)">UAE TEAM EMIRATES</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="verona lidl trek">
             <td>Verona</td>
             <td style="color:var(--muted)">LIDL TREK</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="verstrynge alpecin">
             <td>Verstrynge</td>
             <td style="color:var(--muted)">ALPECIN</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="vinokourov xds astana">
             <td>Vinokourov</td>
             <td style="color:var(--muted)">XDS ASTANA</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Wim">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="voisard tudor pro cycling">
             <td>Voisard</td>
             <td style="color:var(--muted)">TUDOR PRO CYCLING</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="w. barguil picnic postnl">
             <td>W. Barguil</td>
             <td style="color:var(--muted)">PICNIC POSTNL</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="waerenskjold uno x mobility">
             <td>Waerenskjold</td>
             <td style="color:var(--muted)">UNO X MOBILITY</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Anita
+Mitchel
+Paul">3/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="walker ef education">
             <td>Walker</td>
             <td style="color:var(--muted)">EF EDUCATION</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="wellens uae team emirates">
             <td>Wellens</td>
             <td style="color:var(--muted)">UAE TEAM EMIRATES</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="wright pinarello q36.5">
             <td>Wright</td>
             <td style="color:var(--muted)">Pinarello Q36.5</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Door niemand gekozen">0/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="zimmermann lotto intermarche">
             <td>Zimmermann</td>
             <td style="color:var(--muted)">LOTTO Intermarche</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Mark">1/21</td>
           </tr>
           
-          <tr>
+          <tr data-search="vanmechelen bahrain">
             <td>vanMechelen</td>
             <td style="color:var(--muted)">BAHRAIN</td>
             <td class="total">0</td>
+            <td class="gekozen-cell" data-tooltip="Ger">1/21</td>
           </tr>
           
         </tbody>
@@ -3817,6 +4162,18 @@ Totaal: 6">6</td>
       document.querySelectorAll('.tab-panel').forEach(function (panel) {
         panel.style.display = panel.id === 'tab-' + btn.dataset.tab ? '' : 'none';
       });
+    });
+  });
+})();
+
+(function () {
+  var input = document.getElementById('rider-search-input');
+  if (!input) return;
+  var rows = Array.from(document.querySelectorAll('#rider-points-table tbody tr'));
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase();
+    rows.forEach(function (tr) {
+      tr.style.display = tr.dataset.search.indexOf(q) === -1 ? 'none' : '';
     });
   });
 })();

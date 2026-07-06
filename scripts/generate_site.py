@@ -45,20 +45,22 @@ def all_raw_picks(rosters):
     return names
 
 
-def count_owners(rosters, resolve):
-    """How many participants have each rider (by canonical name) on their
-    hoofdploeg specifically - pannenkoeken picks don't count here, since
-    that's a different pool with a different (lowest-wins) purpose. Resolves
-    each pick first so spelling variants of the same rider (e.g. "Philipsen"
-    vs the canonical "J. Philipsen") aren't double-counted as two different
-    riders."""
-    counts = {}
+def owners_by_rider(rosters, resolve):
+    """{canonical_rider_name: sorted [participant_name, ...]} - who has each
+    rider on their hoofdploeg specifically - pannenkoeken picks don't count
+    here, since that's a different pool with a different (lowest-wins)
+    purpose. Resolves each pick first so spelling variants of the same rider
+    (e.g. "Philipsen" vs the canonical "J. Philipsen") aren't split across
+    two different keys."""
+    owners = {}
     for data in rosters.values():
         raw_names = {r["rider"] for r in data["hoofdploeg"]}
         canonical_names = {resolve(n) or n for n in raw_names}
         for name in canonical_names:
-            counts[name] = counts.get(name, 0) + 1
-    return counts
+            owners.setdefault(name, []).append(data["name"])
+    for names in owners.values():
+        names.sort()
+    return owners
 
 
 def build_rider_info(rosters):
@@ -71,11 +73,12 @@ def build_rider_info(rosters):
     rider_info = json.loads(TEAMS_MASTER_PATH.read_text(encoding="utf-8"))["riders"]
     resolve = build_resolver(list(rider_info.keys()))
 
-    owner_counts = count_owners(rosters, resolve)
+    owners = owners_by_rider(rosters, resolve)
     withdrawn = load_withdrawn()
     n_participants = len(rosters)
     for name, info in rider_info.items():
-        info["n_owners"] = owner_counts.get(name, 0)
+        info["owners"] = owners.get(name, [])
+        info["n_owners"] = len(info["owners"])
         info["n_participants"] = n_participants
         info["withdrawn"] = name in withdrawn
 
@@ -105,6 +108,8 @@ def build_rider_leaderboard(rider_info, canonical_names, rider_totals):
             "team": rider_info[name]["team"],
             "points": rider_totals.get(name, 0),
             "withdrawn": rider_info[name]["withdrawn"],
+            "owners": rider_info[name]["owners"],
+            "n_participants": rider_info[name]["n_participants"],
         }
         for name in canonical_names
     ]

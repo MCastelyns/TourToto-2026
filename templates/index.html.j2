@@ -147,6 +147,18 @@
   .rider-points-card { max-height: 640px; overflow-y: auto; }
   .rider-points-card table thead th { position: sticky; top: 0; background: var(--card); }
   .withdrawn-tag { color: var(--bol); font-size: 0.78rem; font-style: italic; margin-left: 6px; }
+  .rider-search { margin-bottom: 10px; }
+  .rider-search input {
+    width: 100%;
+    max-width: 320px;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.92rem;
+    font-family: inherit;
+  }
+  .rider-search input:focus { outline: 2px solid var(--groen); }
+  .gekozen-cell { cursor: help; }
   .tooltip-popup {
     display: none;
     position: fixed;
@@ -363,18 +375,22 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
 
 <div id="tab-renners" class="tab-panel" style="display:none">
   <section>
-    <h2>Punten per renner (hele Tour)</h2>
+    <h2>Punten per renner</h2>
+    <div class="rider-search">
+      <input type="text" id="rider-search-input" placeholder="Zoek op naam of team...">
+    </div>
     <div class="card rider-points-card">
-      <table>
+      <table id="rider-points-table">
         <thead>
-          <tr><th>Renner</th><th>Team</th><th>Punten</th></tr>
+          <tr><th>Renner</th><th>Team</th><th>Punten</th><th>Gekozen</th></tr>
         </thead>
         <tbody>
           {% for r in rider_leaderboard %}
-          <tr>
+          <tr data-search="{{ (r.rider ~ ' ' ~ r.team)|lower }}">
             <td>{{ r.rider }}{% if r.withdrawn %}<span class="withdrawn-tag">uitgevallen</span>{% endif %}</td>
             <td style="color:var(--muted)">{{ r.team }}</td>
             <td class="total">{{ r.points }}</td>
+            <td class="gekozen-cell" data-tooltip="{{ r.owners|join('\n') if r.owners else 'Door niemand gekozen' }}">{{ r.owners|length }}/{{ r.n_participants }}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -505,6 +521,18 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
       document.querySelectorAll('.tab-panel').forEach(function (panel) {
         panel.style.display = panel.id === 'tab-' + btn.dataset.tab ? '' : 'none';
       });
+    });
+  });
+})();
+
+(function () {
+  var input = document.getElementById('rider-search-input');
+  if (!input) return;
+  var rows = Array.from(document.querySelectorAll('#rider-points-table tbody tr'));
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase();
+    rows.forEach(function (tr) {
+      tr.style.display = tr.dataset.search.indexOf(q) === -1 ? 'none' : '';
     });
   });
 })();
