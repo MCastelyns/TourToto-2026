@@ -385,6 +385,19 @@ def scrape_stage_route():
                 f"Gebruik dan de upload-optie hieronder.",
         ))
 
+    # Results occasionally get adjusted shortly after a stage finishes (time
+    # penalties, a photo-finish review, a late jury decision) - re-fetch the
+    # previous stage too so those corrections aren't stuck with whatever the
+    # API returned right after it finished.
+    previous_path = RESULTS_DIR / f"stage_{stage - 1:02d}.json"
+    if stage > 1 and previous_path.exists():
+        try:
+            scrape_results.scrape_stage(stage - 1)
+            notes.append(f"Etappe {stage - 1} ook opnieuw opgehaald (voor eventuele "
+                         f"naderhand aangepaste tijdstraffen/uitslagen).")
+        except Exception:
+            pass  # non-fatal - the new stage's own data still gets saved either way
+
     scoring.main()
     generate_site.main()
     msg = f"Etappe {stage} opgehaald en site herbouwd."
