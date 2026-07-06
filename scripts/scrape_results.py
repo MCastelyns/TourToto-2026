@@ -69,7 +69,12 @@ def build_bib_to_name(bib_map):
 
 
 def ranked_names(entry, bib_to_name, limit):
-    rankings = sorted(entry["rankings"], key=lambda r: r["position"])[:limit]
+    # A real finishing position is always >= 1. Negative positions show up for
+    # riders declassified/relegated from that day's result (e.g. an irregular
+    # sprint) - they're not a real top finisher and must not be sorted in
+    # ahead of position 1, or everyone else gets pushed down a slot.
+    valid_rankings = [r for r in entry["rankings"] if r["position"] >= 1]
+    rankings = sorted(valid_rankings, key=lambda r: r["position"])[:limit]
     if rankings and all(r.get("absolute", 0) == 0 for r in rankings):
         # Everyone tied at 0 (e.g. green/polka after a stage with no intermediate
         # sprints or climbs, like a TTT) - the "top N" the API returns is just
