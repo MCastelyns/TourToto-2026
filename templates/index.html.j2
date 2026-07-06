@@ -16,6 +16,7 @@
     --muted: #6b6b6b;
     --border: #e4e2dc;
     --record: #8e44ad;
+    --optimal: #b8860b;
   }
   * { box-sizing: border-box; }
   body {
@@ -102,6 +103,9 @@
   td.latest-stage { background: #eaf5ec; }
   td.latest-stage.joker-cell { background: var(--geel); }
   td.record-cell { border: 2px solid var(--record); color: var(--record); font-weight: 700; }
+  td.optimal-cell { border: 2px solid var(--optimal); color: var(--optimal); font-weight: 700; }
+  td.record-cell.optimal-cell { border-style: double; border-width: 4px; }
+  .optimal-team-line { font-weight: 400; font-size: 0.85rem; color: var(--optimal); }
   .rank-change { font-size: 0.78rem; font-weight: 700; margin-left: 6px; }
   .rank-up { color: var(--groen); }
   .rank-down { color: var(--bol); }
@@ -179,9 +183,12 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
             {% for s in stages_available %}
             {% set st = p.hoofdploeg.by_stage[s|string] %}
             {% set is_record = (p.name, s) in dagscore_cells %}
-            <td class="stage-cell {{ 'joker-cell' if st.joker else '' }} {{ 'latest-stage' if s == stages_available[-1] else '' }} {{ 'record-cell' if is_record else '' }}" data-tooltip="{{ st.tooltip }}{% if is_record %}
+            {% set is_optimal = (p.name, s) in optimal_cells %}
+            <td class="stage-cell {{ 'joker-cell' if st.joker else '' }} {{ 'latest-stage' if s == stages_available[-1] else '' }} {{ 'record-cell' if is_record else '' }} {{ 'optimal-cell' if is_optimal else '' }}" data-tooltip="{{ st.tooltip }}{% if is_record %}
 
-Hoogste dagscore! ({{ dagscore_record }} punten){% endif %}">{{ st.score }}</td>
+Hoogste dagscore! ({{ dagscore_record }} punten){% endif %}{% if is_optimal %}
+
+Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{{ st.score }}</td>
             {% endfor %}
             <td class="total">{{ p.hoofdploeg.total }}</td>
           </tr>
@@ -203,7 +210,15 @@ Hoogste dagscore! ({{ dagscore_record }} punten){% endif %}">{{ st.score }}</td>
         {% elif b.components.gc %}
         <span class="stage-preview">Geel: {{ b.components.gc[0].rider }}</span>
         {% endif %}
+        {% if b.optimal_hoofdploeg %}
+        <span class="optimal-team-line">Optimale hoofdploeg: {{ b.optimal_hoofdploeg.score }} punten</span>
+        {% endif %}
       </summary>
+      {% if b.optimal_hoofdploeg %}
+      <p class="muted-note" style="margin-bottom:12px;">Theoretisch best mogelijke hoofdploeg deze etappe volgens de regels
+        (2x #1, 1x #2 t/m #8, elk van een ander merk, plus 1 extra #2-#8): <strong>{{ b.optimal_hoofdploeg.score }} punten</strong>
+        &mdash; {% for r in b.optimal_hoofdploeg.riders %}{{ r }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+      {% endif %}
       <div class="breakdown-grid">
         {% for key, label in [('gc','Gele trui'), ('points','Groene trui'), ('mountains','Bergtrui (bolletjes)'), ('youth','Witte trui'), ('stage_result','Dag-uitslag (etappe)')] %}
         <div>

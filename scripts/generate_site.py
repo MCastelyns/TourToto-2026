@@ -126,6 +126,21 @@ def find_highest_dagscore(participants, stages_available):
     return best, cells
 
 
+def find_optimal_matches(participants, stage_breakdowns):
+    """Cells where a participant's actual hoofdploeg score for a stage exactly
+    matches that day's theoretical optimal score (i.e. they drafted the
+    literal best possible legal team for that stage) - vanishingly unlikely,
+    but worth marking if it ever happens. Returns {(participant_name, stage)}."""
+    cells = set()
+    for p in participants:
+        for stage_str, st in p["hoofdploeg"]["by_stage"].items():
+            breakdown = stage_breakdowns.get(stage_str)
+            optimal = breakdown.get("optimal_hoofdploeg") if breakdown else None
+            if optimal and st["base_score"] > 0 and st["base_score"] == optimal["score"]:
+                cells.add((p["name"], int(stage_str)))
+    return cells
+
+
 def main():
     if not STANDINGS_PATH.exists():
         raise SystemExit("data/computed/standings.json not found — run scoring.py first")
@@ -143,6 +158,7 @@ def main():
     pannen_rank_changes = rank_changes(standings["participants"], "pannenkoeken", stages_available, best_is_high=False)
 
     dagscore_record, dagscore_cells = find_highest_dagscore(standings["participants"], stages_available)
+    optimal_cells = find_optimal_matches(standings["participants"], standings.get("stage_breakdowns", {}))
 
     env = Environment(loader=FileSystemLoader(str(TEMPLATES_DIR)), autoescape=True)
     template = env.get_template("index.html.j2")
@@ -161,6 +177,7 @@ def main():
         pannen_rank_changes=pannen_rank_changes,
         dagscore_record=dagscore_record,
         dagscore_cells=dagscore_cells,
+        optimal_cells=optimal_cells,
         generated_at=datetime.now().strftime("%d-%m-%Y %H:%M"),
     )
 

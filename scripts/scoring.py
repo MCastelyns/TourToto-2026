@@ -27,6 +27,9 @@ Rule reference (from Tour toto 2026 regelement.docx):
 import json
 from pathlib import Path
 
+import numpy as np
+from scipy.optimize import linear_sum_assignment
+
 from names import build_resolver
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -79,10 +82,63 @@ def team_stage_score(rider_names, stage_points):
     return sum(stage_points.get(name, 0) for name in rider_names)
 
 
-def stage_breakdown(stage_data):
+def optimal_hoofdploeg(stage_points, teams):
+    """The theoretical best possible hoofdploeg score for one stage, per the
+    draft rules: 2x rank-1 ("kopman", slots 1 and 9) + one each of rank 2-8
+    (slots 2-8) + slot 10 (any rank 2-8 rider) - all 10 riders from 10
+    distinct brand teams. Returns (score, [riders]).
+
+    All 10 slots are solved as a SINGLE max-weight assignment problem (23
+    teams x 10 slot-columns, each team usable for at most one slot) via the
+    Hungarian algorithm. Slot 10 has no rank constraint (any rank 2-8 rider
+    qualifies), so its column value for a given team is the best that team's
+    rank 2-8 riders could contribute.
+
+    Solving the 9 rank-constrained slots in isolation first and only then
+    greedily assigning slot 10 from the leftover teams is NOT equivalent to
+    this: a locally-suboptimal 9-slot split can free up a team whose slot-10
+    contribution more than makes up the difference. Only a joint assignment
+    over all 10 columns at once finds the true optimum."""
+    team_names = list(teams.keys())
+    n_cols = 10  # rank1, rank1(dup), rank2, rank3, rank4, rank5, rank6, rank7, rank8, extra(best of rank2-8)
+    cost = np.zeros((len(team_names), n_cols))
+    extra_rider = {}  # team -> best rank2-8 rider (name, points), for the slot-10 column
+    for i, team in enumerate(team_names):
+        roster = teams[team]
+        for col in range(9):
+            rank_idx = 0 if col < 2 else col - 1  # roster index for that rank (rank N -> index N-1)
+            cost[i, col] = stage_points.get(roster[rank_idx], 0)
+        best_rider, best_pts = None, -1
+        for rider in roster[1:8]:  # ranks 2-8
+            pts = stage_points.get(rider, 0)
+            if pts > best_pts:
+                best_rider, best_pts = rider, pts
+        cost[i, 9] = best_pts
+        extra_rider[team] = (best_rider, best_pts)
+
+    row_ind, col_ind = linear_sum_assignment(cost, maximize=True)
+    riders = []
+    total = 0
+    for r, c in zip(row_ind, col_ind):
+        team = team_names[r]
+        if c == 9:
+            rider, pts = extra_rider[team]
+        else:
+            rank_idx = 0 if c < 2 else c - 1
+            rider = teams[team][rank_idx]
+            pts = stage_points.get(rider, 0)
+        riders.append(rider)
+        total += pts
+
+    return total, riders
+
+
+def stage_breakdown(stage_data, teams=None):
     """Per-stage debug view: every jersey/etappe-uitslag ranking with the
     points each rider got for it, plus a per-rider total across all of them
-    (a rider can appear in multiple jerseys the same day)."""
+    (a rider can appear in multiple jerseys the same day). If `teams` (the
+    master brand-team rosters) is given, also computes the theoretical best
+    possible hoofdploeg score for the day."""
     components = {}
     totals = {}
     for key, scale in DAILY_SCALES.items():
@@ -98,7 +154,13 @@ def stage_breakdown(stage_data):
         {"rider": name, "points": pts}
         for name, pts in sorted(totals.items(), key=lambda kv: -kv[1])
     ]
-    return {"components": components, "totals": totals_sorted}
+
+    result = {"components": components, "totals": totals_sorted}
+    if teams:
+        stage_points = stage_points_by_rider(stage_data)
+        optimal_score, optimal_riders = optimal_hoofdploeg(stage_points, teams)
+        result["optimal_hoofdploeg"] = {"score": optimal_score, "riders": optimal_riders}
+    return result
 
 
 def load_participants(resolve):
@@ -232,7 +294,7 @@ def main():
         "final_available": final is not None,
         "unresolved_names": unresolved_names,
         "stage_breakdowns": {
-            stage_num: stage_breakdown(stages[stage_num]) for stage_num in sorted(stages.keys())
+            stage_num: stage_breakdown(stages[stage_num], master["teams"]) for stage_num in sorted(stages.keys())
         },
         "participants": [],
     }
