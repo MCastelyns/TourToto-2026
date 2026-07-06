@@ -163,10 +163,8 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
 {%- endmacro %}
 
 {% macro rank_badge(name, changes) -%}
-{%- if name in changes and changes[name] != 0 -%}
-{%- set delta = changes[name] -%}
-<span class="rank-change {{ 'rank-up' if delta > 0 else 'rank-down' }}">{% if delta > 0 %}&#9650;{% else %}&#9660;{% endif %}{{ delta|abs }}</span>
-{%- endif -%}
+{%- set delta = changes.get(name, 0) -%}
+<span class="rank-change {{ 'rank-up' if delta > 0 else ('rank-down' if delta < 0 else '') }}" {% if delta == 0 %}style="display:none"{% endif %}>{% if delta > 0 %}&#9650;{% elif delta < 0 %}&#9660;{% endif %}{{ delta|abs if delta != 0 else '' }}</span>
 {%- endmacro %}
 
   {% if not stages_available %}
@@ -198,7 +196,7 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
         </thead>
         <tbody>
           {% for p in hoofd_ranked %}
-          <tr data-total="{{ p.hoofdploeg.total }}"{% for s in stages_available %} data-cum{{ s }}="{{ p.hoofdploeg.by_stage[s|string].cumulative }}"{% endfor %}>
+          <tr data-total="{{ p.hoofdploeg.total }}"{% for s in stages_available %} data-cum{{ s }}="{{ p.hoofdploeg.by_stage[s|string].cumulative }}"{% if s in hoofd_rank_changes_by_stage %} data-delta{{ s }}="{{ hoofd_rank_changes_by_stage[s].get(p.name, 0) }}"{% endif %}{% endfor %}>
             <td>{{ p.name }}{{ rank_badge(p.name, hoofd_rank_changes) }}</td>
             {% for s in stages_available %}
             {% set st = p.hoofdploeg.by_stage[s|string] %}
@@ -279,7 +277,7 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
         </thead>
         <tbody>
           {% for p in pannen_ranked %}
-          <tr data-total="{{ p.pannenkoeken.total }}"{% for s in stages_available %} data-cum{{ s }}="{{ p.pannenkoeken.by_stage[s|string].cumulative }}"{% endfor %}>
+          <tr data-total="{{ p.pannenkoeken.total }}"{% for s in stages_available %} data-cum{{ s }}="{{ p.pannenkoeken.by_stage[s|string].cumulative }}"{% if s in pannen_rank_changes_by_stage %} data-delta{{ s }}="{{ pannen_rank_changes_by_stage[s].get(p.name, 0) }}"{% endif %}{% endfor %}>
             <td>{{ p.name }}{{ rank_badge(p.name, pannen_rank_changes) }}</td>
             {% for s in stages_available %}
             {% set st = p.pannenkoeken.by_stage[s|string] %}
@@ -406,12 +404,24 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
       return raw !== undefined ? parseFloat(raw) : 0;
     }
 
+    var deltaStage = day === 'latest' ? table.dataset.latestStage : String(day);
     rows.forEach(function (tr) {
       var totalCell = tr.querySelector('.total-cell');
       if (totalCell) totalCell.textContent = valueFor(tr);
-      tr.querySelectorAll('.rank-change').forEach(function (badge) {
-        badge.style.display = day === 'latest' ? '' : 'none';
-      });
+      var badge = tr.querySelector('.rank-change');
+      if (!badge) return;
+      var raw = tr.dataset['delta' + deltaStage];
+      var delta = raw !== undefined ? parseInt(raw, 10) : 0;
+      if (delta === 0) {
+        badge.style.display = 'none';
+        badge.textContent = '';
+        badge.classList.remove('rank-up', 'rank-down');
+      } else {
+        badge.style.display = '';
+        badge.classList.toggle('rank-up', delta > 0);
+        badge.classList.toggle('rank-down', delta < 0);
+        badge.textContent = (delta > 0 ? '▲' : '▼') + Math.abs(delta);
+      }
     });
 
     rows.sort(function (a, b) {

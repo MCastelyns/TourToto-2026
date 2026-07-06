@@ -90,22 +90,23 @@ def build_rider_info(rosters):
     return rider_info
 
 
-def rank_changes(participants, team_key, stages_available, best_is_high):
-    """{participant_name: delta} comparing cumulative rank after the latest
-    stage to the rank after the previous one. Positive = moved up (better).
-    Empty dict if there's no previous stage to compare against."""
-    if len(stages_available) < 2:
-        return {}
-    latest, previous = stages_available[-1], stages_available[-2]
-
+def rank_changes_by_stage(participants, team_key, stages_available, best_is_high):
+    """{stage_num: {participant_name: delta}} comparing cumulative rank after
+    each stage to the rank after the one before it. Positive = moved up
+    (better). The first stage in stages_available has no entry (nothing to
+    compare against yet)."""
     def ranks_at(stage_num):
         key = str(stage_num)
         cumulatives = [(p["name"], p[team_key]["by_stage"][key]["cumulative"]) for p in participants]
         cumulatives.sort(key=lambda x: x[1], reverse=best_is_high)
         return {name: i + 1 for i, (name, _) in enumerate(cumulatives)}
 
-    latest_ranks, previous_ranks = ranks_at(latest), ranks_at(previous)
-    return {name: previous_ranks[name] - latest_ranks[name] for name in latest_ranks}
+    result = {}
+    for i in range(1, len(stages_available)):
+        stage_num, previous_num = stages_available[i], stages_available[i - 1]
+        stage_ranks, previous_ranks = ranks_at(stage_num), ranks_at(previous_num)
+        result[stage_num] = {name: previous_ranks[name] - stage_ranks[name] for name in stage_ranks}
+    return result
 
 
 def find_highest_dagscore(participants, stages_available):
@@ -154,8 +155,10 @@ def main():
 
     stages_available = standings["stages_available"]
 
-    hoofd_rank_changes = rank_changes(standings["participants"], "hoofdploeg", stages_available, best_is_high=True)
-    pannen_rank_changes = rank_changes(standings["participants"], "pannenkoeken", stages_available, best_is_high=False)
+    hoofd_rank_changes_by_stage = rank_changes_by_stage(standings["participants"], "hoofdploeg", stages_available, best_is_high=True)
+    pannen_rank_changes_by_stage = rank_changes_by_stage(standings["participants"], "pannenkoeken", stages_available, best_is_high=False)
+    hoofd_rank_changes = hoofd_rank_changes_by_stage.get(stages_available[-1], {}) if stages_available else {}
+    pannen_rank_changes = pannen_rank_changes_by_stage.get(stages_available[-1], {}) if stages_available else {}
 
     dagscore_record, dagscore_cells = find_highest_dagscore(standings["participants"], stages_available)
     optimal_cells = find_optimal_matches(standings["participants"], standings.get("stage_breakdowns", {}))
@@ -175,6 +178,8 @@ def main():
         rider_info=rider_info,
         hoofd_rank_changes=hoofd_rank_changes,
         pannen_rank_changes=pannen_rank_changes,
+        hoofd_rank_changes_by_stage=hoofd_rank_changes_by_stage,
+        pannen_rank_changes_by_stage=pannen_rank_changes_by_stage,
         dagscore_record=dagscore_record,
         dagscore_cells=dagscore_cells,
         optimal_cells=optimal_cells,
