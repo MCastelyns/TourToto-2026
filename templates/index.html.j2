@@ -15,6 +15,7 @@
     --ink: #1c1c1c;
     --muted: #6b6b6b;
     --border: #e4e2dc;
+    --record: #8e44ad;
   }
   * { box-sizing: border-box; }
   body {
@@ -100,6 +101,7 @@
   th.latest-stage { background: var(--groen); color: #fff; }
   td.latest-stage { background: #eaf5ec; }
   td.latest-stage.joker-cell { background: var(--geel); }
+  td.record-cell { border: 2px solid var(--record); color: var(--record); font-weight: 700; }
   .rank-change { font-size: 0.78rem; font-weight: 700; margin-left: 6px; }
   .rank-up { color: var(--groen); }
   .rank-down { color: var(--bol); }
@@ -176,7 +178,10 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
             <td>{{ p.name }}{{ rank_badge(p.name, hoofd_rank_changes) }}</td>
             {% for s in stages_available %}
             {% set st = p.hoofdploeg.by_stage[s|string] %}
-            <td class="stage-cell {{ 'joker-cell' if st.joker else '' }} {{ 'latest-stage' if s == stages_available[-1] else '' }}" data-tooltip="{{ st.tooltip }}">{{ st.score }}</td>
+            {% set is_record = (p.name, s) in dagscore_cells %}
+            <td class="stage-cell {{ 'joker-cell' if st.joker else '' }} {{ 'latest-stage' if s == stages_available[-1] else '' }} {{ 'record-cell' if is_record else '' }}" data-tooltip="{{ st.tooltip }}{% if is_record %}
+
+Hoogste dagscore! ({{ dagscore_record }} punten){% endif %}">{{ st.score }}</td>
             {% endfor %}
             <td class="total">{{ p.hoofdploeg.total }}</td>
           </tr>

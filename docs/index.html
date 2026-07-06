@@ -15,6 +15,7 @@
     --ink: #1c1c1c;
     --muted: #6b6b6b;
     --border: #e4e2dc;
+    --record: #8e44ad;
   }
   * { box-sizing: border-box; }
   body {
@@ -100,6 +101,7 @@
   th.latest-stage { background: var(--groen); color: #fff; }
   td.latest-stage { background: #eaf5ec; }
   td.latest-stage.joker-cell { background: var(--geel); }
+  td.record-cell { border: 2px solid var(--record); color: var(--record); font-weight: 700; }
   .rank-change { font-size: 0.78rem; font-weight: 700; margin-left: 6px; }
   .rank-up { color: var(--groen); }
   .rank-down { color: var(--bol); }
@@ -128,7 +130,7 @@
   <p>
     2 van de 21 etappes verwerkt
     
-    &middot; laatst bijgewerkt: 06-07-2026 06:41
+    &middot; laatst bijgewerkt: 06-07-2026 06:54
   </p>
 </header>
 
@@ -158,15 +160,19 @@
             <td>Ingrid</td>
             
             
-            <td class="stage-cell joker-cell " data-tooltip="Vingegaard: 15
+            
+            <td class="stage-cell joker-cell  " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">52</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage record-cell" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
-Totaal: 32">32</td>
+Totaal: 32
+
+Hoogste dagscore! (32 punten)">32</td>
             
             <td class="total">84</td>
           </tr>
@@ -175,12 +181,14 @@ Totaal: 32">32</td>
             <td>Mirjam</td>
             
             
-            <td class="stage-cell joker-cell " data-tooltip="Vingegaard: 15
+            
+            <td class="stage-cell joker-cell  " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">52</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage " data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -191,12 +199,14 @@ Totaal: 26">26</td>
             <td>Sepp<span class="rank-change rank-up">&#9650;12</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Vingegaard: 15
+            
+            <td class="stage-cell   " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
-            <td class="stage-cell joker-cell latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell joker-cell latest-stage " data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">52</td>
             
@@ -207,16 +217,20 @@ Totaal: 26">52</td>
             <td>Ger</td>
             
             
-            <td class="stage-cell  " data-tooltip="Vingegaard: 15
+            
+            <td class="stage-cell   " data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage record-cell" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
-Totaal: 32">32</td>
+Totaal: 32
+
+Hoogste dagscore! (32 punten)">32</td>
             
             <td class="total">61</td>
           </tr>
@@ -225,15 +239,19 @@ Totaal: 32">32</td>
             <td>Ferdi<span class="rank-change rank-up">&#9650;5</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Vingegaard: 15
+            
+            <td class="stage-cell   " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage record-cell" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
-Totaal: 32">32</td>
+Totaal: 32
+
+Hoogste dagscore! (32 punten)">32</td>
             
             <td class="total">58</td>
           </tr>
@@ -242,15 +260,19 @@ Totaal: 32">32</td>
             <td>Jeffrey<span class="rank-change rank-up">&#9650;5</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Vingegaard: 15
+            
+            <td class="stage-cell   " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage record-cell" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
-Totaal: 32">32</td>
+Totaal: 32
+
+Hoogste dagscore! (32 punten)">32</td>
             
             <td class="total">58</td>
           </tr>
@@ -259,15 +281,19 @@ Totaal: 32">32</td>
             <td>Mitchel<span class="rank-change rank-up">&#9650;7</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Vingegaard: 15
+            
+            <td class="stage-cell   " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage record-cell" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
-Totaal: 32">32</td>
+Totaal: 32
+
+Hoogste dagscore! (32 punten)">32</td>
             
             <td class="total">58</td>
           </tr>
@@ -276,15 +302,19 @@ Totaal: 32">32</td>
             <td>Theo<span class="rank-change rank-up">&#9650;8</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Vingegaard: 15
+            
+            <td class="stage-cell   " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage record-cell" data-tooltip="Pogacar: 14
 Vingegaard: 12
 Skjelmose: 6
-Totaal: 32">32</td>
+Totaal: 32
+
+Hoogste dagscore! (32 punten)">32</td>
             
             <td class="total">58</td>
           </tr>
@@ -293,13 +323,15 @@ Totaal: 32">32</td>
             <td>Casper<span class="rank-change rank-down">&#9660;6</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Vingegaard: 15
+            
+            <td class="stage-cell   " data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage " data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -310,13 +342,15 @@ Totaal: 26">26</td>
             <td>Hans<span class="rank-change rank-down">&#9660;5</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Vingegaard: 15
+            
+            <td class="stage-cell   " data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage " data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -327,13 +361,15 @@ Totaal: 26">26</td>
             <td>Willem<span class="rank-change rank-down">&#9660;5</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Vingegaard: 15
+            
+            <td class="stage-cell   " data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage " data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -344,13 +380,15 @@ Totaal: 26">26</td>
             <td>Wilma<span class="rank-change rank-down">&#9660;5</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Vingegaard: 15
+            
+            <td class="stage-cell   " data-tooltip="Vingegaard: 15
 Pogacar: 11
 F. Lipowitz: 3
 Totaal: 29">29</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage " data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -361,13 +399,15 @@ Totaal: 26">26</td>
             <td>Sharon<span class="rank-change rank-down">&#9660;5</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Vingegaard: 15
+            
+            <td class="stage-cell   " data-tooltip="Vingegaard: 15
 Pogacar: 11
 T. Voss: 2
 Totaal: 28">28</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage " data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -378,12 +418,14 @@ Totaal: 26">26</td>
             <td>Anita<span class="rank-change rank-down">&#9660;5</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Vingegaard: 15
+            
+            <td class="stage-cell   " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage " data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -394,12 +436,14 @@ Totaal: 26">26</td>
             <td>Kevin<span class="rank-change rank-down">&#9660;3</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Vingegaard: 15
+            
+            <td class="stage-cell   " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage " data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -410,12 +454,14 @@ Totaal: 26">26</td>
             <td>Mark<span class="rank-change rank-down">&#9660;3</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Vingegaard: 15
+            
+            <td class="stage-cell   " data-tooltip="Vingegaard: 15
 Pogacar: 11
 Totaal: 26">26</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage " data-tooltip="Pogacar: 14
 Vingegaard: 12
 Totaal: 26">26</td>
             
@@ -426,12 +472,14 @@ Totaal: 26">26</td>
             <td>Elise<span class="rank-change rank-up">&#9650;1</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Pogacar: 11
+            
+            <td class="stage-cell   " data-tooltip="Pogacar: 11
 Evenepoel: 7
 Totaal: 18">18</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage " data-tooltip="Pogacar: 14
 Evenepoel: 11
 Totaal: 25">25</td>
             
@@ -442,11 +490,13 @@ Totaal: 25">25</td>
             <td>Jeroen<span class="rank-change rank-up">&#9650;2</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Pogacar: 11
+            
+            <td class="stage-cell   " data-tooltip="Pogacar: 11
 Totaal: 11">11</td>
             
             
-            <td class="stage-cell joker-cell latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell joker-cell latest-stage " data-tooltip="Pogacar: 14
 Totaal: 14">28</td>
             
             <td class="total">39</td>
@@ -456,14 +506,16 @@ Totaal: 14">28</td>
             <td>Paul<span class="rank-change rank-down">&#9660;2</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Pogacar: 11
+            
+            <td class="stage-cell   " data-tooltip="Pogacar: 11
 Piganzoli: 5
 F. Lipowitz: 3
 P. Seixas: 1
 Totaal: 20">20</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage " data-tooltip="Pogacar: 14
 P. Seixas: 3
 Totaal: 17">17</td>
             
@@ -474,12 +526,14 @@ Totaal: 17">17</td>
             <td>Wim<span class="rank-change rank-down">&#9660;1</span></td>
             
             
-            <td class="stage-cell  " data-tooltip="Pogacar: 11
+            
+            <td class="stage-cell   " data-tooltip="Pogacar: 11
 F. Lipowitz: 3
 Totaal: 14">14</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage " data-tooltip="Pogacar: 14
 Skjelmose: 6
 Totaal: 20">20</td>
             
@@ -490,11 +544,13 @@ Totaal: 20">20</td>
             <td>Luuk</td>
             
             
-            <td class="stage-cell  " data-tooltip="Pogacar: 11
+            
+            <td class="stage-cell   " data-tooltip="Pogacar: 11
 Totaal: 11">11</td>
             
             
-            <td class="stage-cell  latest-stage" data-tooltip="Pogacar: 14
+            
+            <td class="stage-cell  latest-stage " data-tooltip="Pogacar: 14
 Totaal: 14">14</td>
             
             <td class="total">25</td>

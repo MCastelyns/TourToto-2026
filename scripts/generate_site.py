@@ -108,6 +108,24 @@ def rank_changes(participants, team_key, stages_available, best_is_high):
     return {name: previous_ranks[name] - latest_ranks[name] for name in latest_ranks}
 
 
+def find_highest_dagscore(participants, stages_available):
+    """The "Hoogste dagscore" prize: the single highest hoofdploeg score
+    anyone got on any one day, using the base (pre-joker-doubling) score per
+    the rules ("no 2x"). Returns (record_value, {(participant_name, stage)}
+    - a set since ties are possible and all of them should be marked."""
+    best = 0
+    cells = set()
+    for p in participants:
+        for stage_str, st in p["hoofdploeg"]["by_stage"].items():
+            score = st["base_score"]
+            if score > best:
+                best = score
+                cells = {(p["name"], int(stage_str))}
+            elif score == best and score > 0:
+                cells.add((p["name"], int(stage_str)))
+    return best, cells
+
+
 def main():
     if not STANDINGS_PATH.exists():
         raise SystemExit("data/computed/standings.json not found — run scoring.py first")
@@ -124,6 +142,8 @@ def main():
     hoofd_rank_changes = rank_changes(standings["participants"], "hoofdploeg", stages_available, best_is_high=True)
     pannen_rank_changes = rank_changes(standings["participants"], "pannenkoeken", stages_available, best_is_high=False)
 
+    dagscore_record, dagscore_cells = find_highest_dagscore(standings["participants"], stages_available)
+
     env = Environment(loader=FileSystemLoader(str(TEMPLATES_DIR)), autoescape=True)
     template = env.get_template("index.html.j2")
 
@@ -139,6 +159,8 @@ def main():
         rider_info=rider_info,
         hoofd_rank_changes=hoofd_rank_changes,
         pannen_rank_changes=pannen_rank_changes,
+        dagscore_record=dagscore_record,
+        dagscore_cells=dagscore_cells,
         generated_at=datetime.now().strftime("%d-%m-%Y %H:%M"),
     )
 
