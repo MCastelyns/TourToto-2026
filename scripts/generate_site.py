@@ -46,14 +46,15 @@ def all_raw_picks(rosters):
 
 
 def count_owners(rosters, resolve):
-    """How many participants have each rider (by canonical name) somewhere on
-    their hoofdploeg or pannenkoeken (counted once per participant, even if on
-    both). Resolves each pick first so spelling variants of the same rider
-    (e.g. "Philipsen" vs the canonical "J. Philipsen") aren't double-counted
-    as two different riders."""
+    """How many participants have each rider (by canonical name) on their
+    hoofdploeg specifically - pannenkoeken picks don't count here, since
+    that's a different pool with a different (lowest-wins) purpose. Resolves
+    each pick first so spelling variants of the same rider (e.g. "Philipsen"
+    vs the canonical "J. Philipsen") aren't double-counted as two different
+    riders."""
     counts = {}
     for data in rosters.values():
-        raw_names = {r["rider"] for r in data["hoofdploeg"]} | {r["rider"] for r in data["pannenkoeken"]}
+        raw_names = {r["rider"] for r in data["hoofdploeg"]}
         canonical_names = {resolve(n) or n for n in raw_names}
         for name in canonical_names:
             counts[name] = counts.get(name, 0) + 1
