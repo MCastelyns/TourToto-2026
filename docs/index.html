@@ -123,20 +123,27 @@
   }
   .day-toggle button:hover { background: #f0f0ee; }
   .day-toggle button.active { background: var(--groen); color: #fff; border-color: var(--groen); }
-  .main-tabs { display: flex; gap: 8px; padding: 0 16px; margin-top: -2px; }
-  .main-tabs button {
-    border: 1px solid var(--border);
-    border-bottom: none;
-    background: #efeee9;
-    color: var(--muted);
-    border-radius: 8px 8px 0 0;
-    padding: 8px 18px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
+  .main-tabs {
+    display: flex;
+    gap: 4px;
+    padding: 0 16px;
+    background: var(--card);
+    border-bottom: 3px solid var(--border);
   }
-  .main-tabs button.active { background: var(--bg); color: var(--ink); }
-  .main-tabs button:hover:not(.active) { background: #e4e2dc; }
+  .main-tabs button {
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    padding: 14px 22px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-bottom: 4px solid transparent;
+    margin-bottom: -3px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  .main-tabs button.active { color: var(--groen); border-bottom-color: var(--groen); }
+  .main-tabs button:hover:not(.active) { color: var(--ink); }
   .rider-points-card { max-height: 640px; overflow-y: auto; }
   .rider-points-card table thead th { position: sticky; top: 0; background: var(--card); }
   .withdrawn-tag { color: var(--bol); font-size: 0.78rem; font-style: italic; margin-left: 6px; }
@@ -164,7 +171,7 @@
   <p>
     3 van de 21 etappes verwerkt
     
-    &middot; laatst bijgewerkt: 06-07-2026 19:04
+    &middot; laatst bijgewerkt: 06-07-2026 19:13
   </p>
 </header>
 
@@ -2571,8 +2578,6 @@ Totaal: 6">6</td>
 <div id="tab-renners" class="tab-panel" style="display:none">
   <section>
     <h2>Punten per renner (hele Tour)</h2>
-    <p class="muted-note" style="margin-bottom:12px;">Totaal aantal punten dat elke renner tot nu toe behaald heeft over alle etappes
-      samen (etappe-uitslag + gele/groene/bergtrui/witte trui), los van wie hem gekozen heeft.</p>
     <div class="card rider-points-card">
       <table>
         <thead>
