@@ -1,0 +1,37 @@
+{
+  "stage": 3,
+  "stage_result": [
+    "Pogacar",
+    "Vingegaard",
+    "R. Carapaz",
+    "P. Seixas",
+    "T.H. Johannessen",
+    "Van Eetvelt",
+    "F. Lipowitz",
+    "Evenepoel",
+    "Del Torro Romero",
+    "Ayuso"
+  ],
+  "gc": [
+    "Pogacar",
+    "Vingegaard",
+    "Evenepoel",
+    "Del Torro Romero",
+    "Ayuso"
+  ],
+  "points": [
+    "Pogacar",
+    "Vingegaard",
+    "Del Torro Romero"
+  ],
+  "mountains": [
+    "Baudin",
+    "Prodhomme",
+    "Pierna"
+  ],
+  "youth": [
+    "Del Torro Romero",
+    "Ayuso",
+    "P. Seixas"
+  ]
+}
