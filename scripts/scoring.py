@@ -86,7 +86,9 @@ def optimal_hoofdploeg(stage_points, teams):
     """The theoretical best possible hoofdploeg score for one stage, per the
     draft rules: 2x rank-1 ("kopman", slots 1 and 9) + one each of rank 2-8
     (slots 2-8) + slot 10 (any rank 2-8 rider) - all 10 riders from 10
-    distinct brand teams. Returns (score, [riders]).
+    distinct brand teams. Returns (score, [slot rows]), where each slot row
+    is {"rank": 1..10, "rider": name, "points": pts} in a fixed slot order
+    (always 10 rows, even where the assigned rider scored 0 that day).
 
     All 10 slots are solved as a SINGLE max-weight assignment problem (23
     teams x 10 slot-columns, each team usable for at most one slot) via the
@@ -117,7 +119,7 @@ def optimal_hoofdploeg(stage_points, teams):
         extra_rider[team] = (best_rider, best_pts)
 
     row_ind, col_ind = linear_sum_assignment(cost, maximize=True)
-    riders = []
+    by_col = {}
     total = 0
     for r, c in zip(row_ind, col_ind):
         team = team_names[r]
@@ -127,10 +129,14 @@ def optimal_hoofdploeg(stage_points, teams):
             rank_idx = 0 if c < 2 else c - 1
             rider = teams[team][rank_idx]
             pts = stage_points.get(rider, 0)
-        riders.append(rider)
+        by_col[c] = (rider, pts)
         total += pts
 
-    return total, riders
+    slots = [
+        {"rank": col + 1, "rider": by_col[col][0], "points": by_col[col][1]}
+        for col in range(n_cols)
+    ]
+    return total, slots
 
 
 def stage_breakdown(stage_data, teams=None):
@@ -158,8 +164,8 @@ def stage_breakdown(stage_data, teams=None):
     result = {"components": components, "totals": totals_sorted}
     if teams:
         stage_points = stage_points_by_rider(stage_data)
-        optimal_score, optimal_riders = optimal_hoofdploeg(stage_points, teams)
-        result["optimal_hoofdploeg"] = {"score": optimal_score, "riders": optimal_riders}
+        optimal_score, optimal_slots = optimal_hoofdploeg(stage_points, teams)
+        result["optimal_hoofdploeg"] = {"score": optimal_score, "slots": optimal_slots}
     return result
 
 

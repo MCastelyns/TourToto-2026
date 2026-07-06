@@ -214,19 +214,15 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
         <span class="optimal-team-line">Optimale hoofdploeg: {{ b.optimal_hoofdploeg.score }} punten</span>
         {% endif %}
       </summary>
-      {% if b.optimal_hoofdploeg %}
-      <p class="muted-note" style="margin-bottom:12px;">Theoretisch best mogelijke hoofdploeg deze etappe volgens de regels
-        (2x #1, 1x #2 t/m #8, elk van een ander merk, plus 1 extra #2-#8): <strong>{{ b.optimal_hoofdploeg.score }} punten</strong>
-        &mdash; {% for r in b.optimal_hoofdploeg.riders %}{{ r }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
-      {% endif %}
       <div class="breakdown-grid">
-        {% for key, label in [('gc','Gele trui'), ('points','Groene trui'), ('mountains','Bergtrui (bolletjes)'), ('youth','Witte trui'), ('stage_result','Dag-uitslag (etappe)')] %}
+        {% for key, label in [('gc','Gele trui'), ('points','Groene trui'), ('mountains','Bergtrui (bolletjes)'), ('youth','Witte trui'), ('stage_result','Dag-uitslag (etappe)'), ('optimal_hoofdploeg','Optimale hoofdploeg')] %}
+        {% set rows = b.optimal_hoofdploeg.slots if (key == 'optimal_hoofdploeg' and b.optimal_hoofdploeg) else b.components[key] %}
         <div>
-          <h4>{{ label }}</h4>
-          {% if b.components[key] %}
+          <h4>{{ label }}{% if key == 'optimal_hoofdploeg' and b.optimal_hoofdploeg %} ({{ b.optimal_hoofdploeg.score }} punten){% endif %}</h4>
+          {% if rows %}
           <table>
             <tbody>
-              {% for row in b.components[key] %}
+              {% for row in rows %}
               <tr><td class="rank-num">{{ row.rank }}</td><td {{ rider_attrs(row.rider) }}>{{ row.rider }}</td><td class="total">{{ row.points }}</td></tr>
               {% endfor %}
             </tbody>
