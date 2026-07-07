@@ -285,7 +285,7 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
   <section>
     <h2>Hoofdpoule</h2>
     {% if stages_available|length > 1 %}
-    <button type="button" class="chart-trigger" data-chart="hoofd">📈 Puntenverloop</button>
+    <button type="button" class="chart-trigger" data-chart="hoofd">Puntenverloop</button>
     <div class="day-toggle">
       <span class="day-toggle-label">Stand na:</span>
       {% for s in stages_available %}<button type="button" data-day="{{ s }}">Dag {{ s }}</button>{% endfor %}
@@ -374,7 +374,7 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
   <section>
     <h2 class="pannen">Pannenkoekenpoule</h2>
     {% if stages_available|length > 1 %}
-    <button type="button" class="chart-trigger" data-chart="pannen">📈 Puntenverloop</button>
+    <button type="button" class="chart-trigger" data-chart="pannen">Puntenverloop</button>
     {% endif %}
     <div class="card">
       <table id="pannen-table" data-latest-stage="{{ stages_available[-1] }}">
