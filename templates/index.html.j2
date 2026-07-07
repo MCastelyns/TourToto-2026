@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tourtoto 2026</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="theme-color" content="#FFD700">
 <script data-goatcounter="https://mcastelyns.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 <style>
@@ -159,6 +163,65 @@
   }
   .rider-search input:focus { outline: 2px solid var(--groen); }
   .gekozen-cell { cursor: help; }
+  .chart-trigger {
+    display: inline-block;
+    border: 1px solid var(--border);
+    background: #fff;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  .chart-trigger:hover { background: #f0f0ee; }
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 22px;
+    max-width: 880px;
+    width: 100%;
+    max-height: 88vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  .modal-box h3 { margin: 0 0 12px; padding-right: 24px; }
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    border: none;
+    background: none;
+    font-size: 1.7rem;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--muted);
+  }
+  .modal-close:hover { color: var(--ink); }
+  .chart-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .chart-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 3px 9px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    user-select: none;
+  }
+  .chart-legend-item.dimmed { opacity: 0.35; }
+  .chart-legend-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
   .tooltip-popup {
     display: none;
     position: fixed;
@@ -222,6 +285,7 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
   <section>
     <h2>Hoofdpoule</h2>
     {% if stages_available|length > 1 %}
+    <button type="button" class="chart-trigger" data-chart="hoofd">📈 Puntenverloop</button>
     <div class="day-toggle">
       <span class="day-toggle-label">Stand na:</span>
       {% for s in stages_available %}<button type="button" data-day="{{ s }}">Dag {{ s }}</button>{% endfor %}
@@ -239,7 +303,7 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
         </thead>
         <tbody>
           {% for p in hoofd_ranked %}
-          <tr data-total="{{ p.hoofdploeg.total }}"{% for s in stages_available %} data-cum{{ s }}="{{ p.hoofdploeg.by_stage[s|string].cumulative }}"{% if s in hoofd_rank_changes_by_stage %} data-delta{{ s }}="{{ hoofd_rank_changes_by_stage[s].get(p.name, 0) }}"{% endif %}{% endfor %}>
+          <tr data-name="{{ p.name }}" data-total="{{ p.hoofdploeg.total }}"{% for s in stages_available %} data-cum{{ s }}="{{ p.hoofdploeg.by_stage[s|string].cumulative }}"{% if s in hoofd_rank_changes_by_stage %} data-delta{{ s }}="{{ hoofd_rank_changes_by_stage[s].get(p.name, 0) }}"{% endif %}{% endfor %}>
             <td>{{ p.name }}{{ rank_badge(p.name, hoofd_rank_changes) }}</td>
             {% for s in stages_available %}
             {% set st = p.hoofdploeg.by_stage[s|string] %}
@@ -309,6 +373,9 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
 
   <section>
     <h2 class="pannen">Pannenkoekenpoule</h2>
+    {% if stages_available|length > 1 %}
+    <button type="button" class="chart-trigger" data-chart="pannen">📈 Puntenverloop</button>
+    {% endif %}
     <div class="card">
       <table id="pannen-table" data-latest-stage="{{ stages_available[-1] }}">
         <thead>
@@ -320,7 +387,7 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
         </thead>
         <tbody>
           {% for p in pannen_ranked %}
-          <tr data-total="{{ p.pannenkoeken.total }}"{% for s in stages_available %} data-cum{{ s }}="{{ p.pannenkoeken.by_stage[s|string].cumulative }}"{% if s in pannen_rank_changes_by_stage %} data-delta{{ s }}="{{ pannen_rank_changes_by_stage[s].get(p.name, 0) }}"{% endif %}{% endfor %}>
+          <tr data-name="{{ p.name }}" data-total="{{ p.pannenkoeken.total }}"{% for s in stages_available %} data-cum{{ s }}="{{ p.pannenkoeken.by_stage[s|string].cumulative }}"{% if s in pannen_rank_changes_by_stage %} data-delta{{ s }}="{{ pannen_rank_changes_by_stage[s].get(p.name, 0) }}"{% endif %}{% endfor %}>
             <td>{{ p.name }}{{ rank_badge(p.name, pannen_rank_changes) }}</td>
             {% for s in stages_available %}
             {% set st = p.pannenkoeken.by_stage[s|string] %}
@@ -404,6 +471,16 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
 <footer>Tourtoto 2026 &middot; Mitchel Castelyns</footer>
 
 <div id="tooltip-popup" class="tooltip-popup"></div>
+
+<div id="chart-modal" class="modal-overlay">
+  <div class="modal-box">
+    <button type="button" class="modal-close" aria-label="Sluiten">&times;</button>
+    <h3 id="chart-title"></h3>
+    <div id="chart-container"></div>
+    <div id="chart-legend" class="chart-legend"></div>
+  </div>
+</div>
+
 <script>
 (function () {
   var popup = document.getElementById('tooltip-popup');
@@ -532,6 +609,114 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
     rows.forEach(function (tr) {
       tr.style.display = tr.dataset.search.indexOf(q) === -1 ? 'none' : '';
     });
+  });
+})();
+
+(function () {
+  var overlay = document.getElementById('chart-modal');
+  var triggers = document.querySelectorAll('.chart-trigger');
+  if (!overlay || !triggers.length) return;
+  var titleEl = document.getElementById('chart-title');
+  var container = document.getElementById('chart-container');
+  var legend = document.getElementById('chart-legend');
+
+  function color(i, n) {
+    return 'hsl(' + Math.round((360 * i) / n) + ', 65%, 45%)';
+  }
+
+  function collectSeries(tableId) {
+    var table = document.getElementById(tableId);
+    var stages = Array.from(table.querySelectorAll('thead th[data-stage]')).map(function (th) {
+      return parseInt(th.dataset.stage, 10);
+    });
+    var series = Array.from(table.querySelectorAll('tbody tr')).map(function (tr) {
+      return {
+        name: tr.dataset.name,
+        values: stages.map(function (s) {
+          var raw = tr.dataset['cum' + s];
+          return raw !== undefined ? parseFloat(raw) : 0;
+        }),
+      };
+    });
+    return { stages: stages, series: series };
+  }
+
+  function buildSvg(data) {
+    var width = 780, height = 420;
+    var pad = { top: 16, right: 16, bottom: 30, left: 42 };
+    var innerW = width - pad.left - pad.right;
+    var innerH = height - pad.top - pad.bottom;
+    var n = data.stages.length;
+    var maxVal = Math.max.apply(null, [0].concat(data.series.reduce(function (acc, s) { return acc.concat(s.values); }, [])));
+
+    function x(i) { return pad.left + (n <= 1 ? innerW / 2 : (innerW * i) / (n - 1)); }
+    function y(v) { return pad.top + innerH - (maxVal === 0 ? 0 : (innerH * v) / maxVal); }
+
+    var parts = ['<svg viewBox="0 0 ' + width + ' ' + height + '" width="100%" style="max-width:100%;height:auto;">'];
+
+    var ticks = 5;
+    for (var t = 0; t <= ticks; t++) {
+      var val = Math.round((maxVal * t) / ticks);
+      var yy = y(val);
+      parts.push('<line x1="' + pad.left + '" y1="' + yy + '" x2="' + (width - pad.right) + '" y2="' + yy + '" stroke="#e4e2dc" stroke-width="1"/>');
+      parts.push('<text x="' + (pad.left - 8) + '" y="' + (yy + 4) + '" font-size="11" fill="#6b6b6b" text-anchor="end">' + val + '</text>');
+    }
+    data.stages.forEach(function (s, i) {
+      parts.push('<text x="' + x(i) + '" y="' + (height - pad.bottom + 18) + '" font-size="11" fill="#6b6b6b" text-anchor="middle">E' + s + '</text>');
+    });
+
+    data.series.forEach(function (s, idx) {
+      var c = color(idx, data.series.length);
+      var points = s.values.map(function (v, i) { return x(i) + ',' + y(v); }).join(' ');
+      parts.push('<polyline data-series="' + idx + '" points="' + points + '" fill="none" stroke="' + c + '" stroke-width="2" opacity="0.85"/>');
+      s.values.forEach(function (v, i) {
+        parts.push('<circle data-series="' + idx + '" cx="' + x(i) + '" cy="' + y(v) + '" r="2.5" fill="' + c + '"/>');
+      });
+    });
+
+    parts.push('</svg>');
+    return parts.join('');
+  }
+
+  function buildLegend(data) {
+    legend.innerHTML = '';
+    data.series.forEach(function (s, idx) {
+      var c = color(idx, data.series.length);
+      var item = document.createElement('span');
+      item.className = 'chart-legend-item';
+      item.innerHTML = '<span class="chart-legend-dot" style="background:' + c + '"></span>' + s.name;
+      item.addEventListener('click', function () {
+        var hidden = item.classList.toggle('dimmed');
+        container.querySelectorAll('[data-series="' + idx + '"]').forEach(function (el) {
+          el.style.display = hidden ? 'none' : '';
+        });
+      });
+      legend.appendChild(item);
+    });
+  }
+
+  function openChart(kind) {
+    var tableId = kind === 'hoofd' ? 'hoofd-table' : 'pannen-table';
+    titleEl.textContent = kind === 'hoofd'
+      ? 'Puntenverloop - Hoofdpoule'
+      : 'Puntenverloop - Pannenkoekenpoule (laagste wint)';
+    var data = collectSeries(tableId);
+    container.innerHTML = buildSvg(data);
+    buildLegend(data);
+    overlay.classList.add('open');
+  }
+
+  triggers.forEach(function (btn) {
+    btn.addEventListener('click', function () { openChart(btn.dataset.chart); });
+  });
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) overlay.classList.remove('open');
+  });
+  overlay.querySelector('.modal-close').addEventListener('click', function () {
+    overlay.classList.remove('open');
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') overlay.classList.remove('open');
   });
 })();
 </script>
