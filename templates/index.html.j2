@@ -99,9 +99,7 @@
   .muted-note { color: var(--muted); font-size: 0.85rem; font-style: italic; margin: 0; }
   .rider-name { cursor: help; border-bottom: 1px dotted var(--muted); }
   footer { text-align: center; color: var(--muted); font-size: 0.82rem; padding: 20px; }
-  th.latest-stage { background: var(--groen); color: #fff; }
-  td.latest-stage { background: #eaf5ec; }
-  td.latest-stage.joker-cell { background: var(--geel); }
+  th.total-sep, td.total-sep { border-left: 2px solid var(--ink); }
   td.record-cell { border: 2px solid var(--record); color: var(--record); font-weight: 700; }
   td.optimal-cell { border: 2px solid var(--optimal); color: var(--optimal); font-weight: 700; }
   td.record-cell.optimal-cell { border-style: double; border-width: 4px; }
@@ -233,8 +231,8 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
         <thead>
           <tr>
             <th>Naam</th>
-            {% for s in stages_available %}<th class="stage-cell {{ 'latest-stage' if s == stages_available[-1] else '' }}" data-stage="{{ s }}">E{{ s }}</th>{% endfor %}
-            <th>Totaal</th>
+            {% for s in stages_available %}<th class="stage-cell" data-stage="{{ s }}">E{{ s }}</th>{% endfor %}
+            <th class="total-sep">Totaal</th>
           </tr>
         </thead>
         <tbody>
@@ -245,13 +243,13 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
             {% set st = p.hoofdploeg.by_stage[s|string] %}
             {% set is_record = (p.name, s) in dagscore_cells %}
             {% set is_optimal = (p.name, s) in optimal_cells %}
-            <td class="stage-cell {{ 'joker-cell' if st.joker else '' }} {{ 'latest-stage' if s == stages_available[-1] else '' }} {{ 'record-cell' if is_record else '' }} {{ 'optimal-cell' if is_optimal else '' }}" data-stage="{{ s }}" data-tooltip="{{ st.tooltip }}{% if is_record %}
+            <td class="stage-cell {{ 'joker-cell' if st.joker else '' }} {{ 'record-cell' if is_record else '' }} {{ 'optimal-cell' if is_optimal else '' }}" data-stage="{{ s }}" data-tooltip="{{ st.tooltip }}{% if is_record %}
 
 Hoogste dagscore! ({{ dagscore_record }} punten){% endif %}{% if is_optimal %}
 
 Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{{ st.score }}</td>
             {% endfor %}
-            <td class="total total-cell">{{ p.hoofdploeg.total }}</td>
+            <td class="total total-cell total-sep">{{ p.hoofdploeg.total }}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -284,7 +282,7 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
           <table>
             <tbody>
               {% for row in rows %}
-              <tr><td class="rank-num">{{ row.rank }}</td><td {{ rider_attrs(row.rider) }}>{{ row.rider }}</td><td class="total">{{ row.points }}</td></tr>
+              <tr><td class="rank-num">{{ row.rank }}</td>{% if key == 'optimal_hoofdploeg' and row.points == 0 %}<td>-</td>{% else %}<td {{ rider_attrs(row.rider) }}>{{ row.rider }}</td>{% endif %}<td class="total">{{ row.points }}</td></tr>
               {% endfor %}
             </tbody>
           </table>
@@ -314,8 +312,8 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
         <thead>
           <tr>
             <th>Naam</th>
-            {% for s in stages_available %}<th class="stage-cell {{ 'latest-stage' if s == stages_available[-1] else '' }}" data-stage="{{ s }}">E{{ s }}</th>{% endfor %}
-            <th>Totaal</th>
+            {% for s in stages_available %}<th class="stage-cell" data-stage="{{ s }}">E{{ s }}</th>{% endfor %}
+            <th class="total-sep">Totaal</th>
           </tr>
         </thead>
         <tbody>
@@ -324,9 +322,9 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
             <td>{{ p.name }}{{ rank_badge(p.name, pannen_rank_changes) }}</td>
             {% for s in stages_available %}
             {% set st = p.pannenkoeken.by_stage[s|string] %}
-            <td class="stage-cell {{ 'latest-stage' if s == stages_available[-1] else '' }}" data-stage="{{ s }}" data-tooltip="{{ st.tooltip }}">{{ st.score }}</td>
+            <td class="stage-cell" data-stage="{{ s }}" data-tooltip="{{ st.tooltip }}">{{ st.score }}</td>
             {% endfor %}
-            <td class="total total-cell">{{ p.pannenkoeken.total }}</td>
+            <td class="total total-cell total-sep">{{ p.pannenkoeken.total }}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -459,12 +457,10 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
   function applyDay(tableId, day, ascending) {
     var table = document.getElementById(tableId);
     if (!table) return;
-    var highlightStage = day === 'latest' ? table.dataset.latestStage : String(day);
 
     table.querySelectorAll('[data-stage]').forEach(function (el) {
       var visible = day === 'latest' || parseInt(el.dataset.stage, 10) <= day;
       el.style.display = visible ? '' : 'none';
-      el.classList.toggle('latest-stage', el.dataset.stage === highlightStage);
     });
 
     var tbody = table.querySelector('tbody');
