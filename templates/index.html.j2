@@ -303,7 +303,7 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
         </thead>
         <tbody>
           {% for p in hoofd_ranked %}
-          <tr data-name="{{ p.name }}" data-total="{{ p.hoofdploeg.total }}"{% for s in stages_available %} data-cum{{ s }}="{{ p.hoofdploeg.by_stage[s|string].cumulative }}"{% if s in hoofd_rank_changes_by_stage %} data-delta{{ s }}="{{ hoofd_rank_changes_by_stage[s].get(p.name, 0) }}"{% endif %}{% endfor %}>
+          <tr data-name="{{ p.name }}" data-total="{{ p.hoofdploeg.total }}" data-joker-stage="{{ p.joker_stage or '' }}"{% for s in stages_available %} data-cum{{ s }}="{{ p.hoofdploeg.by_stage[s|string].cumulative }}"{% if s in hoofd_rank_changes_by_stage %} data-delta{{ s }}="{{ hoofd_rank_changes_by_stage[s].get(p.name, 0) }}"{% endif %}{% endfor %}>
             <td>{{ p.name }}{{ rank_badge(p.name, hoofd_rank_changes) }}</td>
             {% for s in stages_available %}
             {% set st = p.hoofdploeg.by_stage[s|string] %}
@@ -476,6 +476,7 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
   <div class="modal-box">
     <button type="button" class="modal-close" aria-label="Sluiten">&times;</button>
     <h3 id="chart-title"></h3>
+    <p id="chart-caption" class="muted-note" style="margin-bottom:10px;"></p>
     <div id="chart-container"></div>
     <div id="chart-legend" class="chart-legend"></div>
   </div>
@@ -617,6 +618,7 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
   var triggers = document.querySelectorAll('.chart-trigger');
   if (!overlay || !triggers.length) return;
   var titleEl = document.getElementById('chart-title');
+  var captionEl = document.getElementById('chart-caption');
   var container = document.getElementById('chart-container');
   var legend = document.getElementById('chart-legend');
 
@@ -632,6 +634,7 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
     var series = Array.from(table.querySelectorAll('tbody tr')).map(function (tr) {
       return {
         name: tr.dataset.name,
+        jokerStage: tr.dataset.jokerStage ? parseInt(tr.dataset.jokerStage, 10) : null,
         values: stages.map(function (s) {
           var raw = tr.dataset['cum' + s];
           return raw !== undefined ? parseFloat(raw) : 0;
@@ -670,6 +673,9 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
       var points = s.values.map(function (v, i) { return x(i) + ',' + y(v); }).join(' ');
       parts.push('<polyline data-series="' + idx + '" points="' + points + '" fill="none" stroke="' + c + '" stroke-width="2" opacity="0.85"/>');
       s.values.forEach(function (v, i) {
+        if (s.jokerStage === data.stages[i]) {
+          parts.push('<circle data-series="' + idx + '" cx="' + x(i) + '" cy="' + y(v) + '" r="6" fill="none" stroke="' + c + '" stroke-width="2"/>');
+        }
         parts.push('<circle data-series="' + idx + '" cx="' + x(i) + '" cy="' + y(v) + '" r="2.5" fill="' + c + '"/>');
       });
     });
@@ -700,6 +706,7 @@ Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{
     titleEl.textContent = kind === 'hoofd'
       ? 'Puntenverloop - Hoofdpoule'
       : 'Puntenverloop - Pannenkoekenpoule (laagste wint)';
+    captionEl.textContent = kind === 'hoofd' ? 'Open stip = jokeretappe' : '';
     var data = collectSeries(tableId);
     container.innerHTML = buildSvg(data);
     buildLegend(data);
