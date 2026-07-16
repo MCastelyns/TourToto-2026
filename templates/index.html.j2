@@ -94,6 +94,7 @@
   .bonus-answers { margin-top: 10px; font-size: 0.9rem; color: #444; }
   .bonus-answers div { margin-top: 3px; }
   .unresolved { color: var(--bol); text-decoration: underline dotted; cursor: help; }
+  .rank-col { width: 2em; text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
   .stage-cell { width: 3em; text-align: center; }
   td.stage-cell { cursor: help; }
   .joker-cell { background: var(--geel); font-weight: 700; border-radius: 5px; }
@@ -296,6 +297,7 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
       <table id="hoofd-table" data-latest-stage="{{ stages_available[-1] }}">
         <thead>
           <tr>
+            <th class="rank-col">#</th>
             <th>Naam</th>
             {% for s in stages_available %}<th class="stage-cell" data-stage="{{ s }}">E{{ s }}</th>{% endfor %}
             <th class="total-sep">Totaal</th>
@@ -304,6 +306,7 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
         <tbody>
           {% for p in hoofd_ranked %}
           <tr data-name="{{ p.name }}" data-total="{{ p.hoofdploeg.total }}" data-joker-stage="{{ p.joker_stage or '' }}"{% for s in stages_available %} data-cum{{ s }}="{{ p.hoofdploeg.by_stage[s|string].cumulative }}"{% if s in hoofd_rank_changes_by_stage %} data-delta{{ s }}="{{ hoofd_rank_changes_by_stage[s].get(p.name, 0) }}"{% endif %}{% endfor %}>
+            <td class="rank-col">{{ p.rank_hoofd }}</td>
             <td>{{ p.name }}{{ rank_badge(p.name, hoofd_rank_changes) }}</td>
             {% for s in stages_available %}
             {% set st = p.hoofdploeg.by_stage[s|string] %}
@@ -380,6 +383,7 @@ Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
       <table id="pannen-table" data-latest-stage="{{ stages_available[-1] }}">
         <thead>
           <tr>
+            <th class="rank-col">#</th>
             <th>Naam</th>
             {% for s in stages_available %}<th class="stage-cell" data-stage="{{ s }}">E{{ s }}</th>{% endfor %}
             <th class="total-sep">Totaal</th>
@@ -388,6 +392,7 @@ Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
         <tbody>
           {% for p in pannen_ranked %}
           <tr data-name="{{ p.name }}" data-total="{{ p.pannenkoeken.total }}"{% for s in stages_available %} data-cum{{ s }}="{{ p.pannenkoeken.by_stage[s|string].cumulative }}"{% if s in pannen_rank_changes_by_stage %} data-delta{{ s }}="{{ pannen_rank_changes_by_stage[s].get(p.name, 0) }}"{% endif %}{% endfor %}>
+            <td class="rank-col">{{ p.rank_pannen }}</td>
             <td>{{ p.name }}{{ rank_badge(p.name, pannen_rank_changes) }}</td>
             {% for s in stages_available %}
             {% set st = p.pannenkoeken.by_stage[s|string] %}
@@ -574,7 +579,20 @@ Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
     rows.sort(function (a, b) {
       return ascending ? valueFor(a) - valueFor(b) : valueFor(b) - valueFor(a);
     });
-    rows.forEach(function (tr) { tbody.appendChild(tr); });
+
+    // Re-number after sorting, mirroring assign_ranks() in generate_site.py:
+    // an equal total shares a rank and the next distinct total skips ahead.
+    var previousValue = null;
+    var previousRank = 0;
+    rows.forEach(function (tr, i) {
+      var value = valueFor(tr);
+      var rank = (previousValue !== null && value === previousValue) ? previousRank : i + 1;
+      previousValue = value;
+      previousRank = rank;
+      var rankCell = tr.querySelector('.rank-col');
+      if (rankCell) rankCell.textContent = rank;
+      tbody.appendChild(tr);
+    });
   }
 
   buttons.forEach(function (btn) {

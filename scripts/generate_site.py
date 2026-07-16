@@ -169,6 +169,21 @@ def find_optimal_matches(participants, stage_breakdowns):
     return cells
 
 
+def assign_ranks(sorted_participants, team_key, rank_field):
+    """Numbers an already-sorted standings list in place. Uses standard
+    competition ranking: an equal total shares a rank and the next distinct
+    total skips ahead (1, 2, 2, 4). Plain 1..N would claim a leader among
+    people on identical scores - which the pannenkoekenpoule is full of, where
+    most sit on 0."""
+    previous_total = None
+    previous_rank = 0
+    for i, p in enumerate(sorted_participants):
+        total = p[team_key]["total"]
+        rank = previous_rank if total == previous_total else i + 1
+        p[rank_field] = rank
+        previous_total, previous_rank = total, rank
+
+
 def main():
     if not STANDINGS_PATH.exists():
         raise SystemExit("data/computed/standings.json not found - run scoring.py first")
@@ -186,6 +201,8 @@ def main():
 
     hoofd_ranked = sorted(standings["participants"], key=lambda p: -p["hoofdploeg"]["total"])
     pannen_ranked = sorted(pannen_participants, key=lambda p: p["pannenkoeken"]["total"])
+    assign_ranks(hoofd_ranked, "hoofdploeg", "rank_hoofd")
+    assign_ranks(pannen_ranked, "pannenkoeken", "rank_pannen")
 
     stages_available = standings["stages_available"]
 
