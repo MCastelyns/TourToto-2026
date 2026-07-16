@@ -41,7 +41,9 @@ PRIZES = {
             {"label": "€20", "tooltip": "2e prijs pannenkoekenpoule"},
             {"label": "€10", "tooltip": "3e prijs pannenkoekenpoule"},
         ],
-        "second_last": {"label": "€10", "tooltip": "Voorlaatste plaats: verrassingspakket t.w.v. €10"},
+        # Bracketed to set it apart from the cash prizes - it's a package worth
+        # this much, not the amount itself.
+        "second_last": {"label": "(€10)", "tooltip": "Voorlaatste plaats: verrassingspakket t.w.v. €10"},
     },
     "dagscore": {"label": "€10", "tooltip": "Prijs voor de hoogste dagscore"},
 }
