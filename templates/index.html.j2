@@ -322,7 +322,7 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
             {% set is_optimal = (p.name, s) in optimal_cells %}
             <td class="stage-cell {{ 'joker-cell' if st.joker else '' }} {{ 'record-cell' if is_record else '' }} {{ 'optimal-cell' if is_optimal else '' }}" data-stage="{{ s }}" data-tooltip="{{ st.tooltip }}{% if is_record %}
 
-Hoogste dagscore! ({{ dagscore_record }} punten){% endif %}{% if is_optimal %}
+Hoogste dagscore! ({{ dagscore_record }} punten) - {{ prizes.dagscore.label }}{% endif %}{% if is_optimal %}
 
 Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
             {% endfor %}
@@ -603,20 +603,22 @@ Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
       return rank;
     });
 
-    // Prizes follow the spot, so they move with the standings - mirrors
-    // assign_prizes() in generate_site.py.
+    // Prizes hang on the spot, so they move with the standings - mirrors
+    // assign_prizes() in generate_site.py (by row, so each shows once).
     var prizeConfig = JSON.parse(table.dataset.prizes || '{}');
-    var secondLastRank = ranks.length >= 2 ? ranks[ranks.length - 2] : null;
+    var bySpot = prizeConfig.by_spot || [];
+    var prizeForRow = rows.map(function (tr, i) { return bySpot[i] || null; });
+    if (rows.length >= 2 && !prizeForRow[rows.length - 2]) {
+      prizeForRow[rows.length - 2] = prizeConfig.second_last;
+    }
 
     rows.forEach(function (tr, i) {
-      var rank = ranks[i];
       var rankCell = tr.querySelector('.rank-col');
-      if (rankCell) rankCell.textContent = rank;
+      if (rankCell) rankCell.textContent = ranks[i];
 
       var prizeCell = tr.querySelector('.prize-col');
       if (prizeCell) {
-        var prize = (prizeConfig.by_rank || {})[rank];
-        if (!prize && rank === secondLastRank) prize = prizeConfig.second_last;
+        var prize = prizeForRow[i];
         prizeCell.textContent = prize ? prize.label : '';
         if (prize) prizeCell.setAttribute('data-tooltip', prize.tooltip);
         else prizeCell.removeAttribute('data-tooltip');

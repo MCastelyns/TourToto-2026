@@ -250,7 +250,7 @@
   <p>
     12 van de 21 etappes verwerkt
     
-    &middot; laatst bijgewerkt: 16-07-2026 21:34
+    &middot; laatst bijgewerkt: 16-07-2026 21:41
   </p>
 </header>
 
@@ -283,7 +283,7 @@
     </div>
     
     <div class="card">
-      <table id="hoofd-table" data-latest-stage="12" data-prizes='{"by_rank": {"1": {"label": "\u20ac60", "tooltip": "1e prijs hoofdpoule"}, "2": {"label": "\u20ac40", "tooltip": "2e prijs hoofdpoule"}, "3": {"label": "\u20ac20", "tooltip": "3e prijs hoofdpoule"}}, "second_last": {"label": "\u20ac10", "tooltip": "Voorlaatste plaats"}}'>
+      <table id="hoofd-table" data-latest-stage="12" data-prizes='{"by_spot": [{"label": "\u20ac60", "tooltip": "1e prijs hoofdpoule"}, {"label": "\u20ac40", "tooltip": "2e prijs hoofdpoule"}, {"label": "\u20ac20", "tooltip": "3e prijs hoofdpoule"}], "second_last": {"label": "\u20ac10", "tooltip": "Voorlaatste plaats"}}'>
         <thead>
           <tr>
             <th class="rank-col">#</th>
@@ -1153,7 +1153,7 @@ Pogacar: 8
 Vingegaard: 6
 Totaal: 42
 
-Hoogste dagscore! (42 punten)">42</td>
+Hoogste dagscore! (42 punten) - €10">42</td>
             
             
             
@@ -5931,7 +5931,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
     <button type="button" class="chart-trigger" data-chart="pannen">Puntenverloop</button>
     
     <div class="card">
-      <table id="pannen-table" data-latest-stage="12" data-prizes='{"by_rank": {"1": {"label": "\u20ac30", "tooltip": "1e prijs pannenkoekenpoule"}, "2": {"label": "\u20ac20", "tooltip": "2e prijs pannenkoekenpoule"}, "3": {"label": "\u20ac10", "tooltip": "3e prijs pannenkoekenpoule"}}, "second_last": {"label": "\u20ac10", "tooltip": "Voorlaatste plaats: verrassingspakket t.w.v. \u20ac10"}}'>
+      <table id="pannen-table" data-latest-stage="12" data-prizes='{"by_spot": [{"label": "\u20ac30", "tooltip": "1e prijs pannenkoekenpoule"}, {"label": "\u20ac20", "tooltip": "2e prijs pannenkoekenpoule"}, {"label": "\u20ac10", "tooltip": "3e prijs pannenkoekenpoule"}], "second_last": {"label": "\u20ac10", "tooltip": "Voorlaatste plaats: verrassingspakket t.w.v. \u20ac10"}}'>
         <thead>
           <tr>
             <th class="rank-col">#</th>
@@ -6028,7 +6028,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">0</td>
-            <td class="prize-col" data-tooltip="1e prijs pannenkoekenpoule">€30</td>
+            <td class="prize-col" data-tooltip="2e prijs pannenkoekenpoule">€20</td>
           </tr>
           
           <tr data-name="Casper" data-total="1" data-cum1="0" data-cum2="0" data-delta2="0" data-cum3="0" data-delta3="1" data-cum4="0" data-delta4="0" data-cum5="0" data-delta5="0" data-cum6="0" data-delta6="0" data-cum7="1" data-delta7="-3" data-cum8="1" data-delta8="0" data-cum9="1" data-delta9="1" data-cum10="1" data-delta10="0" data-cum11="1" data-delta11="0" data-cum12="1" data-delta12="0">
@@ -6118,7 +6118,7 @@ Totaal: 1">1</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">1</td>
-            <td class="prize-col" data-tooltip="3e prijs pannenkoekenpoule">€10</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Luuk" data-total="1" data-cum1="0" data-cum2="1" data-delta2="-6" data-cum3="1" data-delta3="4" data-cum4="1" data-delta4="3" data-cum5="1" data-delta5="1" data-cum6="1" data-delta6="0" data-cum7="1" data-delta7="2" data-cum8="1" data-delta8="0" data-cum9="1" data-delta9="1" data-cum10="1" data-delta10="0" data-cum11="1" data-delta11="0" data-cum12="1" data-delta12="0">
@@ -6163,7 +6163,7 @@ Totaal: 1">1</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">1</td>
-            <td class="prize-col" data-tooltip="3e prijs pannenkoekenpoule">€10</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Wim" data-total="3" data-cum1="0" data-cum2="0" data-delta2="6" data-cum3="0" data-delta3="5" data-cum4="0" data-delta4="1" data-cum5="0" data-delta5="2" data-cum6="0" data-delta6="0" data-cum7="0" data-delta7="3" data-cum8="0" data-delta8="0" data-cum9="3" data-delta9="-3" data-cum10="3" data-delta10="0" data-cum11="3" data-delta11="0" data-cum12="3" data-delta12="0">
@@ -9084,20 +9084,22 @@ Mitchel">2/21</td>
       return rank;
     });
 
-    // Prizes follow the spot, so they move with the standings - mirrors
-    // assign_prizes() in generate_site.py.
+    // Prizes hang on the spot, so they move with the standings - mirrors
+    // assign_prizes() in generate_site.py (by row, so each shows once).
     var prizeConfig = JSON.parse(table.dataset.prizes || '{}');
-    var secondLastRank = ranks.length >= 2 ? ranks[ranks.length - 2] : null;
+    var bySpot = prizeConfig.by_spot || [];
+    var prizeForRow = rows.map(function (tr, i) { return bySpot[i] || null; });
+    if (rows.length >= 2 && !prizeForRow[rows.length - 2]) {
+      prizeForRow[rows.length - 2] = prizeConfig.second_last;
+    }
 
     rows.forEach(function (tr, i) {
-      var rank = ranks[i];
       var rankCell = tr.querySelector('.rank-col');
-      if (rankCell) rankCell.textContent = rank;
+      if (rankCell) rankCell.textContent = ranks[i];
 
       var prizeCell = tr.querySelector('.prize-col');
       if (prizeCell) {
-        var prize = (prizeConfig.by_rank || {})[rank];
-        if (!prize && rank === secondLastRank) prize = prizeConfig.second_last;
+        var prize = prizeForRow[i];
         prizeCell.textContent = prize ? prize.label : '';
         if (prize) prizeCell.setAttribute('data-tooltip', prize.tooltip);
         else prizeCell.removeAttribute('data-tooltip');

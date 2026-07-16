@@ -28,21 +28,22 @@ TOTAL_STAGES = 21
 # so these are worth re-checking each edition.
 PRIZES = {
     "hoofdploeg": {
-        "by_rank": {
-            1: {"label": "€60", "tooltip": "1e prijs hoofdpoule"},
-            2: {"label": "€40", "tooltip": "2e prijs hoofdpoule"},
-            3: {"label": "€20", "tooltip": "3e prijs hoofdpoule"},
-        },
+        "by_spot": [
+            {"label": "€60", "tooltip": "1e prijs hoofdpoule"},
+            {"label": "€40", "tooltip": "2e prijs hoofdpoule"},
+            {"label": "€20", "tooltip": "3e prijs hoofdpoule"},
+        ],
         "second_last": {"label": "€10", "tooltip": "Voorlaatste plaats"},
     },
     "pannenkoeken": {
-        "by_rank": {
-            1: {"label": "€30", "tooltip": "1e prijs pannenkoekenpoule"},
-            2: {"label": "€20", "tooltip": "2e prijs pannenkoekenpoule"},
-            3: {"label": "€10", "tooltip": "3e prijs pannenkoekenpoule"},
-        },
+        "by_spot": [
+            {"label": "€30", "tooltip": "1e prijs pannenkoekenpoule"},
+            {"label": "€20", "tooltip": "2e prijs pannenkoekenpoule"},
+            {"label": "€10", "tooltip": "3e prijs pannenkoekenpoule"},
+        ],
         "second_last": {"label": "€10", "tooltip": "Voorlaatste plaats: verrassingspakket t.w.v. €10"},
     },
+    "dagscore": {"label": "€10", "tooltip": "Prijs voor de hoogste dagscore"},
 }
 
 
@@ -207,20 +208,24 @@ def assign_ranks(sorted_participants, team_key, rank_field):
         previous_total, previous_rank = total, rank
 
 
-def assign_prizes(sorted_participants, rank_field, prize_field, prize_config):
-    """Tags each participant with the prize for the spot they currently hold.
-    Prizes attach to a RANK, not a row, so tied participants both show it -
-    honest, since a tie genuinely leaves it unsettled. A top-3 prize wins over
-    the second-last one if a small field makes those the same rank. The field
-    is passed in because a participant sits in both pools at once and would
-    otherwise have one pool's prize overwrite the other's."""
-    second_last_rank = sorted_participants[-2][rank_field] if len(sorted_participants) >= 2 else None
+def assign_prizes(sorted_participants, prize_field, prize_config):
+    """Hangs each prize on a finishing SPOT by row: top row gets the 1st
+    prize, next the 2nd, and so on, plus the voorlaatste-plaats prize on the
+    second-to-last row.
+
+    By position rather than by rank on purpose, so every prize shows exactly
+    once. Going by rank meant a three-way tie printed the same prize three
+    times while the prize above it silently vanished. Ties stay visible in the
+    # column; who actually takes which prize is the group's call. The field
+    name is passed in because a participant sits in both pools at once and
+    would otherwise have one pool's prize overwrite the other's."""
     for p in sorted_participants:
-        rank = p[rank_field]
-        prize = prize_config["by_rank"].get(rank)
-        if prize is None and rank == second_last_rank:
-            prize = prize_config["second_last"]
-        p[prize_field] = prize
+        p[prize_field] = None
+    for i, prize in enumerate(prize_config["by_spot"]):
+        if i < len(sorted_participants):
+            sorted_participants[i][prize_field] = prize
+    if len(sorted_participants) >= 2 and sorted_participants[-2][prize_field] is None:
+        sorted_participants[-2][prize_field] = prize_config["second_last"]
 
 
 def main():
@@ -242,8 +247,8 @@ def main():
     pannen_ranked = sorted(pannen_participants, key=lambda p: p["pannenkoeken"]["total"])
     assign_ranks(hoofd_ranked, "hoofdploeg", "rank_hoofd")
     assign_ranks(pannen_ranked, "pannenkoeken", "rank_pannen")
-    assign_prizes(hoofd_ranked, "rank_hoofd", "prize_hoofd", PRIZES["hoofdploeg"])
-    assign_prizes(pannen_ranked, "rank_pannen", "prize_pannen", PRIZES["pannenkoeken"])
+    assign_prizes(hoofd_ranked, "prize_hoofd", PRIZES["hoofdploeg"])
+    assign_prizes(pannen_ranked, "prize_pannen", PRIZES["pannenkoeken"])
 
     stages_available = standings["stages_available"]
 
