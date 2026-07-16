@@ -95,6 +95,9 @@
   .bonus-answers div { margin-top: 3px; }
   .unresolved { color: var(--bol); text-decoration: underline dotted; cursor: help; }
   .rank-col { width: 2em; text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .prize-col { text-align: right; white-space: nowrap; }
+  td.prize-col { color: var(--optimal); font-weight: 700; cursor: help; }
+  td.prize-col:empty { cursor: default; }
   .stage-cell { width: 3em; text-align: center; }
   td.stage-cell { cursor: help; }
   .joker-cell { background: var(--geel); font-weight: 700; border-radius: 5px; }
@@ -247,7 +250,7 @@
   <p>
     12 van de 21 etappes verwerkt
     
-    &middot; laatst bijgewerkt: 16-07-2026 21:24
+    &middot; laatst bijgewerkt: 16-07-2026 21:34
   </p>
 </header>
 
@@ -257,6 +260,8 @@
 </div>
 
 <main>
+
+
 
 
 
@@ -278,13 +283,14 @@
     </div>
     
     <div class="card">
-      <table id="hoofd-table" data-latest-stage="12">
+      <table id="hoofd-table" data-latest-stage="12" data-prizes='{"by_rank": {"1": {"label": "\u20ac60", "tooltip": "1e prijs hoofdpoule"}, "2": {"label": "\u20ac40", "tooltip": "2e prijs hoofdpoule"}, "3": {"label": "\u20ac20", "tooltip": "3e prijs hoofdpoule"}}, "second_last": {"label": "\u20ac10", "tooltip": "Voorlaatste plaats"}}'>
         <thead>
           <tr>
             <th class="rank-col">#</th>
             <th>Naam</th>
             <th class="stage-cell" data-stage="1">E1</th><th class="stage-cell" data-stage="2">E2</th><th class="stage-cell" data-stage="3">E3</th><th class="stage-cell" data-stage="4">E4</th><th class="stage-cell" data-stage="5">E5</th><th class="stage-cell" data-stage="6">E6</th><th class="stage-cell" data-stage="7">E7</th><th class="stage-cell" data-stage="8">E8</th><th class="stage-cell" data-stage="9">E9</th><th class="stage-cell" data-stage="10">E10</th><th class="stage-cell" data-stage="11">E11</th><th class="stage-cell" data-stage="12">E12</th>
             <th class="total-sep">Totaal</th>
+            <th class="prize-col">Prijs</th>
           </tr>
         </thead>
         <tbody>
@@ -399,6 +405,7 @@ Totaal: 39
 Optimale hoofdploeg">39</td>
             
             <td class="total total-cell total-sep">370</td>
+            <td class="prize-col" data-tooltip="1e prijs hoofdpoule">€60</td>
           </tr>
           
           <tr data-name="Ingrid" data-total="368" data-joker-stage="1" data-cum1="52" data-cum2="84" data-delta2="0" data-cum3="117" data-delta3="0" data-cum4="123" data-delta4="-2" data-cum5="146" data-delta5="1" data-cum6="183" data-delta6="-1" data-cum7="217" data-delta7="2" data-cum8="248" data-delta8="0" data-cum9="264" data-delta9="-1" data-cum10="299" data-delta10="0" data-cum11="335" data-delta11="1" data-cum12="368" data-delta12="-1">
@@ -510,6 +517,7 @@ Artz: 1
 Totaal: 33">33</td>
             
             <td class="total total-cell total-sep">368</td>
+            <td class="prize-col" data-tooltip="2e prijs hoofdpoule">€40</td>
           </tr>
           
           <tr data-name="Theo" data-total="357" data-joker-stage="6" data-cum1="26" data-cum2="58" data-delta2="8" data-cum3="91" data-delta3="-4" data-cum4="97" data-delta4="-3" data-cum5="118" data-delta5="4" data-cum6="190" data-delta6="10" data-cum7="214" data-delta7="-1" data-cum8="248" data-delta8="0" data-cum9="267" data-delta9="1" data-cum10="301" data-delta10="0" data-cum11="324" data-delta11="-2" data-cum12="357" data-delta12="0">
@@ -615,6 +623,7 @@ Vingegaard: 6
 Totaal: 33">33</td>
             
             <td class="total total-cell total-sep">357</td>
+            <td class="prize-col" data-tooltip="3e prijs hoofdpoule">€20</td>
           </tr>
           
           <tr data-name="Mirjam" data-total="343" data-joker-stage="1" data-cum1="52" data-cum2="78" data-delta2="0" data-cum3="111" data-delta3="0" data-cum4="135" data-delta4="1" data-cum5="151" data-delta5="0" data-cum6="187" data-delta6="-1" data-cum7="212" data-delta7="-1" data-cum8="236" data-delta8="-1" data-cum9="258" data-delta9="1" data-cum10="289" data-delta10="0" data-cum11="315" data-delta11="-1" data-cum12="343" data-delta12="0">
@@ -721,6 +730,7 @@ Pedersen: 5
 Totaal: 28">28</td>
             
             <td class="total total-cell total-sep">343</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Sepp" data-total="343" data-joker-stage="2" data-cum1="26" data-cum2="78" data-delta2="12" data-cum3="111" data-delta3="0" data-cum4="126" data-delta4="1" data-cum5="143" data-delta5="-1" data-cum6="176" data-delta6="-1" data-cum7="206" data-delta7="0" data-cum8="239" data-delta8="1" data-cum9="258" data-delta9="-1" data-cum10="287" data-delta10="0" data-cum11="310" data-delta11="-1" data-cum12="343" data-delta12="0">
@@ -825,6 +835,7 @@ Vingegaard: 6
 Totaal: 33">33</td>
             
             <td class="total total-cell total-sep">343</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Mitchel" data-total="338" data-joker-stage="15" data-cum1="26" data-cum2="58" data-delta2="7" data-cum3="91" data-delta3="-4" data-cum4="97" data-delta4="-3" data-cum5="115" data-delta5="0" data-cum6="151" data-delta6="0" data-cum7="190" data-delta7="7" data-cum8="223" data-delta8="2" data-cum9="238" data-delta9="-1" data-cum10="272" data-delta10="0" data-cum11="305" data-delta11="-1" data-cum12="338" data-delta12="1">
@@ -933,6 +944,7 @@ Vingegaard: 6
 Totaal: 33">33</td>
             
             <td class="total total-cell total-sep">338</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Willem" data-total="338" data-joker-stage="14" data-cum1="29" data-cum2="55" data-delta2="-5" data-cum3="95" data-delta3="6" data-cum4="116" data-delta4="1" data-cum5="137" data-delta5="0" data-cum6="175" data-delta6="-1" data-cum7="195" data-delta7="0" data-cum8="223" data-delta8="-1" data-cum9="244" data-delta9="1" data-cum10="279" data-delta10="0" data-cum11="309" data-delta11="-1" data-cum12="338" data-delta12="-1">
@@ -1045,6 +1057,7 @@ Vingegaard: 6
 Totaal: 29">29</td>
             
             <td class="total total-cell total-sep">338</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Anita" data-total="326" data-joker-stage="20" data-cum1="26" data-cum2="52" data-delta2="-5" data-cum3="85" data-delta3="0" data-cum4="91" data-delta4="-2" data-cum5="111" data-delta5="0" data-cum6="144" data-delta6="-1" data-cum7="181" data-delta7="5" data-cum8="210" data-delta8="1" data-cum9="224" data-delta9="-1" data-cum10="252" data-delta10="-1" data-cum11="294" data-delta11="5" data-cum12="326" data-delta12="0">
@@ -1152,6 +1165,7 @@ Vingegaard: 6
 Totaal: 32">32</td>
             
             <td class="total total-cell total-sep">326</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Sharon" data-total="325" data-joker-stage="20" data-cum1="28" data-cum2="54" data-delta2="-5" data-cum3="87" data-delta3="0" data-cum4="102" data-delta4="3" data-cum5="122" data-delta5="2" data-cum6="156" data-delta6="-2" data-cum7="185" data-delta7="-1" data-cum8="217" data-delta8="2" data-cum9="233" data-delta9="-1" data-cum10="263" data-delta10="0" data-cum11="293" data-delta11="0" data-cum12="325" data-delta12="1">
@@ -1258,6 +1272,7 @@ Vingegaard: 6
 Totaal: 32">32</td>
             
             <td class="total total-cell total-sep">325</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Ferdi" data-total="323" data-joker-stage="20" data-cum1="26" data-cum2="58" data-delta2="5" data-cum3="91" data-delta3="-4" data-cum4="102" data-delta4="1" data-cum5="119" data-delta5="-1" data-cum6="155" data-delta6="-2" data-cum7="185" data-delta7="2" data-cum8="218" data-delta8="1" data-cum9="233" data-delta9="-1" data-cum10="267" data-delta10="0" data-cum11="290" data-delta11="-2" data-cum12="323" data-delta12="1">
@@ -1364,6 +1379,7 @@ Vingegaard: 6
 Totaal: 33">33</td>
             
             <td class="total total-cell total-sep">323</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Mark" data-total="322" data-joker-stage="20" data-cum1="26" data-cum2="52" data-delta2="-3" data-cum3="85" data-delta3="0" data-cum4="109" data-delta4="11" data-cum5="125" data-delta5="0" data-cum6="161" data-delta6="-1" data-cum7="191" data-delta7="0" data-cum8="215" data-delta8="-4" data-cum9="237" data-delta9="2" data-cum10="268" data-delta10="0" data-cum11="294" data-delta11="-1" data-cum12="322" data-delta12="-2">
@@ -1471,6 +1487,7 @@ Pedersen: 5
 Totaal: 28">28</td>
             
             <td class="total total-cell total-sep">322</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Kevin" data-total="311" data-joker-stage="20" data-cum1="26" data-cum2="52" data-delta2="-3" data-cum3="85" data-delta3="0" data-cum4="98" data-delta4="3" data-cum5="123" data-delta5="6" data-cum6="156" data-delta6="-3" data-cum7="176" data-delta7="-6" data-cum8="205" data-delta8="2" data-cum9="219" data-delta9="-1" data-cum10="247" data-delta10="-2" data-cum11="279" data-delta11="3" data-cum12="311" data-delta12="1">
@@ -1573,6 +1590,7 @@ Vingegaard: 6
 Totaal: 32">32</td>
             
             <td class="total total-cell total-sep">311</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Hans" data-total="307" data-joker-stage="15" data-cum1="29" data-cum2="55" data-delta2="-5" data-cum3="92" data-delta3="3" data-cum4="98" data-delta4="-4" data-cum5="117" data-delta5="-1" data-cum6="157" data-delta6="4" data-cum7="185" data-delta7="-2" data-cum8="208" data-delta8="-2" data-cum9="222" data-delta9="-1" data-cum10="257" data-delta10="2" data-cum11="280" data-delta11="-1" data-cum12="307" data-delta12="-1">
@@ -1678,6 +1696,7 @@ Kanter: 4
 Totaal: 27">27</td>
             
             <td class="total total-cell total-sep">307</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Ger" data-total="299" data-joker-stage="20" data-cum1="29" data-cum2="61" data-delta2="0" data-cum3="98" data-delta3="0" data-cum4="104" data-delta4="-3" data-cum5="113" data-delta5="-8" data-cum6="154" data-delta6="2" data-cum7="178" data-delta7="0" data-cum8="199" data-delta8="-2" data-cum9="213" data-delta9="-1" data-cum10="253" data-delta10="4" data-cum11="276" data-delta11="-2" data-cum12="299" data-delta12="0">
@@ -1783,6 +1802,7 @@ Vingegaard: 6
 Totaal: 23">23</td>
             
             <td class="total total-cell total-sep">299</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Elise" data-total="295" data-joker-stage="6" data-cum1="18" data-cum2="43" data-delta2="1" data-cum3="67" data-delta3="0" data-cum4="76" data-delta4="-1" data-cum5="92" data-delta5="-1" data-cum6="148" data-delta6="4" data-cum7="174" data-delta7="-1" data-cum8="203" data-delta8="2" data-cum9="214" data-delta9="-1" data-cum10="245" data-delta10="-2" data-cum11="265" data-delta11="1" data-cum12="295" data-delta12="1">
@@ -1885,6 +1905,7 @@ Evenepoel: 3
 Totaal: 30">30</td>
             
             <td class="total total-cell total-sep">295</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Casper" data-total="293" data-joker-stage="20" data-cum1="29" data-cum2="55" data-delta2="-6" data-cum3="92" data-delta3="3" data-cum4="107" data-delta4="0" data-cum5="116" data-delta5="-7" data-cum6="154" data-delta6="1" data-cum7="177" data-delta7="-2" data-cum8="198" data-delta8="-3" data-cum9="212" data-delta9="0" data-cum10="247" data-delta10="2" data-cum11="270" data-delta11="0" data-cum12="293" data-delta12="-1">
@@ -1987,6 +2008,7 @@ Vingegaard: 6
 Totaal: 23">23</td>
             
             <td class="total total-cell total-sep">293</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Luuk" data-total="286" data-joker-stage="5" data-cum1="11" data-cum2="25" data-delta2="0" data-cum3="43" data-delta3="0" data-cum4="65" data-delta4="1" data-cum5="119" data-delta5="10" data-cum6="143" data-delta6="-8" data-cum7="174" data-delta7="1" data-cum8="199" data-delta8="1" data-cum9="226" data-delta9="5" data-cum10="248" data-delta10="-3" data-cum11="259" data-delta11="-4" data-cum12="286" data-delta12="1">
@@ -2089,6 +2111,7 @@ Kanter: 4
 Totaal: 27">27</td>
             
             <td class="total total-cell total-sep">286</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Wilma" data-total="286" data-joker-stage="" data-cum1="29" data-cum2="55" data-delta2="-5" data-cum3="92" data-delta3="4" data-cum4="98" data-delta4="-5" data-cum5="107" data-delta5="-4" data-cum6="145" data-delta6="1" data-cum7="170" data-delta7="-2" data-cum8="191" data-delta8="0" data-cum9="205" data-delta9="0" data-cum10="240" data-delta10="0" data-cum11="263" data-delta11="1" data-cum12="286" data-delta12="-1">
@@ -2190,6 +2213,7 @@ Vingegaard: 6
 Totaal: 23">23</td>
             
             <td class="total total-cell total-sep">286</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Paul" data-total="261" data-joker-stage="15" data-cum1="20" data-cum2="37" data-delta2="-2" data-cum3="67" data-delta3="1" data-cum4="78" data-delta4="1" data-cum5="93" data-delta5="-1" data-cum6="123" data-delta6="-1" data-cum7="150" data-delta7="0" data-cum8="166" data-delta8="0" data-cum9="175" data-delta9="0" data-cum10="211" data-delta10="0" data-cum11="241" data-delta11="0" data-cum12="261" data-delta12="0">
@@ -2295,6 +2319,7 @@ P. Seixas: 3
 Totaal: 20">20</td>
             
             <td class="total total-cell total-sep">261</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Jeroen" data-total="236" data-joker-stage="2" data-cum1="11" data-cum2="39" data-delta2="2" data-cum3="57" data-delta3="-1" data-cum4="70" data-delta4="0" data-cum5="90" data-delta5="-1" data-cum6="108" data-delta6="-1" data-cum7="126" data-delta7="1" data-cum8="154" data-delta8="0" data-cum9="173" data-delta9="0" data-cum10="192" data-delta10="0" data-cum11="209" data-delta11="0" data-cum12="236" data-delta12="0">
@@ -2386,6 +2411,7 @@ Pogacar: 8
 Totaal: 27">27</td>
             
             <td class="total total-cell total-sep">236</td>
+            <td class="prize-col" data-tooltip="Voorlaatste plaats">€10</td>
           </tr>
           
           <tr data-name="Wim" data-total="221" data-joker-stage="5" data-cum1="14" data-cum2="34" data-delta2="-1" data-cum3="56" data-delta3="0" data-cum4="65" data-delta4="-1" data-cum5="89" data-delta5="0" data-cum6="115" data-delta6="1" data-cum7="123" data-delta7="-1" data-cum8="139" data-delta8="0" data-cum9="157" data-delta9="0" data-cum10="187" data-delta10="0" data-cum11="204" data-delta11="0" data-cum12="221" data-delta12="0">
@@ -2478,6 +2504,7 @@ Pogacar: 8
 Totaal: 17">17</td>
             
             <td class="total total-cell total-sep">221</td>
+            <td class="prize-col"></td>
           </tr>
           
         </tbody>
@@ -5904,13 +5931,14 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
     <button type="button" class="chart-trigger" data-chart="pannen">Puntenverloop</button>
     
     <div class="card">
-      <table id="pannen-table" data-latest-stage="12">
+      <table id="pannen-table" data-latest-stage="12" data-prizes='{"by_rank": {"1": {"label": "\u20ac30", "tooltip": "1e prijs pannenkoekenpoule"}, "2": {"label": "\u20ac20", "tooltip": "2e prijs pannenkoekenpoule"}, "3": {"label": "\u20ac10", "tooltip": "3e prijs pannenkoekenpoule"}}, "second_last": {"label": "\u20ac10", "tooltip": "Voorlaatste plaats: verrassingspakket t.w.v. \u20ac10"}}'>
         <thead>
           <tr>
             <th class="rank-col">#</th>
             <th>Naam</th>
             <th class="stage-cell" data-stage="1">E1</th><th class="stage-cell" data-stage="2">E2</th><th class="stage-cell" data-stage="3">E3</th><th class="stage-cell" data-stage="4">E4</th><th class="stage-cell" data-stage="5">E5</th><th class="stage-cell" data-stage="6">E6</th><th class="stage-cell" data-stage="7">E7</th><th class="stage-cell" data-stage="8">E8</th><th class="stage-cell" data-stage="9">E9</th><th class="stage-cell" data-stage="10">E10</th><th class="stage-cell" data-stage="11">E11</th><th class="stage-cell" data-stage="12">E12</th>
             <th class="total-sep">Totaal</th>
+            <th class="prize-col">Prijs</th>
           </tr>
         </thead>
         <tbody>
@@ -5956,6 +5984,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">0</td>
+            <td class="prize-col" data-tooltip="1e prijs pannenkoekenpoule">€30</td>
           </tr>
           
           <tr data-name="Paul" data-total="0" data-cum1="0" data-cum2="0" data-delta2="3" data-cum3="0" data-delta3="4" data-cum4="0" data-delta4="0" data-cum5="0" data-delta5="2" data-cum6="0" data-delta6="0" data-cum7="0" data-delta7="3" data-cum8="0" data-delta8="0" data-cum9="0" data-delta9="0" data-cum10="0" data-delta10="0" data-cum11="0" data-delta11="0" data-cum12="0" data-delta12="0">
@@ -5999,6 +6028,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">0</td>
+            <td class="prize-col" data-tooltip="1e prijs pannenkoekenpoule">€30</td>
           </tr>
           
           <tr data-name="Casper" data-total="1" data-cum1="0" data-cum2="0" data-delta2="0" data-cum3="0" data-delta3="1" data-cum4="0" data-delta4="0" data-cum5="0" data-delta5="0" data-cum6="0" data-delta6="0" data-cum7="1" data-delta7="-3" data-cum8="1" data-delta8="0" data-cum9="1" data-delta9="1" data-cum10="1" data-delta10="0" data-cum11="1" data-delta11="0" data-cum12="1" data-delta12="0">
@@ -6043,6 +6073,7 @@ Totaal: 1">1</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">1</td>
+            <td class="prize-col" data-tooltip="3e prijs pannenkoekenpoule">€10</td>
           </tr>
           
           <tr data-name="Kevin" data-total="1" data-cum1="0" data-cum2="0" data-delta2="2" data-cum3="0" data-delta3="3" data-cum4="0" data-delta4="0" data-cum5="0" data-delta5="2" data-cum6="0" data-delta6="0" data-cum7="1" data-delta7="-3" data-cum8="1" data-delta8="0" data-cum9="1" data-delta9="1" data-cum10="1" data-delta10="0" data-cum11="1" data-delta11="0" data-cum12="1" data-delta12="0">
@@ -6087,6 +6118,7 @@ Totaal: 1">1</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">1</td>
+            <td class="prize-col" data-tooltip="3e prijs pannenkoekenpoule">€10</td>
           </tr>
           
           <tr data-name="Luuk" data-total="1" data-cum1="0" data-cum2="1" data-delta2="-6" data-cum3="1" data-delta3="4" data-cum4="1" data-delta4="3" data-cum5="1" data-delta5="1" data-cum6="1" data-delta6="0" data-cum7="1" data-delta7="2" data-cum8="1" data-delta8="0" data-cum9="1" data-delta9="1" data-cum10="1" data-delta10="0" data-cum11="1" data-delta11="0" data-cum12="1" data-delta12="0">
@@ -6131,6 +6163,7 @@ Totaal: 1">1</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">1</td>
+            <td class="prize-col" data-tooltip="3e prijs pannenkoekenpoule">€10</td>
           </tr>
           
           <tr data-name="Wim" data-total="3" data-cum1="0" data-cum2="0" data-delta2="6" data-cum3="0" data-delta3="5" data-cum4="0" data-delta4="1" data-cum5="0" data-delta5="2" data-cum6="0" data-delta6="0" data-cum7="0" data-delta7="3" data-cum8="0" data-delta8="0" data-cum9="3" data-delta9="-3" data-cum10="3" data-delta10="0" data-cum11="3" data-delta11="0" data-cum12="3" data-delta12="0">
@@ -6175,6 +6208,7 @@ Totaal: 3">3</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">3</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Jeroen" data-total="9" data-cum1="0" data-cum2="5" data-delta2="-10" data-cum3="5" data-delta3="0" data-cum4="7" data-delta4="7" data-cum5="9" data-delta5="1" data-cum6="9" data-delta6="0" data-cum7="9" data-delta7="2" data-cum8="9" data-delta8="0" data-cum9="9" data-delta9="0" data-cum10="9" data-delta10="0" data-cum11="9" data-delta11="0" data-cum12="9" data-delta12="1">
@@ -6221,6 +6255,7 @@ Totaal: 2">2</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">9</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Willem" data-total="9" data-cum1="0" data-cum2="0" data-delta2="6" data-cum3="0" data-delta3="4" data-cum4="9" data-delta4="-6" data-cum5="9" data-delta5="3" data-cum6="9" data-delta6="0" data-cum7="9" data-delta7="2" data-cum8="9" data-delta8="0" data-cum9="9" data-delta9="0" data-cum10="9" data-delta10="0" data-cum11="9" data-delta11="0" data-cum12="9" data-delta12="1">
@@ -6265,6 +6300,7 @@ Totaal: 9">9</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">9</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Mirjam" data-total="10" data-cum1="0" data-cum2="0" data-delta2="3" data-cum3="0" data-delta3="4" data-cum4="0" data-delta4="0" data-cum5="0" data-delta5="2" data-cum6="0" data-delta6="0" data-cum7="1" data-delta7="-4" data-cum8="4" data-delta8="0" data-cum9="4" data-delta9="0" data-cum10="4" data-delta10="0" data-cum11="7" data-delta11="0" data-cum12="10" data-delta12="-2">
@@ -6312,6 +6348,7 @@ Totaal: 3">3</td>
 Totaal: 3">3</td>
             
             <td class="total total-cell total-sep">10</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Jeffrey" data-total="11" data-cum1="0" data-cum2="1" data-delta2="-8" data-cum3="1" data-delta3="4" data-cum4="9" data-delta4="-1" data-cum5="11" data-delta5="-1" data-cum6="11" data-delta6="1" data-cum7="11" data-delta7="0" data-cum8="11" data-delta8="0" data-cum9="11" data-delta9="2" data-cum10="11" data-delta10="0" data-cum11="11" data-delta11="0" data-cum12="11" data-delta12="0">
@@ -6358,6 +6395,7 @@ Totaal: 2">2</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">11</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Ferdi" data-total="17" data-cum1="0" data-cum2="0" data-delta2="0" data-cum3="3" data-delta3="-12" data-cum4="6" data-delta4="6" data-cum5="9" data-delta5="1" data-cum6="9" data-delta6="0" data-cum7="10" data-delta7="-2" data-cum8="10" data-delta8="0" data-cum9="17" data-delta9="-1" data-cum10="17" data-delta10="0" data-cum11="17" data-delta11="1" data-cum12="17" data-delta12="0">
@@ -6406,6 +6444,7 @@ Totaal: 7">7</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">17</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Hans" data-total="17" data-cum1="0" data-cum2="0" data-delta2="0" data-cum3="2" data-delta3="-7" data-cum4="11" data-delta4="-2" data-cum5="17" data-delta5="-1" data-cum6="17" data-delta6="0" data-cum7="17" data-delta7="2" data-cum8="17" data-delta8="1" data-cum9="17" data-delta9="0" data-cum10="17" data-delta10="0" data-cum11="17" data-delta11="1" data-cum12="17" data-delta12="0">
@@ -6454,6 +6493,7 @@ Totaal: 6">6</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">17</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Sepp" data-total="17" data-cum1="0" data-cum2="5" data-delta2="-4" data-cum3="5" data-delta3="0" data-cum4="9" data-delta4="6" data-cum5="11" data-delta5="-1" data-cum6="11" data-delta6="1" data-cum7="11" data-delta7="0" data-cum8="17" data-delta8="-1" data-cum9="17" data-delta9="0" data-cum10="17" data-delta10="0" data-cum11="17" data-delta11="1" data-cum12="17" data-delta12="0">
@@ -6502,6 +6542,7 @@ Totaal: 6">6</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">17</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Wilma" data-total="17" data-cum1="0" data-cum2="0" data-delta2="6" data-cum3="2" data-delta3="-2" data-cum4="11" data-delta4="-1" data-cum5="17" data-delta5="-1" data-cum6="17" data-delta6="0" data-cum7="17" data-delta7="1" data-cum8="17" data-delta8="1" data-cum9="17" data-delta9="0" data-cum10="17" data-delta10="0" data-cum11="17" data-delta11="1" data-cum12="17" data-delta12="0">
@@ -6550,6 +6591,7 @@ Totaal: 6">6</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">17</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Sharon" data-total="20" data-cum1="0" data-cum2="1" data-delta2="-1" data-cum3="2" data-delta3="3" data-cum4="18" data-delta4="-6" data-cum5="20" data-delta5="1" data-cum6="20" data-delta6="0" data-cum7="20" data-delta7="0" data-cum8="20" data-delta8="2" data-cum9="20" data-delta9="1" data-cum10="20" data-delta10="0" data-cum11="20" data-delta11="1" data-cum12="20" data-delta12="0">
@@ -6598,6 +6640,7 @@ Totaal: 2">2</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">20</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Theo" data-total="22" data-cum1="0" data-cum2="5" data-delta2="-3" data-cum3="5" data-delta3="0" data-cum4="14" data-delta4="2" data-cum5="16" data-delta5="3" data-cum6="16" data-delta6="0" data-cum7="17" data-delta7="0" data-cum8="22" data-delta8="-4" data-cum9="22" data-delta9="2" data-cum10="22" data-delta10="0" data-cum11="22" data-delta11="1" data-cum12="22" data-delta12="0">
@@ -6647,6 +6690,7 @@ Totaal: 5">5</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">22</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Elise" data-total="23" data-cum1="0" data-cum2="0" data-delta2="0" data-cum3="0" data-delta3="1" data-cum4="0" data-delta4="0" data-cum5="1" data-delta5="-5" data-cum6="1" data-delta6="0" data-cum7="10" data-delta7="-3" data-cum8="10" data-delta8="0" data-cum9="13" data-delta9="-1" data-cum10="13" data-delta10="0" data-cum11="23" data-delta11="-6" data-cum12="23" data-delta12="0">
@@ -6694,6 +6738,7 @@ Totaal: 10">10</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">23</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Anita" data-total="24" data-cum1="0" data-cum2="0" data-delta2="0" data-cum3="1" data-delta3="-9" data-cum4="17" data-delta4="-9" data-cum5="22" data-delta5="-1" data-cum6="22" data-delta6="0" data-cum7="22" data-delta7="0" data-cum8="22" data-delta8="2" data-cum9="24" data-delta9="0" data-cum10="24" data-delta10="0" data-cum11="24" data-delta11="0" data-cum12="24" data-delta12="0">
@@ -6742,6 +6787,7 @@ Totaal: 2">2</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">24</td>
+            <td class="prize-col"></td>
           </tr>
           
           <tr data-name="Mark" data-total="26" data-cum1="0" data-cum2="0" data-delta2="3" data-cum3="3" data-delta3="-9" data-cum4="14" data-delta4="0" data-cum5="19" data-delta5="-1" data-cum6="19" data-delta6="0" data-cum7="19" data-delta7="1" data-cum8="19" data-delta8="1" data-cum9="26" data-delta9="-3" data-cum10="26" data-delta10="0" data-cum11="26" data-delta11="0" data-cum12="26" data-delta12="0">
@@ -6791,6 +6837,7 @@ Totaal: 7">7</td>
             <td class="stage-cell" data-stage="12" data-tooltip="Totaal: 0">0</td>
             
             <td class="total total-cell total-sep">26</td>
+            <td class="prize-col" data-tooltip="Voorlaatste plaats: verrassingspakket t.w.v. €10">€10</td>
           </tr>
           
           <tr data-name="Ger" data-total="31" data-cum1="0" data-cum2="0" data-delta2="0" data-cum3="0" data-delta3="2" data-cum4="0" data-delta4="0" data-cum5="10" data-delta5="-9" data-cum6="12" data-delta6="-2" data-cum7="20" data-delta7="-4" data-cum8="27" data-delta8="-2" data-cum9="27" data-delta9="0" data-cum10="27" data-delta10="0" data-cum11="27" data-delta11="0" data-cum12="31" data-delta12="0">
@@ -6840,6 +6887,7 @@ Totaal: 7">7</td>
 Totaal: 4">4</td>
             
             <td class="total total-cell total-sep">31</td>
+            <td class="prize-col"></td>
           </tr>
           
         </tbody>
@@ -9028,13 +9076,32 @@ Mitchel">2/21</td>
     // an equal total shares a rank and the next distinct total skips ahead.
     var previousValue = null;
     var previousRank = 0;
-    rows.forEach(function (tr, i) {
+    var ranks = rows.map(function (tr, i) {
       var value = valueFor(tr);
       var rank = (previousValue !== null && value === previousValue) ? previousRank : i + 1;
       previousValue = value;
       previousRank = rank;
+      return rank;
+    });
+
+    // Prizes follow the spot, so they move with the standings - mirrors
+    // assign_prizes() in generate_site.py.
+    var prizeConfig = JSON.parse(table.dataset.prizes || '{}');
+    var secondLastRank = ranks.length >= 2 ? ranks[ranks.length - 2] : null;
+
+    rows.forEach(function (tr, i) {
+      var rank = ranks[i];
       var rankCell = tr.querySelector('.rank-col');
       if (rankCell) rankCell.textContent = rank;
+
+      var prizeCell = tr.querySelector('.prize-col');
+      if (prizeCell) {
+        var prize = (prizeConfig.by_rank || {})[rank];
+        if (!prize && rank === secondLastRank) prize = prizeConfig.second_last;
+        prizeCell.textContent = prize ? prize.label : '';
+        if (prize) prizeCell.setAttribute('data-tooltip', prize.tooltip);
+        else prizeCell.removeAttribute('data-tooltip');
+      }
       tbody.appendChild(tr);
     });
   }

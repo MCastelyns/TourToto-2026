@@ -95,6 +95,9 @@
   .bonus-answers div { margin-top: 3px; }
   .unresolved { color: var(--bol); text-decoration: underline dotted; cursor: help; }
   .rank-col { width: 2em; text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .prize-col { text-align: right; white-space: nowrap; }
+  td.prize-col { color: var(--optimal); font-weight: 700; cursor: help; }
+  td.prize-col:empty { cursor: default; }
   .stage-cell { width: 3em; text-align: center; }
   td.stage-cell { cursor: help; }
   .joker-cell { background: var(--geel); font-weight: 700; border-radius: 5px; }
@@ -267,6 +270,10 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
 {%- endif -%}
 {%- endmacro %}
 
+{% macro prize_cell(prize) -%}
+<td class="prize-col"{% if prize %} data-tooltip="{{ prize.tooltip }}"{% endif %}>{{ prize.label if prize else '' }}</td>
+{%- endmacro %}
+
 {% macro rank_badge(name, changes) -%}
 {%- set delta = changes.get(name, 0) -%}
 <span class="rank-change {{ 'rank-up' if delta > 0 else ('rank-down' if delta < 0 else '') }}" {% if delta == 0 %}style="display:none"{% endif %}>{% if delta > 0 %}&#9650;{% elif delta < 0 %}&#9660;{% endif %}{{ delta|abs if delta != 0 else '' }}</span>
@@ -294,13 +301,14 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
     </div>
     {% endif %}
     <div class="card">
-      <table id="hoofd-table" data-latest-stage="{{ stages_available[-1] }}">
+      <table id="hoofd-table" data-latest-stage="{{ stages_available[-1] }}" data-prizes='{{ prizes.hoofdploeg|tojson }}'>
         <thead>
           <tr>
             <th class="rank-col">#</th>
             <th>Naam</th>
             {% for s in stages_available %}<th class="stage-cell" data-stage="{{ s }}">E{{ s }}</th>{% endfor %}
             <th class="total-sep">Totaal</th>
+            <th class="prize-col">Prijs</th>
           </tr>
         </thead>
         <tbody>
@@ -319,6 +327,7 @@ Hoogste dagscore! ({{ dagscore_record }} punten){% endif %}{% if is_optimal %}
 Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
             {% endfor %}
             <td class="total total-cell total-sep">{{ p.hoofdploeg.total }}</td>
+            {{ prize_cell(p.prize_hoofd) }}
           </tr>
           {% endfor %}
         </tbody>
@@ -380,13 +389,14 @@ Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
     <button type="button" class="chart-trigger" data-chart="pannen">Puntenverloop</button>
     {% endif %}
     <div class="card">
-      <table id="pannen-table" data-latest-stage="{{ stages_available[-1] }}">
+      <table id="pannen-table" data-latest-stage="{{ stages_available[-1] }}" data-prizes='{{ prizes.pannenkoeken|tojson }}'>
         <thead>
           <tr>
             <th class="rank-col">#</th>
             <th>Naam</th>
             {% for s in stages_available %}<th class="stage-cell" data-stage="{{ s }}">E{{ s }}</th>{% endfor %}
             <th class="total-sep">Totaal</th>
+            <th class="prize-col">Prijs</th>
           </tr>
         </thead>
         <tbody>
@@ -399,6 +409,7 @@ Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
             <td class="stage-cell" data-stage="{{ s }}" data-tooltip="{{ st.tooltip }}">{{ st.score }}</td>
             {% endfor %}
             <td class="total total-cell total-sep">{{ p.pannenkoeken.total }}</td>
+            {{ prize_cell(p.prize_pannen) }}
           </tr>
           {% endfor %}
         </tbody>
@@ -584,13 +595,32 @@ Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
     // an equal total shares a rank and the next distinct total skips ahead.
     var previousValue = null;
     var previousRank = 0;
-    rows.forEach(function (tr, i) {
+    var ranks = rows.map(function (tr, i) {
       var value = valueFor(tr);
       var rank = (previousValue !== null && value === previousValue) ? previousRank : i + 1;
       previousValue = value;
       previousRank = rank;
+      return rank;
+    });
+
+    // Prizes follow the spot, so they move with the standings - mirrors
+    // assign_prizes() in generate_site.py.
+    var prizeConfig = JSON.parse(table.dataset.prizes || '{}');
+    var secondLastRank = ranks.length >= 2 ? ranks[ranks.length - 2] : null;
+
+    rows.forEach(function (tr, i) {
+      var rank = ranks[i];
       var rankCell = tr.querySelector('.rank-col');
       if (rankCell) rankCell.textContent = rank;
+
+      var prizeCell = tr.querySelector('.prize-col');
+      if (prizeCell) {
+        var prize = (prizeConfig.by_rank || {})[rank];
+        if (!prize && rank === secondLastRank) prize = prizeConfig.second_last;
+        prizeCell.textContent = prize ? prize.label : '';
+        if (prize) prizeCell.setAttribute('data-tooltip', prize.tooltip);
+        else prizeCell.removeAttribute('data-tooltip');
+      }
       tbody.appendChild(tr);
     });
   }

@@ -22,6 +22,29 @@ SITE_DIR = ROOT / "docs"  # GitHub Pages serves from a "docs/" folder on the mai
 
 TOTAL_STAGES = 21
 
+# Prize money per finishing spot, per the group's 2026 amounts. "second_last"
+# is the voorlaatste plaats (one above last), not last. Amounts scale with
+# turnout ("bedrag afhankelijk van het aantal deelnemers" in the regelement),
+# so these are worth re-checking each edition.
+PRIZES = {
+    "hoofdploeg": {
+        "by_rank": {
+            1: {"label": "€60", "tooltip": "1e prijs hoofdpoule"},
+            2: {"label": "€40", "tooltip": "2e prijs hoofdpoule"},
+            3: {"label": "€20", "tooltip": "3e prijs hoofdpoule"},
+        },
+        "second_last": {"label": "€10", "tooltip": "Voorlaatste plaats"},
+    },
+    "pannenkoeken": {
+        "by_rank": {
+            1: {"label": "€30", "tooltip": "1e prijs pannenkoekenpoule"},
+            2: {"label": "€20", "tooltip": "2e prijs pannenkoekenpoule"},
+            3: {"label": "€10", "tooltip": "3e prijs pannenkoekenpoule"},
+        },
+        "second_last": {"label": "€10", "tooltip": "Voorlaatste plaats: verrassingspakket t.w.v. €10"},
+    },
+}
+
 
 def load_participant_rosters():
     rosters = {}
@@ -184,6 +207,22 @@ def assign_ranks(sorted_participants, team_key, rank_field):
         previous_total, previous_rank = total, rank
 
 
+def assign_prizes(sorted_participants, rank_field, prize_field, prize_config):
+    """Tags each participant with the prize for the spot they currently hold.
+    Prizes attach to a RANK, not a row, so tied participants both show it -
+    honest, since a tie genuinely leaves it unsettled. A top-3 prize wins over
+    the second-last one if a small field makes those the same rank. The field
+    is passed in because a participant sits in both pools at once and would
+    otherwise have one pool's prize overwrite the other's."""
+    second_last_rank = sorted_participants[-2][rank_field] if len(sorted_participants) >= 2 else None
+    for p in sorted_participants:
+        rank = p[rank_field]
+        prize = prize_config["by_rank"].get(rank)
+        if prize is None and rank == second_last_rank:
+            prize = prize_config["second_last"]
+        p[prize_field] = prize
+
+
 def main():
     if not STANDINGS_PATH.exists():
         raise SystemExit("data/computed/standings.json not found - run scoring.py first")
@@ -203,6 +242,8 @@ def main():
     pannen_ranked = sorted(pannen_participants, key=lambda p: p["pannenkoeken"]["total"])
     assign_ranks(hoofd_ranked, "hoofdploeg", "rank_hoofd")
     assign_ranks(pannen_ranked, "pannenkoeken", "rank_pannen")
+    assign_prizes(hoofd_ranked, "rank_hoofd", "prize_hoofd", PRIZES["hoofdploeg"])
+    assign_prizes(pannen_ranked, "rank_pannen", "prize_pannen", PRIZES["pannenkoeken"])
 
     stages_available = standings["stages_available"]
 
@@ -228,6 +269,7 @@ def main():
         stage_breakdowns=standings.get("stage_breakdowns", {}),
         rider_info=rider_info,
         rider_leaderboard=rider_leaderboard,
+        prizes=PRIZES,
         hoofd_rank_changes=hoofd_rank_changes,
         pannen_rank_changes=pannen_rank_changes,
         hoofd_rank_changes_by_stage=hoofd_rank_changes_by_stage,
