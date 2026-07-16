@@ -178,13 +178,19 @@ def main():
     rider_info, canonical_rider_names = build_rider_info(rosters)
     rider_leaderboard = build_rider_leaderboard(rider_info, canonical_rider_names, standings.get("rider_totals", {}))
 
+    # Not everyone enters the pannenkoekenpoule. Someone who didn't hand in a
+    # team must be left out of it entirely rather than ranked with an empty
+    # roster - that scores 0, and since lowest wins they'd "win" a pool they
+    # never played.
+    pannen_participants = [p for p in standings["participants"] if p["pannenkoeken"]["riders"]]
+
     hoofd_ranked = sorted(standings["participants"], key=lambda p: -p["hoofdploeg"]["total"])
-    pannen_ranked = sorted(standings["participants"], key=lambda p: p["pannenkoeken"]["total"])
+    pannen_ranked = sorted(pannen_participants, key=lambda p: p["pannenkoeken"]["total"])
 
     stages_available = standings["stages_available"]
 
     hoofd_rank_changes_by_stage = rank_changes_by_stage(standings["participants"], "hoofdploeg", stages_available, best_is_high=True)
-    pannen_rank_changes_by_stage = rank_changes_by_stage(standings["participants"], "pannenkoeken", stages_available, best_is_high=False)
+    pannen_rank_changes_by_stage = rank_changes_by_stage(pannen_participants, "pannenkoeken", stages_available, best_is_high=False)
     hoofd_rank_changes = hoofd_rank_changes_by_stage.get(stages_available[-1], {}) if stages_available else {}
     pannen_rank_changes = pannen_rank_changes_by_stage.get(stages_available[-1], {}) if stages_available else {}
 

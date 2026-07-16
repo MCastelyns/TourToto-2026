@@ -424,7 +424,7 @@ Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
             {% for r in roster.pannenkoeken %}<li>{% if r.rider in unresolved_names %}<span class="unresolved" data-tooltip="Naam niet herkend op de merkploegen-lijst. Klopt de spelling?">{{ r.rider }}</span>{% else %}{{ r.rider }}{% endif %}</li>{% endfor %}
           </ol>
           {% else %}
-          <p style="color:var(--muted); font-style:italic;">Nog niet ingeleverd</p>
+          <p style="color:var(--muted); font-style:italic;">Speelt niet mee</p>
           {% endif %}
         </div>
       </div>
