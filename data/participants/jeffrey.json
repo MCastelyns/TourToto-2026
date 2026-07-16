@@ -109,6 +109,10 @@
     {
       "slot": 14,
       "rider": "Markl"
+    },
+    {
+      "slot": 15,
+      "rider": "Slock"
     }
   ],
   "bonus_answers": {
@@ -117,7 +121,7 @@
       "Vingegaard",
       "Seixas"
     ],
-    "gap_seconds": null,
-    "dnf_count": null
+    "gap_seconds": 290,
+    "dnf_count": 35
   }
 }

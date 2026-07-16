@@ -55,8 +55,12 @@
   "joker_stage": 1,
   "pannenkoeken": [],
   "bonus_answers": {
-    "podium": null,
-    "gap_seconds": null,
-    "dnf_count": null
+    "podium": [
+      "Pogacar",
+      "Vingegaard",
+      "Evenepoel"
+    ],
+    "gap_seconds": 56,
+    "dnf_count": 18
   }
 }
