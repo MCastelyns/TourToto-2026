@@ -313,7 +313,7 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
 
 Hoogste dagscore! ({{ dagscore_record }} punten){% endif %}{% if is_optimal %}
 
-Optimale hoofdploeg dit etappe! (perfecte score volgens de regels){% endif %}">{{ st.score }}</td>
+Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
             {% endfor %}
             <td class="total total-cell total-sep">{{ p.hoofdploeg.total }}</td>
           </tr>
