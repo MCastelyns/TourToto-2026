@@ -1,0 +1,37 @@
+{
+  "stage": 15,
+  "stage_result": [
+    "Evenepoel",
+    "Pogacar",
+    "Del Torro Romero",
+    "P. Seixas",
+    "F. Lipowitz",
+    "L. Martinez",
+    "Skjelmose",
+    "Ayuso",
+    "A.Yates",
+    "Q. Simmons"
+  ],
+  "gc": [
+    "Pogacar",
+    "Evenepoel",
+    "Del Torro Romero",
+    "P. Seixas",
+    "F. Lipowitz"
+  ],
+  "points": [
+    "Pedersen",
+    "J. Philipsen",
+    "Girmay"
+  ],
+  "mountains": [
+    "Pogacar",
+    "V.Paret-Peintre",
+    "R. Carapaz"
+  ],
+  "youth": [
+    "Del Torro Romero",
+    "P. Seixas",
+    "Ayuso"
+  ]
+}
