@@ -53,11 +53,11 @@ FINAL_SCALES = {
     "youth_final": 3,
 }
 
-# --- PROVISIONAL bonus-question scoring ---------------------------------
-# The regelement only specifies "max 25 punten" for these two guesses without
-# stating the decay curve. Until the group confirms an exact formula, this
-# uses linear decay: points = max(0, MAX - |guess - actual|).
-# Adjust these constants (or the compute_bonus_points function) once agreed.
+# --- Bonus-question scoring ---------------------------------------------
+# Podium: 10 points per correct rider (order doesn't matter). Gap & DNF: full
+# marks if exact, minus 1 per second / per rider you're off, floor 0. The
+# group has CONFIRMED the podium rule; the gap and DNF curves are still marked
+# preliminary by them, so the site labels the whole bonus as "voorlopig".
 BONUS_PODIUM_POINTS_PER_RIDER = 10
 BONUS_GAP_MAX_POINTS = 25
 BONUS_DNF_MAX_POINTS = 25
@@ -195,6 +195,11 @@ def load_participants(resolve):
                     entry["rider"] = canonical
                 else:
                     unresolved.setdefault(entry["rider"], []).append(data["name"])
+        # Podium guesses are typed short ("Seixas", "Ayuso") - resolve them
+        # too so they match the actual (canonical-named) podium.
+        answers = data.get("bonus_answers") or {}
+        if answers.get("podium"):
+            answers["podium"] = [resolve(n) or n for n in answers["podium"]]
         participants.append(data)
     if unresolved:
         print(f"WARNING: {len(unresolved)} rider name(s) could not be resolved to the master "
@@ -221,28 +226,38 @@ def load_final_results():
 
 
 def compute_bonus_points(participant, final):
+    """Per-question breakdown of the three bonus predictions, for both the
+    score and the tooltip. `available` is False (and points are 0) until a
+    final.json supplies the actual answers. Podium guesses are already
+    resolved to canonical names in load_participants, so they compare cleanly
+    against the actual podium."""
     answers = participant.get("bonus_answers") or {}
-    result = {"podium": 0, "gap_seconds": None, "dnf_count": None, "total": 0}
+    detail = {
+        "available": final is not None,
+        "podium": {"points": 0, "correct": 0, "guess": answers.get("podium") or []},
+        "gap": {"points": None, "guess": answers.get("gap_seconds"), "actual": None},
+        "dnf": {"points": None, "guess": answers.get("dnf_count"), "actual": None},
+        "total": 0,
+    }
     if not final:
-        return result
+        return detail
 
-    guess_podium = set(answers.get("podium") or [])
     actual_podium = set(final.get("podium") or [])
-    n_correct = len(guess_podium & actual_podium)
-    result["podium"] = n_correct * BONUS_PODIUM_POINTS_PER_RIDER
+    n_correct = len(set(answers.get("podium") or []) & actual_podium)
+    detail["podium"].update(points=n_correct * BONUS_PODIUM_POINTS_PER_RIDER, correct=n_correct)
 
-    guess_gap = answers.get("gap_seconds")
     actual_gap = final.get("winner_gap_seconds")
-    if guess_gap is not None and actual_gap is not None:
-        result["gap_seconds"] = max(0, BONUS_GAP_MAX_POINTS - abs(guess_gap - actual_gap))
+    detail["gap"]["actual"] = actual_gap
+    if detail["gap"]["guess"] is not None and actual_gap is not None:
+        detail["gap"]["points"] = max(0, BONUS_GAP_MAX_POINTS - abs(detail["gap"]["guess"] - actual_gap))
 
-    guess_dnf = answers.get("dnf_count")
     actual_dnf = final.get("dnf_count")
-    if guess_dnf is not None and actual_dnf is not None:
-        result["dnf_count"] = max(0, BONUS_DNF_MAX_POINTS - abs(guess_dnf - actual_dnf))
+    detail["dnf"]["actual"] = actual_dnf
+    if detail["dnf"]["guess"] is not None and actual_dnf is not None:
+        detail["dnf"]["points"] = max(0, BONUS_DNF_MAX_POINTS - abs(detail["dnf"]["guess"] - actual_dnf))
 
-    result["total"] = result["podium"] + (result["gap_seconds"] or 0) + (result["dnf_count"] or 0)
-    return result
+    detail["total"] = detail["podium"]["points"] + (detail["gap"]["points"] or 0) + (detail["dnf"]["points"] or 0)
+    return detail
 
 
 def compute_team(participant, team_key, stages, joker_stage, final, final_key_map, apply_joker):
@@ -309,6 +324,12 @@ def main():
     standings = {
         "stages_available": sorted(stages.keys()),
         "final_available": final is not None,
+        # A final.json currently holds only the bonus-question answers - the
+        # end classification (GC/jersey) bonus is deferred, so this stays False
+        # until gc_final actually appears, keeping the "eindklassement" header
+        # honest.
+        "classification_available": bool(final and final.get("gc_final")),
+        "bonus_available": bool(final),
         "unresolved_names": unresolved_names,
         "stage_breakdowns": {
             stage_num: stage_breakdown(stages[stage_num], master["teams"]) for stage_num in sorted(stages.keys())

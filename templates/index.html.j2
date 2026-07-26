@@ -98,6 +98,10 @@
   .prize-col { text-align: right; white-space: nowrap; }
   td.prize-col { color: var(--optimal); font-weight: 700; cursor: help; }
   td.prize-col:empty { cursor: default; }
+  .bonus-col { text-align: center; width: 3.5em; }
+  th.bonus-col { cursor: help; }
+  td.bonus-col { color: var(--muted); font-style: italic; cursor: help; }
+  .bonus-note { color: var(--muted); font-size: 0.82rem; font-style: italic; margin: 10px 0 0; }
   .stage-cell { width: 3em; text-align: center; }
   td.stage-cell { cursor: help; }
   .joker-cell { background: var(--geel); font-weight: 700; border-radius: 5px; }
@@ -249,7 +253,7 @@
   <h1>Tourtoto 2026</h1>
   <p>
     {{ stages_available|length }} van de {{ total_stages }} etappes verwerkt
-    {% if final_available %}&middot; eindklassement bekend{% endif %}
+    {% if classification_available %}&middot; eindklassement bekend{% endif %}
     &middot; laatst bijgewerkt: {{ generated_at }}
   </p>
 </header>
@@ -272,6 +276,23 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
 
 {% macro prize_cell(prize) -%}
 <td class="prize-col"{% if prize %} data-tooltip="{{ prize.tooltip }}"{% endif %}>{{ prize.label if prize else '' }}</td>
+{%- endmacro %}
+
+{% macro bonus_cell(bonus) -%}
+{%- if not bonus.available -%}
+<td class="bonus-col"></td>
+{%- else -%}
+{%- set gap_pts = bonus.gap.points if bonus.gap.points is not none else '-' -%}
+{%- set dnf_pts = bonus.dnf.points if bonus.dnf.points is not none else '-' -%}
+{%- set lines = [
+  'Podium: ' ~ bonus.podium.points ~ ' (' ~ bonus.podium.correct ~ '/3 goed)',
+  'Tijdsverschil: ' ~ gap_pts ~ ' (gok ' ~ bonus.gap.guess ~ 's, echt ' ~ bonus.gap.actual ~ 's)',
+  'Uitvallers: ' ~ dnf_pts ~ ' (gok ' ~ bonus.dnf.guess ~ ', echt ' ~ bonus.dnf.actual ~ ')',
+  '',
+  'Voorlopig - formule tijdsverschil/uitvallers nog niet definitief'
+] -%}
+<td class="bonus-col" data-tooltip="{{ lines|join('\n') }}">{{ bonus.total }}</td>
+{%- endif -%}
 {%- endmacro %}
 
 {% macro rank_badge(name, changes) -%}
@@ -308,6 +329,7 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
             <th>Naam</th>
             {% for s in stages_available %}<th class="stage-cell" data-stage="{{ s }}">E{{ s }}</th>{% endfor %}
             <th class="total-sep">Totaal</th>
+            {% if bonus_available %}<th class="bonus-col" data-tooltip="Bonusvragen (podium/tijdsverschil/uitvallers). Voorlopig - nog niet in het totaal verwerkt en de formule voor tijdsverschil/uitvallers is nog niet definitief.">Bonus*</th>{% endif %}
             <th class="prize-col">Prijs</th>
           </tr>
         </thead>
@@ -327,12 +349,14 @@ Hoogste dagscore! ({{ dagscore_record }} punten) - {{ prizes.dagscore.label }}{%
 Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
             {% endfor %}
             <td class="total total-cell total-sep">{{ p.hoofdploeg.total }}</td>
+            {% if bonus_available %}{{ bonus_cell(p.bonus) }}{% endif %}
             {{ prize_cell(p.prize_hoofd) }}
           </tr>
           {% endfor %}
         </tbody>
       </table>
     </div>
+    {% if bonus_available %}<p class="bonus-note">* Bonus = bonusvragen (podium 10 p. per goede renner; tijdsverschil &amp; uitvallers max. 25, −1 per seconde/uitvaller ernaast). <strong>Voorlopig</strong>: nog niet in het totaal verwerkt, en de formule voor tijdsverschil/uitvallers moet nog definitief bevestigd worden. Beweeg over een waarde voor de uitsplitsing.</p>{% endif %}
   </section>
 
   <section>

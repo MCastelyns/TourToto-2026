@@ -272,6 +272,8 @@ def main():
         stages_available=stages_available,
         total_stages=TOTAL_STAGES,
         final_available=standings["final_available"],
+        classification_available=standings.get("classification_available", False),
+        bonus_available=standings.get("bonus_available", False),
         unresolved_names=set(standings.get("unresolved_names", [])),
         stage_breakdowns=standings.get("stage_breakdowns", {}),
         rider_info=rider_info,

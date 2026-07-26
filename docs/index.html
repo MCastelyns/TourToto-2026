@@ -98,6 +98,10 @@
   .prize-col { text-align: right; white-space: nowrap; }
   td.prize-col { color: var(--optimal); font-weight: 700; cursor: help; }
   td.prize-col:empty { cursor: default; }
+  .bonus-col { text-align: center; width: 3.5em; }
+  th.bonus-col { cursor: help; }
+  td.bonus-col { color: var(--muted); font-style: italic; cursor: help; }
+  .bonus-note { color: var(--muted); font-size: 0.82rem; font-style: italic; margin: 10px 0 0; }
   .stage-cell { width: 3em; text-align: center; }
   td.stage-cell { cursor: help; }
   .joker-cell { background: var(--geel); font-weight: 700; border-radius: 5px; }
@@ -250,7 +254,7 @@
   <p>
     21 van de 21 etappes verwerkt
     
-    &middot; laatst bijgewerkt: 26-07-2026 20:00
+    &middot; laatst bijgewerkt: 26-07-2026 20:24
   </p>
 </header>
 
@@ -260,6 +264,8 @@
 </div>
 
 <main>
+
+
 
 
 
@@ -290,6 +296,7 @@
             <th>Naam</th>
             <th class="stage-cell" data-stage="1">E1</th><th class="stage-cell" data-stage="2">E2</th><th class="stage-cell" data-stage="3">E3</th><th class="stage-cell" data-stage="4">E4</th><th class="stage-cell" data-stage="5">E5</th><th class="stage-cell" data-stage="6">E6</th><th class="stage-cell" data-stage="7">E7</th><th class="stage-cell" data-stage="8">E8</th><th class="stage-cell" data-stage="9">E9</th><th class="stage-cell" data-stage="10">E10</th><th class="stage-cell" data-stage="11">E11</th><th class="stage-cell" data-stage="12">E12</th><th class="stage-cell" data-stage="13">E13</th><th class="stage-cell" data-stage="14">E14</th><th class="stage-cell" data-stage="15">E15</th><th class="stage-cell" data-stage="16">E16</th><th class="stage-cell" data-stage="17">E17</th><th class="stage-cell" data-stage="18">E18</th><th class="stage-cell" data-stage="19">E19</th><th class="stage-cell" data-stage="20">E20</th><th class="stage-cell" data-stage="21">E21</th>
             <th class="total-sep">Totaal</th>
+            <th class="bonus-col" data-tooltip="Bonusvragen (podium/tijdsverschil/uitvallers). Voorlopig - nog niet in het totaal verwerkt en de formule voor tijdsverschil/uitvallers is nog niet definitief.">Bonus*</th>
             <th class="prize-col">Prijs</th>
           </tr>
         </thead>
@@ -485,6 +492,11 @@ V.Paret-Peintre: 1
 Totaal: 30">30</td>
             
             <td class="total total-cell total-sep">602</td>
+            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+Tijdsverschil: 0 (gok 270s, echt 386s)
+Uitvallers: 22 (gok 29, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">32</td>
             <td class="prize-col" data-tooltip="1e prijs hoofdpoule">€60</td>
           </tr>
           
@@ -666,6 +678,11 @@ Evenepoel: 4
 Totaal: 22">22</td>
             
             <td class="total total-cell total-sep">570</td>
+            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
+Tijdsverschil: 0 (gok 96s, echt 386s)
+Uitvallers: 18 (gok 33, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">38</td>
             <td class="prize-col" data-tooltip="2e prijs hoofdpoule">€40</td>
           </tr>
           
@@ -858,6 +875,11 @@ Girmay: 1
 Totaal: 19">19</td>
             
             <td class="total total-cell total-sep">568</td>
+            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
+Tijdsverschil: 0 (gok 56s, echt 386s)
+Uitvallers: 17 (gok 18, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">37</td>
             <td class="prize-col" data-tooltip="3e prijs hoofdpoule">€20</td>
           </tr>
           
@@ -1043,6 +1065,11 @@ Fretin: 2
 Totaal: 20">20</td>
             
             <td class="total total-cell total-sep">564</td>
+            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+Tijdsverschil: 0 (gok 290s, echt 386s)
+Uitvallers: 16 (gok 35, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">26</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -1225,6 +1252,11 @@ Fretin: 2
 Totaal: 20">20</td>
             
             <td class="total total-cell total-sep">559</td>
+            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+Tijdsverschil: 0 (gok 125s, echt 386s)
+Uitvallers: 19 (gok 32, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">29</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -1406,6 +1438,11 @@ Pogacar: 7
 Totaal: 18">18</td>
             
             <td class="total total-cell total-sep">556</td>
+            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+Tijdsverschil: 0 (gok 156s, echt 386s)
+Uitvallers: 23 (gok 28, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">33</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -1584,6 +1621,11 @@ Kanter: 7
 Totaal: 25">25</td>
             
             <td class="total total-cell total-sep">554</td>
+            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
+Tijdsverschil: 0 (gok 222s, echt 386s)
+Uitvallers: 23 (gok 28, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">43</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -1767,6 +1809,11 @@ Pogacar: 7
 Totaal: 29">29</td>
             
             <td class="total total-cell total-sep">552</td>
+            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+Tijdsverschil: 4 (gok 365s, echt 386s)
+Uitvallers: 20 (gok 31, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">34</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -1941,6 +1988,11 @@ O. Kooij: 6
 Totaal: 24">24</td>
             
             <td class="total total-cell total-sep">544</td>
+            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+Tijdsverschil: 0 (gok 173s, echt 386s)
+Uitvallers: 20 (gok 31, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">30</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -2129,6 +2181,11 @@ V.Paret-Peintre: 1
 Totaal: 23">23</td>
             
             <td class="total total-cell total-sep">542</td>
+            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
+Tijdsverschil: 0 (gok 221s, echt 386s)
+Uitvallers: 20 (gok 31, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">40</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -2307,6 +2364,11 @@ Pogacar: 7
 Totaal: 18">18</td>
             
             <td class="total total-cell total-sep">534</td>
+            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
+Tijdsverschil: 0 (gok 180s, echt 386s)
+Uitvallers: 12 (gok 39, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">32</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -2483,6 +2545,11 @@ O. Kooij: 6
 Totaal: 24">24</td>
             
             <td class="total total-cell total-sep">532</td>
+            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+Tijdsverschil: 0 (gok 63s, echt 386s)
+Uitvallers: 23 (gok 28, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">33</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -2653,6 +2720,11 @@ O. Kooij: 6
 Totaal: 13">13</td>
             
             <td class="total total-cell total-sep">523</td>
+            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
+Tijdsverschil: 0 (gok 154s, echt 386s)
+Uitvallers: 22 (gok 23, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">42</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -2827,6 +2899,11 @@ M. Mohoric: 5
 Totaal: 23">23</td>
             
             <td class="total total-cell total-sep">520</td>
+            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
+Tijdsverschil: 0 (gok 54s, echt 386s)
+Uitvallers: 19 (gok 32, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">39</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -2999,6 +3076,11 @@ Pogacar: 7
 Totaal: 18">18</td>
             
             <td class="total total-cell total-sep">519</td>
+            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+Tijdsverschil: 0 (gok 188s, echt 386s)
+Uitvallers: 23 (gok 24, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">33</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -3177,6 +3259,11 @@ Pogacar: 7
 Totaal: 18">18</td>
             
             <td class="total total-cell total-sep">516</td>
+            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+Tijdsverschil: 0 (gok 122s, echt 386s)
+Uitvallers: 18 (gok 33, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">28</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -3356,6 +3443,11 @@ V.Paret-Peintre: 1
 Totaal: 19">19</td>
             
             <td class="total total-cell total-sep">510</td>
+            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+Tijdsverschil: 0 (gok 217s, echt 386s)
+Uitvallers: 17 (gok 34, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">27</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -3530,6 +3622,11 @@ Kanter: 7
 Totaal: 35">35</td>
             
             <td class="total total-cell total-sep">503</td>
+            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
+Tijdsverschil: 0 (gok 185s, echt 386s)
+Uitvallers: 16 (gok 35, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">36</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -3705,6 +3802,11 @@ Girmay: 1
 Totaal: 14">14</td>
             
             <td class="total total-cell total-sep">495</td>
+            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
+Tijdsverschil: 0 (gok 420s, echt 386s)
+Uitvallers: 11 (gok 40, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">31</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -3871,6 +3973,11 @@ V.Paret-Peintre: 1
 Totaal: 24">24</td>
             
             <td class="total total-cell total-sep">414</td>
+            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+Tijdsverschil: 0 (gok 153s, echt 386s)
+Uitvallers: 18 (gok 33, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">28</td>
             <td class="prize-col" data-tooltip="Voorlaatste plaats">€10</td>
           </tr>
           
@@ -4021,12 +4128,18 @@ O. Kooij: 6
 Totaal: 23">23</td>
             
             <td class="total total-cell total-sep">375</td>
+            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+Tijdsverschil: 0 (gok 111s, echt 386s)
+Uitvallers: 17 (gok 18, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">27</td>
             <td class="prize-col"></td>
           </tr>
           
         </tbody>
       </table>
     </div>
+    <p class="bonus-note">* Bonus = bonusvragen (podium 10 p. per goede renner; tijdsverschil &amp; uitvallers max. 25, −1 per seconde/uitvaller ernaast). <strong>Voorlopig</strong>: nog niet in het totaal verwerkt, en de formule voor tijdsverschil/uitvallers moet nog definitief bevestigd worden. Beweeg over een waarde voor de uitsplitsing.</p>
   </section>
 
   <section>
@@ -11696,7 +11809,7 @@ Totaal: 11">11</td>
       </div>
       <div class="bonus-answers">
         <strong>Bonusvragen:</strong>
-        <div>podium: Pogacar. Vingegaard, Evenepoel</div>
+        <div>podium: Pogacar, Vingegaard, Evenepoel</div>
         <div>tijdsverschil: 180s</div>
         <div>uitvallers: 39</div>
       </div>
