@@ -101,6 +101,9 @@
   .bonus-col { text-align: center; width: 3.5em; }
   th.bonus-col { cursor: help; }
   td.bonus-col { color: var(--muted); font-style: italic; cursor: help; }
+  .es-col { text-align: center; width: 3em; }
+  th.es-col { cursor: help; }
+  td.es-col { color: var(--groen); cursor: help; }
   .bonus-note { color: var(--muted); font-size: 0.82rem; font-style: italic; margin: 10px 0 0; }
   .stage-cell { width: 3em; text-align: center; }
   td.stage-cell { cursor: help; }
@@ -278,9 +281,22 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
 <td class="prize-col"{% if prize %} data-tooltip="{{ prize.tooltip }}"{% endif %}>{{ prize.label if prize else '' }}</td>
 {%- endmacro %}
 
+{% macro es_cell(team) -%}
+{%- set fb = team.final_breakdown -%}
+{%- set lines = [
+  'Geel: ' ~ fb.get('geel', 0),
+  'Groen: ' ~ fb.get('groen', 0),
+  'Bolletjes: ' ~ fb.get('bolletjes', 0),
+  'Wit: ' ~ fb.get('wit', 0),
+  '',
+  'Totaal eindstand: ' ~ team.final_bonus ~ ' (zit in het totaal)'
+] -%}
+<td class="es-col endcol" data-tooltip="{{ lines|join('\n') }}">{{ team.final_bonus }}</td>
+{%- endmacro %}
+
 {% macro bonus_cell(bonus) -%}
 {%- if not bonus.available -%}
-<td class="bonus-col"></td>
+<td class="bonus-col endcol"></td>
 {%- else -%}
 {%- set gap_pts = bonus.gap.points if bonus.gap.points is not none else '-' -%}
 {%- set dnf_pts = bonus.dnf.points if bonus.dnf.points is not none else '-' -%}
@@ -291,7 +307,7 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
   '',
   'Voorlopig - formule tijdsverschil/uitvallers nog niet definitief'
 ] -%}
-<td class="bonus-col" data-tooltip="{{ lines|join('\n') }}">{{ bonus.total }}</td>
+<td class="bonus-col endcol" data-tooltip="{{ lines|join('\n') }}">{{ bonus.total }}</td>
 {%- endif -%}
 {%- endmacro %}
 
@@ -328,8 +344,9 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
             <th class="rank-col">#</th>
             <th>Naam</th>
             {% for s in stages_available %}<th class="stage-cell" data-stage="{{ s }}">E{{ s }}</th>{% endfor %}
+            {% if classification_available %}<th class="es-col endcol" data-tooltip="Eindstand: extra punten voor renners in de eind-klassementen (geel 10..1, groen 6..1, bolletjes 4..1, wit 3..1). Deze tellen mee in het totaal.">ES</th>{% endif %}
             <th class="total-sep">Totaal</th>
-            {% if bonus_available %}<th class="bonus-col" data-tooltip="Bonusvragen (podium/tijdsverschil/uitvallers). Voorlopig - nog niet in het totaal verwerkt en de formule voor tijdsverschil/uitvallers is nog niet definitief.">Bonus*</th>{% endif %}
+            {% if bonus_available %}<th class="bonus-col endcol" data-tooltip="Bonusvragen (podium/tijdsverschil/uitvallers). Voorlopig - nog niet in het totaal verwerkt en de formule voor tijdsverschil/uitvallers is nog niet definitief.">Bonus*</th>{% endif %}
             <th class="prize-col">Prijs</th>
           </tr>
         </thead>
@@ -348,6 +365,7 @@ Hoogste dagscore! ({{ dagscore_record }} punten) - {{ prizes.dagscore.label }}{%
 
 Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
             {% endfor %}
+            {% if classification_available %}{{ es_cell(p.hoofdploeg) }}{% endif %}
             <td class="total total-cell total-sep">{{ p.hoofdploeg.total }}</td>
             {% if bonus_available %}{{ bonus_cell(p.bonus) }}{% endif %}
             {{ prize_cell(p.prize_hoofd) }}
@@ -419,6 +437,7 @@ Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
             <th class="rank-col">#</th>
             <th>Naam</th>
             {% for s in stages_available %}<th class="stage-cell" data-stage="{{ s }}">E{{ s }}</th>{% endfor %}
+            {% if classification_available %}<th class="es-col endcol" data-tooltip="Eindstand: extra punten voor renners in de eind-klassementen (geel 10..1, groen 6..1, bolletjes 4..1, wit 3..1). Deze tellen mee in het totaal - en in de pannenkoekenpoule is dat dus nadelig.">ES</th>{% endif %}
             <th class="total-sep">Totaal</th>
             <th class="prize-col">Prijs</th>
           </tr>
@@ -432,6 +451,7 @@ Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
             {% set st = p.pannenkoeken.by_stage[s|string] %}
             <td class="stage-cell" data-stage="{{ s }}" data-tooltip="{{ st.tooltip }}">{{ st.score }}</td>
             {% endfor %}
+            {% if classification_available %}{{ es_cell(p.pannenkoeken) }}{% endif %}
             <td class="total total-cell total-sep">{{ p.pannenkoeken.total }}</td>
             {{ prize_cell(p.prize_pannen) }}
           </tr>
@@ -581,6 +601,12 @@ Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
     table.querySelectorAll('[data-stage]').forEach(function (el) {
       var visible = day === 'latest' || parseInt(el.dataset.stage, 10) <= day;
       el.style.display = visible ? '' : 'none';
+    });
+
+    // End-of-tour columns (ES, Bonus) only make sense at the final standing -
+    // hide them while looking back at a historical day.
+    table.querySelectorAll('.endcol').forEach(function (el) {
+      el.style.display = day === 'latest' ? '' : 'none';
     });
 
     var tbody = table.querySelector('tbody');

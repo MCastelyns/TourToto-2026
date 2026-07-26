@@ -101,6 +101,9 @@
   .bonus-col { text-align: center; width: 3.5em; }
   th.bonus-col { cursor: help; }
   td.bonus-col { color: var(--muted); font-style: italic; cursor: help; }
+  .es-col { text-align: center; width: 3em; }
+  th.es-col { cursor: help; }
+  td.es-col { color: var(--groen); cursor: help; }
   .bonus-note { color: var(--muted); font-size: 0.82rem; font-style: italic; margin: 10px 0 0; }
   .stage-cell { width: 3em; text-align: center; }
   td.stage-cell { cursor: help; }
@@ -253,8 +256,8 @@
   <h1>Tourtoto 2026</h1>
   <p>
     21 van de 21 etappes verwerkt
-    
-    &middot; laatst bijgewerkt: 26-07-2026 20:24
+    &middot; eindklassement bekend
+    &middot; laatst bijgewerkt: 26-07-2026 20:44
   </p>
 </header>
 
@@ -264,6 +267,8 @@
 </div>
 
 <main>
+
+
 
 
 
@@ -295,14 +300,15 @@
             <th class="rank-col">#</th>
             <th>Naam</th>
             <th class="stage-cell" data-stage="1">E1</th><th class="stage-cell" data-stage="2">E2</th><th class="stage-cell" data-stage="3">E3</th><th class="stage-cell" data-stage="4">E4</th><th class="stage-cell" data-stage="5">E5</th><th class="stage-cell" data-stage="6">E6</th><th class="stage-cell" data-stage="7">E7</th><th class="stage-cell" data-stage="8">E8</th><th class="stage-cell" data-stage="9">E9</th><th class="stage-cell" data-stage="10">E10</th><th class="stage-cell" data-stage="11">E11</th><th class="stage-cell" data-stage="12">E12</th><th class="stage-cell" data-stage="13">E13</th><th class="stage-cell" data-stage="14">E14</th><th class="stage-cell" data-stage="15">E15</th><th class="stage-cell" data-stage="16">E16</th><th class="stage-cell" data-stage="17">E17</th><th class="stage-cell" data-stage="18">E18</th><th class="stage-cell" data-stage="19">E19</th><th class="stage-cell" data-stage="20">E20</th><th class="stage-cell" data-stage="21">E21</th>
+            <th class="es-col endcol" data-tooltip="Eindstand: extra punten voor renners in de eind-klassementen (geel 10..1, groen 6..1, bolletjes 4..1, wit 3..1). Deze tellen mee in het totaal.">ES</th>
             <th class="total-sep">Totaal</th>
-            <th class="bonus-col" data-tooltip="Bonusvragen (podium/tijdsverschil/uitvallers). Voorlopig - nog niet in het totaal verwerkt en de formule voor tijdsverschil/uitvallers is nog niet definitief.">Bonus*</th>
+            <th class="bonus-col endcol" data-tooltip="Bonusvragen (podium/tijdsverschil/uitvallers). Voorlopig - nog niet in het totaal verwerkt en de formule voor tijdsverschil/uitvallers is nog niet definitief.">Bonus*</th>
             <th class="prize-col">Prijs</th>
           </tr>
         </thead>
         <tbody>
           
-          <tr data-name="Mirjam" data-total="602" data-joker-stage="1" data-cum1="52" data-cum2="78" data-delta2="0" data-cum3="111" data-delta3="0" data-cum4="135" data-delta4="1" data-cum5="151" data-delta5="0" data-cum6="187" data-delta6="-1" data-cum7="212" data-delta7="-1" data-cum8="236" data-delta8="-1" data-cum9="258" data-delta9="1" data-cum10="289" data-delta10="0" data-cum11="315" data-delta11="-1" data-cum12="343" data-delta12="0" data-cum13="377" data-delta13="1" data-cum14="413" data-delta14="-1" data-cum15="437" data-delta15="-1" data-cum16="461" data-delta16="0" data-cum17="498" data-delta17="4" data-cum18="529" data-delta18="0" data-cum19="552" data-delta19="0" data-cum20="572" data-delta20="0" data-cum21="602" data-delta21="0">
+          <tr data-name="Mirjam" data-total="629" data-joker-stage="1" data-cum1="52" data-cum2="78" data-delta2="0" data-cum3="111" data-delta3="0" data-cum4="135" data-delta4="1" data-cum5="151" data-delta5="0" data-cum6="187" data-delta6="-1" data-cum7="212" data-delta7="-1" data-cum8="236" data-delta8="-1" data-cum9="258" data-delta9="1" data-cum10="289" data-delta10="0" data-cum11="315" data-delta11="-1" data-cum12="343" data-delta12="0" data-cum13="377" data-delta13="1" data-cum14="413" data-delta14="-1" data-cum15="437" data-delta15="-1" data-cum16="461" data-delta16="0" data-cum17="498" data-delta17="4" data-cum18="529" data-delta18="0" data-cum19="552" data-delta19="0" data-cum20="572" data-delta20="0" data-cum21="602" data-delta21="0">
             <td class="rank-col">1</td>
             <td>Mirjam<span class="rank-change " style="display:none"></span></td>
             
@@ -491,8 +497,14 @@ Pogacar: 7
 V.Paret-Peintre: 1
 Totaal: 30">30</td>
             
-            <td class="total total-cell total-sep">602</td>
-            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+            <td class="es-col endcol" data-tooltip="Geel: 10
+Groen: 12
+Bolletjes: 5
+Wit: 0
+
+Totaal eindstand: 27 (zit in het totaal)">27</td>
+            <td class="total total-cell total-sep">629</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 10 (1/3 goed)
 Tijdsverschil: 0 (gok 270s, echt 386s)
 Uitvallers: 22 (gok 29, echt 26)
 
@@ -500,7 +512,7 @@ Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">32</td>
             <td class="prize-col" data-tooltip="1e prijs hoofdpoule">€60</td>
           </tr>
           
-          <tr data-name="Elise" data-total="570" data-joker-stage="6" data-cum1="18" data-cum2="43" data-delta2="1" data-cum3="67" data-delta3="0" data-cum4="76" data-delta4="-1" data-cum5="92" data-delta5="-1" data-cum6="148" data-delta6="4" data-cum7="174" data-delta7="-1" data-cum8="203" data-delta8="2" data-cum9="214" data-delta9="-1" data-cum10="245" data-delta10="-2" data-cum11="265" data-delta11="1" data-cum12="295" data-delta12="1" data-cum13="323" data-delta13="1" data-cum14="352" data-delta14="0" data-cum15="385" data-delta15="-2" data-cum16="418" data-delta16="4" data-cum17="451" data-delta17="3" data-cum18="476" data-delta18="2" data-cum19="511" data-delta19="0" data-cum20="548" data-delta20="4" data-cum21="570" data-delta21="1">
+          <tr data-name="Elise" data-total="599" data-joker-stage="6" data-cum1="18" data-cum2="43" data-delta2="1" data-cum3="67" data-delta3="0" data-cum4="76" data-delta4="-1" data-cum5="92" data-delta5="-1" data-cum6="148" data-delta6="4" data-cum7="174" data-delta7="-1" data-cum8="203" data-delta8="2" data-cum9="214" data-delta9="-1" data-cum10="245" data-delta10="-2" data-cum11="265" data-delta11="1" data-cum12="295" data-delta12="1" data-cum13="323" data-delta13="1" data-cum14="352" data-delta14="0" data-cum15="385" data-delta15="-2" data-cum16="418" data-delta16="4" data-cum17="451" data-delta17="3" data-cum18="476" data-delta18="2" data-cum19="511" data-delta19="0" data-cum20="548" data-delta20="4" data-cum21="570" data-delta21="1">
             <td class="rank-col">2</td>
             <td>Elise<span class="rank-change rank-up" >&#9650;1</span></td>
             
@@ -677,8 +689,14 @@ Pogacar: 7
 Evenepoel: 4
 Totaal: 22">22</td>
             
-            <td class="total total-cell total-sep">570</td>
-            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
+            <td class="es-col endcol" data-tooltip="Geel: 19
+Groen: 6
+Bolletjes: 4
+Wit: 0
+
+Totaal eindstand: 29 (zit in het totaal)">29</td>
+            <td class="total total-cell total-sep">599</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 20 (2/3 goed)
 Tijdsverschil: 0 (gok 96s, echt 386s)
 Uitvallers: 18 (gok 33, echt 26)
 
@@ -686,7 +704,7 @@ Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">38</td>
             <td class="prize-col" data-tooltip="2e prijs hoofdpoule">€40</td>
           </tr>
           
-          <tr data-name="Ingrid" data-total="568" data-joker-stage="1" data-cum1="52" data-cum2="84" data-delta2="0" data-cum3="117" data-delta3="0" data-cum4="123" data-delta4="-2" data-cum5="146" data-delta5="1" data-cum6="183" data-delta6="-1" data-cum7="217" data-delta7="2" data-cum8="248" data-delta8="0" data-cum9="264" data-delta9="-1" data-cum10="299" data-delta10="0" data-cum11="335" data-delta11="1" data-cum12="368" data-delta12="-1" data-cum13="385" data-delta13="0" data-cum14="418" data-delta14="-1" data-cum15="442" data-delta15="0" data-cum16="470" data-delta16="0" data-cum17="495" data-delta17="1" data-cum18="506" data-delta18="0" data-cum19="529" data-delta19="0" data-cum20="549" data-delta20="0" data-cum21="568" data-delta21="-1">
+          <tr data-name="Ingrid" data-total="596" data-joker-stage="1" data-cum1="52" data-cum2="84" data-delta2="0" data-cum3="117" data-delta3="0" data-cum4="123" data-delta4="-2" data-cum5="146" data-delta5="1" data-cum6="183" data-delta6="-1" data-cum7="217" data-delta7="2" data-cum8="248" data-delta8="0" data-cum9="264" data-delta9="-1" data-cum10="299" data-delta10="0" data-cum11="335" data-delta11="1" data-cum12="368" data-delta12="-1" data-cum13="385" data-delta13="0" data-cum14="418" data-delta14="-1" data-cum15="442" data-delta15="0" data-cum16="470" data-delta16="0" data-cum17="495" data-delta17="1" data-cum18="506" data-delta18="0" data-cum19="529" data-delta19="0" data-cum20="549" data-delta20="0" data-cum21="568" data-delta21="-1">
             <td class="rank-col">3</td>
             <td>Ingrid<span class="rank-change rank-down" >&#9660;1</span></td>
             
@@ -874,8 +892,14 @@ Pogacar: 7
 Girmay: 1
 Totaal: 19">19</td>
             
-            <td class="total total-cell total-sep">568</td>
-            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
+            <td class="es-col endcol" data-tooltip="Geel: 15
+Groen: 10
+Bolletjes: 3
+Wit: 0
+
+Totaal eindstand: 28 (zit in het totaal)">28</td>
+            <td class="total total-cell total-sep">596</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 20 (2/3 goed)
 Tijdsverschil: 0 (gok 56s, echt 386s)
 Uitvallers: 17 (gok 18, echt 26)
 
@@ -883,7 +907,7 @@ Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">37</td>
             <td class="prize-col" data-tooltip="3e prijs hoofdpoule">€20</td>
           </tr>
           
-          <tr data-name="Jeffrey" data-total="564" data-joker-stage="11" data-cum1="26" data-cum2="58" data-delta2="5" data-cum3="91" data-delta3="-4" data-cum4="102" data-delta4="1" data-cum5="122" data-delta5="2" data-cum6="158" data-delta6="0" data-cum7="188" data-delta7="-1" data-cum8="222" data-delta8="1" data-cum9="237" data-delta9="0" data-cum10="271" data-delta10="0" data-cum11="331" data-delta11="5" data-cum12="370" data-delta12="1" data-cum13="391" data-delta13="0" data-cum14="423" data-delta14="-1" data-cum15="446" data-delta15="0" data-cum16="473" data-delta16="0" data-cum17="493" data-delta17="-2" data-cum18="503" data-delta18="0" data-cum19="525" data-delta19="1" data-cum20="544" data-delta20="-1" data-cum21="564" data-delta21="0">
+          <tr data-name="Jeffrey" data-total="588" data-joker-stage="11" data-cum1="26" data-cum2="58" data-delta2="5" data-cum3="91" data-delta3="-4" data-cum4="102" data-delta4="1" data-cum5="122" data-delta5="2" data-cum6="158" data-delta6="0" data-cum7="188" data-delta7="-1" data-cum8="222" data-delta8="1" data-cum9="237" data-delta9="0" data-cum10="271" data-delta10="0" data-cum11="331" data-delta11="5" data-cum12="370" data-delta12="1" data-cum13="391" data-delta13="0" data-cum14="423" data-delta14="-1" data-cum15="446" data-delta15="0" data-cum16="473" data-delta16="0" data-cum17="493" data-delta17="-2" data-cum18="503" data-delta18="0" data-cum19="525" data-delta19="1" data-cum20="544" data-delta20="-1" data-cum21="564" data-delta21="0">
             <td class="rank-col">4</td>
             <td>Jeffrey<span class="rank-change " style="display:none"></span></td>
             
@@ -1064,8 +1088,14 @@ Pogacar: 7
 Fretin: 2
 Totaal: 20">20</td>
             
-            <td class="total total-cell total-sep">564</td>
-            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+            <td class="es-col endcol" data-tooltip="Geel: 15
+Groen: 6
+Bolletjes: 3
+Wit: 0
+
+Totaal eindstand: 24 (zit in het totaal)">24</td>
+            <td class="total total-cell total-sep">588</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 10 (1/3 goed)
 Tijdsverschil: 0 (gok 290s, echt 386s)
 Uitvallers: 16 (gok 35, echt 26)
 
@@ -1073,8 +1103,200 @@ Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">26</td>
             <td class="prize-col"></td>
           </tr>
           
-          <tr data-name="Willem" data-total="559" data-joker-stage="14" data-cum1="29" data-cum2="55" data-delta2="-5" data-cum3="95" data-delta3="6" data-cum4="116" data-delta4="1" data-cum5="137" data-delta5="0" data-cum6="175" data-delta6="-1" data-cum7="195" data-delta7="0" data-cum8="223" data-delta8="-1" data-cum9="244" data-delta9="1" data-cum10="279" data-delta10="0" data-cum11="309" data-delta11="-1" data-cum12="338" data-delta12="-1" data-cum13="359" data-delta13="0" data-cum14="429" data-delta14="6" data-cum15="455" data-delta15="0" data-cum16="474" data-delta16="0" data-cum17="494" data-delta17="-2" data-cum18="504" data-delta18="0" data-cum19="523" data-delta19="-1" data-cum20="539" data-delta20="-1" data-cum21="559" data-delta21="0">
+          <tr data-name="Mitchel" data-total="580" data-joker-stage="15" data-cum1="26" data-cum2="58" data-delta2="7" data-cum3="91" data-delta3="-4" data-cum4="97" data-delta4="-3" data-cum5="115" data-delta5="0" data-cum6="151" data-delta6="0" data-cum7="190" data-delta7="7" data-cum8="223" data-delta8="2" data-cum9="238" data-delta9="-1" data-cum10="272" data-delta10="0" data-cum11="305" data-delta11="-1" data-cum12="338" data-delta12="1" data-cum13="361" data-delta13="1" data-cum14="393" data-delta14="-1" data-cum15="439" data-delta15="2" data-cum16="467" data-delta16="0" data-cum17="487" data-delta17="-1" data-cum18="497" data-delta18="0" data-cum19="519" data-delta19="0" data-cum20="538" data-delta20="-1" data-cum21="556" data-delta21="0">
             <td class="rank-col">5</td>
+            <td>Mitchel<span class="rank-change " style="display:none"></span></td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="1" data-tooltip="Vingegaard: 15
+Pogacar: 11
+Totaal: 26">26</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="2" data-tooltip="Pogacar: 14
+Vingegaard: 12
+Skjelmose: 6
+Totaal: 32">32</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="3" data-tooltip="Pogacar: 18
+Vingegaard: 15
+Totaal: 33">33</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="4" data-tooltip="Pogacar: 4
+Vingegaard: 2
+Totaal: 6">6</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="5" data-tooltip="T. Merlier: 8
+J. Philipsen: 6
+Pogacar: 2
+Waerenskjold: 1
+Vingegaard: 1
+Totaal: 18">18</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="6" data-tooltip="Pogacar: 18
+Vingegaard: 15
+Skjelmose: 3
+Totaal: 36">36</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="7" data-tooltip="T. Merlier: 10
+Waerenskjold: 9
+Pogacar: 8
+J. Philipsen: 6
+Vingegaard: 6
+Totaal: 39">39</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="8" data-tooltip="T. Merlier: 12
+Pogacar: 8
+J. Philipsen: 7
+Vingegaard: 6
+Totaal: 33">33</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="9" data-tooltip="Pogacar: 8
+Vingegaard: 6
+T. Merlier: 1
+Totaal: 15">15</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="10" data-tooltip="Pogacar: 18
+Vingegaard: 10
+Skjelmose: 5
+T. Merlier: 1
+Totaal: 34">34</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="11" data-tooltip="Waerenskjold: 10
+J. Philipsen: 9
+Pogacar: 8
+Vingegaard: 6
+Totaal: 33">33</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="12" data-tooltip="T. Merlier: 10
+J. Philipsen: 9
+Pogacar: 8
+Vingegaard: 6
+Totaal: 33">33</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="13" data-tooltip="Pogacar: 8
+Van Gils: 7
+Vingegaard: 6
+J. Philipsen: 2
+Totaal: 23">23</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="14" data-tooltip="Pogacar: 18
+Vingegaard: 11
+J. Philipsen: 2
+Skjelmose: 1
+Totaal: 32">32</td>
+            
+            
+            
+            
+            <td class="stage-cell joker-cell  " data-stage="15" data-tooltip="Pogacar: 17
+Skjelmose: 4
+J. Philipsen: 2
+Totaal: 23">46</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="16" data-tooltip="Pogacar: 17
+Skjelmose: 8
+J. Philipsen: 2
+Joshua Tarling: 1
+Totaal: 28">28</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="17" data-tooltip="J. Philipsen: 12
+Pogacar: 8
+Totaal: 20">20</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="18" data-tooltip="Pogacar: 8
+J. Philipsen: 2
+Totaal: 10">10</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="19" data-tooltip="Pogacar: 17
+Skjelmose: 3
+J. Philipsen: 2
+Totaal: 22">22</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="20" data-tooltip="Pogacar: 14
+Skjelmose: 3
+J. Philipsen: 2
+Totaal: 19">19</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="21" data-tooltip="J. Philipsen: 11
+Pogacar: 7
+Totaal: 18">18</td>
+            
+            <td class="es-col endcol" data-tooltip="Geel: 15
+Groen: 6
+Bolletjes: 3
+Wit: 0
+
+Totaal eindstand: 24 (zit in het totaal)">24</td>
+            <td class="total total-cell total-sep">580</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 10 (1/3 goed)
+Tijdsverschil: 0 (gok 156s, echt 386s)
+Uitvallers: 23 (gok 28, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">33</td>
+            <td class="prize-col"></td>
+          </tr>
+          
+          <tr data-name="Willem" data-total="578" data-joker-stage="14" data-cum1="29" data-cum2="55" data-delta2="-5" data-cum3="95" data-delta3="6" data-cum4="116" data-delta4="1" data-cum5="137" data-delta5="0" data-cum6="175" data-delta6="-1" data-cum7="195" data-delta7="0" data-cum8="223" data-delta8="-1" data-cum9="244" data-delta9="1" data-cum10="279" data-delta10="0" data-cum11="309" data-delta11="-1" data-cum12="338" data-delta12="-1" data-cum13="359" data-delta13="0" data-cum14="429" data-delta14="6" data-cum15="455" data-delta15="0" data-cum16="474" data-delta16="0" data-cum17="494" data-delta17="-2" data-cum18="504" data-delta18="0" data-cum19="523" data-delta19="-1" data-cum20="539" data-delta20="-1" data-cum21="559" data-delta21="0">
+            <td class="rank-col">6</td>
             <td>Willem<span class="rank-change " style="display:none"></span></td>
             
             
@@ -1251,8 +1473,14 @@ Pogacar: 7
 Fretin: 2
 Totaal: 20">20</td>
             
-            <td class="total total-cell total-sep">559</td>
-            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+            <td class="es-col endcol" data-tooltip="Geel: 10
+Groen: 6
+Bolletjes: 3
+Wit: 0
+
+Totaal eindstand: 19 (zit in het totaal)">19</td>
+            <td class="total total-cell total-sep">578</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 10 (1/3 goed)
 Tijdsverschil: 0 (gok 125s, echt 386s)
 Uitvallers: 19 (gok 32, echt 26)
 
@@ -1260,377 +1488,8 @@ Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">29</td>
             <td class="prize-col"></td>
           </tr>
           
-          <tr data-name="Mitchel" data-total="556" data-joker-stage="15" data-cum1="26" data-cum2="58" data-delta2="7" data-cum3="91" data-delta3="-4" data-cum4="97" data-delta4="-3" data-cum5="115" data-delta5="0" data-cum6="151" data-delta6="0" data-cum7="190" data-delta7="7" data-cum8="223" data-delta8="2" data-cum9="238" data-delta9="-1" data-cum10="272" data-delta10="0" data-cum11="305" data-delta11="-1" data-cum12="338" data-delta12="1" data-cum13="361" data-delta13="1" data-cum14="393" data-delta14="-1" data-cum15="439" data-delta15="2" data-cum16="467" data-delta16="0" data-cum17="487" data-delta17="-1" data-cum18="497" data-delta18="0" data-cum19="519" data-delta19="0" data-cum20="538" data-delta20="-1" data-cum21="556" data-delta21="0">
-            <td class="rank-col">6</td>
-            <td>Mitchel<span class="rank-change " style="display:none"></span></td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="1" data-tooltip="Vingegaard: 15
-Pogacar: 11
-Totaal: 26">26</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="2" data-tooltip="Pogacar: 14
-Vingegaard: 12
-Skjelmose: 6
-Totaal: 32">32</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="3" data-tooltip="Pogacar: 18
-Vingegaard: 15
-Totaal: 33">33</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="4" data-tooltip="Pogacar: 4
-Vingegaard: 2
-Totaal: 6">6</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="5" data-tooltip="T. Merlier: 8
-J. Philipsen: 6
-Pogacar: 2
-Waerenskjold: 1
-Vingegaard: 1
-Totaal: 18">18</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="6" data-tooltip="Pogacar: 18
-Vingegaard: 15
-Skjelmose: 3
-Totaal: 36">36</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="7" data-tooltip="T. Merlier: 10
-Waerenskjold: 9
-Pogacar: 8
-J. Philipsen: 6
-Vingegaard: 6
-Totaal: 39">39</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="8" data-tooltip="T. Merlier: 12
-Pogacar: 8
-J. Philipsen: 7
-Vingegaard: 6
-Totaal: 33">33</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="9" data-tooltip="Pogacar: 8
-Vingegaard: 6
-T. Merlier: 1
-Totaal: 15">15</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="10" data-tooltip="Pogacar: 18
-Vingegaard: 10
-Skjelmose: 5
-T. Merlier: 1
-Totaal: 34">34</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="11" data-tooltip="Waerenskjold: 10
-J. Philipsen: 9
-Pogacar: 8
-Vingegaard: 6
-Totaal: 33">33</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="12" data-tooltip="T. Merlier: 10
-J. Philipsen: 9
-Pogacar: 8
-Vingegaard: 6
-Totaal: 33">33</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="13" data-tooltip="Pogacar: 8
-Van Gils: 7
-Vingegaard: 6
-J. Philipsen: 2
-Totaal: 23">23</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="14" data-tooltip="Pogacar: 18
-Vingegaard: 11
-J. Philipsen: 2
-Skjelmose: 1
-Totaal: 32">32</td>
-            
-            
-            
-            
-            <td class="stage-cell joker-cell  " data-stage="15" data-tooltip="Pogacar: 17
-Skjelmose: 4
-J. Philipsen: 2
-Totaal: 23">46</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="16" data-tooltip="Pogacar: 17
-Skjelmose: 8
-J. Philipsen: 2
-Joshua Tarling: 1
-Totaal: 28">28</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="17" data-tooltip="J. Philipsen: 12
-Pogacar: 8
-Totaal: 20">20</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="18" data-tooltip="Pogacar: 8
-J. Philipsen: 2
-Totaal: 10">10</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="19" data-tooltip="Pogacar: 17
-Skjelmose: 3
-J. Philipsen: 2
-Totaal: 22">22</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="20" data-tooltip="Pogacar: 14
-Skjelmose: 3
-J. Philipsen: 2
-Totaal: 19">19</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="21" data-tooltip="J. Philipsen: 11
-Pogacar: 7
-Totaal: 18">18</td>
-            
-            <td class="total total-cell total-sep">556</td>
-            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
-Tijdsverschil: 0 (gok 156s, echt 386s)
-Uitvallers: 23 (gok 28, echt 26)
-
-Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">33</td>
-            <td class="prize-col"></td>
-          </tr>
-          
-          <tr data-name="Hans" data-total="554" data-joker-stage="15" data-cum1="29" data-cum2="55" data-delta2="-5" data-cum3="92" data-delta3="3" data-cum4="98" data-delta4="-4" data-cum5="117" data-delta5="-1" data-cum6="157" data-delta6="4" data-cum7="185" data-delta7="-2" data-cum8="208" data-delta8="-2" data-cum9="222" data-delta9="-1" data-cum10="257" data-delta10="2" data-cum11="280" data-delta11="-1" data-cum12="307" data-delta12="-1" data-cum13="333" data-delta13="0" data-cum14="368" data-delta14="0" data-cum15="420" data-delta15="6" data-cum16="439" data-delta16="0" data-cum17="475" data-delta17="1" data-cum18="494" data-delta18="0" data-cum19="513" data-delta19="0" data-cum20="529" data-delta20="-1" data-cum21="554" data-delta21="0">
+          <tr data-name="Mark" data-total="577" data-joker-stage="20" data-cum1="26" data-cum2="52" data-delta2="-3" data-cum3="85" data-delta3="0" data-cum4="109" data-delta4="11" data-cum5="125" data-delta5="0" data-cum6="161" data-delta6="-1" data-cum7="191" data-delta7="0" data-cum8="215" data-delta8="-4" data-cum9="237" data-delta9="2" data-cum10="268" data-delta10="0" data-cum11="294" data-delta11="-1" data-cum12="322" data-delta12="-2" data-cum13="346" data-delta13="3" data-cum14="380" data-delta14="0" data-cum15="402" data-delta15="-1" data-cum16="424" data-delta16="-1" data-cum17="450" data-delta17="-1" data-cum18="463" data-delta18="-1" data-cum19="485" data-delta19="1" data-cum20="523" data-delta20="3" data-cum21="552" data-delta21="0">
             <td class="rank-col">7</td>
-            <td>Hans<span class="rank-change " style="display:none"></span></td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="1" data-tooltip="Vingegaard: 15
-Pogacar: 11
-F. Lipowitz: 3
-Totaal: 29">29</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="2" data-tooltip="Pogacar: 14
-Vingegaard: 12
-Totaal: 26">26</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="3" data-tooltip="Pogacar: 18
-Vingegaard: 15
-F. Lipowitz: 4
-Totaal: 37">37</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="4" data-tooltip="Pogacar: 4
-Vingegaard: 2
-Totaal: 6">6</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="5" data-tooltip="Kanter: 10
-J. Philipsen: 6
-Pogacar: 2
-Vingegaard: 1
-Totaal: 19">19</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="6" data-tooltip="Pogacar: 18
-Vingegaard: 15
-F. Lipowitz: 5
-Kanter: 2
-Totaal: 40">40</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="7" data-tooltip="Pogacar: 8
-Kanter: 8
-Vingegaard: 6
-J. Philipsen: 6
-Totaal: 28">28</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="8" data-tooltip="Pogacar: 8
-J. Philipsen: 7
-Vingegaard: 6
-Kanter: 2
-Totaal: 23">23</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="9" data-tooltip="Pogacar: 8
-Vingegaard: 6
-Totaal: 14">14</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="10" data-tooltip="Pogacar: 18
-Vingegaard: 10
-F. Lipowitz: 7
-Totaal: 35">35</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="11" data-tooltip="J. Philipsen: 9
-Pogacar: 8
-Vingegaard: 6
-Totaal: 23">23</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="12" data-tooltip="J. Philipsen: 9
-Pogacar: 8
-Vingegaard: 6
-Kanter: 4
-Totaal: 27">27</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="13" data-tooltip="Schmid: 10
-Pogacar: 8
-Vingegaard: 6
-J. Philipsen: 2
-Totaal: 26">26</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="14" data-tooltip="Pogacar: 18
-Vingegaard: 11
-F. Lipowitz: 4
-J. Philipsen: 2
-Totaal: 35">35</td>
-            
-            
-            
-            
-            <td class="stage-cell joker-cell  " data-stage="15" data-tooltip="Pogacar: 17
-F. Lipowitz: 7
-J. Philipsen: 2
-Totaal: 26">52</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="16" data-tooltip="Pogacar: 17
-J. Philipsen: 2
-Totaal: 19">19</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="17" data-tooltip="J. Philipsen: 12
-Schmid: 9
-Pogacar: 8
-Askey: 7
-Totaal: 36">36</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="18" data-tooltip="Schmid: 9
-Pogacar: 8
-J. Philipsen: 2
-Totaal: 19">19</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="19" data-tooltip="Pogacar: 17
-J. Philipsen: 2
-Totaal: 19">19</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="20" data-tooltip="Pogacar: 14
-J. Philipsen: 2
-Totaal: 16">16</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="21" data-tooltip="J. Philipsen: 11
-Pogacar: 7
-Kanter: 7
-Totaal: 25">25</td>
-            
-            <td class="total total-cell total-sep">554</td>
-            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
-Tijdsverschil: 0 (gok 222s, echt 386s)
-Uitvallers: 23 (gok 28, echt 26)
-
-Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">43</td>
-            <td class="prize-col"></td>
-          </tr>
-          
-          <tr data-name="Mark" data-total="552" data-joker-stage="20" data-cum1="26" data-cum2="52" data-delta2="-3" data-cum3="85" data-delta3="0" data-cum4="109" data-delta4="11" data-cum5="125" data-delta5="0" data-cum6="161" data-delta6="-1" data-cum7="191" data-delta7="0" data-cum8="215" data-delta8="-4" data-cum9="237" data-delta9="2" data-cum10="268" data-delta10="0" data-cum11="294" data-delta11="-1" data-cum12="322" data-delta12="-2" data-cum13="346" data-delta13="3" data-cum14="380" data-delta14="0" data-cum15="402" data-delta15="-1" data-cum16="424" data-delta16="-1" data-cum17="450" data-delta17="-1" data-cum18="463" data-delta18="-1" data-cum19="485" data-delta19="1" data-cum20="523" data-delta20="3" data-cum21="552" data-delta21="0">
-            <td class="rank-col">8</td>
             <td>Mark<span class="rank-change " style="display:none"></span></td>
             
             
@@ -1808,8 +1667,14 @@ Pedersen: 11
 Pogacar: 7
 Totaal: 29">29</td>
             
-            <td class="total total-cell total-sep">552</td>
-            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+            <td class="es-col endcol" data-tooltip="Geel: 10
+Groen: 12
+Bolletjes: 3
+Wit: 0
+
+Totaal eindstand: 25 (zit in het totaal)">25</td>
+            <td class="total total-cell total-sep">577</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 10 (1/3 goed)
 Tijdsverschil: 4 (gok 365s, echt 386s)
 Uitvallers: 20 (gok 31, echt 26)
 
@@ -1817,16 +1682,17 @@ Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">34</td>
             <td class="prize-col"></td>
           </tr>
           
-          <tr data-name="Kevin" data-total="544" data-joker-stage="20" data-cum1="26" data-cum2="52" data-delta2="-3" data-cum3="85" data-delta3="0" data-cum4="98" data-delta4="3" data-cum5="123" data-delta5="6" data-cum6="156" data-delta6="-3" data-cum7="176" data-delta7="-6" data-cum8="205" data-delta8="2" data-cum9="219" data-delta9="-1" data-cum10="247" data-delta10="-2" data-cum11="279" data-delta11="3" data-cum12="311" data-delta12="1" data-cum13="344" data-delta13="2" data-cum14="375" data-delta14="0" data-cum15="394" data-delta15="-2" data-cum16="413" data-delta16="-2" data-cum17="450" data-delta17="4" data-cum18="469" data-delta18="0" data-cum19="488" data-delta19="0" data-cum20="520" data-delta20="1" data-cum21="544" data-delta21="0">
-            <td class="rank-col">9</td>
-            <td>Kevin<span class="rank-change " style="display:none"></span></td>
+          <tr data-name="Hans" data-total="576" data-joker-stage="15" data-cum1="29" data-cum2="55" data-delta2="-5" data-cum3="92" data-delta3="3" data-cum4="98" data-delta4="-4" data-cum5="117" data-delta5="-1" data-cum6="157" data-delta6="4" data-cum7="185" data-delta7="-2" data-cum8="208" data-delta8="-2" data-cum9="222" data-delta9="-1" data-cum10="257" data-delta10="2" data-cum11="280" data-delta11="-1" data-cum12="307" data-delta12="-1" data-cum13="333" data-delta13="0" data-cum14="368" data-delta14="0" data-cum15="420" data-delta15="6" data-cum16="439" data-delta16="0" data-cum17="475" data-delta17="1" data-cum18="494" data-delta18="0" data-cum19="513" data-delta19="0" data-cum20="529" data-delta20="-1" data-cum21="554" data-delta21="0">
+            <td class="rank-col">8</td>
+            <td>Hans<span class="rank-change " style="display:none"></span></td>
             
             
             
             
             <td class="stage-cell   " data-stage="1" data-tooltip="Vingegaard: 15
 Pogacar: 11
-Totaal: 26">26</td>
+F. Lipowitz: 3
+Totaal: 29">29</td>
             
             
             
@@ -1840,49 +1706,51 @@ Totaal: 26">26</td>
             
             <td class="stage-cell   " data-stage="3" data-tooltip="Pogacar: 18
 Vingegaard: 15
-Totaal: 33">33</td>
+F. Lipowitz: 4
+Totaal: 37">37</td>
             
             
             
             
-            <td class="stage-cell   " data-stage="4" data-tooltip="M. Vacek: 7
-Pogacar: 4
+            <td class="stage-cell   " data-stage="4" data-tooltip="Pogacar: 4
 Vingegaard: 2
-Totaal: 13">13</td>
+Totaal: 6">6</td>
             
             
             
             
-            <td class="stage-cell   " data-stage="5" data-tooltip="O. Kooij: 10
+            <td class="stage-cell   " data-stage="5" data-tooltip="Kanter: 10
 J. Philipsen: 6
-M. Vacek: 6
 Pogacar: 2
 Vingegaard: 1
-Totaal: 25">25</td>
+Totaal: 19">19</td>
             
             
             
             
             <td class="stage-cell   " data-stage="6" data-tooltip="Pogacar: 18
 Vingegaard: 15
-Totaal: 33">33</td>
+F. Lipowitz: 5
+Kanter: 2
+Totaal: 40">40</td>
             
             
             
             
             <td class="stage-cell   " data-stage="7" data-tooltip="Pogacar: 8
-J. Philipsen: 6
+Kanter: 8
 Vingegaard: 6
-Totaal: 20">20</td>
+J. Philipsen: 6
+Totaal: 28">28</td>
             
             
             
             
             <td class="stage-cell   " data-stage="8" data-tooltip="Pogacar: 8
-O. Kooij: 8
 J. Philipsen: 7
 Vingegaard: 6
-Totaal: 29">29</td>
+Kanter: 2
+Totaal: 23">23</td>
             
             
             
@@ -1896,50 +1764,51 @@ Totaal: 14">14</td>
             
             <td class="stage-cell   " data-stage="10" data-tooltip="Pogacar: 18
 Vingegaard: 10
-Totaal: 28">28</td>
+F. Lipowitz: 7
+Totaal: 35">35</td>
             
             
             
             
             <td class="stage-cell   " data-stage="11" data-tooltip="J. Philipsen: 9
-O. Kooij: 9
 Pogacar: 8
 Vingegaard: 6
-Totaal: 32">32</td>
+Totaal: 23">23</td>
             
             
             
             
             <td class="stage-cell   " data-stage="12" data-tooltip="J. Philipsen: 9
-O. Kooij: 9
 Pogacar: 8
 Vingegaard: 6
-Totaal: 32">32</td>
+Kanter: 4
+Totaal: 27">27</td>
             
             
             
             
             <td class="stage-cell   " data-stage="13" data-tooltip="Schmid: 10
 Pogacar: 8
-Van Gils: 7
 Vingegaard: 6
 J. Philipsen: 2
-Totaal: 33">33</td>
+Totaal: 26">26</td>
             
             
             
             
             <td class="stage-cell   " data-stage="14" data-tooltip="Pogacar: 18
 Vingegaard: 11
+F. Lipowitz: 4
 J. Philipsen: 2
-Totaal: 31">31</td>
+Totaal: 35">35</td>
             
             
             
             
-            <td class="stage-cell   " data-stage="15" data-tooltip="Pogacar: 17
+            <td class="stage-cell joker-cell  " data-stage="15" data-tooltip="Pogacar: 17
+F. Lipowitz: 7
 J. Philipsen: 2
-Totaal: 19">19</td>
+Totaal: 26">52</td>
             
             
             
@@ -1954,8 +1823,8 @@ Totaal: 19">19</td>
             <td class="stage-cell   " data-stage="17" data-tooltip="J. Philipsen: 12
 Schmid: 9
 Pogacar: 8
-O. Kooij: 8
-Totaal: 37">37</td>
+Askey: 7
+Totaal: 36">36</td>
             
             
             
@@ -1975,29 +1844,35 @@ Totaal: 19">19</td>
             
             
             
-            <td class="stage-cell joker-cell  " data-stage="20" data-tooltip="Pogacar: 14
+            <td class="stage-cell   " data-stage="20" data-tooltip="Pogacar: 14
 J. Philipsen: 2
-Totaal: 16">32</td>
+Totaal: 16">16</td>
             
             
             
             
             <td class="stage-cell   " data-stage="21" data-tooltip="J. Philipsen: 11
 Pogacar: 7
-O. Kooij: 6
-Totaal: 24">24</td>
+Kanter: 7
+Totaal: 25">25</td>
             
-            <td class="total total-cell total-sep">544</td>
-            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
-Tijdsverschil: 0 (gok 173s, echt 386s)
-Uitvallers: 20 (gok 31, echt 26)
+            <td class="es-col endcol" data-tooltip="Geel: 10
+Groen: 9
+Bolletjes: 3
+Wit: 0
 
-Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">30</td>
+Totaal eindstand: 22 (zit in het totaal)">22</td>
+            <td class="total total-cell total-sep">576</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 20 (2/3 goed)
+Tijdsverschil: 0 (gok 222s, echt 386s)
+Uitvallers: 23 (gok 28, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">43</td>
             <td class="prize-col"></td>
           </tr>
           
-          <tr data-name="Paul" data-total="542" data-joker-stage="15" data-cum1="20" data-cum2="37" data-delta2="-2" data-cum3="67" data-delta3="1" data-cum4="78" data-delta4="1" data-cum5="93" data-delta5="-1" data-cum6="123" data-delta6="-1" data-cum7="150" data-delta7="0" data-cum8="166" data-delta8="0" data-cum9="175" data-delta9="0" data-cum10="211" data-delta10="0" data-cum11="241" data-delta11="0" data-cum12="261" data-delta12="0" data-cum13="273" data-delta13="0" data-cum14="312" data-delta14="0" data-cum15="390" data-delta15="5" data-cum16="422" data-delta16="3" data-cum17="448" data-delta17="-1" data-cum18="471" data-delta18="3" data-cum19="497" data-delta19="1" data-cum20="519" data-delta20="-2" data-cum21="542" data-delta21="0">
-            <td class="rank-col">10</td>
+          <tr data-name="Paul" data-total="572" data-joker-stage="15" data-cum1="20" data-cum2="37" data-delta2="-2" data-cum3="67" data-delta3="1" data-cum4="78" data-delta4="1" data-cum5="93" data-delta5="-1" data-cum6="123" data-delta6="-1" data-cum7="150" data-delta7="0" data-cum8="166" data-delta8="0" data-cum9="175" data-delta9="0" data-cum10="211" data-delta10="0" data-cum11="241" data-delta11="0" data-cum12="261" data-delta12="0" data-cum13="273" data-delta13="0" data-cum14="312" data-delta14="0" data-cum15="390" data-delta15="5" data-cum16="422" data-delta16="3" data-cum17="448" data-delta17="-1" data-cum18="471" data-delta18="3" data-cum19="497" data-delta19="1" data-cum20="519" data-delta20="-2" data-cum21="542" data-delta21="0">
+            <td class="rank-col">9</td>
             <td>Paul<span class="rank-change " style="display:none"></span></td>
             
             
@@ -2180,8 +2055,14 @@ P. Seixas: 4
 V.Paret-Peintre: 1
 Totaal: 23">23</td>
             
-            <td class="total total-cell total-sep">542</td>
-            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
+            <td class="es-col endcol" data-tooltip="Geel: 17
+Groen: 6
+Bolletjes: 5
+Wit: 2
+
+Totaal eindstand: 30 (zit in het totaal)">30</td>
+            <td class="total total-cell total-sep">572</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 20 (2/3 goed)
 Tijdsverschil: 0 (gok 221s, echt 386s)
 Uitvallers: 20 (gok 31, echt 26)
 
@@ -2189,7 +2070,192 @@ Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">40</td>
             <td class="prize-col"></td>
           </tr>
           
-          <tr data-name="Ferdi" data-total="534" data-joker-stage="20" data-cum1="26" data-cum2="58" data-delta2="5" data-cum3="91" data-delta3="-4" data-cum4="102" data-delta4="1" data-cum5="119" data-delta5="-1" data-cum6="155" data-delta6="-2" data-cum7="185" data-delta7="2" data-cum8="218" data-delta8="1" data-cum9="233" data-delta9="-1" data-cum10="267" data-delta10="0" data-cum11="290" data-delta11="-2" data-cum12="323" data-delta12="1" data-cum13="344" data-delta13="1" data-cum14="376" data-delta14="0" data-cum15="399" data-delta15="-1" data-cum16="426" data-delta16="1" data-cum17="446" data-delta17="-5" data-cum18="456" data-delta18="0" data-cum19="478" data-delta19="0" data-cum20="516" data-delta20="3" data-cum21="534" data-delta21="0">
+          <tr data-name="Kevin" data-total="565" data-joker-stage="20" data-cum1="26" data-cum2="52" data-delta2="-3" data-cum3="85" data-delta3="0" data-cum4="98" data-delta4="3" data-cum5="123" data-delta5="6" data-cum6="156" data-delta6="-3" data-cum7="176" data-delta7="-6" data-cum8="205" data-delta8="2" data-cum9="219" data-delta9="-1" data-cum10="247" data-delta10="-2" data-cum11="279" data-delta11="3" data-cum12="311" data-delta12="1" data-cum13="344" data-delta13="2" data-cum14="375" data-delta14="0" data-cum15="394" data-delta15="-2" data-cum16="413" data-delta16="-2" data-cum17="450" data-delta17="4" data-cum18="469" data-delta18="0" data-cum19="488" data-delta19="0" data-cum20="520" data-delta20="1" data-cum21="544" data-delta21="0">
+            <td class="rank-col">10</td>
+            <td>Kevin<span class="rank-change " style="display:none"></span></td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="1" data-tooltip="Vingegaard: 15
+Pogacar: 11
+Totaal: 26">26</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="2" data-tooltip="Pogacar: 14
+Vingegaard: 12
+Totaal: 26">26</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="3" data-tooltip="Pogacar: 18
+Vingegaard: 15
+Totaal: 33">33</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="4" data-tooltip="M. Vacek: 7
+Pogacar: 4
+Vingegaard: 2
+Totaal: 13">13</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="5" data-tooltip="O. Kooij: 10
+J. Philipsen: 6
+M. Vacek: 6
+Pogacar: 2
+Vingegaard: 1
+Totaal: 25">25</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="6" data-tooltip="Pogacar: 18
+Vingegaard: 15
+Totaal: 33">33</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="7" data-tooltip="Pogacar: 8
+J. Philipsen: 6
+Vingegaard: 6
+Totaal: 20">20</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="8" data-tooltip="Pogacar: 8
+O. Kooij: 8
+J. Philipsen: 7
+Vingegaard: 6
+Totaal: 29">29</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="9" data-tooltip="Pogacar: 8
+Vingegaard: 6
+Totaal: 14">14</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="10" data-tooltip="Pogacar: 18
+Vingegaard: 10
+Totaal: 28">28</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="11" data-tooltip="J. Philipsen: 9
+O. Kooij: 9
+Pogacar: 8
+Vingegaard: 6
+Totaal: 32">32</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="12" data-tooltip="J. Philipsen: 9
+O. Kooij: 9
+Pogacar: 8
+Vingegaard: 6
+Totaal: 32">32</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="13" data-tooltip="Schmid: 10
+Pogacar: 8
+Van Gils: 7
+Vingegaard: 6
+J. Philipsen: 2
+Totaal: 33">33</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="14" data-tooltip="Pogacar: 18
+Vingegaard: 11
+J. Philipsen: 2
+Totaal: 31">31</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="15" data-tooltip="Pogacar: 17
+J. Philipsen: 2
+Totaal: 19">19</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="16" data-tooltip="Pogacar: 17
+J. Philipsen: 2
+Totaal: 19">19</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="17" data-tooltip="J. Philipsen: 12
+Schmid: 9
+Pogacar: 8
+O. Kooij: 8
+Totaal: 37">37</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="18" data-tooltip="Schmid: 9
+Pogacar: 8
+J. Philipsen: 2
+Totaal: 19">19</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="19" data-tooltip="Pogacar: 17
+J. Philipsen: 2
+Totaal: 19">19</td>
+            
+            
+            
+            
+            <td class="stage-cell joker-cell  " data-stage="20" data-tooltip="Pogacar: 14
+J. Philipsen: 2
+Totaal: 16">32</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="21" data-tooltip="J. Philipsen: 11
+Pogacar: 7
+O. Kooij: 6
+Totaal: 24">24</td>
+            
+            <td class="es-col endcol" data-tooltip="Geel: 10
+Groen: 8
+Bolletjes: 3
+Wit: 0
+
+Totaal eindstand: 21 (zit in het totaal)">21</td>
+            <td class="total total-cell total-sep">565</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 10 (1/3 goed)
+Tijdsverschil: 0 (gok 173s, echt 386s)
+Uitvallers: 20 (gok 31, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">30</td>
+            <td class="prize-col"></td>
+          </tr>
+          
+          <tr data-name="Ferdi" data-total="558" data-joker-stage="20" data-cum1="26" data-cum2="58" data-delta2="5" data-cum3="91" data-delta3="-4" data-cum4="102" data-delta4="1" data-cum5="119" data-delta5="-1" data-cum6="155" data-delta6="-2" data-cum7="185" data-delta7="2" data-cum8="218" data-delta8="1" data-cum9="233" data-delta9="-1" data-cum10="267" data-delta10="0" data-cum11="290" data-delta11="-2" data-cum12="323" data-delta12="1" data-cum13="344" data-delta13="1" data-cum14="376" data-delta14="0" data-cum15="399" data-delta15="-1" data-cum16="426" data-delta16="1" data-cum17="446" data-delta17="-5" data-cum18="456" data-delta18="0" data-cum19="478" data-delta19="0" data-cum20="516" data-delta20="3" data-cum21="534" data-delta21="0">
             <td class="rank-col">11</td>
             <td>Ferdi<span class="rank-change " style="display:none"></span></td>
             
@@ -2363,8 +2429,14 @@ Totaal: 19">38</td>
 Pogacar: 7
 Totaal: 18">18</td>
             
-            <td class="total total-cell total-sep">534</td>
-            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
+            <td class="es-col endcol" data-tooltip="Geel: 15
+Groen: 6
+Bolletjes: 3
+Wit: 0
+
+Totaal eindstand: 24 (zit in het totaal)">24</td>
+            <td class="total total-cell total-sep">558</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 20 (2/3 goed)
 Tijdsverschil: 0 (gok 180s, echt 386s)
 Uitvallers: 12 (gok 39, echt 26)
 
@@ -2372,7 +2444,7 @@ Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">32</td>
             <td class="prize-col"></td>
           </tr>
           
-          <tr data-name="Anita" data-total="532" data-joker-stage="20" data-cum1="26" data-cum2="52" data-delta2="-5" data-cum3="85" data-delta3="0" data-cum4="91" data-delta4="-2" data-cum5="111" data-delta5="0" data-cum6="144" data-delta6="-1" data-cum7="181" data-delta7="5" data-cum8="210" data-delta8="1" data-cum9="224" data-delta9="-1" data-cum10="252" data-delta10="-1" data-cum11="294" data-delta11="5" data-cum12="326" data-delta12="0" data-cum13="342" data-delta13="-3" data-cum14="373" data-delta14="0" data-cum15="392" data-delta15="-2" data-cum16="411" data-delta16="-2" data-cum17="439" data-delta17="0" data-cum18="449" data-delta18="0" data-cum19="468" data-delta19="0" data-cum20="508" data-delta20="2" data-cum21="532" data-delta21="1">
+          <tr data-name="Anita" data-total="553" data-joker-stage="20" data-cum1="26" data-cum2="52" data-delta2="-5" data-cum3="85" data-delta3="0" data-cum4="91" data-delta4="-2" data-cum5="111" data-delta5="0" data-cum6="144" data-delta6="-1" data-cum7="181" data-delta7="5" data-cum8="210" data-delta8="1" data-cum9="224" data-delta9="-1" data-cum10="252" data-delta10="-1" data-cum11="294" data-delta11="5" data-cum12="326" data-delta12="0" data-cum13="342" data-delta13="-3" data-cum14="373" data-delta14="0" data-cum15="392" data-delta15="-2" data-cum16="411" data-delta16="-2" data-cum17="439" data-delta17="0" data-cum18="449" data-delta18="0" data-cum19="468" data-delta19="0" data-cum20="508" data-delta20="2" data-cum21="532" data-delta21="1">
             <td class="rank-col">12</td>
             <td>Anita<span class="rank-change rank-up" >&#9650;1</span></td>
             
@@ -2544,8 +2616,14 @@ Pogacar: 7
 O. Kooij: 6
 Totaal: 24">24</td>
             
-            <td class="total total-cell total-sep">532</td>
-            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+            <td class="es-col endcol" data-tooltip="Geel: 10
+Groen: 8
+Bolletjes: 3
+Wit: 0
+
+Totaal eindstand: 21 (zit in het totaal)">21</td>
+            <td class="total total-cell total-sep">553</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 10 (1/3 goed)
 Tijdsverschil: 0 (gok 63s, echt 386s)
 Uitvallers: 23 (gok 28, echt 26)
 
@@ -2553,7 +2631,7 @@ Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">33</td>
             <td class="prize-col"></td>
           </tr>
           
-          <tr data-name="Theo" data-total="523" data-joker-stage="6" data-cum1="26" data-cum2="58" data-delta2="8" data-cum3="91" data-delta3="-4" data-cum4="97" data-delta4="-3" data-cum5="118" data-delta5="4" data-cum6="190" data-delta6="10" data-cum7="214" data-delta7="-1" data-cum8="248" data-delta8="0" data-cum9="267" data-delta9="1" data-cum10="301" data-delta10="0" data-cum11="324" data-delta11="-2" data-cum12="357" data-delta12="0" data-cum13="371" data-delta13="-1" data-cum14="401" data-delta14="-1" data-cum15="422" data-delta15="-1" data-cum16="447" data-delta16="0" data-cum17="465" data-delta17="-1" data-cum18="473" data-delta18="-1" data-cum19="493" data-delta19="-1" data-cum20="510" data-delta20="-3" data-cum21="523" data-delta21="-1">
+          <tr data-name="Theo" data-total="544" data-joker-stage="6" data-cum1="26" data-cum2="58" data-delta2="8" data-cum3="91" data-delta3="-4" data-cum4="97" data-delta4="-3" data-cum5="118" data-delta5="4" data-cum6="190" data-delta6="10" data-cum7="214" data-delta7="-1" data-cum8="248" data-delta8="0" data-cum9="267" data-delta9="1" data-cum10="301" data-delta10="0" data-cum11="324" data-delta11="-2" data-cum12="357" data-delta12="0" data-cum13="371" data-delta13="-1" data-cum14="401" data-delta14="-1" data-cum15="422" data-delta15="-1" data-cum16="447" data-delta16="0" data-cum17="465" data-delta17="-1" data-cum18="473" data-delta18="-1" data-cum19="493" data-delta19="-1" data-cum20="510" data-delta20="-3" data-cum21="523" data-delta21="-1">
             <td class="rank-col">13</td>
             <td>Theo<span class="rank-change rank-down" >&#9660;1</span></td>
             
@@ -2719,8 +2797,14 @@ Totaal: 17">17</td>
 O. Kooij: 6
 Totaal: 13">13</td>
             
-            <td class="total total-cell total-sep">523</td>
-            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
+            <td class="es-col endcol" data-tooltip="Geel: 15
+Groen: 3
+Bolletjes: 3
+Wit: 0
+
+Totaal eindstand: 21 (zit in het totaal)">21</td>
+            <td class="total total-cell total-sep">544</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 20 (2/3 goed)
 Tijdsverschil: 0 (gok 154s, echt 386s)
 Uitvallers: 22 (gok 23, echt 26)
 
@@ -2728,364 +2812,8 @@ Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">42</td>
             <td class="prize-col"></td>
           </tr>
           
-          <tr data-name="Sepp" data-total="520" data-joker-stage="2" data-cum1="26" data-cum2="78" data-delta2="12" data-cum3="111" data-delta3="0" data-cum4="126" data-delta4="1" data-cum5="143" data-delta5="-1" data-cum6="176" data-delta6="-1" data-cum7="206" data-delta7="0" data-cum8="239" data-delta8="1" data-cum9="258" data-delta9="-1" data-cum10="287" data-delta10="0" data-cum11="310" data-delta11="-1" data-cum12="343" data-delta12="0" data-cum13="359" data-delta13="-1" data-cum14="390" data-delta14="-1" data-cum15="410" data-delta15="-1" data-cum16="430" data-delta16="0" data-cum17="452" data-delta17="0" data-cum18="462" data-delta18="-5" data-cum19="481" data-delta19="0" data-cum20="497" data-delta20="-3" data-cum21="520" data-delta21="2">
+          <tr data-name="Ger" data-total="540" data-joker-stage="20" data-cum1="29" data-cum2="61" data-delta2="0" data-cum3="98" data-delta3="0" data-cum4="104" data-delta4="-3" data-cum5="113" data-delta5="-8" data-cum6="154" data-delta6="2" data-cum7="178" data-delta7="0" data-cum8="199" data-delta8="-2" data-cum9="213" data-delta9="-1" data-cum10="253" data-delta10="4" data-cum11="276" data-delta11="-2" data-cum12="299" data-delta12="0" data-cum13="315" data-delta13="-1" data-cum14="351" data-delta14="0" data-cum15="381" data-delta15="-2" data-cum16="408" data-delta16="1" data-cum17="428" data-delta17="0" data-cum18="438" data-delta18="0" data-cum19="460" data-delta19="0" data-cum20="498" data-delta20="1" data-cum21="516" data-delta21="-1">
             <td class="rank-col">14</td>
-            <td>Sepp<span class="rank-change rank-up" >&#9650;2</span></td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="1" data-tooltip="Vingegaard: 15
-Pogacar: 11
-Totaal: 26">26</td>
-            
-            
-            
-            
-            <td class="stage-cell joker-cell  " data-stage="2" data-tooltip="Pogacar: 14
-Vingegaard: 12
-Totaal: 26">52</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="3" data-tooltip="Pogacar: 18
-Vingegaard: 15
-Totaal: 33">33</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="4" data-tooltip="Q. Simmons: 9
-Pogacar: 4
-Vingegaard: 2
-Totaal: 15">15</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="5" data-tooltip="T. Merlier: 8
-J. Philipsen: 6
-Pogacar: 2
-Vingegaard: 1
-Totaal: 17">17</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="6" data-tooltip="Pogacar: 18
-Vingegaard: 15
-Totaal: 33">33</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="7" data-tooltip="T. Merlier: 10
-Pogacar: 8
-J. Philipsen: 6
-Vingegaard: 6
-Totaal: 30">30</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="8" data-tooltip="T. Merlier: 12
-Pogacar: 8
-J. Philipsen: 7
-Vingegaard: 6
-Totaal: 33">33</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="9" data-tooltip="Pogacar: 8
-Vingegaard: 6
-M. Matthews: 4
-T. Merlier: 1
-Totaal: 19">19</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="10" data-tooltip="Pogacar: 18
-Vingegaard: 10
-T. Merlier: 1
-Totaal: 29">29</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="11" data-tooltip="J. Philipsen: 9
-Pogacar: 8
-Vingegaard: 6
-Totaal: 23">23</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="12" data-tooltip="T. Merlier: 10
-J. Philipsen: 9
-Pogacar: 8
-Vingegaard: 6
-Totaal: 33">33</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="13" data-tooltip="Pogacar: 8
-Vingegaard: 6
-J. Philipsen: 2
-Totaal: 16">16</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="14" data-tooltip="Pogacar: 18
-Vingegaard: 11
-J. Philipsen: 2
-Totaal: 31">31</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="15" data-tooltip="Pogacar: 17
-J. Philipsen: 2
-Q. Simmons: 1
-Totaal: 20">20</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="16" data-tooltip="Pogacar: 17
-J. Philipsen: 2
-Joshua Tarling: 1
-Totaal: 20">20</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="17" data-tooltip="J. Philipsen: 12
-Pogacar: 8
-M. Matthews: 2
-Totaal: 22">22</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="18" data-tooltip="Pogacar: 8
-J. Philipsen: 2
-Totaal: 10">10</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="19" data-tooltip="Pogacar: 17
-J. Philipsen: 2
-Totaal: 19">19</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="20" data-tooltip="Pogacar: 14
-J. Philipsen: 2
-Totaal: 16">16</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="21" data-tooltip="J. Philipsen: 11
-Pogacar: 7
-M. Mohoric: 5
-Totaal: 23">23</td>
-            
-            <td class="total total-cell total-sep">520</td>
-            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
-Tijdsverschil: 0 (gok 54s, echt 386s)
-Uitvallers: 19 (gok 32, echt 26)
-
-Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">39</td>
-            <td class="prize-col"></td>
-          </tr>
-          
-          <tr data-name="Wilma" data-total="519" data-joker-stage="15" data-cum1="29" data-cum2="55" data-delta2="-5" data-cum3="92" data-delta3="4" data-cum4="98" data-delta4="-5" data-cum5="107" data-delta5="-4" data-cum6="145" data-delta6="1" data-cum7="170" data-delta7="-2" data-cum8="191" data-delta8="0" data-cum9="205" data-delta9="0" data-cum10="240" data-delta10="0" data-cum11="263" data-delta11="1" data-cum12="286" data-delta12="-1" data-cum13="312" data-delta13="1" data-cum14="347" data-delta14="1" data-cum15="399" data-delta15="5" data-cum16="418" data-delta16="-2" data-cum17="447" data-delta17="0" data-cum18="466" data-delta18="2" data-cum19="485" data-delta19="-1" data-cum20="501" data-delta20="-2" data-cum21="519" data-delta21="-1">
-            <td class="rank-col">15</td>
-            <td>Wilma<span class="rank-change rank-down" >&#9660;1</span></td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="1" data-tooltip="Vingegaard: 15
-Pogacar: 11
-F. Lipowitz: 3
-Totaal: 29">29</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="2" data-tooltip="Pogacar: 14
-Vingegaard: 12
-Totaal: 26">26</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="3" data-tooltip="Pogacar: 18
-Vingegaard: 15
-F. Lipowitz: 4
-Totaal: 37">37</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="4" data-tooltip="Pogacar: 4
-Vingegaard: 2
-Totaal: 6">6</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="5" data-tooltip="J. Philipsen: 6
-Pogacar: 2
-Vingegaard: 1
-Totaal: 9">9</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="6" data-tooltip="Pogacar: 18
-Vingegaard: 15
-F. Lipowitz: 5
-Totaal: 38">38</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="7" data-tooltip="Pogacar: 8
-Vingegaard: 6
-J. Philipsen: 6
-Bauhaus: 5
-Totaal: 25">25</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="8" data-tooltip="Pogacar: 8
-J. Philipsen: 7
-Vingegaard: 6
-Totaal: 21">21</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="9" data-tooltip="Pogacar: 8
-Vingegaard: 6
-Totaal: 14">14</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="10" data-tooltip="Pogacar: 18
-Vingegaard: 10
-F. Lipowitz: 7
-Totaal: 35">35</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="11" data-tooltip="J. Philipsen: 9
-Pogacar: 8
-Vingegaard: 6
-Totaal: 23">23</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="12" data-tooltip="J. Philipsen: 9
-Pogacar: 8
-Vingegaard: 6
-Totaal: 23">23</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="13" data-tooltip="Schmid: 10
-Pogacar: 8
-Vingegaard: 6
-J. Philipsen: 2
-Totaal: 26">26</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="14" data-tooltip="Pogacar: 18
-Vingegaard: 11
-F. Lipowitz: 4
-J. Philipsen: 2
-Totaal: 35">35</td>
-            
-            
-            
-            
-            <td class="stage-cell joker-cell  " data-stage="15" data-tooltip="Pogacar: 17
-F. Lipowitz: 7
-J. Philipsen: 2
-Totaal: 26">52</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="16" data-tooltip="Pogacar: 17
-J. Philipsen: 2
-Totaal: 19">19</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="17" data-tooltip="J. Philipsen: 12
-Schmid: 9
-Pogacar: 8
-Totaal: 29">29</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="18" data-tooltip="Schmid: 9
-Pogacar: 8
-J. Philipsen: 2
-Totaal: 19">19</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="19" data-tooltip="Pogacar: 17
-J. Philipsen: 2
-Totaal: 19">19</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="20" data-tooltip="Pogacar: 14
-J. Philipsen: 2
-Totaal: 16">16</td>
-            
-            
-            
-            
-            <td class="stage-cell   " data-stage="21" data-tooltip="J. Philipsen: 11
-Pogacar: 7
-Totaal: 18">18</td>
-            
-            <td class="total total-cell total-sep">519</td>
-            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
-Tijdsverschil: 0 (gok 188s, echt 386s)
-Uitvallers: 23 (gok 24, echt 26)
-
-Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">33</td>
-            <td class="prize-col"></td>
-          </tr>
-          
-          <tr data-name="Ger" data-total="516" data-joker-stage="20" data-cum1="29" data-cum2="61" data-delta2="0" data-cum3="98" data-delta3="0" data-cum4="104" data-delta4="-3" data-cum5="113" data-delta5="-8" data-cum6="154" data-delta6="2" data-cum7="178" data-delta7="0" data-cum8="199" data-delta8="-2" data-cum9="213" data-delta9="-1" data-cum10="253" data-delta10="4" data-cum11="276" data-delta11="-2" data-cum12="299" data-delta12="0" data-cum13="315" data-delta13="-1" data-cum14="351" data-delta14="0" data-cum15="381" data-delta15="-2" data-cum16="408" data-delta16="1" data-cum17="428" data-delta17="0" data-cum18="438" data-delta18="0" data-cum19="460" data-delta19="0" data-cum20="498" data-delta20="1" data-cum21="516" data-delta21="-1">
-            <td class="rank-col">16</td>
             <td>Ger<span class="rank-change rank-down" >&#9660;1</span></td>
             
             
@@ -3258,8 +2986,14 @@ Totaal: 19">38</td>
 Pogacar: 7
 Totaal: 18">18</td>
             
-            <td class="total total-cell total-sep">516</td>
-            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+            <td class="es-col endcol" data-tooltip="Geel: 15
+Groen: 6
+Bolletjes: 3
+Wit: 0
+
+Totaal eindstand: 24 (zit in het totaal)">24</td>
+            <td class="total total-cell total-sep">540</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 10 (1/3 goed)
 Tijdsverschil: 0 (gok 122s, echt 386s)
 Uitvallers: 18 (gok 33, echt 26)
 
@@ -3267,7 +3001,375 @@ Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">28</td>
             <td class="prize-col"></td>
           </tr>
           
-          <tr data-name="Casper" data-total="510" data-joker-stage="20" data-cum1="29" data-cum2="55" data-delta2="-6" data-cum3="92" data-delta3="3" data-cum4="107" data-delta4="0" data-cum5="116" data-delta5="-7" data-cum6="154" data-delta6="1" data-cum7="177" data-delta7="-2" data-cum8="198" data-delta8="-3" data-cum9="212" data-delta9="0" data-cum10="247" data-delta10="2" data-cum11="270" data-delta11="0" data-cum12="293" data-delta12="-1" data-cum13="309" data-delta13="-2" data-cum14="346" data-delta14="1" data-cum15="375" data-delta15="-1" data-cum16="396" data-delta16="0" data-cum17="418" data-delta17="0" data-cum18="437" data-delta18="1" data-cum19="457" data-delta19="0" data-cum20="491" data-delta20="0" data-cum21="510" data-delta21="0">
+          <tr data-name="Sepp" data-total="539" data-joker-stage="2" data-cum1="26" data-cum2="78" data-delta2="12" data-cum3="111" data-delta3="0" data-cum4="126" data-delta4="1" data-cum5="143" data-delta5="-1" data-cum6="176" data-delta6="-1" data-cum7="206" data-delta7="0" data-cum8="239" data-delta8="1" data-cum9="258" data-delta9="-1" data-cum10="287" data-delta10="0" data-cum11="310" data-delta11="-1" data-cum12="343" data-delta12="0" data-cum13="359" data-delta13="-1" data-cum14="390" data-delta14="-1" data-cum15="410" data-delta15="-1" data-cum16="430" data-delta16="0" data-cum17="452" data-delta17="0" data-cum18="462" data-delta18="-5" data-cum19="481" data-delta19="0" data-cum20="497" data-delta20="-3" data-cum21="520" data-delta21="2">
+            <td class="rank-col">15</td>
+            <td>Sepp<span class="rank-change rank-up" >&#9650;2</span></td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="1" data-tooltip="Vingegaard: 15
+Pogacar: 11
+Totaal: 26">26</td>
+            
+            
+            
+            
+            <td class="stage-cell joker-cell  " data-stage="2" data-tooltip="Pogacar: 14
+Vingegaard: 12
+Totaal: 26">52</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="3" data-tooltip="Pogacar: 18
+Vingegaard: 15
+Totaal: 33">33</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="4" data-tooltip="Q. Simmons: 9
+Pogacar: 4
+Vingegaard: 2
+Totaal: 15">15</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="5" data-tooltip="T. Merlier: 8
+J. Philipsen: 6
+Pogacar: 2
+Vingegaard: 1
+Totaal: 17">17</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="6" data-tooltip="Pogacar: 18
+Vingegaard: 15
+Totaal: 33">33</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="7" data-tooltip="T. Merlier: 10
+Pogacar: 8
+J. Philipsen: 6
+Vingegaard: 6
+Totaal: 30">30</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="8" data-tooltip="T. Merlier: 12
+Pogacar: 8
+J. Philipsen: 7
+Vingegaard: 6
+Totaal: 33">33</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="9" data-tooltip="Pogacar: 8
+Vingegaard: 6
+M. Matthews: 4
+T. Merlier: 1
+Totaal: 19">19</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="10" data-tooltip="Pogacar: 18
+Vingegaard: 10
+T. Merlier: 1
+Totaal: 29">29</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="11" data-tooltip="J. Philipsen: 9
+Pogacar: 8
+Vingegaard: 6
+Totaal: 23">23</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="12" data-tooltip="T. Merlier: 10
+J. Philipsen: 9
+Pogacar: 8
+Vingegaard: 6
+Totaal: 33">33</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="13" data-tooltip="Pogacar: 8
+Vingegaard: 6
+J. Philipsen: 2
+Totaal: 16">16</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="14" data-tooltip="Pogacar: 18
+Vingegaard: 11
+J. Philipsen: 2
+Totaal: 31">31</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="15" data-tooltip="Pogacar: 17
+J. Philipsen: 2
+Q. Simmons: 1
+Totaal: 20">20</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="16" data-tooltip="Pogacar: 17
+J. Philipsen: 2
+Joshua Tarling: 1
+Totaal: 20">20</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="17" data-tooltip="J. Philipsen: 12
+Pogacar: 8
+M. Matthews: 2
+Totaal: 22">22</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="18" data-tooltip="Pogacar: 8
+J. Philipsen: 2
+Totaal: 10">10</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="19" data-tooltip="Pogacar: 17
+J. Philipsen: 2
+Totaal: 19">19</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="20" data-tooltip="Pogacar: 14
+J. Philipsen: 2
+Totaal: 16">16</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="21" data-tooltip="J. Philipsen: 11
+Pogacar: 7
+M. Mohoric: 5
+Totaal: 23">23</td>
+            
+            <td class="es-col endcol" data-tooltip="Geel: 10
+Groen: 6
+Bolletjes: 3
+Wit: 0
+
+Totaal eindstand: 19 (zit in het totaal)">19</td>
+            <td class="total total-cell total-sep">539</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 20 (2/3 goed)
+Tijdsverschil: 0 (gok 54s, echt 386s)
+Uitvallers: 19 (gok 32, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">39</td>
+            <td class="prize-col"></td>
+          </tr>
+          
+          <tr data-name="Wilma" data-total="538" data-joker-stage="15" data-cum1="29" data-cum2="55" data-delta2="-5" data-cum3="92" data-delta3="4" data-cum4="98" data-delta4="-5" data-cum5="107" data-delta5="-4" data-cum6="145" data-delta6="1" data-cum7="170" data-delta7="-2" data-cum8="191" data-delta8="0" data-cum9="205" data-delta9="0" data-cum10="240" data-delta10="0" data-cum11="263" data-delta11="1" data-cum12="286" data-delta12="-1" data-cum13="312" data-delta13="1" data-cum14="347" data-delta14="1" data-cum15="399" data-delta15="5" data-cum16="418" data-delta16="-2" data-cum17="447" data-delta17="0" data-cum18="466" data-delta18="2" data-cum19="485" data-delta19="-1" data-cum20="501" data-delta20="-2" data-cum21="519" data-delta21="-1">
+            <td class="rank-col">16</td>
+            <td>Wilma<span class="rank-change rank-down" >&#9660;1</span></td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="1" data-tooltip="Vingegaard: 15
+Pogacar: 11
+F. Lipowitz: 3
+Totaal: 29">29</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="2" data-tooltip="Pogacar: 14
+Vingegaard: 12
+Totaal: 26">26</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="3" data-tooltip="Pogacar: 18
+Vingegaard: 15
+F. Lipowitz: 4
+Totaal: 37">37</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="4" data-tooltip="Pogacar: 4
+Vingegaard: 2
+Totaal: 6">6</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="5" data-tooltip="J. Philipsen: 6
+Pogacar: 2
+Vingegaard: 1
+Totaal: 9">9</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="6" data-tooltip="Pogacar: 18
+Vingegaard: 15
+F. Lipowitz: 5
+Totaal: 38">38</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="7" data-tooltip="Pogacar: 8
+Vingegaard: 6
+J. Philipsen: 6
+Bauhaus: 5
+Totaal: 25">25</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="8" data-tooltip="Pogacar: 8
+J. Philipsen: 7
+Vingegaard: 6
+Totaal: 21">21</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="9" data-tooltip="Pogacar: 8
+Vingegaard: 6
+Totaal: 14">14</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="10" data-tooltip="Pogacar: 18
+Vingegaard: 10
+F. Lipowitz: 7
+Totaal: 35">35</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="11" data-tooltip="J. Philipsen: 9
+Pogacar: 8
+Vingegaard: 6
+Totaal: 23">23</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="12" data-tooltip="J. Philipsen: 9
+Pogacar: 8
+Vingegaard: 6
+Totaal: 23">23</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="13" data-tooltip="Schmid: 10
+Pogacar: 8
+Vingegaard: 6
+J. Philipsen: 2
+Totaal: 26">26</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="14" data-tooltip="Pogacar: 18
+Vingegaard: 11
+F. Lipowitz: 4
+J. Philipsen: 2
+Totaal: 35">35</td>
+            
+            
+            
+            
+            <td class="stage-cell joker-cell  " data-stage="15" data-tooltip="Pogacar: 17
+F. Lipowitz: 7
+J. Philipsen: 2
+Totaal: 26">52</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="16" data-tooltip="Pogacar: 17
+J. Philipsen: 2
+Totaal: 19">19</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="17" data-tooltip="J. Philipsen: 12
+Schmid: 9
+Pogacar: 8
+Totaal: 29">29</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="18" data-tooltip="Schmid: 9
+Pogacar: 8
+J. Philipsen: 2
+Totaal: 19">19</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="19" data-tooltip="Pogacar: 17
+J. Philipsen: 2
+Totaal: 19">19</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="20" data-tooltip="Pogacar: 14
+J. Philipsen: 2
+Totaal: 16">16</td>
+            
+            
+            
+            
+            <td class="stage-cell   " data-stage="21" data-tooltip="J. Philipsen: 11
+Pogacar: 7
+Totaal: 18">18</td>
+            
+            <td class="es-col endcol" data-tooltip="Geel: 10
+Groen: 6
+Bolletjes: 3
+Wit: 0
+
+Totaal eindstand: 19 (zit in het totaal)">19</td>
+            <td class="total total-cell total-sep">538</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 10 (1/3 goed)
+Tijdsverschil: 0 (gok 188s, echt 386s)
+Uitvallers: 23 (gok 24, echt 26)
+
+Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">33</td>
+            <td class="prize-col"></td>
+          </tr>
+          
+          <tr data-name="Casper" data-total="531" data-joker-stage="20" data-cum1="29" data-cum2="55" data-delta2="-6" data-cum3="92" data-delta3="3" data-cum4="107" data-delta4="0" data-cum5="116" data-delta5="-7" data-cum6="154" data-delta6="1" data-cum7="177" data-delta7="-2" data-cum8="198" data-delta8="-3" data-cum9="212" data-delta9="0" data-cum10="247" data-delta10="2" data-cum11="270" data-delta11="0" data-cum12="293" data-delta12="-1" data-cum13="309" data-delta13="-2" data-cum14="346" data-delta14="1" data-cum15="375" data-delta15="-1" data-cum16="396" data-delta16="0" data-cum17="418" data-delta17="0" data-cum18="437" data-delta18="1" data-cum19="457" data-delta19="0" data-cum20="491" data-delta20="0" data-cum21="510" data-delta21="0">
             <td class="rank-col">17</td>
             <td>Casper<span class="rank-change " style="display:none"></span></td>
             
@@ -3442,8 +3544,14 @@ Pogacar: 7
 V.Paret-Peintre: 1
 Totaal: 19">19</td>
             
-            <td class="total total-cell total-sep">510</td>
-            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+            <td class="es-col endcol" data-tooltip="Geel: 10
+Groen: 6
+Bolletjes: 5
+Wit: 0
+
+Totaal eindstand: 21 (zit in het totaal)">21</td>
+            <td class="total total-cell total-sep">531</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 10 (1/3 goed)
 Tijdsverschil: 0 (gok 217s, echt 386s)
 Uitvallers: 17 (gok 34, echt 26)
 
@@ -3451,7 +3559,7 @@ Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">27</td>
             <td class="prize-col"></td>
           </tr>
           
-          <tr data-name="Luuk" data-total="503" data-joker-stage="5" data-cum1="11" data-cum2="25" data-delta2="0" data-cum3="43" data-delta3="0" data-cum4="65" data-delta4="1" data-cum5="119" data-delta5="10" data-cum6="143" data-delta6="-8" data-cum7="174" data-delta7="1" data-cum8="199" data-delta8="1" data-cum9="226" data-delta9="5" data-cum10="248" data-delta10="-3" data-cum11="259" data-delta11="-4" data-cum12="286" data-delta12="1" data-cum13="312" data-delta13="1" data-cum14="333" data-delta14="-2" data-cum15="353" data-delta15="-1" data-cum16="373" data-delta16="0" data-cum17="396" data-delta17="0" data-cum18="416" data-delta18="0" data-cum19="443" data-delta19="0" data-cum20="468" data-delta20="0" data-cum21="503" data-delta21="1">
+          <tr data-name="Luuk" data-total="527" data-joker-stage="5" data-cum1="11" data-cum2="25" data-delta2="0" data-cum3="43" data-delta3="0" data-cum4="65" data-delta4="1" data-cum5="119" data-delta5="10" data-cum6="143" data-delta6="-8" data-cum7="174" data-delta7="1" data-cum8="199" data-delta8="1" data-cum9="226" data-delta9="5" data-cum10="248" data-delta10="-3" data-cum11="259" data-delta11="-4" data-cum12="286" data-delta12="1" data-cum13="312" data-delta13="1" data-cum14="333" data-delta14="-2" data-cum15="353" data-delta15="-1" data-cum16="373" data-delta16="0" data-cum17="396" data-delta17="0" data-cum18="416" data-delta18="0" data-cum19="443" data-delta19="0" data-cum20="468" data-delta20="0" data-cum21="503" data-delta21="1">
             <td class="rank-col">18</td>
             <td>Luuk<span class="rank-change rank-up" >&#9650;1</span></td>
             
@@ -3621,8 +3729,14 @@ Pogacar: 7
 Kanter: 7
 Totaal: 35">35</td>
             
-            <td class="total total-cell total-sep">503</td>
-            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
+            <td class="es-col endcol" data-tooltip="Geel: 10
+Groen: 10
+Bolletjes: 4
+Wit: 0
+
+Totaal eindstand: 24 (zit in het totaal)">24</td>
+            <td class="total total-cell total-sep">527</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 20 (2/3 goed)
 Tijdsverschil: 0 (gok 185s, echt 386s)
 Uitvallers: 16 (gok 35, echt 26)
 
@@ -3630,7 +3744,7 @@ Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">36</td>
             <td class="prize-col"></td>
           </tr>
           
-          <tr data-name="Sharon" data-total="495" data-joker-stage="20" data-cum1="28" data-cum2="54" data-delta2="-5" data-cum3="87" data-delta3="0" data-cum4="102" data-delta4="3" data-cum5="122" data-delta5="2" data-cum6="156" data-delta6="-2" data-cum7="185" data-delta7="-1" data-cum8="217" data-delta8="2" data-cum9="233" data-delta9="-1" data-cum10="263" data-delta10="0" data-cum11="293" data-delta11="0" data-cum12="325" data-delta12="1" data-cum13="340" data-delta13="-3" data-cum14="370" data-delta14="0" data-cum15="389" data-delta15="-3" data-cum16="407" data-delta16="-2" data-cum17="424" data-delta17="0" data-cum18="433" data-delta18="-1" data-cum19="451" data-delta19="0" data-cum20="481" data-delta20="0" data-cum21="495" data-delta21="-1">
+          <tr data-name="Sharon" data-total="515" data-joker-stage="20" data-cum1="28" data-cum2="54" data-delta2="-5" data-cum3="87" data-delta3="0" data-cum4="102" data-delta4="3" data-cum5="122" data-delta5="2" data-cum6="156" data-delta6="-2" data-cum7="185" data-delta7="-1" data-cum8="217" data-delta8="2" data-cum9="233" data-delta9="-1" data-cum10="263" data-delta10="0" data-cum11="293" data-delta11="0" data-cum12="325" data-delta12="1" data-cum13="340" data-delta13="-3" data-cum14="370" data-delta14="0" data-cum15="389" data-delta15="-3" data-cum16="407" data-delta16="-2" data-cum17="424" data-delta17="0" data-cum18="433" data-delta18="-1" data-cum19="451" data-delta19="0" data-cum20="481" data-delta20="0" data-cum21="495" data-delta21="-1">
             <td class="rank-col">19</td>
             <td>Sharon<span class="rank-change rank-down" >&#9660;1</span></td>
             
@@ -3801,8 +3915,14 @@ O. Kooij: 6
 Girmay: 1
 Totaal: 14">14</td>
             
-            <td class="total total-cell total-sep">495</td>
-            <td class="bonus-col" data-tooltip="Podium: 20 (2/3 goed)
+            <td class="es-col endcol" data-tooltip="Geel: 10
+Groen: 7
+Bolletjes: 3
+Wit: 0
+
+Totaal eindstand: 20 (zit in het totaal)">20</td>
+            <td class="total total-cell total-sep">515</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 20 (2/3 goed)
 Tijdsverschil: 0 (gok 420s, echt 386s)
 Uitvallers: 11 (gok 40, echt 26)
 
@@ -3810,7 +3930,7 @@ Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">31</td>
             <td class="prize-col"></td>
           </tr>
           
-          <tr data-name="Wim" data-total="414" data-joker-stage="5" data-cum1="14" data-cum2="34" data-delta2="-1" data-cum3="56" data-delta3="0" data-cum4="65" data-delta4="-1" data-cum5="89" data-delta5="0" data-cum6="115" data-delta6="1" data-cum7="123" data-delta7="-1" data-cum8="139" data-delta8="0" data-cum9="157" data-delta9="0" data-cum10="187" data-delta10="0" data-cum11="204" data-delta11="0" data-cum12="221" data-delta12="0" data-cum13="234" data-delta13="0" data-cum14="259" data-delta14="0" data-cum15="289" data-delta15="1" data-cum16="316" data-delta16="0" data-cum17="334" data-delta17="0" data-cum18="351" data-delta18="0" data-cum19="372" data-delta19="0" data-cum20="390" data-delta20="0" data-cum21="414" data-delta21="0">
+          <tr data-name="Wim" data-total="437" data-joker-stage="5" data-cum1="14" data-cum2="34" data-delta2="-1" data-cum3="56" data-delta3="0" data-cum4="65" data-delta4="-1" data-cum5="89" data-delta5="0" data-cum6="115" data-delta6="1" data-cum7="123" data-delta7="-1" data-cum8="139" data-delta8="0" data-cum9="157" data-delta9="0" data-cum10="187" data-delta10="0" data-cum11="204" data-delta11="0" data-cum12="221" data-delta12="0" data-cum13="234" data-delta13="0" data-cum14="259" data-delta14="0" data-cum15="289" data-delta15="1" data-cum16="316" data-delta16="0" data-cum17="334" data-delta17="0" data-cum18="351" data-delta18="0" data-cum19="372" data-delta19="0" data-cum20="390" data-delta20="0" data-cum21="414" data-delta21="0">
             <td class="rank-col">20</td>
             <td>Wim<span class="rank-change " style="display:none"></span></td>
             
@@ -3972,8 +4092,14 @@ O. Kooij: 6
 V.Paret-Peintre: 1
 Totaal: 24">24</td>
             
-            <td class="total total-cell total-sep">414</td>
-            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+            <td class="es-col endcol" data-tooltip="Geel: 15
+Groen: 3
+Bolletjes: 5
+Wit: 0
+
+Totaal eindstand: 23 (zit in het totaal)">23</td>
+            <td class="total total-cell total-sep">437</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 10 (1/3 goed)
 Tijdsverschil: 0 (gok 153s, echt 386s)
 Uitvallers: 18 (gok 33, echt 26)
 
@@ -3981,7 +4107,7 @@ Voorlopig - formule tijdsverschil/uitvallers nog niet definitief">28</td>
             <td class="prize-col" data-tooltip="Voorlaatste plaats">€10</td>
           </tr>
           
-          <tr data-name="Jeroen" data-total="375" data-joker-stage="2" data-cum1="11" data-cum2="39" data-delta2="2" data-cum3="57" data-delta3="-1" data-cum4="70" data-delta4="0" data-cum5="90" data-delta5="-1" data-cum6="108" data-delta6="-1" data-cum7="126" data-delta7="1" data-cum8="154" data-delta8="0" data-cum9="173" data-delta9="0" data-cum10="192" data-delta10="0" data-cum11="209" data-delta11="0" data-cum12="236" data-delta12="0" data-cum13="244" data-delta13="0" data-cum14="262" data-delta14="0" data-cum15="280" data-delta15="-1" data-cum16="297" data-delta16="0" data-cum17="313" data-delta17="0" data-cum18="321" data-delta18="0" data-cum19="338" data-delta19="0" data-cum20="352" data-delta20="0" data-cum21="375" data-delta21="0">
+          <tr data-name="Jeroen" data-total="391" data-joker-stage="2" data-cum1="11" data-cum2="39" data-delta2="2" data-cum3="57" data-delta3="-1" data-cum4="70" data-delta4="0" data-cum5="90" data-delta5="-1" data-cum6="108" data-delta6="-1" data-cum7="126" data-delta7="1" data-cum8="154" data-delta8="0" data-cum9="173" data-delta9="0" data-cum10="192" data-delta10="0" data-cum11="209" data-delta11="0" data-cum12="236" data-delta12="0" data-cum13="244" data-delta13="0" data-cum14="262" data-delta14="0" data-cum15="280" data-delta15="-1" data-cum16="297" data-delta16="0" data-cum17="313" data-delta17="0" data-cum18="321" data-delta18="0" data-cum19="338" data-delta19="0" data-cum20="352" data-delta20="0" data-cum21="375" data-delta21="0">
             <td class="rank-col">21</td>
             <td>Jeroen<span class="rank-change " style="display:none"></span></td>
             
@@ -4127,8 +4253,14 @@ Pogacar: 7
 O. Kooij: 6
 Totaal: 23">23</td>
             
-            <td class="total total-cell total-sep">375</td>
-            <td class="bonus-col" data-tooltip="Podium: 10 (1/3 goed)
+            <td class="es-col endcol" data-tooltip="Geel: 10
+Groen: 3
+Bolletjes: 3
+Wit: 0
+
+Totaal eindstand: 16 (zit in het totaal)">16</td>
+            <td class="total total-cell total-sep">391</td>
+            <td class="bonus-col endcol" data-tooltip="Podium: 10 (1/3 goed)
 Tijdsverschil: 0 (gok 111s, echt 386s)
 Uitvallers: 17 (gok 18, echt 26)
 
@@ -10176,6 +10308,7 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
             <th class="rank-col">#</th>
             <th>Naam</th>
             <th class="stage-cell" data-stage="1">E1</th><th class="stage-cell" data-stage="2">E2</th><th class="stage-cell" data-stage="3">E3</th><th class="stage-cell" data-stage="4">E4</th><th class="stage-cell" data-stage="5">E5</th><th class="stage-cell" data-stage="6">E6</th><th class="stage-cell" data-stage="7">E7</th><th class="stage-cell" data-stage="8">E8</th><th class="stage-cell" data-stage="9">E9</th><th class="stage-cell" data-stage="10">E10</th><th class="stage-cell" data-stage="11">E11</th><th class="stage-cell" data-stage="12">E12</th><th class="stage-cell" data-stage="13">E13</th><th class="stage-cell" data-stage="14">E14</th><th class="stage-cell" data-stage="15">E15</th><th class="stage-cell" data-stage="16">E16</th><th class="stage-cell" data-stage="17">E17</th><th class="stage-cell" data-stage="18">E18</th><th class="stage-cell" data-stage="19">E19</th><th class="stage-cell" data-stage="20">E20</th><th class="stage-cell" data-stage="21">E21</th>
+            <th class="es-col endcol" data-tooltip="Eindstand: extra punten voor renners in de eind-klassementen (geel 10..1, groen 6..1, bolletjes 4..1, wit 3..1). Deze tellen mee in het totaal - en in de pannenkoekenpoule is dat dus nadelig.">ES</th>
             <th class="total-sep">Totaal</th>
             <th class="prize-col">Prijs</th>
           </tr>
@@ -10249,6 +10382,12 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">0</td>
             <td class="prize-col" data-tooltip="1e prijs pannenkoekenpoule">€30</td>
           </tr>
@@ -10320,6 +10459,12 @@ Uitgevallen: Nee">P. Seixas</td><td class="total">1</td></tr>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">0</td>
             <td class="prize-col" data-tooltip="2e prijs pannenkoekenpoule">€20</td>
           </tr>
@@ -10392,6 +10537,12 @@ Totaal: 1">1</td>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">1</td>
             <td class="prize-col" data-tooltip="3e prijs pannenkoekenpoule">€10</td>
           </tr>
@@ -10464,6 +10615,12 @@ Totaal: 1">1</td>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">1</td>
             <td class="prize-col"></td>
           </tr>
@@ -10537,6 +10694,12 @@ Totaal: 3">3</td>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">4</td>
             <td class="prize-col"></td>
           </tr>
@@ -10611,6 +10774,12 @@ Totaal: 2">2</td>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">9</td>
             <td class="prize-col"></td>
           </tr>
@@ -10684,6 +10853,12 @@ Totaal: 1">1</td>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">10</td>
             <td class="prize-col"></td>
           </tr>
@@ -10758,6 +10933,12 @@ Totaal: 2">2</td>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">11</td>
             <td class="prize-col"></td>
           </tr>
@@ -10832,6 +11013,12 @@ Totaal: 8">8</td>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">11</td>
             <td class="prize-col"></td>
           </tr>
@@ -10909,6 +11096,12 @@ Totaal: 5">5</td>
             <td class="stage-cell" data-stage="21" data-tooltip="Russo: 1
 Totaal: 1">1</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">16</td>
             <td class="prize-col"></td>
           </tr>
@@ -10985,6 +11178,12 @@ Totaal: 7">7</td>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">17</td>
             <td class="prize-col"></td>
           </tr>
@@ -11061,6 +11260,12 @@ Totaal: 6">6</td>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">17</td>
             <td class="prize-col"></td>
           </tr>
@@ -11137,6 +11342,12 @@ Totaal: 6">6</td>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">17</td>
             <td class="prize-col"></td>
           </tr>
@@ -11212,6 +11423,12 @@ Totaal: 10">10</td>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">23</td>
             <td class="prize-col"></td>
           </tr>
@@ -11291,6 +11508,12 @@ Totaal: 4">4</td>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">24</td>
             <td class="prize-col"></td>
           </tr>
@@ -11368,6 +11591,12 @@ Totaal: 5">5</td>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">25</td>
             <td class="prize-col"></td>
           </tr>
@@ -11446,11 +11675,17 @@ Totaal: 3">3</td>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">29</td>
             <td class="prize-col"></td>
           </tr>
           
-          <tr data-name="Anita" data-total="34" data-cum1="0" data-cum2="0" data-delta2="0" data-cum3="1" data-delta3="-9" data-cum4="17" data-delta4="-9" data-cum5="22" data-delta5="-1" data-cum6="22" data-delta6="0" data-cum7="22" data-delta7="0" data-cum8="22" data-delta8="2" data-cum9="24" data-delta9="0" data-cum10="24" data-delta10="0" data-cum11="24" data-delta11="0" data-cum12="24" data-delta12="0" data-cum13="29" data-delta13="0" data-cum14="29" data-delta14="0" data-cum15="29" data-delta15="0" data-cum16="29" data-delta16="0" data-cum17="29" data-delta17="1" data-cum18="34" data-delta18="-1" data-cum19="34" data-delta19="0" data-cum20="34" data-delta20="0" data-cum21="34" data-delta21="0">
+          <tr data-name="Anita" data-total="35" data-cum1="0" data-cum2="0" data-delta2="0" data-cum3="1" data-delta3="-9" data-cum4="17" data-delta4="-9" data-cum5="22" data-delta5="-1" data-cum6="22" data-delta6="0" data-cum7="22" data-delta7="0" data-cum8="22" data-delta8="2" data-cum9="24" data-delta9="0" data-cum10="24" data-delta10="0" data-cum11="24" data-delta11="0" data-cum12="24" data-delta12="0" data-cum13="29" data-delta13="0" data-cum14="29" data-delta14="0" data-cum15="29" data-delta15="0" data-cum16="29" data-delta16="0" data-cum17="29" data-delta17="1" data-cum18="34" data-delta18="-1" data-cum19="34" data-delta19="0" data-cum20="34" data-delta20="0" data-cum21="34" data-delta21="0">
             <td class="rank-col">18</td>
             <td>Anita<span class="rank-change " style="display:none"></span></td>
             
@@ -11525,7 +11760,13 @@ Totaal: 5">5</td>
             
             <td class="stage-cell" data-stage="21" data-tooltip="Totaal: 0">0</td>
             
-            <td class="total total-cell total-sep">34</td>
+            <td class="es-col endcol" data-tooltip="Geel: 1
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 1 (zit in het totaal)">1</td>
+            <td class="total total-cell total-sep">35</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -11605,11 +11846,17 @@ Totaal: 13">13</td>
             <td class="stage-cell" data-stage="21" data-tooltip="Pluimers: 4
 Totaal: 4">4</td>
             
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 0
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 0 (zit in het totaal)">0</td>
             <td class="total total-cell total-sep">39</td>
             <td class="prize-col" data-tooltip="Voorlaatste plaats: verrassingspakket t.w.v. €10">(€10)</td>
           </tr>
           
-          <tr data-name="Ger" data-total="49" data-cum1="0" data-cum2="0" data-delta2="0" data-cum3="0" data-delta3="2" data-cum4="0" data-delta4="0" data-cum5="10" data-delta5="-9" data-cum6="12" data-delta6="-2" data-cum7="20" data-delta7="-4" data-cum8="27" data-delta8="-2" data-cum9="27" data-delta9="0" data-cum10="27" data-delta10="0" data-cum11="27" data-delta11="0" data-cum12="31" data-delta12="0" data-cum13="31" data-delta13="0" data-cum14="31" data-delta14="0" data-cum15="31" data-delta15="0" data-cum16="31" data-delta16="0" data-cum17="38" data-delta17="0" data-cum18="38" data-delta18="0" data-cum19="38" data-delta19="0" data-cum20="38" data-delta20="0" data-cum21="49" data-delta21="0">
+          <tr data-name="Ger" data-total="52" data-cum1="0" data-cum2="0" data-delta2="0" data-cum3="0" data-delta3="2" data-cum4="0" data-delta4="0" data-cum5="10" data-delta5="-9" data-cum6="12" data-delta6="-2" data-cum7="20" data-delta7="-4" data-cum8="27" data-delta8="-2" data-cum9="27" data-delta9="0" data-cum10="27" data-delta10="0" data-cum11="27" data-delta11="0" data-cum12="31" data-delta12="0" data-cum13="31" data-delta13="0" data-cum14="31" data-delta14="0" data-cum15="31" data-delta15="0" data-cum16="31" data-delta16="0" data-cum17="38" data-delta17="0" data-cum18="38" data-delta18="0" data-cum19="38" data-delta19="0" data-cum20="38" data-delta20="0" data-cum21="49" data-delta21="0">
             <td class="rank-col">20</td>
             <td>Ger<span class="rank-change " style="display:none"></span></td>
             
@@ -11686,7 +11933,13 @@ Totaal: 7">7</td>
 Pluimers: 4
 Totaal: 11">11</td>
             
-            <td class="total total-cell total-sep">49</td>
+            <td class="es-col endcol" data-tooltip="Geel: 0
+Groen: 3
+Bolletjes: 0
+Wit: 0
+
+Totaal eindstand: 3 (zit in het totaal)">3</td>
+            <td class="total total-cell total-sep">52</td>
             <td class="prize-col"></td>
           </tr>
           
@@ -13839,6 +14092,12 @@ Theo">2/21</td>
     table.querySelectorAll('[data-stage]').forEach(function (el) {
       var visible = day === 'latest' || parseInt(el.dataset.stage, 10) <= day;
       el.style.display = visible ? '' : 'none';
+    });
+
+    // End-of-tour columns (ES, Bonus) only make sense at the final standing -
+    // hide them while looking back at a historical day.
+    table.querySelectorAll('.endcol').forEach(function (el) {
+      el.style.display = day === 'latest' ? '' : 'none';
     });
 
     var tbody = table.querySelector('tbody');

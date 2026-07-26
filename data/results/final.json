@@ -1,4 +1,8 @@
 {
+  "gc_final": ["Pogacar", "Evenepoel", "Del Torro Romero", "P. Seixas", "L. Martinez", "Skjelmose", "Ayuso", "R. Carapaz", "T. Pidcock", "Jegat"],
+  "points_final": ["Pedersen", "J. Philipsen", "Girmay", "Kanter", "O. Kooij", "Pogacar"],
+  "mountains_final": ["R. Carapaz", "Pogacar", "V.Paret-Peintre", "Kuss"],
+  "youth_final": ["Del Torro Romero", "P. Seixas", "L. Martinez"],
   "podium": ["Pogacar", "Evenepoel", "Del Torro Romero"],
   "winner_gap_seconds": 386,
   "dnf_count": 26
