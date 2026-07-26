@@ -104,7 +104,6 @@
   .es-col { text-align: center; width: 3em; }
   th.es-col { cursor: help; }
   td.es-col { color: var(--groen); cursor: help; }
-  .bonus-note { color: var(--muted); font-size: 0.82rem; font-style: italic; margin: 10px 0 0; }
   .stage-cell { width: 3em; text-align: center; }
   td.stage-cell { cursor: help; }
   .joker-cell { background: var(--geel); font-weight: 700; border-radius: 5px; }
@@ -346,7 +345,7 @@ Uitgevallen: {{ 'Ja' if info.withdrawn else 'Nee' }}"
             {% for s in stages_available %}<th class="stage-cell" data-stage="{{ s }}">E{{ s }}</th>{% endfor %}
             {% if classification_available %}<th class="es-col endcol" data-tooltip="Eindstand: extra punten voor renners in de eind-klassementen (geel 10..1, groen 6..1, bolletjes 4..1, wit 3..1). Deze tellen mee in het totaal.">ES</th>{% endif %}
             <th class="total-sep">Totaal</th>
-            {% if bonus_available %}<th class="bonus-col endcol" data-tooltip="Bonusvragen (podium/tijdsverschil/uitvallers). Voorlopig - nog niet in het totaal verwerkt en de formule voor tijdsverschil/uitvallers is nog niet definitief.">Bonus*</th>{% endif %}
+            {% if bonus_available %}<th class="bonus-col endcol" data-tooltip="Bonusvragen (podium/tijdsverschil/uitvallers). Voorlopig - nog niet in het totaal verwerkt en de formule voor tijdsverschil/uitvallers is nog niet definitief.">Bonus</th>{% endif %}
             <th class="prize-col">Prijs</th>
           </tr>
         </thead>
@@ -374,7 +373,6 @@ Optimale hoofdploeg{% endif %}">{{ st.score }}</td>
         </tbody>
       </table>
     </div>
-    {% if bonus_available %}<p class="bonus-note">* Bonus = bonusvragen (podium 10 p. per goede renner; tijdsverschil &amp; uitvallers max. 25, −1 per seconde/uitvaller ernaast). <strong>Voorlopig</strong>: nog niet in het totaal verwerkt, en de formule voor tijdsverschil/uitvallers moet nog definitief bevestigd worden. Beweeg over een waarde voor de uitsplitsing.</p>{% endif %}
   </section>
 
   <section>
